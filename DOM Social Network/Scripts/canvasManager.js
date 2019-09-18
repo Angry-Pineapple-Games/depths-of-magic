@@ -8,8 +8,8 @@ var myGameArea = {
         this.resizeCanvas();
     },
     resizeCanvas : function () {
-        var tam1 = 0.65;
-        var tam2 = 0.35;
+        let tam1 = 0.65;
+        let tam2 = 0.35;
         if (window.innerWidth > window.innerHeight*1.5) {
             myGameArea.canvas1.width = window.innerWidth*tam1;
             myGameArea.canvas2.width = window.innerWidth*tam2;

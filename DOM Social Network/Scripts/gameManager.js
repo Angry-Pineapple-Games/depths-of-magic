@@ -4,7 +4,9 @@ function preloadGame() {
 
 function startGame() {
     myGameArea.start();
+    myInputsManager.start();
     myGameManager.start();
+
     //myGamePiece = new component(30, 30, "red", 10, 120);
 }
 
@@ -49,7 +51,6 @@ var mainLoop = function(timestamp) {
             break;
         }
     }
-
     myGame.draw(myGameManager.delta / myGameManager.timestep, myGameArea.context1, myGameArea.context2, myGameArea.canvas1, myGameArea.canvas2);
     window.requestAnimationFrame(mainLoop);
 }
