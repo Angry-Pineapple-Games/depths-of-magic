@@ -28,9 +28,9 @@ var myInputsManager = {
         $( "#canvas2" ).mousemove(function(event) {
             if (that.leftMouseDown) {
                 that.trace.push([event.pageX - parseInt(myGameArea.canvas2.style.left), event.pageY - parseInt(myGameArea.canvas2.style.top)])
-                var msg = "Move to: ";
+                /*var msg = "Move to: ";
                 msg += (event.pageX - parseInt(myGameArea.canvas2.style.left)) + ", " + (event.pageY - parseInt(myGameArea.canvas2.style.top));
-                console.log(msg)
+                console.log(msg)*/
             }
         });
 
