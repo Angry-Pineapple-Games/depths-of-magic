@@ -1,5 +1,5 @@
 function preloadGame() {
-    loadImages(sources, startGame)
+    myPreload.loadImages(startGame);
 }
 
 function startGame() {

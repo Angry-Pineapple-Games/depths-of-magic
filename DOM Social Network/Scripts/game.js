@@ -6,6 +6,7 @@ var myGame = {
     },
     draw : function(interp, ctx1, ctx2, cnv1, cnv2) {
         this.scenes[this.scene].draw(interp, ctx1, ctx2, cnv1, cnv2);
+        myGameMechanics.drawTraces(ctx2);
     }
 }
 

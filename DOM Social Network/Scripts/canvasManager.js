@@ -26,10 +26,15 @@ var myGameArea = {
             myGameArea.canvas2.style.top = window.innerHeight*tam1 + 'px';
         }
     },
-    resizeImages : function () {
-        images.forEach(i => {
-            
-        });
+    resizeImage: function(img, cnv, ctx) {
+        let aspectRatio = img.initWidth / img.initHeight;
+        let newHight = cnv.width/aspectRatio;
+        let newWidth = cnv.height * aspectRatio;
+        if ((cnv.width < img.initWidth && cnv.height > newHight)|| cnv.width < newWidth) {
+          ctx.drawImage(img, 0, cnv.height/2 - newHight * 0.5, cnv.width, newHight);
+        } else {
+          ctx.drawImage(img, cnv.width/2 - newWidth * 0.5, 0, newWidth, cnv.height);
+        }
     }
 }
 
