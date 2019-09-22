@@ -1,14 +1,23 @@
+/*En este script se gestiona la carga de los archivos multimedia para dejarlo disponible siempre que sea necesario*/
 var myPreload = {
   images: {},
   sources : {
     street: {
       src: 'Assets/streetfighter.jpg',
-      width: 992,
-      height: 558},
+      width: 1920,
+      height: 1440},
     grid: {
       src: 'Assets/grid.png',
-      width: 270,
-      height: 246},
+      width: 640,
+      height: 640},
+    ropeV: {
+      src: 'Assets/ropeV.png',
+      width: 40,
+      height: 160},
+    ropeH: {
+      src: 'Assets/ropeH.png',
+      width: 160,
+      height: 40}
   },
   loadImages: function(callback) {
     let loadedImages = 0;

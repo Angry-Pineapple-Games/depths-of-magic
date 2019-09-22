@@ -1,3 +1,4 @@
+/*En este script se gestionan todos los inputs que pueda recibir el juego, para servirselo al resto del programa*/
 var myInputsManager = {
     leftMouseDown : false,
     rightMouseDown : false,
