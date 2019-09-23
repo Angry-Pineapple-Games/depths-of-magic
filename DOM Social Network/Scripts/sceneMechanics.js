@@ -35,6 +35,7 @@ var mySceneMechanics = {
         myGameArea.resizeBackground(myPreload.images.grid, cnv2, ctx2, 2);
         myGameMechanics.drawRopes(this.gridRopes0);
         myGameMechanics.trackingTraces(myGameArea.background2);
+        myGameMechanics.deleteRope(this.gridRopes0);
     }
 }
 //https://konvajs.org/docs/sandbox/GIF_On_Canvas.html
