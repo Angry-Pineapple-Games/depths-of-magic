@@ -1,7 +1,25 @@
 /*En este script se establecen las diferentes mecánicas que se puedan dar en el juego*/
 var myGameMechanics = {
-    traces: [],
+    traces: [],//se componen de un primer array con el grosor del trazo y si ya ha sido analizado para su seguimiento
     tracks: [],
+    mapTrack: [
+        [[1,4],[0,3]],
+        [[0,2,5],[0,1,4]],
+        [[1,3,6],[1,2,5]],
+        [[2,7],[2,6]],
+        [[0,5,8],[3,7,10]],
+        [[1,4,6,9],[4,7,8,11]],
+        [[2,5,7,10],[5,8,9,12]],
+        [[3,6,11],[6,9,13]],
+        [[4,9,12],[10,14,17]],
+        [[5,8,10,13],[11,14,15,18]],
+        [[6,9,11,14],[12,15,16,19]],
+        [[7,10,15],[13,16,20]],
+        [[8,13],[17,21]],
+        [[9,12,14],[18,21,22]],
+        [[10,13,15],[19,22,23]],
+        [[11,14],[20,23]]
+    ],
     lineDecay: 0.02,
     sizeGridX: 4,
     sizeGridY: 4,
@@ -17,7 +35,7 @@ var myGameMechanics = {
             }
             ctx2.stroke();
         });
-        if (that.traces.length > 0 && that.traces[0][0][0] <= that.traces[0][0][1]) {
+        if (that.traces.length > 0 && that.traces[0][0][0] <= 0) {
             that.traces.shift();
         }
     }, 
@@ -29,42 +47,66 @@ var myGameMechanics = {
     drawRopes: function(gridRopes) {
         myGameArea.drawInBackgroundAGrid(2, this.getPositionRope, gridRopes);
     },
+    deleteRope: function(gridRopes) { //elimina la cuerda analizando los tracks con el mapa de seguimiento
+        while(this.tracks.length > 0){
+            let lastPosTrace = this.tracks[0][0];
+            for (var x=1; x<this.tracks[0].length; x++) {
+                let neighbour = this.mapTrack[lastPosTrace];
+                let y=0;
+                let ropeFound = false;
+                while (y<neighbour[0].length && !ropeFound) {
+                    if (neighbour[0][y] === this.tracks[0][x]) {
+                        //x = (0-y) + (y+1-total)
+                        mySceneMechanics.gridRopes0[neighbour[1][y]] = undefined;
+                        //mySceneMechanics.gridRopes0 = mySceneMechanics.gridRopes0.slice(0, neighbour[1][y]).concat(mySceneMechanics.gridRopes0.slice(neighbour[1][y]+1, mySceneMechanics.gridRopes0.length));
+                        ropeFound = true;
+                    }
+                    y++;
+                }
+                lastPosTrace = this.tracks[0][x];
+            }
+            this.tracks.shift();
+        }
+    },
     trackingTraces: function(bg) {
         let that = myGameMechanics;
         that.tracks = [];
         that.traces.forEach(trace => {
-            let z = 1;
-            let diffPeroneWidth = (bg.width/that.sizeGridX)/bg.width;
-            let diffPeroneHeight = (bg.height/that.sizeGridY)/bg.height;
-            let newTrack = [];
-            while (z<trace.length) {
-                let found = false;
-                let y = 0;
-                while(y<that.sizeGridY && !found) {
-                    let x = 0;
-                    while(x<that.sizeGridX && !found) {
-                        let leftLimit = bg.drawPosX + bg.width*diffPeroneWidth*x;
-                        let rightLimit = bg.drawPosX + bg.width*diffPeroneWidth*(x+1);
-                        let upLimit = bg.drawPosY + bg.height*diffPeroneHeight*y;
-                        let downLimit = bg.drawPosY + bg.height*diffPeroneHeight*(y+1);
-                        if((upLimit <= trace[z][1]) && (trace[z][1] <= downLimit)) {
-                            if((leftLimit <= trace[z][0]) && (trace[z][0] <= rightLimit)) {
-                                let target = x + y * that.sizeGridX
-                                if(newTrack[newTrack.length-1] !== target) {
-                                    newTrack.push(target);
-                                    console.log(that.tracks);
+            if (trace[0][1] === 0) {
+                let z = 1;
+                let diffPeroneWidth = (bg.width / that.sizeGridX) / bg.width;
+                let diffPeroneHeight = (bg.height / that.sizeGridY) / bg.height;
+                let newTrack = [];
+                while (z < trace.length) {
+                    let found = false;
+                    let y = 0;
+                    while (y < that.sizeGridY && !found) {
+                        let x = 0;
+                        while (x < that.sizeGridX && !found) {
+                            let leftLimit = bg.drawPosX + bg.width * diffPeroneWidth * x;
+                            let rightLimit = bg.drawPosX + bg.width * diffPeroneWidth * (x + 1);
+                            let upLimit = bg.drawPosY + bg.height * diffPeroneHeight * y;
+                            let downLimit = bg.drawPosY + bg.height * diffPeroneHeight * (y + 1);
+                            if ((upLimit <= trace[z][1]) && (trace[z][1] <= downLimit)) {
+                                if ((leftLimit <= trace[z][0]) && (trace[z][0] <= rightLimit)) {
+                                    let target = x + y * that.sizeGridX
+                                    if (newTrack[newTrack.length - 1] !== target) {
+                                        newTrack.push(target);
+                                        //console.log(that.tracks);
+                                    }
+                                    found = true;
                                 }
-                                found = true;
                             }
+                            x++;
                         }
-                        x++;
+                        y++;
                     }
-                    y++;
+                    z++;
                 }
-                z++;
+                that.tracks.push(newTrack);
+                trace[0][1]++;
             }
-            that.tracks.push(newTrack);
-        });        
+        });     
     },
     getPositionRope: function(bg, num) {
         switch(num) {

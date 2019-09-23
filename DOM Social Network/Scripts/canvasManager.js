@@ -75,9 +75,11 @@ var myGameArea = {
         else {console.log("Error en canvasManager/drawInBackground/num");}
         if (bg !== undefined) {
             grid.forEach(g => {
-                let pos = callback(bg, g[0]);//[posx, posy, isrotate]
-                let resizePerOne = this.resizeBackgroundPerOne(bg);
-                this.context2.drawImage(g[1], bg.drawPosX + pos[0], bg.drawPosY + pos[1], g[1].initWidth * resizePerOne, g[1].initHeight * resizePerOne);
+                if(g!==undefined) {
+                    let pos = callback(bg, g[0]);//[posx, posy]
+                    let resizePerOne = this.resizeBackgroundPerOne(bg);
+                    this.context2.drawImage(g[1], bg.drawPosX + pos[0], bg.drawPosY + pos[1], g[1].initWidth * resizePerOne, g[1].initHeight * resizePerOne);
+                }
             });
         }
     }, 
