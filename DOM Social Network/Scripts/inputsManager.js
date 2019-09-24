@@ -3,7 +3,7 @@ var myInputsManager = {
     leftMouseDown : false,
     rightMouseDown : false,
     middleMouseDown : false,
-    traceLive : [2, 0],//limitacion de vida del trazo
+    traceLive : [5, 0],//limitacion de vida del trazo
     trace : [],
     start : function () {
         let that = myInputsManager;

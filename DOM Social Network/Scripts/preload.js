@@ -7,17 +7,17 @@ var myPreload = {
       width: 1920,
       height: 1440},
     grid: {
-      src: 'Assets/grid.png',
-      width: 640,
-      height: 640},
+      src: 'Assets/grid.jpg',
+      width: 1080,
+      height: 1080},
     ropeV: {
       src: 'Assets/ropeV.png',
-      width: 40,
-      height: 160},
+      width: 67,
+      height: 270},
     ropeH: {
       src: 'Assets/ropeH.png',
-      width: 160,
-      height: 40}
+      width: 270,
+      height: 67},
   },
   loadImages: function(callback) {
     let loadedImages = 0;
