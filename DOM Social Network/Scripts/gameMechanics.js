@@ -20,7 +20,7 @@ var myGameMechanics = {
         [[10,13,15],[19,22,23]],
         [[11,14],[20,23]]
     ],
-    lineDecay: 0.02,
+    lineDecay: 0.1,
     sizeGridX: 4,
     sizeGridY: 4,
     drawTraces: function (ctx2) {
@@ -41,7 +41,7 @@ var myGameMechanics = {
     }, 
     generateGridRopes: function(gridRopes) {
         gridRopes.forEach(rope => {
-            rope[1] = myPreload.images[rope[1]]
+            if (rope!==undefined) {rope[1] = myPreload.images[rope[1]];}
         });
     },
     drawRopes: function(gridRopes) {
@@ -56,9 +56,7 @@ var myGameMechanics = {
                 let ropeFound = false;
                 while (y<neighbour[0].length && !ropeFound) {
                     if (neighbour[0][y] === this.tracks[0][x]) {
-                        //x = (0-y) + (y+1-total)
                         mySceneMechanics.gridRopes0[neighbour[1][y]] = undefined;
-                        //mySceneMechanics.gridRopes0 = mySceneMechanics.gridRopes0.slice(0, neighbour[1][y]).concat(mySceneMechanics.gridRopes0.slice(neighbour[1][y]+1, mySceneMechanics.gridRopes0.length));
                         ropeFound = true;
                     }
                     y++;
