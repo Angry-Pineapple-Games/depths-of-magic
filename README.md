@@ -19,9 +19,6 @@ Ambientado en un mundo donde la magia es posible, nuestra protagonista deberá e
 ### Plataformas
 **Depths of Magic** estará disponible para web en Itch.io, Facebook Games y en la propia web del videojuego. (Pendiente de completar con enlaces).
 El juego podrá ejecutarse tanto en PC como en móviles y tabletas.
-### Modelo de monetización
-TODO_
-Enlace al modelo de negocio completo: TODO_
 ### Alcance y escala del proyecto
 * **Escala económica y de tiempo**:
 	* **Presupuesto inicial**: 0 euros.
@@ -40,10 +37,6 @@ Enlace al modelo de negocio completo: TODO_
 * **Darkest Dungeon**: El enfoque de la cámara y la distribución de la interfaz de usuario de los combates será similar al de esta obra.
 * **Octopath Traveler**: Se buscará una estética en los efectos mágicos similar a la presentada en este título.
 * **Crypt of the Necrodancer**: La ambientación de la historia será similar, enfrentándose a los peligros y amenazas que se encuentren en la mazmorra.
-### Descripción del proyecto (breve)
-2-3 párrafos
-### Descripción del proyecto (detallada)
-4-6 párrafos
 ## Elevator Pitch
 En **Depths of Magic** se premia al jugador habilidoso gracias al sistema de combate basado en trazados. Es un juego inmediato, frenético y rejugable gracias a la generación aleatoria de los combates.
 Jugando a **Depths of Magic** el jugador se encontrará con una experiencia de *dungeon crawler* alejada de los repetitivos pasillos aleatorios y sin necesidad de planificar una estrategia preestablecida para los combates enemigos. La toma de contacto es sencilla y rápida, enseñando los fundamentos del juego sin aburrir al jugador y permitiéndole disfrutar lo antes posible.
