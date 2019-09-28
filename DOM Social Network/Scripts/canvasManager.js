@@ -48,6 +48,7 @@ var myGameArea = {
         }
         if (num === 1) {
             myGameArea.background1 = {
+                ctx: this.context1,
                 aspectRatio : aspectRatio,
                 width : newWidth,
                 iniWidth : img.initWidth,
@@ -58,6 +59,7 @@ var myGameArea = {
             }
         } else if (num === 2) {
             myGameArea.background2 = {
+                ctx: this.context2,
                 aspectRatio : aspectRatio,
                 width : newWidth,
                 iniWidth : img.initWidth,
@@ -78,9 +80,19 @@ var myGameArea = {
                 if(g!==undefined) {
                     let pos = callback(bg, g[0]);//[posx, posy]
                     let resizePerOne = this.resizeBackgroundPerOne(bg);
-                    this.context2.drawImage(g[1], bg.drawPosX + pos[0], bg.drawPosY + pos[1], g[1].initWidth * resizePerOne, g[1].initHeight * resizePerOne);
+                    bg.ctx.drawImage(g[1], bg.drawPosX + pos[0], bg.drawPosY + pos[1], g[1].initWidth * resizePerOne, g[1].initHeight * resizePerOne);
                 }
             });
+        }
+    },
+    drawInBackground: function(num, pos, img) {
+        let bg;
+        if (num===1){bg = this.background1;}
+        else if (num===2){bg = this.background2;}
+        else {console.log("Error en canvasManager/drawInBackground/num");}
+        if (bg !== undefined) {
+            let resizePerOne = this.resizeBackgroundPerOne(bg);
+            bg.ctx.drawImage(img, bg.drawPosX + pos[0], bg.drawPosY + pos[1], img.initWidth * resizePerOne, img.initHeight * resizePerOne);
         }
     }, 
     resizeBackgroundPerOne: function(bg) {

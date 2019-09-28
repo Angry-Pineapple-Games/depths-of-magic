@@ -1,0 +1,11 @@
+Name: Raygler
+
+HP: 90
+
+Base attack: 35
+
+Base defense: 25
+
+Attack buff/debuff: 0 (modifiable in-game)
+
+Defense buff/debuff: 0 (modifiable in-game)

@@ -3,21 +3,26 @@ dibujado, actualización y comienzo de cada escena*/
 var myGame = {
     scene : 0,// la pantalla actual del juego
     sceneStarted : false,
-    scenes : [mySceneMechanics], //las diferentes pantallas del juego
-    update : function(delta) {
+    scenes : [myLevel1, myGameOver], //las diferentes pantallas del juego
+    update : function(delta) { //simulacion de fisicas e inicializar a traves del start una vez
         if (!this.sceneStarted) {
             this.scenes[this.scene].start();
             this.sceneStarted = true;
         }
         this.scenes[this.scene].update(delta);
     },
-    draw : function(interp, ctx1, ctx2, cnv1, cnv2) {
+    draw : function(interp, ctx1, ctx2, cnv1, cnv2) {//pintar cada frame
         this.scenes[this.scene].draw(interp, ctx1, ctx2, cnv1, cnv2);
         myGameMechanics.drawTraces(ctx2);
     },
-    swapScene : function (num) {
+    swapScene : function () {
         this.sceneStarted = false;
-        this.scene = num;
+        if (this.scene < this.scenes.length-2) {this.scene++;}
+        else {this.scene=0;}
+    },
+    gameOver : function() {
+        this.sceneStarted = false;
+        this.scene = this.scenes[this.scenes.length-1];
     }
 }
 
