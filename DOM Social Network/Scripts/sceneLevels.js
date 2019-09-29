@@ -26,8 +26,10 @@ var myLevel1 = {
         if (typeof this.enemy.img === "undefined"){
             console.log("Fallo");
         }
-        myGameArea.drawInBackground(1, this.posHero, this.hero.img);
+        //myGameArea.drawInBackground(1, this.posHero, this.hero.img);
+        
         myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.animations.idle, 4);
 
         myGameArea.resizeBackground(myPreload.images.grid, cnv2, ctx2, 2);
         myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);

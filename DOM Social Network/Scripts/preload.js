@@ -14,10 +14,10 @@ var myPreload = {
       src: 'Assets/ropeH.png',
       width: 270,
       height: 67},
-    hero: {
-      src: 'Assets/hero.jpg',
-      width: 366,
-      height: 688},
+    //hero: {
+      //src: 'Assets/hero.jpg',
+      //width: 366,
+      //height: 688},
     enemy0: {
       src: 'Assets/enemy1.jpg',
       width: 366,
@@ -97,7 +97,18 @@ var myPreload = {
     gameover: {
       src: 'Assets/gameover.jpg',
       width: 1920,
-      height: 1440}
+      height: 1440},
+    hero:{
+      src:'Assets/spritesheet_hero.png',
+      width: 1024,
+      height: 2048}
+  },
+  spritesInfo:{
+    spritesHero:{
+      src:'Assets/spritesheet_hero.png',
+      json:'Assets/spritesheet_hero.json',
+      frames:[]
+    }
   },
   loadImages: function(callback) {
     let loadedImages = 0;
@@ -114,5 +125,11 @@ var myPreload = {
       this.images[src].initWidth = this.sources[src].width;
       this.images[src].initHeight = this.sources[src].height;
     }
+    for(var spr in this.spritesInfo){
+      this.spritesInfo[spr].frames = myAnimManager.getFrameInfoFromJSON(this.spritesInfo[spr].json);
+    }
+    
+    //this.spritesInfo.spritesHero.frames = myAnimManager.getFrameInfoFromJSON(this.spritesInfo.spritesHero.json);
+    console.log(this.spritesInfo.spritesHero.frames);
   }
 }

@@ -94,7 +94,17 @@ var myGameArea = {
             let resizePerOne = this.resizeBackgroundPerOne(bg);
             bg.ctx.drawImage(img, bg.drawPosX + pos[0], bg.drawPosY + pos[1], img.initWidth * resizePerOne, img.initHeight * resizePerOne);
         }
-    }, 
+    },
+    animateInBackground: function(num, pos, img, animation, frame) {
+        let bg;
+        if (num===1){bg = this.background1;}
+        else if (num===2){bg = this.background2;}
+        else {console.log("Error en canvasManager/drawInBackground/num");}
+        if (bg !== undefined) {
+            let resizePerOne = this.resizeBackgroundPerOne(bg);
+            myAnimManager.drawFrame(bg.ctx,img,animation,frame,bg.drawPosX + pos[0], bg.drawPosY + pos[1]);
+        }
+    },
     resizeBackgroundPerOne: function(bg) {
         return bg.width/bg.iniWidth;
     }
