@@ -1,4 +1,4 @@
-﻿{"frames": [
+﻿spritesheet_hero = [
 
 {
 	"filename": "Aguila instancia 10000",
@@ -2383,13 +2383,4 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":23,"y":5,"w":135,"h":127},
 	"sourceSize": {"w":135,"h":127}
-}],
-"meta": {
-	"app": "Adobe Animate",
-	"version": "18.0.2.126",
-	"image": "animaciones_aguila.png",
-	"format": "RGBA8888",
-	"size": {"w":1024,"h":2048},
-	"scale": "1"
-}
-}
+}]

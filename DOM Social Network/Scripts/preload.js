@@ -106,7 +106,7 @@ var myPreload = {
   spritesInfo:{
     spritesHero:{
       src:'Assets/spritesheet_hero.png',
-      json:'Assets/spritesheet_hero.json',
+      json:spritesheet_hero,
       frames:[]
     }
   },

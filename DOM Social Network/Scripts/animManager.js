@@ -1,18 +1,17 @@
 /*Script encargado de organizar y reproducir animaciones a partir de spritesheets*/
 
 var myAnimManager = {
-    getFrameInfoFromJSON: function(JSONFile){
+    
+    getFrameInfoFromJSON:function(JSONArray){
         var arrayFrames = [];
-        $.getJSON(JSONFile, function(data){
-            if(data.frames.length > 0){
-                $.each(data.frames, function(index, value){
-                    arrayFrames.push(value);
-                });
-                console.log("Extraction succesful");
-            }else{
-                console.log("JSON file in wrong format. Please use JSON Array");
-            }
-        });
+        if(JSONArray.length > 0){
+            $.each(JSONArray, function(index, value){
+                arrayFrames.push(value);
+            });
+            console.log("Extraction succesful");
+        }else{
+            console.log("JSON file in wrong format. Please use JSON Array");
+        }
         return arrayFrames;
     },
     getAnimFrames: function(spritesheet, start, end){
