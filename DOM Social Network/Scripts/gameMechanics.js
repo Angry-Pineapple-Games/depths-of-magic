@@ -208,7 +208,7 @@ var myCombatMechanics = {
         myCutMechanics.totalRopes = 0;
         myCutMechanics.concatenatedCuts = 0;
         myGameMechanics.generateGridRopes(this.scene.enemy);
-        setTimeout(this.updateState, this.scene.limitTimePerPatron);
+        myGameManager.addTimer(this.updateState, this.scene.limitTimePerPatron);
     },
     swapEnemy: function () {
         this.countSwaps = 0;
@@ -237,7 +237,6 @@ var myRoomMechanics = {
     startRoom: function (scene) {
         this.scene = scene;
         this.swapRoom();
-        myCombatMechanics.startCombat(scene);
     },
     swapRoom: function () {
         this.scene.hero.buf = 0;

@@ -23,9 +23,6 @@ var myLevel1 = {
 
         //dibujado
         myGameArea.resizeBackground(this.room, cnv1, ctx1, 1);
-        if (typeof this.enemy.img === "undefined"){
-            console.log("Fallo");
-        }
         //myGameArea.drawInBackground(1, this.posHero, this.hero.img);
         
         myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
