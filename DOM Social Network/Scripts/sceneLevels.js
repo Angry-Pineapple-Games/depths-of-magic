@@ -6,13 +6,13 @@ var myLevel1 = {
     posEnemy: [0,0],
     rooms : [],
     room : {},
-    enemiesMax: 3,
-    roomsMax: 3,
+    enemiesMax: 4,
+    roomsMax: 4,
     limitTimePerPatron : 8000,
     start: function () {
         this.hero = myHeroCharacter.generateHero(myPreload.images.hero);
         this.enemies = myCharacterEnemies.generateEnemies(this);
-        this.enemy = myGameMechanics.generateEnemy(this.enemies, this.enemiesMax);
+        //this.enemy = myGameMechanics.generateEnemy(this.enemies, this.enemiesMax);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         myRoomMechanics.startRoom(this);
     },

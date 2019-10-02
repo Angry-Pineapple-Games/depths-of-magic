@@ -63,8 +63,7 @@ var myInputsManager = {
         });
 
         $(document).keyup(function (e) {
-            if (e.key === "Escape") {
-                console.log("escape press");
+            if (e.key === "Escape") {//pausa la partida
                 if (!pause) {
                     pause = true;
                     myGameManager.pauseTimers();
@@ -73,6 +72,8 @@ var myInputsManager = {
                     pause = false;
                     myGameManager.resumeTimers();
                 }
+            }else if(e.key === "Backspace") { //si la tecla era "retroceso" vuelve a la pagina anterior
+                window.history.back();
             }
         });
     }
