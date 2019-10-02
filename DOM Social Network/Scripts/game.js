@@ -1,6 +1,7 @@
 /*En este script se gestiona todo lo relacionado con las pantallas del juego, marcando cual es la actual y siendo el puente entre gameManager y las scenes para el
 dibujado, actualización y comienzo de cada escena*/
 var myGame = {
+    debug: false,
     scene : 0,// la pantalla actual del juego
     sceneStarted : false,
     scenes : [myLevel1, myGameOver], //las diferentes pantallas del juego
@@ -19,10 +20,12 @@ var myGame = {
         this.sceneStarted = false;
         if (this.scene < this.scenes.length-2) {this.scene++;}
         else {this.scene=0;}
+        if(this.debug){console.log("SwapScene");}
     },
     gameOver : function() {
         this.sceneStarted = false;
         this.scene = this.scenes[this.scenes.length-1];
+        if(this.debug){console.log("GameOver");}
     }
 }
 

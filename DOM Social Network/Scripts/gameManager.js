@@ -19,8 +19,40 @@ var myGameManager = {
     fps : 60,
     framesThisSecond : 0,
     lastFpsUpdate : 0,
+    timers: [],
+    pause: false,
     start : function () {
         window.requestAnimationFrame(mainLoop);
+    },
+    addTimer: function(callback, timeMilis) {
+        if (this.pause) {
+            console.log("Concurrency Fail: gameManager/myGameManager/addtimer/pause");
+        } else {
+            this.timers.push(new myTimer(callback, timeMilis));
+        }
+    },
+    pauseTimers: function() {
+        for (var idx = 0; idx < this.timers.length; idx++) {
+            this.timers[idx].pause();
+        }
+    },
+    resumeTimers: function() {
+        for (var idx = 0; idx < this.timers.length; idx++) {
+            if(this.timers.length>1 && this.timers[idx].timeMilis < 0) {
+                this.timers.splice(idx, 1);
+                idx--;
+            }else if (this.timers[idx].timeMilis < 0) {
+                console.log("Concurrency fail");
+                this.timers[idx].timeMilis = 0;
+                this.timers[idx].resume();
+            } else {
+                this.timers[idx].resume();
+            }
+        }
+    },
+    clearTimers: function() {
+        this.pauseTimers();
+        this.timers = [];
     }
 }
 
@@ -54,6 +86,23 @@ var mainLoop = function(timestamp) {
     }
     myGame.draw(myGameManager.delta / myGameManager.timestep, myGameArea.context1, myGameArea.context2, myGameArea.canvas1, myGameArea.canvas2);
     window.requestAnimationFrame(mainLoop);
+}
+
+function myTimer(callback, timeMilis) {
+    this.callback = callback;
+    this.timerID = 0;
+    this.timeMilis = timeMilis;
+    this.start = Date.now();
+    this.pause = function() {
+        clearTimeout(this.timerID);
+        this.timeMilis = this.timeMilis - (Date.now()-this.start);
+    }
+    this.resume = function() {
+        this.start = Date.now();
+        if (this.timeMilis >= 0) {this.timerID = setTimeout(this.callback, this.timeMilis);}
+        else {console.log("Fail gameManager/myTimer/timeMilis<0")}
+    }
+    this.resume();
 }
 
 //referencias: https://isaacsukin.com/news/2015/01/detailed-explanation-javascript-game-loops-and-timing#panic-spiral-death

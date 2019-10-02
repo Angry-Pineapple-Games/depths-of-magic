@@ -6,13 +6,13 @@ var myLevel1 = {
     posEnemy: [0,0],
     rooms : [],
     room : {},
-    enemiesMax: 3,
-    roomsMax: 3,
+    enemiesMax: 4,
+    roomsMax: 4,
     limitTimePerPatron : 8000,
     start: function () {
         this.hero = myHeroCharacter.generateHero(myPreload.images.hero);
         this.enemies = myCharacterEnemies.generateEnemies(this);
-        this.enemy = myGameMechanics.generateEnemy(this.enemies, this.enemiesMax);
+        //this.enemy = myGameMechanics.generateEnemy(this.enemies, this.enemiesMax);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         myRoomMechanics.startRoom(this);
     },
@@ -23,9 +23,6 @@ var myLevel1 = {
 
         //dibujado
         myGameArea.resizeBackground(this.room, cnv1, ctx1, 1);
-        if (typeof this.enemy.img === "undefined"){
-            console.log("Fallo");
-        }
         //myGameArea.drawInBackground(1, this.posHero, this.hero.img);
         
         myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);

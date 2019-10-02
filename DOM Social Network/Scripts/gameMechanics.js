@@ -1,6 +1,6 @@
 /*En este script se establecen las diferentes mecánicas que se puedan dar en el juego*/
 var myGameMechanics = {
-    debug: true,
+    debug: false,
     traces: [],//se componen de un primer array con el grosor del trazo y si ya ha sido analizado para su seguimiento
     tracks: [],
     mapTrack: [ //mapa de caminos para detectar y seleccionar las cuerdas cortadas
@@ -43,16 +43,18 @@ var myGameMechanics = {
     generateGridRopes: function (enemy) {//coge un nuevo grid aleatorio y lo pinta, contando el número de cuerdas totales
         enemy.gridRopeNow = Math.floor(Math.random() * enemy.gridRopes.length);
         enemy.gridRopes[enemy.gridRopeNow].forEach(function (rope) {
-            if (rope !== undefined && typeof rope[1] === "string") {
-                rope[1] = myPreload.images[rope[1]];
+            if (typeof rope[2] === "string") {
+                rope[2] = myPreload.images[rope[2]];
                 myCombatMechanics.totalRopes++;
+            } else if (rope[0] === -1) {
+                rope[0] = 0;
             }
         });
     },
-    generateEnemy: function (enemies, enemiesMax) {
-        let nextEnemy = enemies[Math.floor(Math.random() * enemiesMax)];
-        if(typeof nextEnemy === "undefined") {
-            console.log("fallo");
+    generateEnemy: function (enemies, enemiesMax, nEnemies) {
+        let nextEnemy = enemies[enemiesMax - 1];
+        if (myRoomMechanics.countSwaps < myRoomMechanics.nRooms - 1) {
+            nextEnemy = enemies[Math.floor(Math.random() * nEnemies)];
         }
         nextEnemy.hp = nextEnemy.hpMax;
         nextEnemy.buf = 0;
@@ -60,31 +62,37 @@ var myGameMechanics = {
     },
     generateRooms: function (roomsMax) {
         let rooms = [];
-        for (var r=0; r<roomsMax; r++) {
-            rooms.push(myPreload.images['room'+String(r)]);
+        for (var r = 0; r < roomsMax; r++) {
+            rooms.push(myPreload.images['room' + String(r)]);
         }
         return rooms;
     },
     drawRopes: function (gridRopes) { //pinta las cuerdas en función del tamaño de la imagen de fondo
         myGameArea.drawInBackgroundAGrid(2, this.getPositionRope, gridRopes);
     },
-    deleteRope: function (gridRopes) { //elimina la cuerda analizando los tracks con el mapa de seguimiento
-        while (this.tracks.length > 0) {
+    deleteRope: function (gridRope) { //elimina la cuerda analizando los tracks con el mapa de seguimiento
+        while (this.tracks.length > 0) {//mientras existan trazos
             let lastPosTrace = this.tracks[0][0];
-            for (var x = 1; x < this.tracks[0].length; x++) {
+            let concatenatedCuts = 0;
+            for (var x = 1; x < this.tracks[0].length; x++) {//recorro el trazo realizado
                 let neighbour = this.mapTrack[lastPosTrace];
                 let y = 0;
                 let ropeFound = false;
-                while (y < neighbour[0].length && !ropeFound) {
-                    if (neighbour[0][y] === this.tracks[0][x]) {
-                        gridRopes[neighbour[1][y]] = undefined;
-                        myCombatMechanics.cutRopes++;
-                        ropeFound = true;
+                while (y < neighbour[0].length && !ropeFound) {//recorro los vecinos posibles
+                    let z = 0;
+                    while (z < gridRope.length && !ropeFound) {//recorro las cuerdas
+                        if (gridRope[z][1] === neighbour[1][y] && neighbour[0][y] === this.tracks[0][x]) {
+                            if (myCutMechanics.checkRopeType(gridRope, z, this.tracks[0], x)) { concatenatedCuts++; }
+                            else { myCutMechanics.concatenatedCuts = 0; }
+                            ropeFound = true;
+                        }
+                        z++;
                     }
                     y++;
                 }
                 lastPosTrace = this.tracks[0][x];
             }
+            myCutMechanics.checkConcatenateCut(concatenatedCuts);
             this.tracks.shift();
         }
     },
@@ -178,72 +186,140 @@ var myGameMechanics = {
                 return [bg.width * 0.46875, bg.width * 0.75];
             case 23:
                 return [bg.width * 0.71875, bg.width * 0.75];
+            default:
+                console.log("Fail gameMechanic/myGameMechanic/getpositionrope")
+                break;
         }
     }
 }
 
 var myCombatMechanics = {
-    debug: true,
-    cutRopes : 0,
-    totalRopes : 0,
-    concatenatedCuts : 0,
-    countSwaps : 0,
-    countCombats : 0,
-    patronsPerEnemy : 4,
-    nEnemies : 3,
-    scene : {},
+    debug: false,
+    countSwaps: 0,
+    countCombats: 0,
+    patronsPerEnemy: 3,
+    nEnemies: 3,
+    scene: {},
     startCombat: function (scene) {
         this.scene = scene;
         this.countSwaps = 0;
         this.countCombats = 0;
-        this.swapPattern();
+        this.swapEnemy();
     },
     swapPattern: function () {
-        this.cutRopes = 0;
-        this.totalRopes = 0;
-        this.concatenatedCuts = 0;
+        myCutMechanics.cutRopes = 0;
+        myCutMechanics.totalRopes = 0;
+        myCutMechanics.concatenatedCuts = 0;
         myGameMechanics.generateGridRopes(this.scene.enemy);
-        setTimeout(this.updateState, this.scene.limitTimePerPatron);
-        if(this.debug === true){console.log("Swaping pattern");}
+        myGameManager.addTimer(this.updateState, this.scene.limitTimePerPatron);
+        if (this.debug) { console.log("SwapPattern"); }
     },
-    swapEnemy: function() {
+    swapEnemy: function () {
         this.countSwaps = 0;
-        this.scene.enemy = myGameMechanics.generateEnemy(this.scene.enemies, this.scene.enemiesMax);
-        if(++this.countCombats < this.nEnemies){this.swapPattern();}
-        else{
-            clearTimeout();
+        if (this.countCombats++ < this.nEnemies) {
+            this.scene.enemy = myGameMechanics.generateEnemy(this.scene.enemies, this.scene.enemiesMax, this.nEnemies);
+            if (this.debug) { console.log("SwapEnemy"); }
+            this.swapPattern();
+        }
+        else {
+            myGameManager.clearTimers();
             myRoomMechanics.swapRoom();
         }
-        if(this.debug === true){console.log("Swaping Enemy");}
     },
     updateState: function () {
         that = myCombatMechanics;
-        if(that.scene.hero.hp <= 0){myGame.gameOver();}
-        else if(that.scene.enemy.hp <= 0){that.swapEnemy();}
+        if (that.scene.hero.hp <= 0) { myGame.gameOver(); }
+        else if (that.scene.enemy.hp <= 0) { that.swapEnemy(); }
         //correspondiente animacion y cuando termine que llame a swapPattern el y eliminar la linea de abajo
-        else if(that.countSwaps++ < 4) {that.swapPattern();}
-        else {that.swapEnemy();}
+        else if (++that.countSwaps < that.patronsPerEnemy) { that.swapPattern(); }
+        else { that.swapEnemy(); }
     }
 }
 
 var myRoomMechanics = {
-    debug: true,
-    scene : {},
-    countSwaps : 0,
+    debug: false,
+    scene: {},
+    countSwaps: 0,
     nRooms: 3,
-    startRoom: function(scene) {
+    startRoom: function (scene) {
         this.scene = scene;
+        this.countSwaps = 0;
         this.swapRoom();
-        myCombatMechanics.startCombat(scene);
     },
-    swapRoom: function() {
+    swapRoom: function () {
         this.scene.hero.buf = 0;
-        this.scene.room = this.scene.rooms[Math.floor(Math.random()*this.scene.roomsMax)];
-        myCombatMechanics.startCombat(this.scene);
-        if(this.countSwaps++ < this.nRooms) {
-            myGame.swapScene();
-            if(this.debug === true){console.log("Swaping Level");}
+        if (this.countSwaps++ < this.nRooms) {
+            this.scene.room = this.scene.rooms[Math.floor(Math.random() * this.scene.roomsMax)];
+            if (this.debug) { console.log("SwapRoom"); }
+            myCombatMechanics.startCombat(this.scene);
+        } else { myGame.swapScene(); }
+    }
+}
+
+var myCutMechanics = {
+    debug: false,
+    cutRopes: 0,
+    totalRopes: 0,
+    concatenatedCuts: 0,
+    rope: {},
+    gridRope: {},
+    lastPosTrace: 0,
+    posTrace: 0,
+    nextPosTrace: 0,
+    checkRopeType: function (gridRope, posRopeInGrid, track, x) {
+        this.gridRope = gridRope;
+        this.rope = gridRope[posRopeInGrid];
+        this.lastPosTrace = track[x - 1];
+        this.posTrace = track[x];
+        this.nextPosTrace = (x + 1 === track.length) ? -1 : track[x + 1];
+        switch (this.rope[3]) {
+            case 0:
+                return this.checkSimpleCut();
+            case 1:
+                return this.checkDoubleCut();
+            case 2:
+                return this.checkDirectionalCut(-1);
+            case 3:
+                return this.checkDirectionalCut(1);
+            case 4:
+                return this.checkCutInOrder();
         }
-        else if(this.debug === true){console.log("Swaping Room");}
+    },
+    checkSimpleCut: function () {
+        this.rope[0] = -1;
+        this.cutRopes++;
+        return true;
+    },
+    checkDoubleCut: function () {
+        if (this.lastPosTrace === this.nextPosTrace) {
+            this.rope[0] = -1;
+            this.cutRopes++;
+            return true;
+        }
+        return false;
+    },
+    checkDirectionalCut: function (dir) {
+        if (this.posTrace - this.lastPosTrace < 0 && dir < 0) {
+            this.rope[0] = -1;
+            this.cutRopes++;
+            return true;
+        } else if (this.posTrace - this.lastPosTrace > 0 && dir > 0) {
+            this.rope[0] = -1;
+            this.cutRopes++;
+            return true;
+        }
+        return false;
+
+    },
+    checkCutInOrder: function () {
+        if (this.cutRopes - 1 === this.posRopeInGrid) {
+            this.rope[0] = -1;
+            this.cutRopes++;
+            return true;
+        }
+        return false;
+    },
+    checkConcatenateCut: function (concatenatedCuts) {
+        if (concatenatedCuts > 1) { this.concatenatedCuts += concatenatedCuts; }
     }
 }
