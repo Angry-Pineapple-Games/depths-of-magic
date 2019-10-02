@@ -1,83 +1,88 @@
-/*En este script se gestona todo lo relacionado con los tamaños de los canvas, fondos e imagenes que se usan en el juego*/
+/*En este script se gestiona todo lo relacionado con los tamaños de los canvas, fondos e imagenes que se usan en el juego*/
 var myGameArea = {
-    canvas1 : document.getElementById("canvas1"),
-    context1 : canvas1.getContext("2d"),
-    canvas2 : document.getElementById("canvas2"),
-    context2 : canvas2.getContext("2d"),
-    start : function() {
+    canvas1: document.getElementById("canvas1"),
+    context1: canvas1.getContext("2d"),
+    canvas2: document.getElementById("canvas2"),
+    context2: canvas2.getContext("2d"),
+    tam1: 1,
+    tam2: 0,
+    start: function () {
         window.addEventListener('resize', this.resizeCanvas, false);
         this.resizeCanvas();
     },
-    resizeCanvas : function () {
-        let tam1 = 0.65;
-        let tam2 = 0.35;
-        if (window.innerWidth > window.innerHeight*1.5) {
-            myGameArea.canvas1.width = window.innerWidth*tam1;
-            myGameArea.canvas2.width = window.innerWidth*tam2;
+    editTams: function (tam1) {
+        if (tam1 > 1 || tam1 < 0) { console.log("Fail mygamearea/edittams/tam1"); }
+        this.tam1 = tam1;
+        this.tam2 = 1 - tam1;
+        this.resizeCanvas();
+    },
+    resizeCanvas: function () {//en tanto por uno
+        let that = myGameArea;
+        if (window.innerWidth > window.innerHeight * 1.5) {
+            myGameArea.canvas1.width = window.innerWidth * that.tam1;
+            myGameArea.canvas2.width = window.innerWidth * that.tam2;
             myGameArea.canvas1.height = window.innerHeight;
             myGameArea.canvas2.height = window.innerHeight;
-            myGameArea.canvas2.style.left = window.innerWidth*tam1 + 'px';
+            myGameArea.canvas2.style.left = window.innerWidth * that.tam1 + 'px';
             myGameArea.canvas2.style.top = 0 + 'px';
         } else {
             myGameArea.canvas1.width = window.innerWidth;
             myGameArea.canvas2.width = window.innerWidth;
-            myGameArea.canvas1.height = window.innerHeight*tam1;
-            myGameArea.canvas2.height = window.innerHeight*tam2;
-            myGameArea.canvas2.style.left = 0+ 'px';
-            myGameArea.canvas2.style.top = window.innerHeight*tam1 + 'px';
+            myGameArea.canvas1.height = window.innerHeight * that.tam1;
+            myGameArea.canvas2.height = window.innerHeight * that.tam2;
+            myGameArea.canvas2.style.left = 0 + 'px';
+            myGameArea.canvas2.style.top = window.innerHeight * that.tam1 + 'px';
         }
     },
-    resizeBackground: function(img, cnv, ctx, num) {
-        let aspectRatio = img.initWidth / img.initHeight;
-        let possibleHight = cnv.width/aspectRatio;
-        let possibleWidth = cnv.height * aspectRatio;
-        let newHeight = 0;
-        let newWidth = 0;
-        let drawPosInCnvWidth = cnv.width/2 - possibleWidth * 0.5;
-        let drawPosInCnvHeight = cnv.height/2 - possibleHight * 0.5;
-        if ((cnv.width < img.initWidth && cnv.height > possibleHight)|| cnv.width < possibleWidth) {
-          ctx.drawImage(img, 0, drawPosInCnvHeight, cnv.width, possibleHight);
-          newHeight = possibleHight;
-          newWidth = cnv.width;
-          drawPosInCnvWidth = 0;
+    resizeBackground: function (img, num) {
+        let cnv, ctx;
+        let background = {
+            iniWidth: img.initWidth,
+            iniHeight: img.initHeight
+        }
+
+        if(num === 1) {
+            myGameArea.background1 = background;
+            cnv = this.canvas1;
+            ctx = this.context1;
         } else {
-          ctx.drawImage(img, drawPosInCnvWidth, 0, possibleWidth, cnv.height);
-          newHeight = cnv.height;
-          newWidth = possibleWidth;
-          drawPosInCnvHeight = 0;
+            myGameArea.background2 = background;
+            cnv = this.canvas2;
+            ctx = this.context2;
         }
-        if (num === 1) {
-            myGameArea.background1 = {
-                ctx: this.context1,
-                aspectRatio : aspectRatio,
-                width : newWidth,
-                iniWidth : img.initWidth,
-                height : newHeight,
-                iniHeight : img.initHeight,
-                drawPosX : drawPosInCnvWidth,
-                drawPosY : drawPosInCnvHeight
-            }
-        } else if (num === 2) {
-            myGameArea.background2 = {
-                ctx: this.context2,
-                aspectRatio : aspectRatio,
-                width : newWidth,
-                iniWidth : img.initWidth,
-                height : newHeight,
-                iniHeight : img.initHeight,
-                drawPosX : drawPosInCnvWidth,
-                drawPosY : drawPosInCnvHeight
-            }
+
+        background.cnv = cnv;
+        background.ctx = ctx;
+        let aspectRatio = img.initWidth / img.initHeight;
+        background.aspectRatio = aspectRatio;
+        let possibleHight = cnv.width / aspectRatio;
+        let possibleWidth = cnv.height * aspectRatio;
+        let drawPosInCnvWidth = cnv.width / 2 - possibleWidth * 0.5;
+        let drawPosInCnvHeight = cnv.height / 2 - possibleHight * 0.5;
+
+        if ((cnv.width < img.initWidth && cnv.height > possibleHight) || cnv.width < possibleWidth) {
+            ctx.drawImage(img, 0, drawPosInCnvHeight, cnv.width, possibleHight);
+            background.height = possibleHight;
+            background.width = cnv.width;
+            drawPosInCnvWidth = 0;
+        } else {
+            ctx.drawImage(img, drawPosInCnvWidth, 0, possibleWidth, cnv.height);
+            background.height = cnv.height;
+            background.width  = possibleWidth;
+            drawPosInCnvHeight = 0;
         }
+
+        background.drawPosX = drawPosInCnvWidth;
+        background.drawPosY = drawPosInCnvHeight;
     },
-    drawInBackgroundAGrid: function(num, callback, grid) {
+    drawInBackgroundAGrid: function (num, callback, grid) {
         let bg;
-        if (num===1){bg = this.background1;}
-        else if (num===2){bg = this.background2;}
-        else {console.log("Error en canvasManager/drawInBackground/num");}
+        if (num === 1) { bg = this.background1; }
+        else if (num === 2) { bg = this.background2; }
+        else { console.log("Error en canvasManager/drawInBackground/num"); }
         if (bg !== undefined) {
             grid.forEach(g => {
-                if(g[0] !== -1) {
+                if (g[0] !== -1) {
                     let pos = callback(bg, g[1]);//[posx, posy]
                     let resizePerOne = this.resizeBackgroundPerOne(bg);
                     bg.ctx.drawImage(g[2], bg.drawPosX + pos[0], bg.drawPosY + pos[1], g[2].initWidth * resizePerOne, g[2].initHeight * resizePerOne);
@@ -85,28 +90,28 @@ var myGameArea = {
             });
         }
     },
-    drawInBackground: function(num, pos, img) {
+    drawInBackground: function (num, pos, img) {
         let bg;
-        if (num===1){bg = this.background1;}
-        else if (num===2){bg = this.background2;}
-        else {console.log("Error en canvasManager/drawInBackground/num");}
+        if (num === 1) { bg = this.background1; }
+        else if (num === 2) { bg = this.background2; }
+        else { console.log("Error en canvasManager/drawInBackground/num"); }
         if (bg !== undefined) {
             let resizePerOne = this.resizeBackgroundPerOne(bg);
             bg.ctx.drawImage(img, bg.drawPosX + pos[0], bg.drawPosY + pos[1], img.initWidth * resizePerOne, img.initHeight * resizePerOne);
         }
     },
-    animateInBackground: function(num, pos, img, animation, frame) {
+    animateInBackground: function (num, pos, img, animation, frame) {
         let bg;
-        if (num===1){bg = this.background1;}
-        else if (num===2){bg = this.background2;}
-        else {console.log("Error en canvasManager/drawInBackground/num");}
+        if (num === 1) { bg = this.background1; }
+        else if (num === 2) { bg = this.background2; }
+        else { console.log("Error en canvasManager/drawInBackground/num"); }
         if (bg !== undefined) {
             let resizePerOne = this.resizeBackgroundPerOne(bg);
-            myAnimManager.drawFrame(bg.ctx,img,animation,frame,bg.drawPosX + pos[0], bg.drawPosY + pos[1]);
+            myAnimManager.drawFrame(bg.ctx, img, animation, frame, bg.drawPosX + pos[0], bg.drawPosY + pos[1]);
         }
     },
-    resizeBackgroundPerOne: function(bg) {
-        return bg.width/bg.iniWidth;
+    resizeBackgroundPerOne: function (bg) {
+        return bg.width / bg.iniWidth;
     }
 }
 

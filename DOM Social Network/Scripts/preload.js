@@ -1,4 +1,29 @@
 /*En este script se gestiona la carga de los archivos multimedia para dejarlo disponible siempre que sea necesario*/
+var myLoading = {
+  images: [],
+  numImages: 16,
+  source: {
+    firstFrame: {
+      src: 'Assets/preload/DepthsOfMagic',
+      width: 2100,
+      height: 1500}
+  },
+  loadImages: function(callback) {
+    let loadedImages = 0;
+    for(var i=0; i<this.numImages; i++) {
+      this.images[i] = new Image();
+      this.images[i].onload = function() {
+        if(++loadedImages >= myLoading.numImages) {
+          myPreload.loadImages(callback);
+        }
+      };
+      this.images[i].src = this.source.firstFrame.src + String(i) + ".png";
+      this.images[i].initWidth = this.source.firstFrame.width;
+      this.images[i].initHeight = this.source.firstFrame.height;
+    }
+  }
+}
+
 var myPreload = {
   images: {},
   sources : {
@@ -115,8 +140,12 @@ var myPreload = {
     let numImages = 0;
     for(var src in this.sources) {
       numImages++;
+    }
+    for(var src in this.sources) {
+      let percent = 0;
       this.images[src] = new Image();
       this.images[src].onload = function() {
+        myGameArea.resizeBackground(myLoading.images[Math.trunc((loadedImages/numImages)*myLoading.numImages)], 1);
         if(++loadedImages >= numImages) {
           callback();
         }
@@ -130,6 +159,6 @@ var myPreload = {
     }
     
     //this.spritesInfo.spritesHero.frames = myAnimManager.getFrameInfoFromJSON(this.spritesInfo.spritesHero.json);
-    console.log(this.spritesInfo.spritesHero.frames);
+    //console.log(this.spritesInfo.spritesHero.frames);
   }
 }
