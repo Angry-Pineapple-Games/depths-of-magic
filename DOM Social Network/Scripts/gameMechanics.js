@@ -52,9 +52,9 @@ var myGameMechanics = {
         });
     },
     generateEnemy: function (enemies, enemiesMax, nEnemies) {
-        let nextEnemy = enemies[enemiesMax - 1];
-        if (myRoomMechanics.countSwaps < myRoomMechanics.nRooms - 1) {
-            nextEnemy = enemies[Math.floor(Math.random() * nEnemies)];
+        let nextEnemy = enemies[Math.floor(Math.random() * nEnemies)];
+        if (myRoomMechanics.countSwaps === myRoomMechanics.nRooms && myCombatMechanics.countCombats === nEnemies) {
+            nextEnemy = enemies[enemiesMax -1];
         }
         nextEnemy.hp = nextEnemy.hpMax;
         nextEnemy.buf = 0;

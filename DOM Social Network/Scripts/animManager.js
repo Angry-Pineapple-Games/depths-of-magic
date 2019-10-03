@@ -8,7 +8,7 @@ var myAnimManager = {
             $.each(JSONArray, function(index, value){
                 arrayFrames.push(value);
             });
-            console.log("Extraction succesful");
+            //console.log("Extraction succesful");
         }else{
             console.log("JSON file in wrong format. Please use JSON Array");
         }

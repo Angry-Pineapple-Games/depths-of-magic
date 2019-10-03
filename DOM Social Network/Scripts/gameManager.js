@@ -1,14 +1,12 @@
 /*En este script se gestiona el motor del juego, controlando el gameloop y siendo por tanto el core de esta estructura*/
 function preloadGame() {
-    myPreload.loadImages(startGame);
+    myGameArea.start();
+    myLoading.loadImages(startGame);
 }
 
 function startGame() {
-    myGameArea.start();
     myInputsManager.start();
     myGameManager.start();
-
-    //myGamePiece = new component(30, 30, "red", 10, 120);
 }
 
 var myGameManager = {

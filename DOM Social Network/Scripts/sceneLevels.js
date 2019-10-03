@@ -10,6 +10,7 @@ var myLevel1 = {
     roomsMax: 4,
     limitTimePerPatron : 8000,
     start: function () {
+        myGameArea.editTams(0.6);
         this.hero = myHeroCharacter.generateHero(myPreload.images.hero);
         this.enemies = myCharacterEnemies.generateEnemies(this);
         //this.enemy = myGameMechanics.generateEnemy(this.enemies, this.enemiesMax);
@@ -22,7 +23,7 @@ var myLevel1 = {
         //cambio de estado
 
         //dibujado
-        myGameArea.resizeBackground(this.room, cnv1, ctx1, 1);
+        myGameArea.resizeBackground(this.room, 1);
         //myGameArea.drawInBackground(1, this.posHero, this.hero.img);
         
         myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
