@@ -55,7 +55,7 @@ Ambas secuencias serán omisibles, de cara a
 * **Secuencia introductoria**: Se muestra la siguiente frase:     _"ENG: Whoever fights with monsters should see to it that he does not become a monster in the process." / ESP: "Quien con monstruos lucha cuide de no convertirse a su vez en monstruo"_ , acto seguido, la frase desaparece y comienza a formarse una llama. Cuando la llama llega a la máxima intensidad, aparece otra frase _"ENG: And when you gaze long into an abyss, the abyss also gazes into you."  / ESP: "Cuando miras largo tiempo a un abismo, el abismo también mira dentro de ti",_ con _Friderich Nietzsche_ escrito debajo como subtítulo de autoría. Acto seguido, la frase comienza a desaparecer y se muestra un plano medio de Rhaxtir de espaldas mirando hacia la caverna, mientras el viento agita su pelo.
 * **Secuencia final**: Esta secuencia se mostrará cuando Rhaxtir derrote al jefe final en el nivel 3. En ella se verá un primer plano de su mano sosteniendo una llama del color del enemigo final. Volverá a aparecer la frase _"ENG: Whoever fights with monsters should see to it that he does not become a monster in the process." / ESP: "Quien con monstruos lucha cuide de no convertirse a su vez en monstruo"_, y cuando esta desaparezca, la mano se cerrará de golpe, absorbiendo la energía mágica de la llama. Habrá un fundido a negro, en el que aparecerá otra vez la segunda parte de la frase, esta vez sin referenciar a Nietzsche: _ENG: "And when you gaze long into an abyss, the abyss also gazes into you. "/ ESP: "Cuando miras largo tiempo a un abismo, el abismo también mira dentro de ti"_, y cuando esta frase desaparezca, se verá en la oscuridad cómo se abren los ojos de Rhaxtir, emanando el color del jefe final, en señal de que ha absorbido su poder. De esta manera, se enlaza la historia con la jugabilidad, justificando que Rhaxtir ha sido consumida por su ambición de poder y ahora solo le queda continuar en la mazmorra hasta la extenuación (el _Game Over_).
 
-**_TODO_**: Inclusión del Storyboard para referencia de los artistas.
+![](https://github.com/Angry-Pineapple-Games/depths-of-magic/blob/master/Game%20Design/Storyboard.jpg "Storyboard")
 
 ### Gameplay resumido
 El juego se desarrollará como una secuencia de combates, uno tras otro y con transiciones entre ellos. Habrá tres niveles, cada uno con tres salas y varios combates en cada sala. Al finalizar cada nivel se informará al jugador de la progresión obtenida y se pasará al siguiente.
@@ -78,8 +78,8 @@ TODO_: Muestra de la interfaz de usuario.
 #### Cadenas
 Las cadenas que forman los patrones mágicos de los enemigos tendrán distintas formas y efectos. Enlazar varios cortes incrementará los efectos que tengan las cadenas cortadas.
 * **Cadena de contraataque:** Cortarla prevendrá el daño que se fuese a hacer al protagonista y se realizará un contraataque que dañará al enemigo en función de los stats del protagonista y del propio enemigo.
-* **Cadena de buff**: Cortarla aumentará un stat del personaje (ataque o defensa, al azar) hasta finalizar una sala. Fallar el corte aumentará un stat del enemigo y se mantendrá hasta que este sea derrotado.
-* **Cadena de debuff**: Cortarla disminuye un stat del enemigo hasta que este sea derrotado. Fallar disminuirá un stat del personaje hasta finalizar la sala. Los buffs y debuffs son acumulativos (se pueden tener varios buffs en el mismo stat), y uno anula a otro si se aplican al mismo stat.
+* **Cadena de buff**: Cortarla aumentará un stat del personaje (ataque primero, luego defensa) hasta finalizar una sala. Fallar el corte aumentará un stat del enemigo y se mantendrá hasta que este sea derrotado.
+* **Cadena de debuff**: Cortarla disminuye un stat del enemigo hasta que este sea derrotado. Fallar disminuirá un stat del personaje hasta finalizar la sala. Los buffs y debuffs no son acumulativos (no se pueden tener varios buffs en el mismo stat, cortar una tercera cadena simplemente no tiene efecto), y uno anula a otro si se aplican al mismo stat.
 * **Cadena de curación**: Cortarla devolverá el hechizo al enemigo y le curará vida. No cortarla recuperará vida a Rhaxtir. De esta manera se incentiva a no cortar todas las cadenas sin pensar.
 * **Cadena de shock**: Si no se corta esta cadena, el personaje quedará expuesto al siguiente ataque enemigo, no pudiendo cortar ninguna cadena. Si se corta con éxito, infligirá una gran cantidad de daño al enemigo. Requiere de conectar dos veces para cortarla.
 #### Enemigos
@@ -104,6 +104,8 @@ Habrá dos modos de juego:
 * Cooperativo: Dos jugadores podrán participar a la vez. Se enfrentarán a enemigos más fuertes (stats incrementados) desde un inicio y cortarán las cadenas por turnos: ataque del enemigo -> corta el jugador 1 -> siguiente ataque -> corta el jugador 2. En este modo de juego, el _Game Over_ llegará cuando ambos jugadores pierdan, y si solo uno de los dos muere en combate, se le restaurará la vida al finalizar una sala.
 #### Sistema de guardado
 El juego no contará con sistema de guardado, ya que está orientado a partidas de jugar hasta perder. Queda abierta la posibilidad de guardar el progreso de los jugadores al finalizar las partidas a modo de ranking.
+## Modelo de Negocio
+![](https://github.com/Angry-Pineapple-Games/depths-of-magic/blob/master/Bussiness%2C%20Marketing%20and%20Management/Canvas.jpg "Modelo de negocio - Canvas")
 ## Assets necesarios
 ### Sprites
 * Protagonista
@@ -170,27 +172,74 @@ El juego no contará con sistema de guardado, ya que está orientado a partidas 
 * Símbolo de defensa
 * Símbolo de salud
 * Símbolos de buff/debuff
-## Milestones del proyecto
-### Milestone 1 - 27/ 09 / 2019 [FINALIZADO]
-#### Objetivo: Concepto de juego
+## Objetivos del proyecto
+### Estimación del coste en tiempo de las tareas
+* **Mario:**
+	* Documentación para diseños: 20 horas
+	* Logos de la empresa y el juego: 7 horas
+	* Bocetos de personaje y enemigos: 3 horas
+	* Diseño de personaje y enemigos: 25 horas
+	* Diseño de grid y cadenas: 15 horas
+	* Animaciones de personaje y enemigos: 40 horas
+	* Bocetos de interfaz: 2 horas
+	* Diseño de assets de la interfaz: 5 horas
+* **Javier:**
+	* Implementación del Framework del juego: 65 horas
+	* Implementación del Gameplay principal: 25 horas
+	* Implementación del esqueleto de la web: 5 horas
+	* Implementación de mecánicas específicas: 25 horas
+	* Implementación de parámetros y decisiones de diseño: 8 horas
+	* Testeo: 40 horas
+* **César**:
+	* Implementación del servidor: 5 horas
+	* Documentación sobre animar con JavaScript: 10 horas
+	* Implementación de animaciones con JSON: 12 horas
+	* Documentación sobre sonido: 5 horas
+	* Diseño de sonido: 25 horas
+	* Documentación de música: 15 horas
+	* Diseño de música: 30 horas
+* **Laura**:
+	*  Boceto de enemigo y búsqueda de referencias: 2 horas 30 minutos por enemigo.
+	* Limpieza y coloreado del boceto: 30 minutos por enemigo.
+	* Spritesheet completa del enemigo: 5 horas por enemigo.
+	* Boceto de fondo y sombras: 1 hora por fondo.
+	* Mejorado de fondo: 2 horas por fondo.
+	* Spritesheets de efectos: 3 horas por efecto.
+* **Juan**:
+	* Planteamiento básico del juego: 10 horas
+	* Game Design en profundidad: 30 horas
+	* Gestión de Redes Sociales: 25-40 horas
+	* Gestión de la Web: 15-20 horas
+	* Preparación de presentación PowerPoint: 3-5 horas
+	* Storyboard y guión: 2 horas
+	* Creación de las cinemáticas: 10 horas
+	* Creación del tráiler: 15 horas
+	* Diseño de enemigos, cadenas y niveles: 15 horas
+	* Balanceo y testing: 25-35 horas
+	* Canvas de Modelo de Negocio + documentación: 5 horas
+	* Modelo de monetización: 3 horas
+	* Redacción, revisión y mantenimiento del GDD: 40 horas
+### Milestones
+#### Milestone 1 - 27/ 09 / 2019 [FINALIZADO]
+##### Objetivo: Concepto de juego
 * **Programación**: Engine principal. Dos lienzos: uno de la visualización de la acción y otro donde se desarrolle la jugabilidad.
 * **Game Design**: Establecimiento de mecánicas principales, desarrollo del juego, ambientación y reglas básicas.
 * **Assets**: Arte conceptual, propuestas de diseños enemigos y de fondos.
 * **Marketing y gestión**: Cuentas de redes sociales, establecimiento de objetivos, primera versión del GDD.
-### Milestone 2 - 06 / 10 / 2019
-#### Objetivo: Primer prototipo
+#### Milestone 2 - 06 / 10 / 2019
+##### Objetivo: Primer prototipo
 * **Programación**: Game loop, clases para la gestión de los distintos objetos, desarrollo de combate.
 * **Game Design**: Guión, storyboard, diseño de los enemigos (ataques y parámetros), diseño de los niveles (número de salas por nivel, número de enemigos por sala, jefes finales), diseño de los efectos de las cadenas, mockup del diseño de interfaz.
 * **Assets**: Diseños definitivos, primeros fondos, animaciones de la protagonista.
 * **Marketing y gestión**: Movimiento en cuentas de Twitter, canvas del modelo de negocio, planes de monetización, lanzamiento de la web definitiva por Github Pages.
-### Milestone 3 - 11 / 10 / 2019
-#### Objetivo: Finalización del grueso del proyecto
+#### Milestone 3 - 11 / 10 / 2019
+##### Objetivo: Finalización del grueso del proyecto
 * **Programación**: Se puede jugar una partida de principio a fin, con todas sus pantallas (inicio, game over, cinemáticas, todos los niveles y combates).
 * **Game Design**: Balanceo de tiempo límite para cortar, de los buffs/debuffs, de los stats de personaje y enemigos y de la curva de dificultad.
 * **Assets**: Interfaz, sonido y música, animaciones finales, fondos finales.
 * **Marketing y gestión**: Mantenimiento y actualización de las redes sociales y la web. Detallar y decorar los modelos de negocio y monetización de cara a la presentación.
-### Milestone 4 - 15 / 10 / 2019
-#### Objetivo: Pequeños detalles, corrección de errores y publicación
+#### Milestone 4 - 15 / 10 / 2019
+##### Objetivo: Pequeños detalles, corrección de errores y publicación
 * **Programación**: Testing, corrección de bugs e integración de los últimos assets. Implementación del modo multijugador.
 * **Game Design**: Ajustes finales de balanceo. Mockups de las posibles ampliaciones del juego.
 * **Assets**: Animaciones y efectos que hayan quedado pendientes del anterior milestrone.
