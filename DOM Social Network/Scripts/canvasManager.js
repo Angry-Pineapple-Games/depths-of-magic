@@ -81,13 +81,13 @@ var myGameArea = {
         else if (num === 2) { bg = this.background2; }
         else { console.log("Error en canvasManager/drawInBackground/num"); }
         if (bg !== undefined) {
-            grid.forEach(g => {
-                if (g[0] !== -1) {
-                    let pos = callback(bg, g[1]);//[posx, posy]
+            for(var idx=0; idx < grid.length; idx++){
+                if (grid[idx][0] !== -1) {
+                    let pos = callback(bg, grid[idx][1]);//[posx, posy]
                     let resizePerOne = this.resizeBackgroundPerOne(bg);
-                    bg.ctx.drawImage(g[2], bg.drawPosX + pos[0], bg.drawPosY + pos[1], g[2].initWidth * resizePerOne, g[2].initHeight * resizePerOne);
+                    bg.ctx.drawImage(grid[idx][2], bg.drawPosX + pos[0], bg.drawPosY + pos[1], grid[idx][2].initWidth * resizePerOne, grid[idx][2].initHeight * resizePerOne);
                 }
-            });
+            }
         }
     },
     drawInBackground: function (num, pos, img) {

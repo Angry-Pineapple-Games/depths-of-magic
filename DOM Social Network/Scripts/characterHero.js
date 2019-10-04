@@ -1,7 +1,7 @@
 var myHeroCharacter = {
     hp: 100,
     hpMax: 100,
-    buf: 0,
+    buff: 0,
     ap: 40,
     apMax: 40,
     dp: 30,
@@ -15,7 +15,7 @@ var myHeroCharacter = {
     generateHero: function(img) {
         this.img = img;
         this.hp = this.hpMax;
-        this.buf = 0;
+        this.buff = 0;
         this.ap = this.apMax;
         this.dp = this.dpMax;
         this.generateAnimationsInfo();

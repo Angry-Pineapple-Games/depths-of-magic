@@ -1,8 +1,10 @@
 /*En este script se establecen las diferentes mecánicas que se puedan dar en el juego*/
 var myGameMechanics = {
     debug: false,
+    timeOrder: 0,
     traces: [],//se componen de un primer array con el grosor del trazo y si ya ha sido analizado para su seguimiento
     tracks: [],
+    gridRopes: {},
     mapTrack: [ //mapa de caminos para detectar y seleccionar las cuerdas cortadas
         [[1, 4], [0, 3]],
         [[0, 2, 5], [0, 1, 4]],
@@ -40,24 +42,47 @@ var myGameMechanics = {
             that.traces.shift();
         }
     },
-    generateGridRopes: function (enemy) {//coge un nuevo grid aleatorio y lo pinta, contando el número de cuerdas totales
+    generateGridRopes: function (enemy) {//coge un nuevo grid aleatorio y lo pinta, contando el número de cuerdas totales y modificando los stats
         enemy.gridRopeNow = Math.floor(Math.random() * enemy.gridRopes.length);
+        myStatsController.reset(enemy.gridRopes[enemy.gridRopeNow]);
         enemy.gridRopes[enemy.gridRopeNow].forEach(function (rope) {
-            if (typeof rope[2] === "string") {
+            if (typeof rope[2] === "string") {//si es un string en vez de una imagen
                 rope[2] = myPreload.images[rope[2]];
                 myCombatMechanics.totalRopes++;
-            } else if (rope[0] === -1) {
+            } else if (rope[0] === -1) {//si la cuerda ya esta pintada
                 rope[0] = 0;
             }
         });
+        this.gridRopes = enemy.gridRopes[enemy.gridRopeNow];
+        if(this.gridRopes[0][3] === 4) { //si es una cuerda especial
+            this.un_blockInputs();
+            myGameManager.pauseTimers("timersSwap");
+            this.generateGridWithOrder();
+        }
+    },
+    generateGridWithOrder: function() {
+        if(this.timeOrder < this.gridRopes.length) {
+            for (let g=0; g<this.gridRopes.length; g++) {
+                if (g !== this.timeOrder) {
+                    this.gridRopes[g][0] = -1;
+                }else{this.gridRopes[g][0] = 0;}
+            }
+            myGameManager.addTimer(this.timeOrderAddOne, 2000, "timersOrderPattern");
+        }else if (this.timeOrder === this.gridRopes.length){
+            for (let g=0; g<this.gridRopes.length; g++) {
+                this.gridRopes[g][0] = 0;
+            }
+            this.timeOrderAddOne();
+            myGameManager.addTimer(this.un_blockInputs, 2000, "timersOrderPattern");
+        }
     },
     generateEnemy: function (enemies, enemiesMax, nEnemies) {
         let nextEnemy = enemies[Math.floor(Math.random() * nEnemies)];
         if (myRoomMechanics.countSwaps === myRoomMechanics.nRooms && myCombatMechanics.countCombats === nEnemies) {
-            nextEnemy = enemies[enemiesMax -1];
+            nextEnemy = enemies[enemiesMax - 1];
         }
         nextEnemy.hp = nextEnemy.hpMax;
-        nextEnemy.buf = 0;
+        nextEnemy.buff = 0;
         return nextEnemy;
     },
     generateRooms: function (roomsMax) {
@@ -69,6 +94,25 @@ var myGameMechanics = {
     },
     drawRopes: function (gridRopes) { //pinta las cuerdas en función del tamaño de la imagen de fondo
         myGameArea.drawInBackgroundAGrid(2, this.getPositionRope, gridRopes);
+    },
+    timeOrderAddOne: function () {
+        let that = myGameMechanics;
+        if(that.debug){console.log("TimeOrderAddone");}
+        that.timeOrder++;
+        that.generateGridWithOrder();
+    },
+    un_blockInputs: function() {
+        let that = myGameMechanics;
+        if (!myInputsManager.blocked) {
+            if(that.debug){console.log("blockInputs");}
+            myInputsManager.blocked = true;
+        }
+        else {
+            if(that.debug){console.log("unblockInputs");}
+            myInputsManager.blocked = false;
+            myGameManager.resumeTimers("timersSwap");
+            myGameManager.clearTimers("timersOrderPattern");
+        }
     },
     deleteRope: function (gridRope) { //elimina la cuerda analizando los tracks con el mapa de seguimiento
         while (this.tracks.length > 0) {//mientras existan trazos
@@ -82,7 +126,10 @@ var myGameMechanics = {
                     let z = 0;
                     while (z < gridRope.length && !ropeFound) {//recorro las cuerdas
                         if (gridRope[z][1] === neighbour[1][y] && neighbour[0][y] === this.tracks[0][x]) {
-                            if (myCutMechanics.checkRopeType(gridRope, z, this.tracks[0], x)) { concatenatedCuts++; }
+                            if (myCutMechanics.checkRopeType(gridRope, z, this.tracks[0], x)) {
+                                myStatsController.updateStats(gridRope[z]);
+                                concatenatedCuts++;
+                            }
                             else { myCutMechanics.concatenatedCuts = 0; }
                             ropeFound = true;
                         }
@@ -120,7 +167,6 @@ var myGameMechanics = {
                                     let target = x + y * that.sizeGridX
                                     if (newTrack[newTrack.length - 1] !== target) {
                                         newTrack.push(target);
-                                        //console.log(that.tracks);
                                     }
                                     found = true;
                                 }
@@ -197,7 +243,7 @@ var myCombatMechanics = {
     debug: false,
     countSwaps: 0,
     countCombats: 0,
-    patronsPerEnemy: 3,
+    patternsPerEnemy: 3,
     nEnemies: 3,
     scene: {},
     startCombat: function (scene) {
@@ -210,8 +256,9 @@ var myCombatMechanics = {
         myCutMechanics.cutRopes = 0;
         myCutMechanics.totalRopes = 0;
         myCutMechanics.concatenatedCuts = 0;
+        myGameMechanics.timeOrder = 0;
+        myGameManager.addTimer(this.updateState, this.scene.limitTimePerPatron, "timersSwap");
         myGameMechanics.generateGridRopes(this.scene.enemy);
-        myGameManager.addTimer(this.updateState, this.scene.limitTimePerPatron);
         if (this.debug) { console.log("SwapPattern"); }
     },
     swapEnemy: function () {
@@ -222,21 +269,22 @@ var myCombatMechanics = {
             this.swapPattern();
         }
         else {
-            myGameManager.clearTimers();
+            myGameManager.clearTimers("timersSwap");
             myRoomMechanics.swapRoom();
         }
     },
     updateState: function () {
         that = myCombatMechanics;
+        myStatsController.applyStats(that.scene.hero, that.scene.enemy);
         if (that.scene.hero.hp <= 0) { myGame.gameOver(); }
         else if (that.scene.enemy.hp <= 0) { that.swapEnemy(); }
-        //correspondiente animacion y cuando termine que llame a swapPattern el y eliminar la linea de abajo
-        else if (++that.countSwaps < that.patronsPerEnemy) { that.swapPattern(); }
+        //correspondiente animacion y cuando termine que llame a swapPattern el y eliminar el contenido del else if de abajo
+        else if(++that.countSwaps < that.patternsPerEnemy) { that.swapPattern(); }
         else { that.swapEnemy(); }
     }
 }
 
-var myRoomMechanics = {
+var myRoomMechanics={
     debug: false,
     scene: {},
     countSwaps: 0,
@@ -247,7 +295,7 @@ var myRoomMechanics = {
         this.swapRoom();
     },
     swapRoom: function () {
-        this.scene.hero.buf = 0;
+        this.scene.hero.buff = 0;
         if (this.countSwaps++ < this.nRooms) {
             this.scene.room = this.scene.rooms[Math.floor(Math.random() * this.scene.roomsMax)];
             if (this.debug) { console.log("SwapRoom"); }
@@ -272,18 +320,11 @@ var myCutMechanics = {
         this.lastPosTrace = track[x - 1];
         this.posTrace = track[x];
         this.nextPosTrace = (x + 1 === track.length) ? -1 : track[x + 1];
-        switch (this.rope[3]) {
-            case 0:
-                return this.checkSimpleCut();
-            case 1:
-                return this.checkDoubleCut();
-            case 2:
-                return this.checkDirectionalCut(-1);
-            case 3:
-                return this.checkDirectionalCut(1);
-            case 4:
-                return this.checkCutInOrder();
-        }
+        if(this.rope[3] === 0) {return this.checkSimpleCut();}
+        else if(this.rope[3] === 1) {return this.checkDoubleCut();}
+        else if(this.rope[3] === 2) {return this.checkDirectionalCut(-1);}
+        else if(this.rope[3] === 3) {return this.checkDirectionalCut(1);}
+        else if(this.rope[3] === 4) {return this.checkCutInOrder(posRopeInGrid);}
     },
     checkSimpleCut: function () {
         this.rope[0] = -1;
@@ -311,8 +352,8 @@ var myCutMechanics = {
         return false;
 
     },
-    checkCutInOrder: function () {
-        if (this.cutRopes - 1 === this.posRopeInGrid) {
+    checkCutInOrder: function (posRope) {
+        if (this.cutRopes === posRope) {
             this.rope[0] = -1;
             this.cutRopes++;
             return true;
@@ -321,5 +362,65 @@ var myCutMechanics = {
     },
     checkConcatenateCut: function (concatenatedCuts) {
         if (concatenatedCuts > 1) { this.concatenatedCuts += concatenatedCuts; }
+    }
+}
+
+var myStatsController = {
+    loops: 0,//vueltas dadas al juego
+    loopfactor: 0.1,//factor de mejora enemigos en cada vuelta al juego
+    increaseFactor: 5,//factor de mejora para las estadisticas del heroe
+    counter: 0,
+    counterCounter: 0,
+    totalCounter: 0,
+    buff: 0,
+    buffFactor: 0.1,
+    counterBuff: 0,
+    totalBuff: 0,
+    debuff: 0,
+    debuffFactor: 0.1,
+    counterDebuff: 0,
+    totalDebuff: 0,
+    heal: 0,
+    counterHeal: 0,
+    totalHeal: 0,
+    reset: function (pattern) {//resetea las variables
+        this.counter = 0;
+        this.buff = 0;
+        this.debuff = 0;
+        this.heal = 0;
+        this.totalCounter = 0;
+        this.totalBuff = 0;
+        this.totalDebuff = 0;
+        this.totalHeal = 0;
+        for (var rope in pattern) {
+            if (rope[4] === 0) { this.totalCounter++; }
+            else if (rope[4] === 1) { this.totalBuff++; }
+            else if (rope[4] === 2) { this.totalDebuff++; }
+            else if (rope[4] === 3) { this.totalHeal++; }
+            else if (rope[4] === 4) { this.totalPower++; }
+        }
+    },
+    updateStats: function (rope) {//actualiza los contenedores
+        if (rope[4] === 0) { this.counter++; this.counterCounter++; }
+        else if (rope[4] === 1) { this.buff++; this.counterBuff++; }
+        else if (rope[4] === 2) { this.debuff++; this.counterDebuff++; }
+        else if (rope[4] === 3) { this.heal++; this.counterHeal++; }
+        else if (rope[4] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
+    },
+    increaseStats: function(hero) {//incrementa las estadisticas
+        hero.hp += increaseFactor * this.counterHeal;
+        this.counterHeal = 0;
+        hero.ap += increaseFactor * this.counterCounter;
+        this.counterCounter = 0;
+        hero.dp += increaseFactor * (this.counterBuff + this.counterDebuff);
+        this.counterBuff = 0;
+        this.counterDebuff = 0;
+    },
+    applyStats: function (hero, enemy) {//aplica los daños
+        hero.buff = this.buff * (hero.ap + hero.dp) * this.buffFactor - (this.totalDebuff - this.debuff) * (enemy.ap + enemy.dp) * this.debuffFactor;
+        enemy.buff = (this.totalBuff - this.buff) * (enemy.ap + enemy.dp) * this.buffFactor - this.debuff * (hero.ap + hero.dp) * this.debuffFactor;
+        
+        hero.hp = Math.trunc(((hero.buff + (hero.hp * hero.dp)) - ((this.totalCounter - this.counter) * enemy.ap + (enemy.ap * this.loops * this.loopfactor) + enemy.buff)) / hero.dp);
+        enemy.hp = Math.trunc(((enemy.buff + (enemy.hp * enemy.dp) + (enemy.ap * this.loops * this.loopfactor)) - (this.counter * hero.ap + hero.buff)) / enemy.dp);
     }
 }

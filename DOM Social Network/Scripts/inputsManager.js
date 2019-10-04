@@ -3,13 +3,14 @@ var myInputsManager = {
     leftMouseDown: false,
     rightMouseDown: false,
     middleMouseDown: false,
+    blocked: false,
     traceLive: [5, 0],//limitacion de vida del trazo
     trace: [],
     start: function () {
         let that = myInputsManager;
         let pause = myGameManager.pause;
         $("#canvas2").mousedown(function (event) {
-            if (!pause) {
+            if (!pause && !that.blocked) {
                 switch (event.which) {
                     case 1:
                         //console.log('left mouse press')
@@ -30,7 +31,7 @@ var myInputsManager = {
         });
 
         $("#canvas2").mousemove(function (event) {
-            if (!pause) {
+            if (!pause && !that.blocked) {
                 if (that.leftMouseDown) {
                     that.trace.push([event.pageX - parseInt(myGameArea.canvas2.style.left), event.pageY - parseInt(myGameArea.canvas2.style.top)])
                     /*var msg = "Move to: ";
@@ -41,7 +42,7 @@ var myInputsManager = {
         });
 
         $("#canvas2").mouseup(function (event) {
-            if (!pause) {
+            if (!pause && !that.blocked) {
                 switch (event.which) {
                     case 1:
                         //console.log('left mouse stop press')
@@ -62,15 +63,17 @@ var myInputsManager = {
             }
         });
 
-        $(document).keyup(function (e) {
+        $(document).keyup( function (e) {
             if (e.key === "Escape") {//pausa la partida
                 if (!pause) {
                     pause = true;
-                    myGameManager.pauseTimers();
+                    myGameManager.pauseTimers("timersSwap");
+                    myGameManager.pauseTimers("timersOrderPattern");
                 }
                 else {
                     pause = false;
-                    myGameManager.resumeTimers();
+                    myGameManager.resumeTimers("timersSwap");
+                    myGameManager.resumeTimers("timersOrderPattern");
                 }
             }else if(e.key === "Backspace") { //si la tecla era "retroceso" vuelve a la pagina anterior
                 window.history.back();

@@ -1,5 +1,6 @@
 var myCharacterEnemies = {
     enemies: [],
+    
     generateEnemies: function(scene) {
         for (var e=0; e<scene.enemiesMax - scene.enemies.length; e++) {
             this.enemies.push(myEnemiesProperties[String(e)]);
@@ -8,517 +9,208 @@ var myCharacterEnemies = {
         return this.enemies;
     }
 }
-//rope[deleted, pos, "image name", type] type = 0:simple, 1:double, 3:directionable negative, 4:directionable positive
+//rope[deleted, pos, "image name", typeCut, typeRope] 
+//typeCut = 0:simple, 1:double, 2:directionable negative, 3:directionable positive, 4:orden
+//typeRope = 0:contraataque, 1:buff , 2:debuff, 3:curacion, 4:power
 var myEnemiesProperties = {
     length: 10,
     0: {
         hp: 100,
         hpMax: 100,
-        buf: 0,
+        buff: 0,
         ap: 20,
         dp: 30,
         img: 'enemy0',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",0],
-            [0,6, "ropeH",0],
-            [0,9, "ropeV",0],
-            [0,10, "ropeH",0],
-            [0,13, "ropeH",0],
-            [0,14, "ropeV",0],
-            [0,15, "ropeV",0],
-            [0,22, "ropeV",0],
-            [0,23, "ropeV",0]
+            [0,4, "ropeH",4,1],
+            [0,6, "ropeH",4,1],
+            [0,7, "ropeV",4,1]
         ],[
-            [0,0, "ropeV",4],
-            [0,1, "ropeV",4],
-            [0,2, "ropeV",4],
-            [0,3, "ropeH",4],
-            [0,4, "ropeH",4],
-            [0,6, "ropeH",4],
-            [0,7, "ropeV",4],
-            [0,8, "ropeV",4],
-            [0,9, "ropeV",4],
-            [0,10, "ropeH",4],
-            [0,12, "ropeH",4],
-            [0,13, "ropeH",4],
-            [0,14, "ropeV",4],
-            [0,15, "ropeV",4],
-            [0,20, "ropeH",4],
-            [0,21, "ropeV",4],
-            [0,22, "ropeV",4],
-            [0,23, "ropeV",4]
+            [0,4, "ropeH",4,1],
+            [0,6, "ropeH",4,1],
+            [0,7, "ropeV",4,1]
         ],[
-            [0,4, "ropeH",0],
-            [0,6, "ropeH",0],
-            [0,7, "ropeV",0],
-            [0,8, "ropeV",0],
-            [0,9, "ropeV",0],
-            [0,10, "ropeH",0],
-            [0,15, "ropeV",0],
-            [0,16, "ropeV",0],
-            [0,17, "ropeH",0],
-            [0,18, "ropeH",0],
-            [0,19, "ropeH",0]
+            [0,4, "ropeH",4,1],
+            [0,6, "ropeH",4,1],
+            [0,7, "ropeV",4,1]
         ]]
     },
     1: {
         hp: 100,
         hpMax: 100,
-        buf: 0,
+        buff: 0,
         ap: 20,
         dp: 30,
         img: 'enemy1',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,13, "ropeH",1],
-            [0,14, "ropeV",1],
-            [0,15, "ropeV",1],
-            [0,22, "ropeV",1],
-            [0,23, "ropeV",1]
+            [0,4, "ropeH",4,1],
+            [0,6, "ropeH",4,1],
+            [0,7, "ropeV",4,1]
         ],[
-            [0,0, "ropeV",1],
-            [0,1, "ropeV",1],
-            [0,2, "ropeV",1],
-            [0,3, "ropeH",1],
-            [0,4, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,7, "ropeV",1],
-            [0,8, "ropeV",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,12, "ropeH",1],
-            [0,13, "ropeH",1],
-            [0,14, "ropeV",1],
-            [0,15, "ropeV",1],
-            [0,20, "ropeH",1],
-            [0,21, "ropeV",1],
-            [0,22, "ropeV",1],
-            [0,23, "ropeV",1]
+            [0,4, "ropeH",4,1],
+            [0,6, "ropeH",4,1],
+            [0,7, "ropeV",4,1]
         ],[
-            [0,4, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,7, "ropeV",1],
-            [0,8, "ropeV",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,15, "ropeV",1],
-            [0,16, "ropeV",1],
-            [0,17, "ropeH",1],
-            [0,18, "ropeH",1],
-            [0,19, "ropeH",1]
+            [0,4, "ropeH",4,1],
+            [0,6, "ropeH",4,1],
+            [0,7, "ropeV",4,1]
         ]]
     },
     2: {
         hp: 100,
         hpMax: 100,
-        buf: 0,
+        buff: 0,
         ap: 20,
         dp: 30,
         img: 'enemy2',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",2],
-            [0,6, "ropeH",2],
-            [0,9, "ropeV",2],
-            [0,10, "ropeH",2],
-            [0,13, "ropeH",2],
-            [0,14, "ropeV",2],
-            [0,15, "ropeV",2],
-            [0,22, "ropeV",2],
-            [0,23, "ropeV",2]
+            [0,4, "ropeH",4,1],
+            [0,6, "ropeH",4,1],
+            [0,7, "ropeV",4,1]
         ],[
-            [0,0, "ropeV",2],
-            [0,1, "ropeV",2],
-            [0,2, "ropeV",2],
-            [0,3, "ropeH",2],
-            [0,4, "ropeH",2],
-            [0,6, "ropeH",2],
-            [0,7, "ropeV",2],
-            [0,8, "ropeV",2],
-            [0,9, "ropeV",2],
-            [0,10, "ropeH",2],
-            [0,12, "ropeH",2],
-            [0,13, "ropeH",2],
-            [0,14, "ropeV",2],
-            [0,15, "ropeV",2],
-            [0,20, "ropeH",2],
-            [0,21, "ropeV",2],
-            [0,22, "ropeV",2],
-            [0,23, "ropeV",2]
+            [0,4, "ropeH",4,1],
+            [0,6, "ropeH",4,1],
+            [0,7, "ropeV",4,1]
         ],[
-            [0,4, "ropeH",2],
-            [0,6, "ropeH",2],
-            [0,7, "ropeV",2],
-            [0,8, "ropeV",2],
-            [0,9, "ropeV",2],
-            [0,10, "ropeH",2],
-            [0,15, "ropeV",2],
-            [0,16, "ropeV",2],
-            [0,17, "ropeH",2],
-            [0,18, "ropeH",2],
-            [0,19, "ropeH",2]
+            [0,4, "ropeH",4,1],
+            [0,6, "ropeH",4,1],
+            [0,7, "ropeV",4,1]
         ]]
     },
     3: {
         hp: 100,
         hpMax: 100,
-        buf: 0,
+        buff: 0,
         ap: 20,
         dp: 30,
         img: 'enemy3',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,13, "ropeH",1],
-            [0,14, "ropeV",1],
-            [0,15, "ropeV",1],
-            [0,22, "ropeV",1],
-            [0,23, "ropeV",1]
+            [0,3, "ropeH",0, 1]
         ],[
-            [0,0, "ropeV",1],
-            [0,1, "ropeV",1],
-            [0,2, "ropeV",1],
-            [0,3, "ropeH",1],
-            [0,4, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,7, "ropeV",1],
-            [0,8, "ropeV",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,12, "ropeH",1],
-            [0,13, "ropeH",1],
-            [0,14, "ropeV",1],
-            [0,15, "ropeV",1],
-            [0,20, "ropeH",1],
-            [0,21, "ropeV",1],
-            [0,22, "ropeV",1],
-            [0,23, "ropeV",1]
+            [0,0, "ropeV",3,1],
+            [0,1, "ropeV",3,1]
         ],[
-            [0,4, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,7, "ropeV",1],
-            [0,8, "ropeV",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,15, "ropeV",1],
-            [0,16, "ropeV",1],
-            [0,17, "ropeH",1],
-            [0,18, "ropeH",1],
-            [0,19, "ropeH",1]
+            [0,4, "ropeH",4,2],
+            [0,6, "ropeH",4,2],
+            [0,7, "ropeV",4,2]
         ]]
     },
     4: {
         hp: 100,
         hpMax: 100,
-        buf: 0,
+        buff: 0,
         ap: 20,
         dp: 30,
         img: 'enemy4',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",0],
-            [0,6, "ropeH",0],
-            [0,9, "ropeV",0],
-            [0,10, "ropeH",0],
-            [0,13, "ropeH",0],
-            [0,14, "ropeV",0],
-            [0,15, "ropeV",0],
-            [0,22, "ropeV",0],
-            [0,23, "ropeV",0]
+            [0,3, "ropeH",0, 1]
         ],[
-            [0,0, "ropeV",0],
-            [0,1, "ropeV",0],
-            [0,2, "ropeV",0],
-            [0,3, "ropeH",0],
-            [0,4, "ropeH",0],
-            [0,6, "ropeH",0],
-            [0,7, "ropeV",0],
-            [0,8, "ropeV",0],
-            [0,9, "ropeV",0],
-            [0,10, "ropeH",0],
-            [0,12, "ropeH",0],
-            [0,13, "ropeH",0],
-            [0,14, "ropeV",0],
-            [0,15, "ropeV",0],
-            [0,20, "ropeH",0],
-            [0,21, "ropeV",0],
-            [0,22, "ropeV",0],
-            [0,23, "ropeV",0]
+            [0,0, "ropeV",3,1],
+            [0,1, "ropeV",3,1]
         ],[
-            [0,4, "ropeH",0],
-            [0,6, "ropeH",0],
-            [0,7, "ropeV",0],
-            [0,8, "ropeV",0],
-            [0,9, "ropeV",0],
-            [0,10, "ropeH",0],
-            [0,15, "ropeV",0],
-            [0,16, "ropeV",0],
-            [0,17, "ropeH",0],
-            [0,18, "ropeH",0],
-            [0,19, "ropeH",0]
+            [0,4, "ropeH",4,2],
+            [0,6, "ropeH",4,2],
+            [0,7, "ropeV",4,2]
         ]]
     },
     5: {
         hp: 100,
         hpMax: 100,
-        buf: 0,
+        buff: 0,
         ap: 20,
         dp: 30,
         img: 'enemy5',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",0],
-            [0,6, "ropeH",0],
-            [0,9, "ropeV",0],
-            [0,10, "ropeH",0],
-            [0,13, "ropeH",0],
-            [0,14, "ropeV",0],
-            [0,15, "ropeV",0],
-            [0,22, "ropeV",0],
-            [0,23, "ropeV",0]
+            [0,3, "ropeH",0, 1]
         ],[
-            [0,0, "ropeV",0],
-            [0,1, "ropeV",0],
-            [0,2, "ropeV",0],
-            [0,3, "ropeH",0],
-            [0,4, "ropeH",0],
-            [0,6, "ropeH",0],
-            [0,7, "ropeV",0],
-            [0,8, "ropeV",0],
-            [0,9, "ropeV",0],
-            [0,10, "ropeH",0],
-            [0,12, "ropeH",0],
-            [0,13, "ropeH",0],
-            [0,14, "ropeV",0],
-            [0,15, "ropeV",0],
-            [0,20, "ropeH",0],
-            [0,21, "ropeV",0],
-            [0,22, "ropeV",0],
-            [0,23, "ropeV",0]
+            [0,0, "ropeV",3,1],
+            [0,1, "ropeV",3,1]
         ],[
-            [0,4, "ropeH",0],
-            [0,6, "ropeH",0],
-            [0,7, "ropeV",0],
-            [0,8, "ropeV",0],
-            [0,9, "ropeV",0],
-            [0,10, "ropeH",0],
-            [0,15, "ropeV",0],
-            [0,16, "ropeV",0],
-            [0,17, "ropeH",0],
-            [0,18, "ropeH",0],
-            [0,19, "ropeH",0]
+            [0,4, "ropeH",4,2],
+            [0,6, "ropeH",4,2],
+            [0,7, "ropeV",4,2]
         ]]
     },
     6: {
         hp: 100,
         hpMax: 100,
-        buf: 0,
+        buff: 0,
         ap: 20,
         dp: 30,
         img: 'enemy6',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,13, "ropeH",1],
-            [0,14, "ropeV",1],
-            [0,15, "ropeV",1],
-            [0,22, "ropeV",1],
-            [0,23, "ropeV",1]
+            [0,3, "ropeH",0, 1]
         ],[
-            [0,0, "ropeV",1],
-            [0,1, "ropeV",1],
-            [0,2, "ropeV",1],
-            [0,3, "ropeH",1],
-            [0,4, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,7, "ropeV",1],
-            [0,8, "ropeV",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,12, "ropeH",1],
-            [0,13, "ropeH",1],
-            [0,14, "ropeV",1],
-            [0,15, "ropeV",1],
-            [0,20, "ropeH",1],
-            [0,21, "ropeV",1],
-            [0,22, "ropeV",1],
-            [0,23, "ropeV",1]
+            [0,0, "ropeV",3,1],
+            [0,1, "ropeV",3,1]
         ],[
-            [0,4, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,7, "ropeV",1],
-            [0,8, "ropeV",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,15, "ropeV",1],
-            [0,16, "ropeV",1],
-            [0,17, "ropeH",1],
-            [0,18, "ropeH",1],
-            [0,19, "ropeH",1]
+            [0,4, "ropeH",4,2],
+            [0,6, "ropeH",4,2],
+            [0,7, "ropeV",4,2]
         ]]
     },
     7: {
         hp: 100,
         hpMax: 100,
-        buf: 0,
+        buff: 0,
         ap: 20,
         dp: 30,
         img: 'enemy7',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",0],
-            [0,6, "ropeH",0],
-            [0,9, "ropeV",0],
-            [0,10, "ropeH",0],
-            [0,13, "ropeH",0],
-            [0,14, "ropeV",0],
-            [0,15, "ropeV",0],
-            [0,22, "ropeV",0],
-            [0,23, "ropeV",0]
+            [0,3, "ropeH",0, 1]
         ],[
-            [0,0, "ropeV",0],
-            [0,1, "ropeV",0],
-            [0,2, "ropeV",0],
-            [0,3, "ropeH",0],
-            [0,4, "ropeH",0],
-            [0,6, "ropeH",0],
-            [0,7, "ropeV",0],
-            [0,8, "ropeV",0],
-            [0,9, "ropeV",0],
-            [0,10, "ropeH",0],
-            [0,12, "ropeH",0],
-            [0,13, "ropeH",0],
-            [0,14, "ropeV",0],
-            [0,15, "ropeV",0],
-            [0,20, "ropeH",0],
-            [0,21, "ropeV",0],
-            [0,22, "ropeV",0],
-            [0,23, "ropeV",0]
+            [0,0, "ropeV",3,1],
+            [0,1, "ropeV",3,1]
         ],[
-            [0,4, "ropeH",0],
-            [0,6, "ropeH",0],
-            [0,7, "ropeV",0],
-            [0,8, "ropeV",0],
-            [0,9, "ropeV",0],
-            [0,10, "ropeH",0],
-            [0,15, "ropeV",0],
-            [0,16, "ropeV",0],
-            [0,17, "ropeH",0],
-            [0,18, "ropeH",0],
-            [0,19, "ropeH",0]
+            [0,4, "ropeH",4,2],
+            [0,6, "ropeH",4,2],
+            [0,7, "ropeV",4,2]
         ]]
     },
     8: {
         hp: 100,
         hpMax: 100,
-        buf: 0,
+        buff: 0,
         ap: 20,
         dp: 30,
         img: 'enemy8',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,13, "ropeH",1],
-            [0,14, "ropeV",1],
-            [0,15, "ropeV",1],
-            [0,22, "ropeV",1],
-            [0,23, "ropeV",1]
+            [0,3, "ropeH",0, 1]
         ],[
-            [0,0, "ropeV",1],
-            [0,1, "ropeV",1],
-            [0,2, "ropeV",1],
-            [0,3, "ropeH",1],
-            [0,4, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,7, "ropeV",1],
-            [0,8, "ropeV",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,12, "ropeH",1],
-            [0,13, "ropeH",1],
-            [0,14, "ropeV",1],
-            [0,15, "ropeV",1],
-            [0,20, "ropeH",1],
-            [0,21, "ropeV",1],
-            [0,22, "ropeV",1],
-            [0,23, "ropeV",1]
+            [0,0, "ropeV",3,1],
+            [0,1, "ropeV",3,1]
         ],[
-            [0,4, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,7, "ropeV",1],
-            [0,8, "ropeV",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,15, "ropeV",1],
-            [0,16, "ropeV",1],
-            [0,17, "ropeH",1],
-            [0,18, "ropeH",1],
-            [0,19, "ropeH",1]
+            [0,4, "ropeH",4,2],
+            [0,6, "ropeH",4,2],
+            [0,7, "ropeV",4,2]
         ]]
     },
     9: {
         hp: 100,
         hpMax: 100,
-        buf: 0,
+        buff: 0,
         ap: 20,
         dp: 30,
         img: 'enemy9',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,13, "ropeH",1],
-            [0,14, "ropeV",1],
-            [0,15, "ropeV",1],
-            [0,22, "ropeV",1],
-            [0,23, "ropeV",1]
+            [0,3, "ropeH",0, 1]
         ],[
-            [0,0, "ropeV",1],
-            [0,1, "ropeV",1],
-            [0,2, "ropeV",1],
-            [0,3, "ropeH",1],
-            [0,4, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,7, "ropeV",1],
-            [0,8, "ropeV",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,12, "ropeH",1],
-            [0,13, "ropeH",1],
-            [0,14, "ropeV",1],
-            [0,15, "ropeV",1],
-            [0,20, "ropeH",1],
-            [0,21, "ropeV",1],
-            [0,22, "ropeV",1],
-            [0,23, "ropeV",1]
+            [0,0, "ropeV",3,1],
+            [0,1, "ropeV",3,1]
         ],[
-            [0,4, "ropeH",1],
-            [0,6, "ropeH",1],
-            [0,7, "ropeV",1],
-            [0,8, "ropeV",1],
-            [0,9, "ropeV",1],
-            [0,10, "ropeH",1],
-            [0,15, "ropeV",1],
-            [0,16, "ropeV",1],
-            [0,17, "ropeH",1],
-            [0,18, "ropeH",1],
-            [0,19, "ropeH",1]
+            [0,4, "ropeH",4,2],
+            [0,6, "ropeH",4,2],
+            [0,7, "ropeV",4,2]
         ]]
     }
 }
