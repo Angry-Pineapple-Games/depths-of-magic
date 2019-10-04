@@ -408,11 +408,11 @@ var myStatsController = {
         else if (rope[4] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
     },
     increaseStats: function(hero) {//incrementa las estadisticas
-        hero.hp += increaseFactor * this.counterHeal;
+        hero.hp += this.increaseFactor * this.counterHeal;
         this.counterHeal = 0;
-        hero.ap += increaseFactor * this.counterCounter;
+        hero.ap += this.increaseFactor * this.counterCounter;
         this.counterCounter = 0;
-        hero.dp += increaseFactor * (this.counterBuff + this.counterDebuff);
+        hero.dp += this.increaseFactor * (this.counterBuff + this.counterDebuff);
         this.counterBuff = 0;
         this.counterDebuff = 0;
     },

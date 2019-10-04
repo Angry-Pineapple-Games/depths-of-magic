@@ -26,11 +26,14 @@ var myGameManager = {
     addTimer: function (callback, timeMilis, timerType) {
         if (timerType === "timersSwap") { this.timersSwap.push(new myTimer(callback, timeMilis)); }
         else if (timerType === "timersOrderPattern") { this.timersOrderPattern.push(new myTimer(callback, timeMilis)); }
+        else {console.log("Fail gameManager/mygamemanager/addTimer/parameter timerType");}
     },
     pauseTimers: function (timerType) {
         let list;
         if (timerType === "timersSwap") { list = this.timersSwap; }
         else if (timerType === "timersOrderPattern") { list = this.timersOrderPattern; }
+        else if (timerType === "all") { this.pauseTimers("timersSwap"); this.pauseTimers("timersOrderPattern");return;}
+        else {console.log("Fail gameManager/mygamemanager/pauseTimers/parameter");}
 
         for (var idx = 0; idx < list.length; idx++) {
             list[idx].pause();
@@ -40,6 +43,8 @@ var myGameManager = {
         let list;
         if (timerType === "timersSwap") { list = this.timersSwap; }
         else if (timerType === "timersOrderPattern") { list = this.timersOrderPattern; }
+        else if (timerType === "all") { this.resumeTimers("timersSwap"); this.resumeTimers("timersOrderPattern");return;}
+        else {console.log("Fail gameManager/mygamemanager/resumeTimers/parameter");}
         
         for (var idx = 0; idx < list.length; idx++) {
             if (list.length > 1 && list[idx].timeMilis < 0) {
@@ -54,8 +59,10 @@ var myGameManager = {
         let list;
         if (timerType === "timersSwap") { list = this.timersSwap; }
         else if (timerType === "timersOrderPattern") { list = this.timersOrderPattern; }
+        else if (timerType === "all") { this.clearTimers("timersSwap"); this.clearTimers("timersOrderPattern");return;}
+        else {console.log("Fail gameManager/mygamemanager/clearTimers/parameter");}
         this.pauseTimers(timerType);
-        list = [];
+        list.length = 0;
     }
 }
 

@@ -67,13 +67,11 @@ var myInputsManager = {
             if (e.key === "Escape") {//pausa la partida
                 if (!pause) {
                     pause = true;
-                    myGameManager.pauseTimers("timersSwap");
-                    myGameManager.pauseTimers("timersOrderPattern");
+                    myGameManager.pauseTimers("all");
                 }
                 else {
                     pause = false;
-                    myGameManager.resumeTimers("timersSwap");
-                    myGameManager.resumeTimers("timersOrderPattern");
+                    myGameManager.resumeTimers("all");
                 }
             }else if(e.key === "Backspace") { //si la tecla era "retroceso" vuelve a la pagina anterior
                 window.history.back();
