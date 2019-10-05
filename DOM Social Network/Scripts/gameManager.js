@@ -10,6 +10,7 @@ function startGame() {
 }
 
 var myGameManager = {
+    debug: false,
     lastFrameTimeMs: 0,
     maxFPS: 60,
     delta: 0,
@@ -30,13 +31,14 @@ var myGameManager = {
     },
     pauseTimers: function (timerType) {
         let list;
-        if (timerType === "timersSwap") { list = this.timersSwap; }
-        else if (timerType === "timersOrderPattern") { list = this.timersOrderPattern; }
+        if (timerType === "timersSwap") { list = this.timersSwap;}
+        else if (timerType === "timersOrderPattern") { list = this.timersOrderPattern;}
         else if (timerType === "all") { this.pauseTimers("timersSwap"); this.pauseTimers("timersOrderPattern");return;}
         else {console.log("Fail gameManager/mygamemanager/pauseTimers/parameter");}
 
         for (var idx = 0; idx < list.length; idx++) {
             list[idx].pause();
+            if(this.debug){console.log("timerPause: " + idx);}
         }
     },
     resumeTimers: function (timerType) {
@@ -47,18 +49,20 @@ var myGameManager = {
         else {console.log("Fail gameManager/mygamemanager/resumeTimers/parameter");}
         
         for (var idx = 0; idx < list.length; idx++) {
-            if (list.length > 1 && list[idx].timeMilis < 0) {
+            if (list[idx].timeMilis < 0) {
                 list.splice(idx, 1);
                 idx--;
+                if(this.debug){console.log("timerDelete: " + idx);}
             } else {
                 list[idx].resume();
+                if(this.debug){console.log("timerResume: " + idx);}
             }
         }
     },
     clearTimers: function (timerType) {
         let list;
-        if (timerType === "timersSwap") { list = this.timersSwap; }
-        else if (timerType === "timersOrderPattern") { list = this.timersOrderPattern; }
+        if (timerType === "timersSwap") { list = this.timersSwap;}
+        else if (timerType === "timersOrderPattern") { list = this.timersOrderPattern;}
         else if (timerType === "all") { this.clearTimers("timersSwap"); this.clearTimers("timersOrderPattern");return;}
         else {console.log("Fail gameManager/mygamemanager/clearTimers/parameter");}
         this.pauseTimers(timerType);
@@ -99,6 +103,7 @@ var mainLoop = function (timestamp) {
 }
 
 function myTimer(callback, timeMilis) {
+    this.debug = false;
     this.callback = callback;
     this.timerID = 0;
     this.timeMilis = timeMilis;
@@ -108,12 +113,16 @@ function myTimer(callback, timeMilis) {
         if (++this.paused === 1) {
             clearTimeout(this.timerID);
             this.timeMilis = this.timeMilis - (Date.now() - this.start);
+            if(this.debug && this.timeMilis>0){console.log("timerPause: " + this.timeMilis);} // if the diference is 0 the task was performed
         }
     }
     this.resume = function () {
         if (--this.paused === 0) {
             this.start = Date.now();
-            if (this.timeMilis >= 0) { this.timerID = setTimeout(this.callback, this.timeMilis); }
+            if (this.timeMilis > 0) { 
+                this.timerID = setTimeout(this.callback, this.timeMilis); 
+                if(this.debug){console.log("timerResume: " + this.timeMilis);}
+            }
         }
     }
     this.resume();
