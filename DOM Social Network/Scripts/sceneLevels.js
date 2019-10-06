@@ -24,7 +24,7 @@ var myLevel1 = {
         //myGameArea.drawInBackground(1, this.posHero, this.hero.img);
         
         myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.animations.idle, 4);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation);
 
         myGameArea.resizeBackground(myPreload.images.grid, cnv2, ctx2, 2);
         myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);
@@ -51,7 +51,7 @@ var myTransitionScene = {
     },
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.animations.idle, 4);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation);
     }
 }
 
@@ -79,7 +79,7 @@ var myLevel2 = {
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
         myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.animations.idle, 4);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation);
 
         myGameArea.resizeBackground(myPreload.images.grid, cnv2, ctx2, 2);
         myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);
@@ -112,7 +112,7 @@ var myLevel3 = {
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
         myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.animations.idle, 4);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation);
 
         myGameArea.resizeBackground(myPreload.images.grid, cnv2, ctx2, 2);
         myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);
