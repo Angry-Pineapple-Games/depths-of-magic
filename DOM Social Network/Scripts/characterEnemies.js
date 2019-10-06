@@ -2,7 +2,10 @@ var myCharacterEnemies = {
     enemies: [],
     
     generateEnemies: function(scene) {
-        for (var e=0; e<scene.enemiesMax - scene.enemies.length; e++) {
+        for(var e=0; e<this.enemies.length; e++) {
+            this.enemies[e].hp = this.enemies[e].hpMax;
+        }
+        for (var e=this.enemies.length; e<scene.enemiesMax; e++) {
             this.enemies.push(myEnemiesProperties[String(e)]);
             this.enemies[e].img = myPreload.images[this.enemies[e].img]
         }
@@ -23,17 +26,16 @@ var myEnemiesProperties = {
         img: 'enemy0',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,4, "ropeH",4,1],
-            [0,6, "ropeH",4,1],
-            [0,7, "ropeV",4,1]
+            [0,4, "ropeCounterH",0,1,1],
+            [0,6, "ropeCounterH",0,1,1],
         ],[
-            [0,4, "ropeH",4,1],
-            [0,6, "ropeH",4,1],
-            [0,7, "ropeV",4,1]
+            [0,4, "ropeCounterH",1,1,1],
+            [0,6, "ropeCounterH",1,1,1],
+            [0,7, "ropeCounterV",1,1,1]
         ],[
-            [0,4, "ropeH",4,1],
-            [0,6, "ropeH",4,1],
-            [0,7, "ropeV",4,1]
+            [0,4, "ropeCounterH",1,1,1],
+            [0,6, "ropeCounterH",1,1,1],
+            [0,7, "ropeCounterV",1,1,1]
         ]]
     },
     1: {
@@ -45,17 +47,16 @@ var myEnemiesProperties = {
         img: 'enemy1',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,4, "ropeH",4,1],
-            [0,6, "ropeH",4,1],
-            [0,7, "ropeV",4,1]
+            [0,4, "ropeCounterH",0,1,1],
+            [0,6, "ropeCounterH",0,1,1],
         ],[
-            [0,4, "ropeH",4,1],
-            [0,6, "ropeH",4,1],
-            [0,7, "ropeV",4,1]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ],[
-            [0,4, "ropeH",4,1],
-            [0,6, "ropeH",4,1],
-            [0,7, "ropeV",4,1]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ]]
     },
     2: {
@@ -67,17 +68,16 @@ var myEnemiesProperties = {
         img: 'enemy2',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,4, "ropeH",4,1],
-            [0,6, "ropeH",4,1],
-            [0,7, "ropeV",4,1]
+            [0,4, "ropeCounterH",0,1,1],
+            [0,6, "ropeCounterH",0,1,1],
         ],[
-            [0,4, "ropeH",4,1],
-            [0,6, "ropeH",4,1],
-            [0,7, "ropeV",4,1]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ],[
-            [0,4, "ropeH",4,1],
-            [0,6, "ropeH",4,1],
-            [0,7, "ropeV",4,1]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ]]
     },
     3: {
@@ -89,14 +89,16 @@ var myEnemiesProperties = {
         img: 'enemy3',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",0, 1]
+            [0,4, "ropeCounterH",0,1,1],
+            [0,6, "ropeCounterH",0,1,1],
         ],[
-            [0,0, "ropeV",3,1],
-            [0,1, "ropeV",3,1]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ],[
-            [0,4, "ropeH",4,2],
-            [0,6, "ropeH",4,2],
-            [0,7, "ropeV",4,2]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ]]
     },
     4: {
@@ -108,14 +110,16 @@ var myEnemiesProperties = {
         img: 'enemy4',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",0, 1]
+            [0,4, "ropeCounterH",0,1,1],
+            [0,6, "ropeCounterH",0,1,1],
         ],[
-            [0,0, "ropeV",3,1],
-            [0,1, "ropeV",3,1]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ],[
-            [0,4, "ropeH",4,2],
-            [0,6, "ropeH",4,2],
-            [0,7, "ropeV",4,2]
+            [0,4, "ropeCounterH",1,1,1],
+            [0,6, "ropeCounterH",1,1,1],
+            [0,7, "ropeCounterV",1,1,1]
         ]]
     },
     5: {
@@ -127,14 +131,16 @@ var myEnemiesProperties = {
         img: 'enemy5',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",0, 1]
+            [0,4, "ropeCounterH",0,1,1],
+            [0,6, "ropeCounterH",0,1,1],
         ],[
-            [0,0, "ropeV",3,1],
-            [0,1, "ropeV",3,1]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ],[
-            [0,4, "ropeH",4,2],
-            [0,6, "ropeH",4,2],
-            [0,7, "ropeV",4,2]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ]]
     },
     6: {
@@ -146,14 +152,16 @@ var myEnemiesProperties = {
         img: 'enemy6',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",0, 1]
+            [0,4, "ropeCounterH",0,1,1],
+            [0,6, "ropeCounterH",0,1,1],
         ],[
-            [0,0, "ropeV",3,1],
-            [0,1, "ropeV",3,1]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ],[
-            [0,4, "ropeH",4,2],
-            [0,6, "ropeH",4,2],
-            [0,7, "ropeV",4,2]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ]]
     },
     7: {
@@ -165,14 +173,16 @@ var myEnemiesProperties = {
         img: 'enemy7',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",0, 1]
+            [0,4, "ropeCounterH",0,1,1],
+            [0,6, "ropeCounterH",0,1,1],
         ],[
-            [0,0, "ropeV",3,1],
-            [0,1, "ropeV",3,1]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ],[
-            [0,4, "ropeH",4,2],
-            [0,6, "ropeH",4,2],
-            [0,7, "ropeV",4,2]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ]]
     },
     8: {
@@ -184,14 +194,16 @@ var myEnemiesProperties = {
         img: 'enemy8',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",0, 1]
+            [0,4, "ropeCounterH",0,1,1],
+            [0,6, "ropeCounterH",0,1,1],
         ],[
-            [0,0, "ropeV",3,1],
-            [0,1, "ropeV",3,1]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ],[
-            [0,4, "ropeH",4,2],
-            [0,6, "ropeH",4,2],
-            [0,7, "ropeV",4,2]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ]]
     },
     9: {
@@ -203,14 +215,16 @@ var myEnemiesProperties = {
         img: 'enemy9',
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeH",0, 1]
+            [0,4, "ropeCounterH",0,1,1],
+            [0,6, "ropeCounterH",0,1,1],
         ],[
-            [0,0, "ropeV",3,1],
-            [0,1, "ropeV",3,1]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ],[
-            [0,4, "ropeH",4,2],
-            [0,6, "ropeH",4,2],
-            [0,7, "ropeV",4,2]
+            [0,4, "ropeCounterH",1,0,1],
+            [0,6, "ropeCounterH",1,0,1],
+            [0,7, "ropeCounterV",1,0,1]
         ]]
     }
 }

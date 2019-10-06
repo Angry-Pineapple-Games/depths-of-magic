@@ -54,7 +54,7 @@ var myGameMechanics = {
             }
         });
         this.gridRopes = enemy.gridRopes[enemy.gridRopeNow];
-        if(this.gridRopes[0][3] === 4) { //si es una cuerda especial
+        if(this.gridRopes[0][3] === 1) { //si es una cuerda especial
             this.un_blockInputs();
             myGameManager.pauseTimers("timersSwap");
             this.generateGridWithOrder();
@@ -77,7 +77,7 @@ var myGameMechanics = {
         }
     },
     generateEnemy: function (enemies, enemiesMax, nEnemies) {
-        let nextEnemy = enemies[Math.floor(Math.random() * nEnemies)];
+        let nextEnemy = enemies[Math.floor(Math.random() * (enemiesMax-1))];
         if (myRoomMechanics.countSwaps === myRoomMechanics.nRooms && myCombatMechanics.countCombats === nEnemies) {
             nextEnemy = enemies[enemiesMax - 1];
         }
@@ -253,6 +253,7 @@ var myCombatMechanics = {
         this.swapEnemy();
     },
     swapPattern: function () {
+        myFade.in(2);
         myCutMechanics.cutRopes = 0;
         myCutMechanics.totalRopes = 0;
         myCutMechanics.concatenatedCuts = 0;
@@ -262,6 +263,7 @@ var myCombatMechanics = {
         if (this.debug) { console.log("SwapPattern"); }
     },
     swapEnemy: function () {
+        myFade.in(1);
         this.countSwaps = 0;
         if (this.countCombats++ < this.nEnemies) {
             this.scene.enemy = myGameMechanics.generateEnemy(this.scene.enemies, this.scene.enemiesMax, this.nEnemies);
@@ -276,11 +278,11 @@ var myCombatMechanics = {
     updateState: function () {
         that = myCombatMechanics;
         myStatsController.applyStats(that.scene.hero, that.scene.enemy);
-        if (that.scene.hero.hp <= 0) { myGame.gameOver(); }
-        else if (that.scene.enemy.hp <= 0) { that.swapEnemy(); }
+        if (that.scene.hero.hp <= 0) {myGame.gameOver();}
+        else if (that.scene.enemy.hp <= 0) {that.swapEnemy();}
         //correspondiente animacion y cuando termine que llame a swapPattern el y eliminar el contenido del else if de abajo
-        else if(++that.countSwaps < that.patternsPerEnemy) { that.swapPattern(); }
-        else { that.swapEnemy(); }
+        else if(++that.countSwaps < that.patternsPerEnemy) {that.swapPattern();}
+        else {that.swapEnemy();}
     }
 }
 
@@ -295,12 +297,14 @@ var myRoomMechanics={
         this.swapRoom();
     },
     swapRoom: function () {
+        myFade.in(1);
+        myFade.in(2);
         this.scene.hero.buff = 0;
         if (this.countSwaps++ < this.nRooms) {
             this.scene.room = this.scene.rooms[Math.floor(Math.random() * this.scene.roomsMax)];
             if (this.debug) { console.log("SwapRoom"); }
             myCombatMechanics.startCombat(this.scene);
-        } else { myGame.swapScene(); }
+        } else {myGame.swapScene();}
     }
 }
 
@@ -320,11 +324,9 @@ var myCutMechanics = {
         this.lastPosTrace = track[x - 1];
         this.posTrace = track[x];
         this.nextPosTrace = (x + 1 === track.length) ? -1 : track[x + 1];
-        if(this.rope[3] === 0) {return this.checkSimpleCut();}
-        else if(this.rope[3] === 1) {return this.checkDoubleCut();}
-        else if(this.rope[3] === 2) {return this.checkDirectionalCut(-1);}
-        else if(this.rope[3] === 3) {return this.checkDirectionalCut(1);}
-        else if(this.rope[3] === 4) {return this.checkCutInOrder(posRopeInGrid);}
+        if(this.rope[3]===0){return this.checkCutType();}
+        else if(this.rope[3] === 1) {return this.checkCutInOrder(posRopeInGrid);}
+        else {console.log("Fail gamemechanics/mycutmechanics/checkRopeType");}
     },
     checkSimpleCut: function () {
         this.rope[0] = -1;
@@ -350,13 +352,17 @@ var myCutMechanics = {
             return true;
         }
         return false;
-
+    },
+    checkCutType: function() {
+        if(this.rope[4] === 0) {return this.checkSimpleCut();}
+        else if(this.rope[4] === 1) {return this.checkDoubleCut();}
+        else if(this.rope[4] === 2) {return this.checkDirectionalCut(-1);}
+        else if(this.rope[4] === 3) {return this.checkDirectionalCut(1);}
+        else {console.log("Fail gamemechanics/mycutmechanics/checkcuttype");}
     },
     checkCutInOrder: function (posRope) {
         if (this.cutRopes === posRope) {
-            this.rope[0] = -1;
-            this.cutRopes++;
-            return true;
+            return this.checkCutType();
         }
         return false;
     },
@@ -393,19 +399,19 @@ var myStatsController = {
         this.totalDebuff = 0;
         this.totalHeal = 0;
         for (var rope in pattern) {
-            if (rope[4] === 0) { this.totalCounter++; }
-            else if (rope[4] === 1) { this.totalBuff++; }
-            else if (rope[4] === 2) { this.totalDebuff++; }
-            else if (rope[4] === 3) { this.totalHeal++; }
-            else if (rope[4] === 4) { this.totalPower++; }
+            if (rope[5] === 0) { this.totalCounter++; }
+            else if (rope[5] === 1) { this.totalBuff++; }
+            else if (rope[5] === 2) { this.totalDebuff++; }
+            else if (rope[5] === 3) { this.totalHeal++; }
+            else if (rope[5] === 4) { this.totalPower++; }
         }
     },
     updateStats: function (rope) {//actualiza los contenedores
-        if (rope[4] === 0) { this.counter++; this.counterCounter++; }
-        else if (rope[4] === 1) { this.buff++; this.counterBuff++; }
-        else if (rope[4] === 2) { this.debuff++; this.counterDebuff++; }
-        else if (rope[4] === 3) { this.heal++; this.counterHeal++; }
-        else if (rope[4] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
+        if (rope[5] === 0) { this.counter++; this.counterCounter++; }
+        else if (rope[5] === 1) { this.buff++; this.counterBuff++; }
+        else if (rope[5] === 2) { this.debuff++; this.counterDebuff++; }
+        else if (rope[5] === 3) { this.heal++; this.counterHeal++; }
+        else if (rope[5] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
     },
     increaseStats: function(hero) {//incrementa las estadisticas
         hero.hp += this.increaseFactor * this.counterHeal;
@@ -421,6 +427,6 @@ var myStatsController = {
         enemy.buff = (this.totalBuff - this.buff) * (enemy.ap + enemy.dp) * this.buffFactor - this.debuff * (hero.ap + hero.dp) * this.debuffFactor;
         
         hero.hp = Math.trunc(((hero.buff + (hero.hp * hero.dp)) - ((this.totalCounter - this.counter) * enemy.ap + (enemy.ap * this.loops * this.loopfactor) + enemy.buff)) / hero.dp);
-        enemy.hp = Math.trunc(((enemy.buff + (enemy.hp * enemy.dp) + (enemy.ap * this.loops * this.loopfactor)) - (this.counter * hero.ap + hero.buff)) / enemy.dp);
+        enemy.hp = Math.trunc(((enemy.buff + (enemy.hp * enemy.dp) + (enemy.ap * this.loops * this.loopfactor)) - ((this.counter * hero.ap + hero.buff)) / enemy.dp) * myCutMechanics.concatenatedCuts);
     }
 }
