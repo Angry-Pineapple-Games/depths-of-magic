@@ -10,51 +10,67 @@ function startGame() {
 }
 
 var myGameManager = {
-    lastFrameTimeMs : 0,
-    maxFPS : 60,
-    delta : 0,
-    timestep : 1000 / 60,
-    fps : 60,
-    framesThisSecond : 0,
-    lastFpsUpdate : 0,
-    timers: [],
+    debug: false,
+    lastFrameTimeMs: 0,
+    maxFPS: 60,
+    delta: 0,
+    timestep: 1000 / 60,
+    fps: 60,
+    framesThisSecond: 0,
+    lastFpsUpdate: 0,
+    timersSwap: [],
+    timersOrderPattern: [],
     pause: false,
-    start : function () {
+    start: function () {
         window.requestAnimationFrame(mainLoop);
     },
-    addTimer: function(callback, timeMilis) {
-        if (this.pause) {
-            console.log("Concurrency Fail: gameManager/myGameManager/addtimer/pause");
-        } else {
-            this.timers.push(new myTimer(callback, timeMilis));
+    addTimer: function (callback, timeMilis, timerType) {
+        if (timerType === "timersSwap") { this.timersSwap.push(new myTimer(callback, timeMilis)); }
+        else if (timerType === "timersOrderPattern") { this.timersOrderPattern.push(new myTimer(callback, timeMilis)); }
+        else {console.log("Fail gameManager/mygamemanager/addTimer/parameter timerType");}
+    },
+    pauseTimers: function (timerType) {
+        let list;
+        if (timerType === "timersSwap") { list = this.timersSwap;}
+        else if (timerType === "timersOrderPattern") { list = this.timersOrderPattern;}
+        else if (timerType === "all") { this.pauseTimers("timersSwap"); this.pauseTimers("timersOrderPattern");return;}
+        else {console.log("Fail gameManager/mygamemanager/pauseTimers/parameter");}
+
+        for (var idx = 0; idx < list.length; idx++) {
+            list[idx].pause();
+            if(this.debug){console.log("timerPause: " + idx);}
         }
     },
-    pauseTimers: function() {
-        for (var idx = 0; idx < this.timers.length; idx++) {
-            this.timers[idx].pause();
-        }
-    },
-    resumeTimers: function() {
-        for (var idx = 0; idx < this.timers.length; idx++) {
-            if(this.timers.length>1 && this.timers[idx].timeMilis < 0) {
-                this.timers.splice(idx, 1);
+    resumeTimers: function (timerType) {
+        let list;
+        if (timerType === "timersSwap") { list = this.timersSwap; }
+        else if (timerType === "timersOrderPattern") { list = this.timersOrderPattern; }
+        else if (timerType === "all") { this.resumeTimers("timersSwap"); this.resumeTimers("timersOrderPattern");return;}
+        else {console.log("Fail gameManager/mygamemanager/resumeTimers/parameter");}
+        
+        for (var idx = 0; idx < list.length; idx++) {
+            if (list[idx].timeMilis < 0) {
+                list.splice(idx, 1);
                 idx--;
-            }else if (this.timers[idx].timeMilis < 0) {
-                console.log("Concurrency fail");
-                this.timers[idx].timeMilis = 0;
-                this.timers[idx].resume();
+                if(this.debug){console.log("timerDelete: " + idx);}
             } else {
-                this.timers[idx].resume();
+                list[idx].resume();
+                if(this.debug){console.log("timerResume: " + idx);}
             }
         }
     },
-    clearTimers: function() {
-        this.pauseTimers();
-        this.timers = [];
+    clearTimers: function (timerType) {
+        let list;
+        if (timerType === "timersSwap") { list = this.timersSwap;}
+        else if (timerType === "timersOrderPattern") { list = this.timersOrderPattern;}
+        else if (timerType === "all") { this.clearTimers("timersSwap"); this.clearTimers("timersOrderPattern");return;}
+        else {console.log("Fail gameManager/mygamemanager/clearTimers/parameter");}
+        this.pauseTimers(timerType);
+        list.length = 0;
     }
 }
 
-var mainLoop = function(timestamp) {
+var mainLoop = function (timestamp) {
     // Limita los fps 
     if (timestamp < myGameManager.lastFrameTimeMs + (1000 / myGameManager.maxFPS)) {
         requestAnimationFrame(mainLoop);
@@ -87,18 +103,27 @@ var mainLoop = function(timestamp) {
 }
 
 function myTimer(callback, timeMilis) {
+    this.debug = false;
     this.callback = callback;
     this.timerID = 0;
     this.timeMilis = timeMilis;
     this.start = Date.now();
-    this.pause = function() {
-        clearTimeout(this.timerID);
-        this.timeMilis = this.timeMilis - (Date.now()-this.start);
+    this.paused = 1;
+    this.pause = function () {
+        if (++this.paused === 1) {
+            clearTimeout(this.timerID);
+            this.timeMilis = this.timeMilis - (Date.now() - this.start);
+            if(this.debug && this.timeMilis>0){console.log("timerPause: " + this.timeMilis);} // if the diference is 0 the task was performed
+        }
     }
-    this.resume = function() {
-        this.start = Date.now();
-        if (this.timeMilis >= 0) {this.timerID = setTimeout(this.callback, this.timeMilis);}
-        else {console.log("Fail gameManager/myTimer/timeMilis<0")}
+    this.resume = function () {
+        if (--this.paused === 0) {
+            this.start = Date.now();
+            if (this.timeMilis > 0) { 
+                this.timerID = setTimeout(this.callback, this.timeMilis); 
+                if(this.debug){console.log("timerResume: " + this.timeMilis);}
+            }
+        }
     }
     this.resume();
 }

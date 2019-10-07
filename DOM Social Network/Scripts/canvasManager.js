@@ -9,6 +9,8 @@ var myGameArea = {
     start: function () {
         window.addEventListener('resize', this.resizeCanvas, false);
         this.resizeCanvas();
+        myFade.addCanvas(this.canvas1, this.context1);
+        myFade.addCanvas(this.canvas2, this.context2);
     },
     editTams: function (tam1) {
         if (tam1 > 1 || tam1 < 0) { console.log("Fail mygamearea/edittams/tam1"); }
@@ -81,13 +83,13 @@ var myGameArea = {
         else if (num === 2) { bg = this.background2; }
         else { console.log("Error en canvasManager/drawInBackground/num"); }
         if (bg !== undefined) {
-            grid.forEach(g => {
-                if (g[0] !== -1) {
-                    let pos = callback(bg, g[1]);//[posx, posy]
+            for(var idx=0; idx < grid.length; idx++){
+                if (grid[idx][0] !== -1) {
+                    let pos = callback(bg, grid[idx][1]);//[posx, posy]
                     let resizePerOne = this.resizeBackgroundPerOne(bg);
-                    bg.ctx.drawImage(g[2], bg.drawPosX + pos[0], bg.drawPosY + pos[1], g[2].initWidth * resizePerOne, g[2].initHeight * resizePerOne);
+                    bg.ctx.drawImage(grid[idx][2], bg.drawPosX + pos[0], bg.drawPosY + pos[1], grid[idx][2].initWidth * resizePerOne, grid[idx][2].initHeight * resizePerOne);
                 }
-            });
+            }
         }
     },
     drawInBackground: function (num, pos, img) {
@@ -100,14 +102,14 @@ var myGameArea = {
             bg.ctx.drawImage(img, bg.drawPosX + pos[0], bg.drawPosY + pos[1], img.initWidth * resizePerOne, img.initHeight * resizePerOne);
         }
     },
-    animateInBackground: function (num, pos, img, animation, frame) {
+    animateInBackground: function (num, pos, img, animation) {
         let bg;
         if (num === 1) { bg = this.background1; }
         else if (num === 2) { bg = this.background2; }
-        else { console.log("Error en canvasManager/drawInBackground/num"); }
+        else { console.log("Error en canvasManager/animateInBackground/num"); }
         if (bg !== undefined) {
             let resizePerOne = this.resizeBackgroundPerOne(bg);
-            myAnimManager.drawFrame(bg.ctx, img, animation, frame, bg.drawPosX + pos[0], bg.drawPosY + pos[1]);
+            animation.animate(bg.ctx, img, bg.drawPosX + pos[0], bg.drawPosY + pos[1], resizePerOne);
         }
     },
     resizeBackgroundPerOne: function (bg) {
@@ -115,3 +117,33 @@ var myGameArea = {
     }
 }
 
+var myFade = {
+    canvas: [], //cnv, ctx, fade
+    in: function(num) {
+        this.canvas[num-1][2] = [1,-0.08];
+    },
+    out: function(num) {
+        this.canvas[num-1][2] = [0,0.08];
+    },
+    addCanvas: function(cnv, ctx) {
+        this.canvas.push([cnv, ctx, [1, -0.08]]);
+    },
+    fade: function (num) {
+        let cnv = this.canvas[num-1][0];
+        let ctx = this.canvas[num-1][1];
+        let fade = this.canvas[num-1][2];
+        if (fade[0] > 0 && fade[1] < 0) {
+            ctx.globalAlpha = fade[0];
+            fade[0] += fade[1];
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, cnv.width, cnv.height);
+            ctx.globalAlpha = 1;
+        } else if (fade[0] < 1 && fade[1] > 0) {
+            ctx1.globalAlpha = fade[0];
+            fade[0] += fade[1];
+            ctx1.fillStyle = "black";
+            ctx1.fillRect(0, 0, cnv.width, cnv.height);
+            ctx1.globalAlpha = 1;
+        }
+    }
+}
