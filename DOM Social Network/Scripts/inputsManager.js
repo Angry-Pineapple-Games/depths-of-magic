@@ -66,18 +66,20 @@ var myInputsManager = {
         $(document).keyup( function (e) {
             if (e.key === "Escape") {//pausa la partida
                 if (!pause) {
+                    myGameManager.pause = true;
                     pause = true;
                     myGameManager.pauseTimers("all");
                 }
                 else {
+                    myGameManager.pause = false;
                     pause = false;
                     myGameManager.resumeTimers("all");
                 }
             }else if(e.key === "Backspace") { //si la tecla era "retroceso" vuelve a la pagina anterior
                 window.history.back();
             }/*else if(e.key ==="a"){//Para debuggear transiciones entre animaciones
-                myHeroCharacter.changeAnimationWithCallback("attack", function(){
-                    myHeroCharacter.changeAnimation("idle");
+                myAnimManager.changeAnimation(myHeroCharacter, "attack", function(){
+                    myAnimManager.changeAnimation(myHeroCharacter, "idle");
                 });
             }*/
         });

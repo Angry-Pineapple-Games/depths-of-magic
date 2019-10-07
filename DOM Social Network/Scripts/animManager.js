@@ -28,6 +28,32 @@ var myAnimManager = {
                         x, y, info[frame].frame.w * resize, info[frame].frame.h * resize);
         //ctx.drawImage(image, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
     },
+
+    //Cambia la animacion actual del personaje y recibe un callback que se hara
+    //al terminar la animacion
+    changeAnimation: function(character, type, callback = character.currentAnimation.reset){
+        switch (type){
+            case "idle":
+                character.currentAnimation = character.animations.idle;
+                break;
+            case "attack":
+                character.currentAnimation = character.animations.attack;
+                break;
+            case "damage":
+                character.currentAnimation = character.animations.damage;
+                break;
+            case "death":
+                character.currentAnimation = character.animations.death;
+                break;
+            case "victory":
+                character.currentAnimation = character.animations.victory;
+                break;
+            default:
+                console.log("wrong animation name");
+        }
+        character.currentAnimation.reset();
+        character.currentAnimation.callback = callback;
+    },
 }
 
 //Clase para las animaciones, que controla el estado de ellas
@@ -43,7 +69,7 @@ class Animation{
     animate(ctx, img, x, y, resize){
         myAnimManager.drawFrame(ctx, img, this.framesInfo, this.currentFrame, x, y, resize);
         //La animacion solo avanza en frames impares para que vaya a 30fps mientras el game loop va a 60fps
-        if(!this.even){
+        if(!this.even && !myGameManager.pause){
             this.currentFrame++;
         }
         this.even = !this.even;
