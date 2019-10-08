@@ -1,0 +1,7 @@
+ANIMACIONES PROTAGONISTA:
+
+Anim. idle: 1-60
+Anim. victoria: 60-120
+Anim. recibir daño: 120-150
+Anim. morir: 150-250 
+Anim. atacar: 251-295
