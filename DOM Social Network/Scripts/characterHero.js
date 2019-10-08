@@ -11,6 +11,7 @@ var myHeroCharacter = {
     animations:{
         idle:{},
         attack:{},
+        attack2:{},
         damage:{},
         death:{},
         victory:{}
@@ -29,6 +30,7 @@ var myHeroCharacter = {
         let spritesheet = myPreload.spritesInfo.spritesHero;
         this.animations.idle = new Animation(spritesheet, 22, 40);//placeholder
         this.animations.attack = new Animation(spritesheet, 0, 18);//placeholder
+        this.animations.attack2 = new Animation(spritesheet, 0, 18);//placeholder
         this.animations.damage = new Animation(spritesheet, 41, 63);//placeholder
         this.animations.death = new Animation(spritesheet, 64, 70);//placeholder
         this.animations.victory = new Animation(spritesheet, 85, 114);//placeholder
