@@ -11,3 +11,8 @@ canvas {
 html {
     overflow:hidden;
 }
+
+@font-face {
+    font-family: 'jamestandinawanao';
+    src: url('Assets/font/jamestandinawanao.ttf');
+}
