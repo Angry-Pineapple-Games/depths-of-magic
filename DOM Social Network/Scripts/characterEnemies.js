@@ -7,10 +7,8 @@ var myCharacterEnemies = {
         }
         for (var e=this.enemies.length; e<scene.enemiesMax; e++) {
             this.enemies.push(myEnemiesProperties[String(e)]);
-            //this.enemies[e].img = myPreload.images[this.enemies[e].img]
-            //prueba, toda referencia al heroe sera sustituida por la imagen y spritesheet correspondiente
-            this.enemies[e].img = myPreload.images.hero;
-            this.generateAnimationsInfo(this.enemies[e], myPreload.spritesInfo.spritesHero, myEnemiesAnimFrames[e]);
+            this.enemies[e].img = myPreload.images[this.enemies[e].img]
+            this.generateAnimationsInfo(this.enemies[e], myPreload.spritesInfo[e], myEnemiesAnimFrames[e]);
             this.enemies[e].currentAnimation = this.enemies[e].animations.idle;
         }
         return this.enemies;
@@ -317,12 +315,6 @@ var myEnemiesAnimFrames = {
         death: {start: 64, end: 70},
     },
     9:{
-        idle: {start: 22, end: 40},
-        attack: {start: 0, end: 18},
-        damage: {start: 41, end: 63},
-        death: {start: 64, end: 70},
-    },
-    10:{
         idle: {start: 22, end: 40},
         attack: {start: 0, end: 18},
         attack2: {start: 0, end: 18},

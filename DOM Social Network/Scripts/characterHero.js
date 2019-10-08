@@ -27,7 +27,7 @@ var myHeroCharacter = {
         return this;
     },
     generateAnimationsInfo: function(){
-        let spritesheet = myPreload.spritesInfo.spritesHero;
+        let spritesheet = myPreload.spritesInfo.hero;
         this.animations.idle = new Animation(spritesheet, 22, 40);//placeholder
         this.animations.attack = new Animation(spritesheet, 0, 18);//placeholder
         this.animations.attack2 = new Animation(spritesheet, 0, 18);//placeholder
