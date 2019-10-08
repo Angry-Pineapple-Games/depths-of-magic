@@ -1,0 +1,11 @@
+Name: Sawyrah
+
+HP: 80
+
+Base attack: 55
+
+Base defense: 15
+
+Attack buff/debuff: 0 (modifiable in-game)
+
+Defense buff/debuff: 0 (modifiable in-game)

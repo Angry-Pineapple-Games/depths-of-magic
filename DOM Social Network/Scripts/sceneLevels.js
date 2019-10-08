@@ -3,7 +3,7 @@ var myLevel1 = {
     enemies: [],
     enemy: {},
     posHero: [0, 0],
-    posEnemy: [0, 0],
+    posEnemy: [100, 0],
     rooms: [],
     room: {},
     enemiesMax: 4,
@@ -22,7 +22,8 @@ var myLevel1 = {
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
 
-        myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
+        //myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
+        myGameArea.animateInBackground(1, this.posEnemy, this.enemy.img, this.enemy.currentAnimation);
         myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation);
 
         if (!myInputsManager.blocked) {
