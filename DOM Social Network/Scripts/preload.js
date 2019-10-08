@@ -53,57 +53,53 @@ var myPreload = {
       width: 160,
       height: 40
     },
-    //hero: {
-    //src: 'Assets/hero.jpg',
-    //width: 366,
-    //height: 688},
     enemy0: {
-      src: 'Assets/enemy1.jpg',
+      src: 'Assets/spritesheet_test.png',
       width: 366,
       height: 688
     },
     enemy1: {
-      src: 'Assets/enemy2.jpg',
+      src: 'Assets/spritesheet_test.png',
       width: 366,
       height: 688
     },
     enemy2: {
-      src: 'Assets/enemy3.jpg',
+      src: 'Assets/spritesheet_test1.png',
       width: 366,
       height: 688
     },
     enemy3: {
-      src: 'Assets/enemy4.jpg',
+      src: 'Assets/spritesheet_test.png',
       width: 366,
       height: 688
     },
     enemy4: {
-      src: 'Assets/enemy5.jpg',
+      src: 'Assets/spritesheet_test1.png',
       width: 366,
       height: 688
     },
     enemy5: {
-      src: 'Assets/enemy6.jpg',
+      src: 'Assets/spritesheet_test.png',
       width: 366,
       height: 688
     },
     enemy6: {
-      src: 'Assets/enemy7.jpg',
+      src: 'Assets/spritesheet_test1.png',
       width: 366,
       height: 688
     },
     enemy7: {
-      src: 'Assets/enemy8.jpg',
+      src: 'Assets/spritesheet_test.png',
       width: 366,
       height: 688
     },
     enemy8: {
-      src: 'Assets/enemy9.jpg',
+      src: 'Assets/spritesheet_test1.png',
       width: 366,
       height: 688
     },
     enemy9: {
-      src: 'Assets/enemy10.jpg',
+      src: 'Assets/spritesheet_test.png',
       width: 366,
       height: 688
     },
@@ -164,10 +160,62 @@ var myPreload = {
     }
   },
   spritesInfo: {
-    spritesHero: {
+    hero: {
       src: 'Assets/spritesheet_hero.png',
       json: spritesheet_hero,
       frames: []
+    },
+    //enemies
+    0: {
+      src: 'Assets/spritesheet_test.png',
+      json: spritesheet_test,
+      frames: []
+    },
+    1: {
+      src: 'Assets/spritesheet_test.png',
+      json: spritesheet_test,
+      frames: []
+    },
+    2: {
+      src: 'Assets/spritesheet_test1.png',
+      json: spritesheet_test,
+      frames: []
+    },
+    3: {
+      src: 'Assets/spritesheet_test.png',
+      json: spritesheet_test,
+      frames: []
+    },
+    4: {
+      src: 'Assets/spritesheet_test1.png',
+      json: spritesheet_test,
+      frames: []
+    },
+    5: {
+      src: 'Assets/spritesheet_test.png',
+      json: spritesheet_test,
+      frames: []
+    },
+    6: {
+      src: 'Assets/spritesheet_test1.png',
+      json: spritesheet_test,
+      frames: []
+    },
+    7: {
+      src: 'Assets/spritesheet_test.png',
+      json: spritesheet_test,
+      frames: []
+    },
+    8: {
+      src: 'Assets/spritesheet_test1.png',
+      json: spritesheet_test,
+      frames: []
+    },
+    9: {
+      src: 'Assets/spritesheet_test.png',
+      json: spritesheet_test,
+      frames: []
+
     }
   },
   loadImages: function (callback) {
@@ -191,8 +239,5 @@ var myPreload = {
     for (var spr in this.spritesInfo) {
       this.spritesInfo[spr].frames = myAnimManager.getFrameInfoFromJSON(this.spritesInfo[spr].json);
     }
-
-    //this.spritesInfo.spritesHero.frames = myAnimManager.getFrameInfoFromJSON(this.spritesInfo.spritesHero.json);
-    //console.log(this.spritesInfo.spritesHero.frames);
   }
 }

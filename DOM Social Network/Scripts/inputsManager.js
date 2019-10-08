@@ -77,11 +77,11 @@ var myInputsManager = {
                 }
             }else if(e.key === "Backspace") { //si la tecla era "retroceso" vuelve a la pagina anterior
                 window.history.back();
-            }/*else if(e.key ==="a"){//Para debuggear transiciones entre animaciones
+            }else if(e.key ==="a"){//Para debuggear transiciones entre animaciones
                 myAnimManager.changeAnimation(myHeroCharacter, "attack", function(){
                     myAnimManager.changeAnimation(myHeroCharacter, "idle");
                 });
-            }*/
+            }
         });
     }
 }
