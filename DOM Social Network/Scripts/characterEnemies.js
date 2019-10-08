@@ -8,8 +8,17 @@ var myCharacterEnemies = {
         for (var e=this.enemies.length; e<scene.enemiesMax; e++) {
             this.enemies.push(myEnemiesProperties[String(e)]);
             this.enemies[e].img = myPreload.images[this.enemies[e].img]
+            this.generateAnimationsInfo(this.enemies[e], myPreload.spritesInfo[e], myEnemiesAnimFrames[e]);
+            this.enemies[e].currentAnimation = this.enemies[e].animations.idle;
         }
         return this.enemies;
+    },
+
+    generateAnimationsInfo: function(character, spritesheet, frames){
+        character.animations.idle = new Animation(spritesheet, frames.idle.start, frames.idle.end);
+        character.animations.attack = new Animation(spritesheet, frames.attack.start, frames.attack.end);
+        character.animations.damage = new Animation(spritesheet, frames.damage.start, frames.damage.end);
+        character.animations.death = new Animation(spritesheet, frames.death.start, frames.death.end);
     }
 }
 //rope[deleted, pos, "image name", typeCut, typeRope] 
@@ -24,6 +33,8 @@ var myEnemiesProperties = {
         ap: 20,
         dp: 30,
         img: 'enemy0',
+        currentAnimation: {},
+        animations:{},
         gridRopeNow: -1,
         gridRopes: [[
             [0,4, "ropeCounterH",0,1,1],
@@ -45,6 +56,8 @@ var myEnemiesProperties = {
         ap: 20,
         dp: 30,
         img: 'enemy1',
+        currentAnimation: {},
+        animations:{},
         gridRopeNow: -1,
         gridRopes: [[
             [0,4, "ropeCounterH",0,1,1],
@@ -66,6 +79,8 @@ var myEnemiesProperties = {
         ap: 20,
         dp: 30,
         img: 'enemy2',
+        currentAnimation: {},
+        animations:{},
         gridRopeNow: -1,
         gridRopes: [[
             [0,4, "ropeCounterH",0,1,1],
@@ -87,6 +102,8 @@ var myEnemiesProperties = {
         ap: 20,
         dp: 30,
         img: 'enemy3',
+        currentAnimation: {},
+        animations:{},
         gridRopeNow: -1,
         gridRopes: [[
             [0,4, "ropeCounterH",0,1,1],
@@ -108,6 +125,8 @@ var myEnemiesProperties = {
         ap: 20,
         dp: 30,
         img: 'enemy4',
+        currentAnimation: {},
+        animations:{},
         gridRopeNow: -1,
         gridRopes: [[
             [0,4, "ropeCounterH",0,1,1],
@@ -129,6 +148,8 @@ var myEnemiesProperties = {
         ap: 20,
         dp: 30,
         img: 'enemy5',
+        currentAnimation: {},
+        animations:{},
         gridRopeNow: -1,
         gridRopes: [[
             [0,4, "ropeCounterH",0,1,1],
@@ -150,6 +171,8 @@ var myEnemiesProperties = {
         ap: 20,
         dp: 30,
         img: 'enemy6',
+        currentAnimation: {},
+        animations:{},
         gridRopeNow: -1,
         gridRopes: [[
             [0,4, "ropeCounterH",0,1,1],
@@ -171,6 +194,8 @@ var myEnemiesProperties = {
         ap: 20,
         dp: 30,
         img: 'enemy7',
+        currentAnimation: {},
+        animations:{},
         gridRopeNow: -1,
         gridRopes: [[
             [0,4, "ropeCounterH",0,1,1],
@@ -192,6 +217,8 @@ var myEnemiesProperties = {
         ap: 20,
         dp: 30,
         img: 'enemy8',
+        currentAnimation: {},
+        animations:{},
         gridRopeNow: -1,
         gridRopes: [[
             [0,4, "ropeCounterH",0,1,1],
@@ -213,6 +240,8 @@ var myEnemiesProperties = {
         ap: 20,
         dp: 30,
         img: 'enemy9',
+        currentAnimation: {},
+        animations:{},
         gridRopeNow: -1,
         gridRopes: [[
             [0,4, "ropeCounterH",0,1,1],
@@ -227,4 +256,69 @@ var myEnemiesProperties = {
             [0,7, "ropeCounterV",1,0,1]
         ]]
     }
+}
+
+//Frames son placeholders
+var myEnemiesAnimFrames = {
+    0: {
+        idle: {start: 22, end: 40},
+        attack: {start: 0, end: 18},
+        damage: {start: 41, end: 63},
+        death: {start: 64, end: 70},
+    },
+    1: {
+        idle: {start: 22, end: 40},
+        attack: {start: 0, end: 18},
+        damage: {start: 41, end: 63},
+        death: {start: 64, end: 70},
+    },
+    2: {
+        idle: {start: 22, end: 40},
+        attack: {start: 0, end: 18},
+        damage: {start: 41, end: 63},
+        death: {start: 64, end: 70},
+    },
+    3:{
+        idle: {start: 22, end: 40},
+        attack: {start: 0, end: 18},
+        damage: {start: 41, end: 63},
+        death: {start: 64, end: 70},
+    },
+    4:{
+        idle: {start: 22, end: 40},
+        attack: {start: 0, end: 18},
+        damage: {start: 41, end: 63},
+        death: {start: 64, end: 70},
+    },
+    5:{
+        idle: {start: 22, end: 40},
+        attack: {start: 0, end: 18},
+        damage: {start: 41, end: 63},
+        death: {start: 64, end: 70},
+    },
+    6:{
+        idle: {start: 22, end: 40},
+        attack: {start: 0, end: 18},
+        damage: {start: 41, end: 63},
+        death: {start: 64, end: 70},
+    },
+    7:{
+        idle: {start: 22, end: 40},
+        attack: {start: 0, end: 18},
+        damage: {start: 41, end: 63},
+        death: {start: 64, end: 70},
+    },
+    8:{
+        idle: {start: 22, end: 40},
+        attack: {start: 0, end: 18},
+        damage: {start: 41, end: 63},
+        death: {start: 64, end: 70},
+    },
+    9:{
+        idle: {start: 22, end: 40},
+        attack: {start: 0, end: 18},
+        attack2: {start: 0, end: 18},
+        damage: {start: 41, end: 63},
+        death: {start: 64, end: 70},
+    },
 }

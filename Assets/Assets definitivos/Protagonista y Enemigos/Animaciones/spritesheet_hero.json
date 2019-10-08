@@ -1,0 +1,2379 @@
+﻿{"frames": [
+
+{
+	"filename": "animasio instancia 10000",
+	"frame": {"x":0,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10001",
+	"frame": {"x":286,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10002",
+	"frame": {"x":572,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10003",
+	"frame": {"x":858,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10004",
+	"frame": {"x":1144,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10005",
+	"frame": {"x":1430,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10006",
+	"frame": {"x":1716,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10007",
+	"frame": {"x":2002,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10008",
+	"frame": {"x":2288,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10009",
+	"frame": {"x":2574,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10010",
+	"frame": {"x":2860,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10011",
+	"frame": {"x":3146,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10012",
+	"frame": {"x":3432,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10013",
+	"frame": {"x":3718,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10014",
+	"frame": {"x":4004,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10015",
+	"frame": {"x":4290,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10016",
+	"frame": {"x":4576,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10017",
+	"frame": {"x":4862,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10018",
+	"frame": {"x":5148,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10019",
+	"frame": {"x":5434,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10020",
+	"frame": {"x":5720,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10021",
+	"frame": {"x":6006,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10022",
+	"frame": {"x":6292,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10023",
+	"frame": {"x":6578,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10024",
+	"frame": {"x":6864,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10025",
+	"frame": {"x":7150,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10026",
+	"frame": {"x":7436,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10027",
+	"frame": {"x":7722,"y":0,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10028",
+	"frame": {"x":0,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10029",
+	"frame": {"x":286,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10030",
+	"frame": {"x":572,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10031",
+	"frame": {"x":858,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10032",
+	"frame": {"x":1144,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10033",
+	"frame": {"x":1430,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10034",
+	"frame": {"x":1716,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10035",
+	"frame": {"x":2002,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10036",
+	"frame": {"x":2288,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10037",
+	"frame": {"x":2574,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10038",
+	"frame": {"x":2860,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10039",
+	"frame": {"x":3146,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10040",
+	"frame": {"x":3432,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10041",
+	"frame": {"x":3718,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10042",
+	"frame": {"x":4004,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10043",
+	"frame": {"x":4290,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10044",
+	"frame": {"x":4576,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10045",
+	"frame": {"x":4862,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10046",
+	"frame": {"x":5148,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10047",
+	"frame": {"x":5434,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10048",
+	"frame": {"x":5720,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10049",
+	"frame": {"x":6006,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10050",
+	"frame": {"x":6292,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10051",
+	"frame": {"x":6578,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10052",
+	"frame": {"x":6864,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10053",
+	"frame": {"x":7150,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10054",
+	"frame": {"x":7436,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10055",
+	"frame": {"x":7722,"y":471,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10056",
+	"frame": {"x":0,"y":942,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10057",
+	"frame": {"x":286,"y":942,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10058",
+	"frame": {"x":572,"y":942,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10059",
+	"frame": {"x":858,"y":942,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10060",
+	"frame": {"x":1144,"y":942,"w":288,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":80,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10061",
+	"frame": {"x":1432,"y":942,"w":290,"h":472},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":77,"y":116,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10062",
+	"frame": {"x":1722,"y":942,"w":291,"h":472},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":75,"y":116,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10063",
+	"frame": {"x":2013,"y":942,"w":294,"h":473},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":72,"y":115,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10064",
+	"frame": {"x":2307,"y":942,"w":297,"h":473},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":68,"y":115,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10065",
+	"frame": {"x":2604,"y":942,"w":301,"h":474},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":64,"y":114,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10066",
+	"frame": {"x":2905,"y":942,"w":303,"h":474},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":61,"y":114,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10067",
+	"frame": {"x":3208,"y":942,"w":306,"h":475},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":57,"y":113,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10068",
+	"frame": {"x":3514,"y":942,"w":310,"h":475},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":53,"y":113,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10069",
+	"frame": {"x":3824,"y":942,"w":313,"h":476},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":49,"y":112,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10070",
+	"frame": {"x":4137,"y":942,"w":316,"h":476},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":46,"y":112,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10071",
+	"frame": {"x":4453,"y":942,"w":319,"h":476},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":112,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10072",
+	"frame": {"x":4772,"y":942,"w":322,"h":477},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":38,"y":111,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10073",
+	"frame": {"x":5094,"y":942,"w":325,"h":477},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":111,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10074",
+	"frame": {"x":5419,"y":942,"w":328,"h":478},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":31,"y":110,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10075",
+	"frame": {"x":5747,"y":942,"w":315,"h":477},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":47,"y":111,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10076",
+	"frame": {"x":6062,"y":942,"w":303,"h":476},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":63,"y":112,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10077",
+	"frame": {"x":6365,"y":942,"w":291,"h":475},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":79,"y":113,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10078",
+	"frame": {"x":6656,"y":942,"w":280,"h":476},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":93,"y":112,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10079",
+	"frame": {"x":6936,"y":942,"w":271,"h":505},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":106,"y":83,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10080",
+	"frame": {"x":7207,"y":942,"w":265,"h":513},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":113,"y":75,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10081",
+	"frame": {"x":7472,"y":942,"w":264,"h":529},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":115,"y":59,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10082",
+	"frame": {"x":7736,"y":942,"w":265,"h":545},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":116,"y":43,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10083",
+	"frame": {"x":0,"y":1487,"w":264,"h":561},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":118,"y":27,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10084",
+	"frame": {"x":264,"y":1487,"w":265,"h":588},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":119,"y":0,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10085",
+	"frame": {"x":529,"y":1487,"w":264,"h":587},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":1,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10086",
+	"frame": {"x":793,"y":1487,"w":264,"h":586},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":2,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10087",
+	"frame": {"x":1057,"y":1487,"w":264,"h":585},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":3,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10088",
+	"frame": {"x":1321,"y":1487,"w":263,"h":584},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":4,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10089",
+	"frame": {"x":1584,"y":1487,"w":263,"h":583},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":5,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10090",
+	"frame": {"x":1847,"y":1487,"w":263,"h":582},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":6,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10091",
+	"frame": {"x":2110,"y":1487,"w":263,"h":581},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":7,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10092",
+	"frame": {"x":2373,"y":1487,"w":263,"h":580},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":8,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10093",
+	"frame": {"x":2636,"y":1487,"w":263,"h":580},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":8,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10094",
+	"frame": {"x":2899,"y":1487,"w":264,"h":580},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":8,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10095",
+	"frame": {"x":3163,"y":1487,"w":264,"h":581},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":7,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10096",
+	"frame": {"x":3427,"y":1487,"w":264,"h":581},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":7,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10097",
+	"frame": {"x":3691,"y":1487,"w":264,"h":581},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":7,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10098",
+	"frame": {"x":3955,"y":1487,"w":264,"h":581},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":7,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10099",
+	"frame": {"x":4219,"y":1487,"w":264,"h":581},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":7,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10100",
+	"frame": {"x":4483,"y":1487,"w":264,"h":557},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":118,"y":31,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10101",
+	"frame": {"x":4747,"y":1487,"w":265,"h":542},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":116,"y":46,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10102",
+	"frame": {"x":5012,"y":1487,"w":264,"h":527},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":115,"y":61,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10103",
+	"frame": {"x":5276,"y":1487,"w":265,"h":512},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":113,"y":76,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10104",
+	"frame": {"x":5541,"y":1487,"w":271,"h":505},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":106,"y":83,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10105",
+	"frame": {"x":5812,"y":1487,"w":272,"h":497},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":104,"y":91,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10106",
+	"frame": {"x":6084,"y":1487,"w":272,"h":488},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":103,"y":100,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10107",
+	"frame": {"x":6356,"y":1487,"w":274,"h":483},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":101,"y":105,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10108",
+	"frame": {"x":6630,"y":1487,"w":274,"h":478},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":100,"y":110,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10109",
+	"frame": {"x":6904,"y":1487,"w":276,"h":473},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":98,"y":115,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10110",
+	"frame": {"x":7180,"y":1487,"w":277,"h":472},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":96,"y":116,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10111",
+	"frame": {"x":7457,"y":1487,"w":278,"h":472},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":95,"y":116,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10112",
+	"frame": {"x":7735,"y":1487,"w":279,"h":472},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":93,"y":116,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10113",
+	"frame": {"x":0,"y":2075,"w":280,"h":472},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":92,"y":116,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10114",
+	"frame": {"x":280,"y":2075,"w":281,"h":472},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":90,"y":116,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10115",
+	"frame": {"x":561,"y":2075,"w":281,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":89,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10116",
+	"frame": {"x":842,"y":2075,"w":283,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":87,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10117",
+	"frame": {"x":1125,"y":2075,"w":284,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":85,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10118",
+	"frame": {"x":1409,"y":2075,"w":284,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":84,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10119",
+	"frame": {"x":1693,"y":2075,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10120",
+	"frame": {"x":1979,"y":2075,"w":280,"h":480},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":108,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10121",
+	"frame": {"x":2259,"y":2075,"w":278,"h":488},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":52,"y":100,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10122",
+	"frame": {"x":2537,"y":2075,"w":288,"h":494},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":94,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10123",
+	"frame": {"x":2825,"y":2075,"w":317,"h":499},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":89,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10124",
+	"frame": {"x":3142,"y":2075,"w":345,"h":503},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":85,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10125",
+	"frame": {"x":3487,"y":2075,"w":333,"h":499},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":89,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10126",
+	"frame": {"x":3820,"y":2075,"w":322,"h":496},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":16,"y":92,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10127",
+	"frame": {"x":4142,"y":2075,"w":310,"h":492},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":96,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10128",
+	"frame": {"x":4452,"y":2075,"w":298,"h":488},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":100,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10129",
+	"frame": {"x":4750,"y":2075,"w":286,"h":484},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":40,"y":104,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10130",
+	"frame": {"x":5036,"y":2075,"w":275,"h":480},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":48,"y":108,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10131",
+	"frame": {"x":5311,"y":2075,"w":275,"h":476},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":56,"y":112,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10132",
+	"frame": {"x":5586,"y":2075,"w":275,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":64,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10133",
+	"frame": {"x":5861,"y":2075,"w":276,"h":466},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":71,"y":122,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10134",
+	"frame": {"x":6137,"y":2075,"w":278,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":77,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10135",
+	"frame": {"x":6415,"y":2075,"w":280,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":77,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10136",
+	"frame": {"x":6695,"y":2075,"w":279,"h":462},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":78,"y":126,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10137",
+	"frame": {"x":6974,"y":2075,"w":280,"h":463},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":78,"y":125,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10138",
+	"frame": {"x":7254,"y":2075,"w":281,"h":464},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":78,"y":124,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10139",
+	"frame": {"x":7535,"y":2075,"w":281,"h":464},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":79,"y":124,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10140",
+	"frame": {"x":7816,"y":2075,"w":282,"h":465},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":79,"y":123,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10141",
+	"frame": {"x":0,"y":2578,"w":283,"h":466},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":79,"y":122,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10142",
+	"frame": {"x":283,"y":2578,"w":282,"h":466},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":80,"y":122,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10143",
+	"frame": {"x":565,"y":2578,"w":283,"h":467},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":80,"y":121,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10144",
+	"frame": {"x":848,"y":2578,"w":284,"h":468},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":80,"y":120,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10145",
+	"frame": {"x":1132,"y":2578,"w":284,"h":468},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":81,"y":120,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10146",
+	"frame": {"x":1416,"y":2578,"w":285,"h":469},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":81,"y":119,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10147",
+	"frame": {"x":1701,"y":2578,"w":286,"h":470},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":81,"y":118,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10148",
+	"frame": {"x":1987,"y":2578,"w":285,"h":470},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":118,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10149",
+	"frame": {"x":2272,"y":2578,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10150",
+	"frame": {"x":2558,"y":2578,"w":285,"h":469},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":81,"y":119,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10151",
+	"frame": {"x":2843,"y":2578,"w":283,"h":467},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":80,"y":121,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10152",
+	"frame": {"x":3126,"y":2578,"w":282,"h":465},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":79,"y":123,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10153",
+	"frame": {"x":3408,"y":2578,"w":280,"h":463},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":78,"y":125,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10154",
+	"frame": {"x":3688,"y":2578,"w":278,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":77,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10155",
+	"frame": {"x":3966,"y":2578,"w":262,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":93,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10156",
+	"frame": {"x":4228,"y":2578,"w":245,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":110,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10157",
+	"frame": {"x":4473,"y":2578,"w":234,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10158",
+	"frame": {"x":4707,"y":2578,"w":234,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10159",
+	"frame": {"x":4941,"y":2578,"w":234,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10160",
+	"frame": {"x":5175,"y":2578,"w":234,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10161",
+	"frame": {"x":5409,"y":2578,"w":234,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10162",
+	"frame": {"x":5643,"y":2578,"w":234,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10163",
+	"frame": {"x":5877,"y":2578,"w":234,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10164",
+	"frame": {"x":6111,"y":2578,"w":234,"h":461},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":127,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10165",
+	"frame": {"x":6345,"y":2578,"w":275,"h":451},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":137,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10166",
+	"frame": {"x":6620,"y":2578,"w":315,"h":438},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":150,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10167",
+	"frame": {"x":6935,"y":2578,"w":355,"h":423},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":165,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10168",
+	"frame": {"x":7290,"y":2578,"w":394,"h":404},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":184,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10169",
+	"frame": {"x":7684,"y":2578,"w":435,"h":392},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10170",
+	"frame": {"x":0,"y":3049,"w":486,"h":392},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10171",
+	"frame": {"x":486,"y":3049,"w":533,"h":391},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10172",
+	"frame": {"x":1019,"y":3049,"w":574,"h":390},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10173",
+	"frame": {"x":1593,"y":3049,"w":607,"h":390},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10174",
+	"frame": {"x":2200,"y":3049,"w":633,"h":408},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":199,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10175",
+	"frame": {"x":2833,"y":3049,"w":633,"h":406},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":199,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10176",
+	"frame": {"x":3466,"y":3049,"w":632,"h":405},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10177",
+	"frame": {"x":4098,"y":3049,"w":632,"h":403},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10178",
+	"frame": {"x":4730,"y":3049,"w":631,"h":401},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10179",
+	"frame": {"x":5361,"y":3049,"w":630,"h":400},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10180",
+	"frame": {"x":5991,"y":3049,"w":630,"h":400},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10181",
+	"frame": {"x":6621,"y":3049,"w":631,"h":402},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10182",
+	"frame": {"x":7252,"y":3049,"w":631,"h":403},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10183",
+	"frame": {"x":0,"y":3457,"w":632,"h":404},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10184",
+	"frame": {"x":632,"y":3457,"w":632,"h":405},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10185",
+	"frame": {"x":1264,"y":3457,"w":632,"h":407},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10186",
+	"frame": {"x":1896,"y":3457,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10187",
+	"frame": {"x":2528,"y":3457,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10188",
+	"frame": {"x":3160,"y":3457,"w":633,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10189",
+	"frame": {"x":3793,"y":3457,"w":633,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10190",
+	"frame": {"x":4426,"y":3457,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10191",
+	"frame": {"x":5058,"y":3457,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10192",
+	"frame": {"x":5690,"y":3457,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10193",
+	"frame": {"x":6322,"y":3457,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10194",
+	"frame": {"x":6954,"y":3457,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10195",
+	"frame": {"x":0,"y":3868,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10196",
+	"frame": {"x":632,"y":3868,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10197",
+	"frame": {"x":1264,"y":3868,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10198",
+	"frame": {"x":1896,"y":3868,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10199",
+	"frame": {"x":2528,"y":3868,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10200",
+	"frame": {"x":3160,"y":3868,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10201",
+	"frame": {"x":3792,"y":3868,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10202",
+	"frame": {"x":4424,"y":3868,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10203",
+	"frame": {"x":5056,"y":3868,"w":632,"h":408},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":199,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10204",
+	"frame": {"x":5688,"y":3868,"w":633,"h":408},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":199,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10205",
+	"frame": {"x":6321,"y":3868,"w":632,"h":408},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":199,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10206",
+	"frame": {"x":6953,"y":3868,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10207",
+	"frame": {"x":0,"y":4278,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10208",
+	"frame": {"x":632,"y":4278,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10209",
+	"frame": {"x":1264,"y":4278,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10210",
+	"frame": {"x":1896,"y":4278,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10211",
+	"frame": {"x":2528,"y":4278,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10212",
+	"frame": {"x":3160,"y":4278,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10213",
+	"frame": {"x":3792,"y":4278,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10214",
+	"frame": {"x":4424,"y":4278,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10215",
+	"frame": {"x":5056,"y":4278,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10216",
+	"frame": {"x":5688,"y":4278,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10217",
+	"frame": {"x":6320,"y":4278,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10218",
+	"frame": {"x":6952,"y":4278,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10219",
+	"frame": {"x":0,"y":4689,"w":633,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10220",
+	"frame": {"x":633,"y":4689,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10221",
+	"frame": {"x":1265,"y":4689,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10222",
+	"frame": {"x":1897,"y":4689,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10223",
+	"frame": {"x":2529,"y":4689,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10224",
+	"frame": {"x":3161,"y":4689,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10225",
+	"frame": {"x":3793,"y":4689,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10226",
+	"frame": {"x":4425,"y":4689,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10227",
+	"frame": {"x":5057,"y":4689,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10228",
+	"frame": {"x":5689,"y":4689,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10229",
+	"frame": {"x":6321,"y":4689,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10230",
+	"frame": {"x":6953,"y":4689,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10231",
+	"frame": {"x":0,"y":5100,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10232",
+	"frame": {"x":632,"y":5100,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10233",
+	"frame": {"x":1264,"y":5100,"w":632,"h":408},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":199,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10234",
+	"frame": {"x":1896,"y":5100,"w":633,"h":408},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":199,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10235",
+	"frame": {"x":2529,"y":5100,"w":632,"h":408},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":199,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10236",
+	"frame": {"x":3161,"y":5100,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10237",
+	"frame": {"x":3793,"y":5100,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10238",
+	"frame": {"x":4425,"y":5100,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10239",
+	"frame": {"x":5057,"y":5100,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10240",
+	"frame": {"x":5689,"y":5100,"w":632,"h":409},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":198,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10241",
+	"frame": {"x":6321,"y":5100,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10242",
+	"frame": {"x":6953,"y":5100,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10243",
+	"frame": {"x":0,"y":5510,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10244",
+	"frame": {"x":632,"y":5510,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10245",
+	"frame": {"x":1264,"y":5510,"w":632,"h":410},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":197,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10246",
+	"frame": {"x":1896,"y":5510,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10247",
+	"frame": {"x":2528,"y":5510,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10248",
+	"frame": {"x":3160,"y":5510,"w":632,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10249",
+	"frame": {"x":3792,"y":5510,"w":633,"h":411},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":196,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10250",
+	"frame": {"x":4425,"y":5510,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10251",
+	"frame": {"x":4711,"y":5510,"w":289,"h":472},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":77,"y":116,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10252",
+	"frame": {"x":5000,"y":5510,"w":293,"h":473},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":71,"y":115,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10253",
+	"frame": {"x":5293,"y":5510,"w":297,"h":474},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":65,"y":114,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10254",
+	"frame": {"x":5590,"y":5510,"w":303,"h":475},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":57,"y":113,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10255",
+	"frame": {"x":5893,"y":5510,"w":308,"h":476},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":50,"y":112,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10256",
+	"frame": {"x":6201,"y":5510,"w":313,"h":477},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":111,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10257",
+	"frame": {"x":6514,"y":5510,"w":319,"h":478},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":110,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10258",
+	"frame": {"x":6833,"y":5510,"w":324,"h":478},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":28,"y":110,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10259",
+	"frame": {"x":7157,"y":5510,"w":330,"h":479},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":109,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10260",
+	"frame": {"x":7487,"y":5510,"w":317,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":45,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10261",
+	"frame": {"x":7804,"y":5510,"w":304,"h":463},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":125,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10262",
+	"frame": {"x":0,"y":5989,"w":291,"h":479},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":93,"y":109,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10263",
+	"frame": {"x":291,"y":5989,"w":263,"h":476},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":112,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10264",
+	"frame": {"x":554,"y":5989,"w":263,"h":473},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":115,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10265",
+	"frame": {"x":817,"y":5989,"w":329,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10266",
+	"frame": {"x":1146,"y":5989,"w":345,"h":470},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":118,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10267",
+	"frame": {"x":1491,"y":5989,"w":362,"h":472},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":116,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10268",
+	"frame": {"x":1853,"y":5989,"w":378,"h":481},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":107,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10269",
+	"frame": {"x":2231,"y":5989,"w":395,"h":496},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":92,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10270",
+	"frame": {"x":2626,"y":5989,"w":411,"h":512},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":76,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10271",
+	"frame": {"x":3037,"y":5989,"w":411,"h":502},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":86,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10272",
+	"frame": {"x":3448,"y":5989,"w":413,"h":493},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":95,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10273",
+	"frame": {"x":3861,"y":5989,"w":418,"h":505},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":83,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10274",
+	"frame": {"x":4279,"y":5989,"w":424,"h":518},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":121,"y":70,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10275",
+	"frame": {"x":4703,"y":5989,"w":439,"h":531},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":111,"y":57,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10276",
+	"frame": {"x":5142,"y":5989,"w":276,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":92,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10277",
+	"frame": {"x":5418,"y":5989,"w":299,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10278",
+	"frame": {"x":5717,"y":5989,"w":318,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":50,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10279",
+	"frame": {"x":6035,"y":5989,"w":314,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":54,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10280",
+	"frame": {"x":6349,"y":5989,"w":307,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":61,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10281",
+	"frame": {"x":6656,"y":5989,"w":310,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10282",
+	"frame": {"x":6966,"y":5989,"w":314,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":54,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10283",
+	"frame": {"x":7280,"y":5989,"w":317,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":51,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10284",
+	"frame": {"x":7597,"y":5989,"w":320,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":48,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10285",
+	"frame": {"x":0,"y":6520,"w":360,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10286",
+	"frame": {"x":360,"y":6520,"w":352,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":16,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10287",
+	"frame": {"x":712,"y":6520,"w":344,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10288",
+	"frame": {"x":1056,"y":6520,"w":336,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10289",
+	"frame": {"x":1392,"y":6520,"w":328,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":40,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10290",
+	"frame": {"x":1720,"y":6520,"w":320,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":48,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10291",
+	"frame": {"x":2040,"y":6520,"w":313,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":55,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10292",
+	"frame": {"x":2353,"y":6520,"w":305,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":63,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10293",
+	"frame": {"x":2658,"y":6520,"w":297,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":71,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10294",
+	"frame": {"x":2955,"y":6520,"w":291,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":77,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}
+,{
+	"filename": "animasio instancia 10295",
+	"frame": {"x":3246,"y":6520,"w":286,"h":471},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":82,"y":117,"w":754,"h":607},
+	"sourceSize": {"w":754,"h":607}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "18.0.2.126",
+	"image": "spritesheet_hero.png",
+	"format": "RGBA8888",
+	"size": {"w":8192,"h":8192},
+	"scale": "1"
+}
+}
