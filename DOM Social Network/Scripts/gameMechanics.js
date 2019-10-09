@@ -48,7 +48,7 @@ var myGameMechanics = {
         enemy.gridRopes[enemy.gridRopeNow].forEach(function (rope) {
             if (typeof rope[2] === "string") {//si es un string en vez de una imagen
                 rope[2] = myPreload.images[rope[2]];
-                myCombatMechanics.totalRopes++;
+                myCutMechanics.totalRopes++;
             } else if (rope[0] === -1) {//si la cuerda ya esta pintada
                 rope[0] = 0;
             }
@@ -305,6 +305,7 @@ var myCombatMechanics = {
                 myAnimManager.changeAnimation(that.scene.hero, "attack", function(){
                     myAnimManager.changeAnimation(that.scene.hero, "idle");
                     myAnimManager.changeAnimation(that.scene.enemy, "damage", function(){
+                        myAnimManager.changeAnimation(that.scene.enemy, "idle");
                         that.swapPattern();
                     });
                 });
@@ -330,7 +331,7 @@ var myCombatMechanics = {
                 myAnimManager.changeAnimation(that.scene.enemy, "attack", function(){
                     myAnimManager.changeAnimation(that.scene.enemy, "idle");
                     myAnimManager.changeAnimation(that.scene.hero, "damage", function(){
-                        myAnimManager.changeAnimation(that.scene.here,"idle");
+                        myAnimManager.changeAnimation(that.scene.hero,"idle");
                         that.swapPattern();
                     });
                 });
