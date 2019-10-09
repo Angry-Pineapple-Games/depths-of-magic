@@ -28,12 +28,12 @@ var myHeroCharacter = {
     },
     generateAnimationsInfo: function(){
         let spritesheet = myPreload.spritesInfo.hero;
-        this.animations.idle = new Animation(spritesheet, 22, 40);//placeholder
-        this.animations.attack = new Animation(spritesheet, 0, 18);//placeholder
+        this.animations.idle = new Animation(spritesheet, 0, 59);//placeholder
+        this.animations.attack = new Animation(spritesheet, 250, 294);//placeholder
         this.animations.attack2 = new Animation(spritesheet, 0, 18);//placeholder
-        this.animations.damage = new Animation(spritesheet, 41, 63);//placeholder
-        this.animations.death = new Animation(spritesheet, 64, 70);//placeholder
-        this.animations.victory = new Animation(spritesheet, 85, 114);//placeholder
+        this.animations.damage = new Animation(spritesheet, 120, 149);//placeholder
+        this.animations.death = new Animation(spritesheet, 150, 249);//placeholder
+        this.animations.victory = new Animation(spritesheet, 60, 119);//placeholder
     },
 }
 //https://konvajs.org/docs/sandbox/GIF_On_Canvas.html
