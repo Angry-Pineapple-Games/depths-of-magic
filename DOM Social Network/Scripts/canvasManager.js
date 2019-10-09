@@ -43,7 +43,7 @@ var myGameArea = {
             iniHeight: img.initHeight
         }
 
-        if(num === 1) {
+        if (num === 1) {
             myGameArea.background1 = background;
             cnv = this.canvas1;
             ctx = this.context1;
@@ -70,7 +70,7 @@ var myGameArea = {
         } else {
             ctx.drawImage(img, drawPosInCnvWidth, 0, possibleWidth, cnv.height);
             background.height = cnv.height;
-            background.width  = possibleWidth;
+            background.width = possibleWidth;
             drawPosInCnvHeight = 0;
         }
 
@@ -83,7 +83,7 @@ var myGameArea = {
         else if (num === 2) { bg = this.background2; }
         else { console.log("Error en canvasManager/drawInBackground/num"); }
         if (bg !== undefined) {
-            for(var idx=0; idx < grid.length; idx++){
+            for (var idx = 0; idx < grid.length; idx++) {
                 if (grid[idx][0] !== -1) {
                     let pos = callback(bg, grid[idx][1]);//[posx, posy]
                     let resizePerOne = this.resizeBackgroundPerOne(bg);
@@ -100,6 +100,21 @@ var myGameArea = {
         if (bg !== undefined) {
             let resizePerOne = this.resizeBackgroundPerOne(bg);
             bg.ctx.drawImage(img, bg.drawPosX + pos[0], bg.drawPosY + pos[1], img.initWidth * resizePerOne, img.initHeight * resizePerOne);
+        }
+    },
+    drawTextInBackground: function (num, text, pos, color = "white", textHeight = 20, textAlign = "center") {
+        let bg;
+        if (num === 1) { bg = myGameArea.background1; }
+        else if (num === 2) { bg = myGameArea.background2; }
+        else { console.log("Error en canvasManager/drawTextInBackground/num"); }
+        if (bg !== undefined) {
+            let resizePerOne = this.resizeBackgroundPerOne(bg);
+            let height = Math.trunc(textHeight * resizePerOne);
+            bg.ctx.font = String(height) + "px jamestandinawanao";
+            bg.cnv.style.letterSpacing = String(Math.trunc(2*resizePerOne))+'px';
+            bg.ctx.fillStyle = color;
+            bg.ctx.textAlign = textAlign;
+            bg.ctx.fillText(text, bg.drawPosX + pos[0] * bg.width, bg.drawPosY + pos[1] * bg.height);
         }
     },
     animateInBackground: function (num, pos, img, animation) {
@@ -119,19 +134,19 @@ var myGameArea = {
 
 var myFade = {
     canvas: [], //cnv, ctx, fade
-    in: function(num) {
-        this.canvas[num-1][2] = [1,-0.08];
+    in: function (num) {
+        this.canvas[num - 1][2] = [1, -0.08];
     },
-    out: function(num) {
-        this.canvas[num-1][2] = [0,0.08];
+    out: function (num) {
+        this.canvas[num - 1][2] = [0, 0.08];
     },
-    addCanvas: function(cnv, ctx) {
+    addCanvas: function (cnv, ctx) {
         this.canvas.push([cnv, ctx, [1, -0.08]]);
     },
     fade: function (num) {
-        let cnv = this.canvas[num-1][0];
-        let ctx = this.canvas[num-1][1];
-        let fade = this.canvas[num-1][2];
+        let cnv = this.canvas[num - 1][0];
+        let ctx = this.canvas[num - 1][1];
+        let fade = this.canvas[num - 1][2];
         if (fade[0] > 0 && fade[1] < 0) {
             ctx.globalAlpha = fade[0];
             fade[0] += fade[1];

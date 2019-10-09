@@ -4,7 +4,7 @@ var myGame = {
     debug: false,
     scene : 0,// la pantalla actual del juego
     sceneStarted : false,
-    scenes : [myLevel1, myTransitionScene, myLevel2, myTransitionScene, myLevel3, myTransitionScene, myGameOver], //las diferentes pantallas del juego
+    scenes : [myIntro, myLevel1, myTransitionScene, myLevel2, myTransitionScene, myLevel3, myEnding, myTransitionScene, myGameOver], //las diferentes pantallas del juego
     update : function(delta) { //simulacion de fisicas e inicializar a traves del start una vez
         if (!this.sceneStarted) {
             this.scenes[this.scene].start();

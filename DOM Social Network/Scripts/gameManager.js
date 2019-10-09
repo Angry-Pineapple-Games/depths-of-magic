@@ -1,6 +1,7 @@
 /*En este script se gestiona el motor del juego, controlando el gameloop y siendo por tanto el core de esta estructura*/
 function preloadGame() {
     myGameArea.start();
+    myTextManager.changeLang();
     myLoading.loadImages(startGame);
 }
 

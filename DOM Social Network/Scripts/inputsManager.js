@@ -1,5 +1,6 @@
 /*En este script se gestionan todos los inputs que pueda recibir el juego, para servirselo al resto del programa*/
 var myInputsManager = {
+    debugAnimationTransitions: false,
     leftMouseDown: false,
     rightMouseDown: false,
     middleMouseDown: false,
@@ -9,6 +10,11 @@ var myInputsManager = {
     start: function () {
         let that = myInputsManager;
         let pause = myGameManager.pause;
+        
+        $("#canvas1").mouseup(function(event) {
+            if (myIntro === myGame.scenes[myGame.scene] || myEnding ) {myGame.swapScene();}
+        });
+
         $("#canvas2").mousedown(function (event) {
             if (!pause && !that.blocked) {
                 switch (event.which) {
@@ -77,7 +83,7 @@ var myInputsManager = {
                 }
             }else if(e.key === "Backspace") { //si la tecla era "retroceso" vuelve a la pagina anterior
                 window.history.back();
-            }else if(e.key ==="a"){//Para debuggear transiciones entre animaciones
+            }else if(e.key ==="a" && that.debugAnimationTransitions){//Para debuggear transiciones entre animaciones
                 myAnimManager.changeAnimation(myHeroCharacter, "attack", function(){
                     myAnimManager.changeAnimation(myHeroCharacter, "idle");
                 });

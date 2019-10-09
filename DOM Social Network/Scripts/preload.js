@@ -53,6 +53,15 @@ var myPreload = {
       width: 160,
       height: 40
     },
+    backgroundBlack: {
+      src: 'Assets/background/backgroundBlack.png',
+      width: 1920,
+      height: 1440
+    },
+    //hero: {
+    //src: 'Assets/hero.jpg',
+    //width: 366,
+    //height: 688},
     enemy0: {
       src: 'Assets/spritesheet_test.png',
       width: 366,
