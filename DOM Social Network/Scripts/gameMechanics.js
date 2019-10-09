@@ -440,6 +440,9 @@ var myStatsController = {
     heal: 0,
     counterHeal: 0,
     totalHeal: 0,
+    resetLoops: function () {
+        this.loops = 0;
+    },
     reset: function (pattern) {//resetea las variables
         this.counter = 0;
         this.buff = 0;
@@ -449,12 +452,12 @@ var myStatsController = {
         this.totalBuff = 0;
         this.totalDebuff = 0;
         this.totalHeal = 0;
-        for (var rope in pattern) {
-            if (rope[5] === 0) { this.totalCounter++; }
-            else if (rope[5] === 1) { this.totalBuff++; }
-            else if (rope[5] === 2) { this.totalDebuff++; }
-            else if (rope[5] === 3) { this.totalHeal++; }
-            else if (rope[5] === 4) { this.totalPower++; }
+        for (var idx=0; idx<pattern.length; idx++) {
+            if (pattern[idx][5] === 0) { this.totalCounter++; }
+            else if (pattern[idx][5] === 1) { this.totalBuff++; }
+            else if (pattern[idx][5] === 2) { this.totalDebuff++; }
+            else if (pattern[idx][5] === 3) { this.totalHeal++; }
+            else if (pattern[idx][5] === 4) { this.totalPower++; }
         }
     },
     updateStats: function (rope) {//actualiza los contenedores

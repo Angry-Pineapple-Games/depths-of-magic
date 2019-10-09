@@ -1,0 +1,1619 @@
+﻿{"frames": [
+
+{
+	"filename": "Animacion instancia 10000",
+	"frame": {"x":0,"y":0,"w":442,"h":605},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":80,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10001",
+	"frame": {"x":442,"y":0,"w":444,"h":605},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":204,"y":80,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10002",
+	"frame": {"x":886,"y":0,"w":446,"h":605},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":203,"y":80,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10003",
+	"frame": {"x":1332,"y":0,"w":447,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":203,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10004",
+	"frame": {"x":1779,"y":0,"w":449,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10005",
+	"frame": {"x":2228,"y":0,"w":451,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":201,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10006",
+	"frame": {"x":2679,"y":0,"w":452,"h":603},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":201,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10007",
+	"frame": {"x":3131,"y":0,"w":454,"h":603},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":200,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10008",
+	"frame": {"x":3585,"y":0,"w":456,"h":603},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":199,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10009",
+	"frame": {"x":4041,"y":0,"w":458,"h":603},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10010",
+	"frame": {"x":4499,"y":0,"w":458,"h":602},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":83,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10011",
+	"frame": {"x":4957,"y":0,"w":460,"h":602},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":197,"y":83,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10012",
+	"frame": {"x":5417,"y":0,"w":462,"h":602},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":196,"y":83,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10013",
+	"frame": {"x":5879,"y":0,"w":464,"h":602},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":195,"y":83,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10014",
+	"frame": {"x":6343,"y":0,"w":465,"h":601},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":195,"y":84,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10015",
+	"frame": {"x":6808,"y":0,"w":467,"h":601},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":194,"y":84,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10016",
+	"frame": {"x":7275,"y":0,"w":469,"h":601},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":193,"y":84,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10017",
+	"frame": {"x":0,"y":605,"w":470,"h":601},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":193,"y":84,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10018",
+	"frame": {"x":470,"y":605,"w":472,"h":600},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":192,"y":85,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10019",
+	"frame": {"x":942,"y":605,"w":474,"h":600},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":191,"y":85,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10020",
+	"frame": {"x":1416,"y":605,"w":476,"h":600},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":190,"y":85,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10021",
+	"frame": {"x":1892,"y":605,"w":478,"h":600},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":189,"y":85,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10022",
+	"frame": {"x":2370,"y":605,"w":480,"h":599},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":188,"y":86,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10023",
+	"frame": {"x":2850,"y":605,"w":482,"h":599},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":187,"y":86,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10024",
+	"frame": {"x":3332,"y":605,"w":484,"h":599},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":186,"y":86,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10025",
+	"frame": {"x":3816,"y":605,"w":482,"h":599},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":187,"y":86,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10026",
+	"frame": {"x":4298,"y":605,"w":480,"h":599},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":188,"y":86,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10027",
+	"frame": {"x":4778,"y":605,"w":478,"h":599},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":189,"y":86,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10028",
+	"frame": {"x":5256,"y":605,"w":476,"h":600},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":190,"y":85,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10029",
+	"frame": {"x":5732,"y":605,"w":474,"h":600},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":191,"y":85,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10030",
+	"frame": {"x":6206,"y":605,"w":472,"h":600},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":192,"y":85,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10031",
+	"frame": {"x":6678,"y":605,"w":471,"h":600},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":192,"y":85,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10032",
+	"frame": {"x":7149,"y":605,"w":469,"h":601},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":193,"y":84,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10033",
+	"frame": {"x":7618,"y":605,"w":468,"h":601},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":194,"y":84,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10034",
+	"frame": {"x":0,"y":1206,"w":467,"h":601},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":194,"y":84,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10035",
+	"frame": {"x":467,"y":1206,"w":465,"h":601},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":195,"y":84,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10036",
+	"frame": {"x":932,"y":1206,"w":463,"h":602},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":196,"y":83,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10037",
+	"frame": {"x":1395,"y":1206,"w":462,"h":602},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":196,"y":83,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10038",
+	"frame": {"x":1857,"y":1206,"w":460,"h":602},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":197,"y":83,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10039",
+	"frame": {"x":2317,"y":1206,"w":458,"h":603},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10040",
+	"frame": {"x":2775,"y":1206,"w":456,"h":603},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":199,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10041",
+	"frame": {"x":3231,"y":1206,"w":455,"h":603},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":199,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10042",
+	"frame": {"x":3686,"y":1206,"w":453,"h":603},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":200,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10043",
+	"frame": {"x":4139,"y":1206,"w":452,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":201,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10044",
+	"frame": {"x":4591,"y":1206,"w":451,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":201,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10045",
+	"frame": {"x":5042,"y":1206,"w":449,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10046",
+	"frame": {"x":5491,"y":1206,"w":447,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":203,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10047",
+	"frame": {"x":5938,"y":1206,"w":446,"h":605},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":203,"y":80,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10048",
+	"frame": {"x":6384,"y":1206,"w":444,"h":605},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":204,"y":80,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10049",
+	"frame": {"x":6828,"y":1206,"w":442,"h":605},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":80,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10050",
+	"frame": {"x":7270,"y":1206,"w":433,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":209,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10051",
+	"frame": {"x":7703,"y":1206,"w":431,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":212,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10052",
+	"frame": {"x":0,"y":1811,"w":432,"h":602},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":216,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10053",
+	"frame": {"x":432,"y":1811,"w":434,"h":599},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":220,"y":83,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10054",
+	"frame": {"x":866,"y":1811,"w":436,"h":597},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":224,"y":84,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10055",
+	"frame": {"x":1302,"y":1811,"w":436,"h":590},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":225,"y":92,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10056",
+	"frame": {"x":1738,"y":1811,"w":435,"h":581},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":226,"y":101,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10057",
+	"frame": {"x":2173,"y":1811,"w":435,"h":571},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":226,"y":111,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10058",
+	"frame": {"x":2608,"y":1811,"w":434,"h":562},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":225,"y":120,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10059",
+	"frame": {"x":3042,"y":1811,"w":436,"h":551},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":221,"y":130,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10060",
+	"frame": {"x":3478,"y":1811,"w":407,"h":575},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":242,"y":108,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10061",
+	"frame": {"x":3885,"y":1811,"w":419,"h":595},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":212,"y":89,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10062",
+	"frame": {"x":4304,"y":1811,"w":508,"h":611},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":133,"y":71,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10063",
+	"frame": {"x":4812,"y":1811,"w":634,"h":623},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":53,"y":56,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10064",
+	"frame": {"x":5446,"y":1811,"w":723,"h":630},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":42,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10065",
+	"frame": {"x":6169,"y":1811,"w":722,"h":631},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":37,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10066",
+	"frame": {"x":6891,"y":1811,"w":720,"h":630},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":33,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10067",
+	"frame": {"x":0,"y":2442,"w":718,"h":631},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":28,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10068",
+	"frame": {"x":718,"y":2442,"w":715,"h":631},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":23,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10069",
+	"frame": {"x":1433,"y":2442,"w":713,"h":630},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":19,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10070",
+	"frame": {"x":2146,"y":2442,"w":711,"h":631},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":14,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10071",
+	"frame": {"x":2857,"y":2442,"w":709,"h":630},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":10,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10072",
+	"frame": {"x":3566,"y":2442,"w":706,"h":631},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":5,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10073",
+	"frame": {"x":4272,"y":2442,"w":705,"h":631},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10074",
+	"frame": {"x":4977,"y":2442,"w":678,"h":627},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":13,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10075",
+	"frame": {"x":5655,"y":2442,"w":646,"h":622},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":25,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10076",
+	"frame": {"x":6301,"y":2442,"w":605,"h":616},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":38,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10077",
+	"frame": {"x":6906,"y":2442,"w":578,"h":608},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":52,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10078",
+	"frame": {"x":7484,"y":2442,"w":550,"h":599},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":64,"y":66,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10079",
+	"frame": {"x":0,"y":3073,"w":539,"h":589},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":88,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10080",
+	"frame": {"x":539,"y":3073,"w":526,"h":577},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":115,"y":97,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10081",
+	"frame": {"x":1065,"y":3073,"w":513,"h":565},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":138,"y":113,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10082",
+	"frame": {"x":1578,"y":3073,"w":498,"h":551},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":159,"y":130,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10083",
+	"frame": {"x":2076,"y":3073,"w":486,"h":556},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":172,"y":125,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10084",
+	"frame": {"x":2562,"y":3073,"w":474,"h":561},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":185,"y":120,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10085",
+	"frame": {"x":3036,"y":3073,"w":461,"h":567},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":199,"y":115,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10086",
+	"frame": {"x":3497,"y":3073,"w":448,"h":571},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":213,"y":111,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10087",
+	"frame": {"x":3945,"y":3073,"w":440,"h":576},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":221,"y":106,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10088",
+	"frame": {"x":4385,"y":3073,"w":437,"h":581},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":224,"y":101,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10089",
+	"frame": {"x":4822,"y":3073,"w":437,"h":585},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":224,"y":97,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10090",
+	"frame": {"x":5259,"y":3073,"w":437,"h":590},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":224,"y":92,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10091",
+	"frame": {"x":5696,"y":3073,"w":437,"h":593},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":223,"y":88,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10092",
+	"frame": {"x":6133,"y":3073,"w":436,"h":597},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":224,"y":84,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10093",
+	"frame": {"x":6569,"y":3073,"w":435,"h":599},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":221,"y":83,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10094",
+	"frame": {"x":7004,"y":3073,"w":434,"h":601},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":218,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10095",
+	"frame": {"x":7438,"y":3073,"w":432,"h":602},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":215,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10096",
+	"frame": {"x":0,"y":3675,"w":431,"h":603},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":213,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10097",
+	"frame": {"x":431,"y":3675,"w":430,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":210,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10098",
+	"frame": {"x":861,"y":3675,"w":436,"h":605},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":207,"y":80,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10099",
+	"frame": {"x":1297,"y":3675,"w":442,"h":605},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":80,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10100",
+	"frame": {"x":1739,"y":3675,"w":451,"h":586},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":203,"y":95,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10101",
+	"frame": {"x":2190,"y":3675,"w":490,"h":568},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":185,"y":113,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10102",
+	"frame": {"x":2680,"y":3675,"w":516,"h":555},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":170,"y":126,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10103",
+	"frame": {"x":3196,"y":3675,"w":527,"h":547},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":158,"y":134,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10104",
+	"frame": {"x":3723,"y":3675,"w":529,"h":539},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":141,"y":142,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10105",
+	"frame": {"x":4252,"y":3675,"w":551,"h":543},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":138,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10106",
+	"frame": {"x":4803,"y":3675,"w":569,"h":547},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":128,"y":134,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10107",
+	"frame": {"x":5372,"y":3675,"w":579,"h":550},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":122,"y":131,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10108",
+	"frame": {"x":5951,"y":3675,"w":583,"h":560},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":117,"y":126,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10109",
+	"frame": {"x":6534,"y":3675,"w":583,"h":574},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":111,"y":115,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10110",
+	"frame": {"x":7117,"y":3675,"w":578,"h":587},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":106,"y":105,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10111",
+	"frame": {"x":0,"y":4280,"w":576,"h":597},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":101,"y":96,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10112",
+	"frame": {"x":576,"y":4280,"w":570,"h":595},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":109,"y":97,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10113",
+	"frame": {"x":1146,"y":4280,"w":565,"h":593},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":116,"y":98,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10114",
+	"frame": {"x":1711,"y":4280,"w":559,"h":591},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":123,"y":99,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10115",
+	"frame": {"x":2270,"y":4280,"w":551,"h":589},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":132,"y":100,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10116",
+	"frame": {"x":2821,"y":4280,"w":550,"h":586},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":141,"y":102,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10117",
+	"frame": {"x":3371,"y":4280,"w":548,"h":583},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":151,"y":104,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10118",
+	"frame": {"x":3919,"y":4280,"w":549,"h":580},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":160,"y":106,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10119",
+	"frame": {"x":4468,"y":4280,"w":505,"h":576},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":168,"y":109,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10120",
+	"frame": {"x":4973,"y":4280,"w":481,"h":571},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":176,"y":113,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10121",
+	"frame": {"x":5454,"y":4280,"w":463,"h":568},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":181,"y":116,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10122",
+	"frame": {"x":5917,"y":4280,"w":463,"h":563},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":187,"y":120,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10123",
+	"frame": {"x":6380,"y":4280,"w":464,"h":559},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":191,"y":123,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10124",
+	"frame": {"x":6844,"y":4280,"w":465,"h":555},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":193,"y":126,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10125",
+	"frame": {"x":7309,"y":4280,"w":463,"h":551},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":194,"y":130,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10126",
+	"frame": {"x":0,"y":4877,"w":462,"h":554},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":196,"y":127,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10127",
+	"frame": {"x":462,"y":4877,"w":461,"h":558},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":198,"y":123,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10128",
+	"frame": {"x":923,"y":4877,"w":459,"h":561},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":200,"y":120,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10129",
+	"frame": {"x":1382,"y":4877,"w":458,"h":565},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":202,"y":117,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10130",
+	"frame": {"x":1840,"y":4877,"w":456,"h":568},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":204,"y":114,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10131",
+	"frame": {"x":2296,"y":4877,"w":455,"h":571},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":206,"y":111,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10132",
+	"frame": {"x":2751,"y":4877,"w":453,"h":575},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":208,"y":107,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10133",
+	"frame": {"x":3204,"y":4877,"w":451,"h":578},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":210,"y":104,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10134",
+	"frame": {"x":3655,"y":4877,"w":449,"h":581},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":212,"y":101,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10135",
+	"frame": {"x":4104,"y":4877,"w":447,"h":584},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":214,"y":98,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10136",
+	"frame": {"x":4551,"y":4877,"w":445,"h":587},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":216,"y":95,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10137",
+	"frame": {"x":4996,"y":4877,"w":443,"h":590},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":218,"y":92,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10138",
+	"frame": {"x":5439,"y":4877,"w":441,"h":592},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":220,"y":89,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10139",
+	"frame": {"x":5880,"y":4877,"w":439,"h":595},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":222,"y":86,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10140",
+	"frame": {"x":6319,"y":4877,"w":436,"h":597},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":224,"y":84,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10141",
+	"frame": {"x":6755,"y":4877,"w":434,"h":599},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":220,"y":83,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10142",
+	"frame": {"x":7189,"y":4877,"w":432,"h":602},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":216,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10143",
+	"frame": {"x":7621,"y":4877,"w":431,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":212,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10144",
+	"frame": {"x":0,"y":5481,"w":433,"h":604},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":209,"y":81,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10145",
+	"frame": {"x":433,"y":5481,"w":442,"h":605},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":80,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10146",
+	"frame": {"x":875,"y":5481,"w":442,"h":603},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":82,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10147",
+	"frame": {"x":1317,"y":5481,"w":442,"h":600},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":85,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10148",
+	"frame": {"x":1759,"y":5481,"w":442,"h":597},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":88,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10149",
+	"frame": {"x":2201,"y":5481,"w":442,"h":594},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":91,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10150",
+	"frame": {"x":2643,"y":5481,"w":442,"h":590},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":205,"y":95,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10151",
+	"frame": {"x":3085,"y":5481,"w":446,"h":579},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":190,"y":112,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10152",
+	"frame": {"x":3531,"y":5481,"w":450,"h":570},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":176,"y":129,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10153",
+	"frame": {"x":3981,"y":5481,"w":458,"h":556},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":157,"y":147,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10154",
+	"frame": {"x":4439,"y":5481,"w":472,"h":540},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":138,"y":164,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10155",
+	"frame": {"x":4911,"y":5481,"w":488,"h":521},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":118,"y":181,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10156",
+	"frame": {"x":5399,"y":5481,"w":505,"h":503},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":97,"y":199,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10157",
+	"frame": {"x":5904,"y":5481,"w":522,"h":483},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":76,"y":216,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10158",
+	"frame": {"x":6426,"y":5481,"w":538,"h":463},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":55,"y":234,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10159",
+	"frame": {"x":6964,"y":5481,"w":553,"h":450},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":251,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10160",
+	"frame": {"x":7517,"y":5481,"w":569,"h":437},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":268,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10161",
+	"frame": {"x":0,"y":6086,"w":575,"h":406},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":16,"y":298,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10162",
+	"frame": {"x":575,"y":6086,"w":579,"h":372},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":329,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10163",
+	"frame": {"x":1154,"y":6086,"w":580,"h":359},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":339,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10164",
+	"frame": {"x":1734,"y":6086,"w":588,"h":343},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":350,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10165",
+	"frame": {"x":2322,"y":6086,"w":598,"h":326},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":364,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10166",
+	"frame": {"x":2920,"y":6086,"w":605,"h":315},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":379,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10167",
+	"frame": {"x":3525,"y":6086,"w":608,"h":299},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":27,"y":396,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10168",
+	"frame": {"x":4133,"y":6086,"w":606,"h":280},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":33,"y":414,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10169",
+	"frame": {"x":4739,"y":6086,"w":601,"h":265},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":433,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10170",
+	"frame": {"x":5340,"y":6086,"w":593,"h":263},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":51,"y":443,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10171",
+	"frame": {"x":5933,"y":6086,"w":596,"h":259},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":51,"y":447,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10172",
+	"frame": {"x":6529,"y":6086,"w":601,"h":260},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":50,"y":446,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10173",
+	"frame": {"x":7130,"y":6086,"w":603,"h":263},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":51,"y":443,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10174",
+	"frame": {"x":0,"y":6492,"w":604,"h":266},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":52,"y":440,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10175",
+	"frame": {"x":604,"y":6492,"w":605,"h":269},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":54,"y":437,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10176",
+	"frame": {"x":1209,"y":6492,"w":605,"h":272},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":56,"y":434,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10177",
+	"frame": {"x":1814,"y":6492,"w":605,"h":274},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":432,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10178",
+	"frame": {"x":2419,"y":6492,"w":603,"h":282},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":61,"y":430,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10179",
+	"frame": {"x":3022,"y":6492,"w":600,"h":292},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":65,"y":428,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10180",
+	"frame": {"x":3622,"y":6492,"w":597,"h":303},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":425,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10181",
+	"frame": {"x":4219,"y":6492,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10182",
+	"frame": {"x":4816,"y":6492,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10183",
+	"frame": {"x":5413,"y":6492,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10184",
+	"frame": {"x":6010,"y":6492,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10185",
+	"frame": {"x":6607,"y":6492,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10186",
+	"frame": {"x":7204,"y":6492,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10187",
+	"frame": {"x":0,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10188",
+	"frame": {"x":597,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10189",
+	"frame": {"x":1194,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10190",
+	"frame": {"x":1791,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10191",
+	"frame": {"x":2388,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10192",
+	"frame": {"x":2985,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10193",
+	"frame": {"x":3582,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10194",
+	"frame": {"x":4179,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10195",
+	"frame": {"x":4776,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10196",
+	"frame": {"x":5373,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10197",
+	"frame": {"x":5970,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10198",
+	"frame": {"x":6567,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10199",
+	"frame": {"x":7164,"y":6795,"w":597,"h":302},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":426,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}
+,{
+	"filename": "Animacion instancia 10200",
+	"frame": {"x":0,"y":7097,"w":597,"h":303},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":69,"y":425,"w":734,"h":728},
+	"sourceSize": {"w":734,"h":728}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "18.0.2.126",
+	"image": "spritesheet_enemigo3.png",
+	"format": "RGBA8888",
+	"size": {"w":8192,"h":8192},
+	"scale": "1"
+}
+}

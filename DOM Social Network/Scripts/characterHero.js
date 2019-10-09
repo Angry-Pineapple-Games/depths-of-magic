@@ -35,5 +35,10 @@ var myHeroCharacter = {
         this.animations.death = new Animation(spritesheet, 150, 249);//placeholder
         this.animations.victory = new Animation(spritesheet, 60, 119);//placeholder
     },
+    resetHeroStats: function() {
+        this.hp = this.hpMax;
+        this.ap = this.apMax;
+        this.dp = this.dpMax;
+    }
 }
 //https://konvajs.org/docs/sandbox/GIF_On_Canvas.html
