@@ -1,0 +1,11 @@
+Name: The Abyss 
+
+HP: 250
+
+Base attack: 145
+
+Base defense: 120
+
+Attack buff/debuff: 0 (modifiable in-game)
+
+Defense buff/debuff: 0 (modifiable in-game)
