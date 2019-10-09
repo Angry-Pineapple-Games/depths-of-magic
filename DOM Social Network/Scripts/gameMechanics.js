@@ -283,6 +283,7 @@ var myCombatMechanics = {
             myAnimManager.changeAnimation(that.scene.enemy, "attack", function(){
                 myAnimManager.changeAnimation(that.scene.enemy, "idle");
                 myAnimManager.changeAnimation(that.scene.hero, "death", function(){
+                    myAnimManager.changeAnimation(that.scene.hero,"idle");
                     myGame.gameOver();
                 });
             }); 
@@ -292,6 +293,7 @@ var myCombatMechanics = {
             myAnimManager.changeAnimation(that.scene.hero, "attack", function(){
                 myAnimManager.changeAnimation(that.scene.enemy, "death");
                 myAnimManager.changeAnimation(that.scene.hero, "victory", function(){
+                    myAnimManager.changeAnimation(that.scene.hero, "idle");
                     that.swapEnemy();
                 });
             });            
@@ -323,7 +325,8 @@ var myCombatMechanics = {
                     });
                 });
             }else{
-
+                //Secuencia: 1.enemigo ataca, 2. enemigo vuelve a idle y heroe recibe daño
+                //3. heroe vuelve a idle y se cambia el patron
                 myAnimManager.changeAnimation(that.scene.enemy, "attack", function(){
                     myAnimManager.changeAnimation(that.scene.enemy, "idle");
                     myAnimManager.changeAnimation(that.scene.hero, "damage", function(){
