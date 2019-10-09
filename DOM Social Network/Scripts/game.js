@@ -30,5 +30,10 @@ var myGame = {
         this.sceneStarted = false;
         this.scene = this.scenes[this.scenes.length-1];
         if(this.debug){console.log("GameOver");}
+    },
+    restart: function() {
+        this.sceneStarted = false;
+        this.scene = this.scenes[0];
+        if(this.debug){console.log("GameRestart");}
     }
 }

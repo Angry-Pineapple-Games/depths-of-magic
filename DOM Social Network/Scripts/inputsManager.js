@@ -12,14 +12,14 @@ var myInputsManager = {
         let pause = myGameManager.pause;
         
         $("#canvas1").mouseup(function(event) {
-            if (myIntro === myGame.scenes[myGame.scene] || myEnding ) {myGame.swapScene();}
+            if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scene[myGame.scene] || myTransitionScene === myGame.scene[myGame.scene] ) {myGame.swapScene();}
+            else if (myGameOver === myGame.scenes[myGame.scene]) {myGame.restart();}
         });
 
         $("#canvas2").mousedown(function (event) {
             if (!pause && !that.blocked) {
                 switch (event.which) {
                     case 1:
-                        //console.log('left mouse press')
                         that.trace = [];
                         that.trace.push(that.traceLive.slice());
                         that.leftMouseDown = true;
@@ -70,7 +70,7 @@ var myInputsManager = {
         });
 
         $(document).keyup( function (e) {
-            if (e.key === "Escape") {//pausa la partida
+            if (e.key === "Escape" && myTransitionScene !== myGame.scenes[myGame.scene]) {//pausa la partida, excepto si estas en la pantalla de transicion
                 if (!pause) {
                     myGameManager.pause = true;
                     pause = true;
