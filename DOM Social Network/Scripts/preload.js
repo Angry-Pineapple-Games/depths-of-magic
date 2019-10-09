@@ -53,6 +53,46 @@ var myPreload = {
       width: 160,
       height: 40
     },
+    ropeHealV: {
+      src: 'Assets/combat/ropeHealV.png',
+      width: 40,
+      height: 160
+    },
+    ropeHealH: {
+      src: 'Assets/combat/ropeHealH.png',
+      width: 160,
+      height: 40
+    },
+    ropeBuffV: {
+      src: 'Assets/combat/ropeBuffV.png',
+      width: 40,
+      height: 160
+    },
+    ropeBuffH: {
+      src: 'Assets/combat/ropeBuffH.png',
+      width: 160,
+      height: 40
+    },
+    ropeDebuffV: {
+      src: 'Assets/combat/ropeDebuffV.png',
+      width: 40,
+      height: 160
+    },
+    ropeDebuffH: {
+      src: 'Assets/combat/ropeDebuffH.png',
+      width: 160,
+      height: 40
+    },
+    ropePowerV: {
+      src: 'Assets/combat/ropePowerV.png',
+      width: 40,
+      height: 160
+    },
+    ropePowerH: {
+      src: 'Assets/combat/ropePowerH.png',
+      width: 160,
+      height: 40
+    },
     backgroundBlack: {
       src: 'Assets/background/backgroundBlack.png',
       width: 1920,

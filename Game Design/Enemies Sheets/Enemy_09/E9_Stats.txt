@@ -1,0 +1,11 @@
+Name: Gumlisar
+
+HP: 160
+
+Base attack: 55
+
+Base defense: 70
+
+Attack buff/debuff: 0 (modifiable in-game)
+
+Defense buff/debuff: 0 (modifiable in-game)
