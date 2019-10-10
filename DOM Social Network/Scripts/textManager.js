@@ -1,13 +1,26 @@
 myTextManager = {
-    langVersion : 'english',
+    langVersion: 'english',
+    eventualText: [0, -0.01],
     texts: {},
-    changeLang: function() {
+    changeLang: function () {
         this.langVersion = localStorage.getItem("langDom");
-        if(this.langVersion === 'english') {this.texts = myEnglishVersion;}
-        else if(this.langVersion === 'spanish') {this.texts = mySpanishVersion;}
+        if (this.langVersion === 'english') { this.texts = myEnglishVersion; }
+        else if (this.langVersion === 'spanish') { this.texts = mySpanishVersion; }
     },
-    drawTextInBackground: function(num, text, pos, color = "white", textHeight = 20, textAlign = "center") {
-        myGameArea.drawTextInBackground(num, this.texts[text], pos, color, textHeight, textAlign);
+    drawTextInBackground: function (num, text, pos, color = "white", textHeight = 20, textAlign = "center", isEventualText = false) {
+        if (isEventualText && this.eventualText[0] > 0) {//si es un texto eventual ira desapareciendo poco a poco
+            myGameArea.drawTextInBackground(num, text, pos, color, textHeight, textAlign, this.eventualText[0]);
+        } else if (typeof this.texts[text] === "undefined" && !isEventualText) {//si no es eventual y tampoco tiene traduccion
+            myGameArea.drawTextInBackground(num, text, pos, color, textHeight, textAlign);
+        } else if (!isEventualText){
+            myGameArea.drawTextInBackground(num, this.texts[text], pos, color, textHeight, textAlign);
+        }
+    },
+    resetEventualText: function() {
+        this.eventualText = [1, -0.01];
+    }, 
+    applyDecay: function() {
+        if(this.eventualText[0]>0){this.eventualText[0] += this.eventualText[1];}
     }
 }
 
@@ -38,7 +51,7 @@ mySpanishVersion = {
     clickToConinue: "Pulsa para continuar",
     clickToRestart: "Pulsa para reiniciar",
     pause: "Pausa",
-    hp: "PV: ", 
+    hp: "PV: ",
     dp: "PD: ",
     ap: "PA: ",
     healthPoints: "Puntos de Vida: ",

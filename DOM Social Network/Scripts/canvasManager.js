@@ -102,7 +102,7 @@ var myGameArea = {
             bg.ctx.drawImage(img, bg.drawPosX + pos[0], bg.drawPosY + pos[1], img.initWidth * resizePerOne, img.initHeight * resizePerOne);
         }
     },
-    drawTextInBackground: function (num, text, pos, color = "white", textHeight = 20, textAlign = "center") {
+    drawTextInBackground: function (num, text, pos, color = "white", textHeight = 20, textAlign = "center", textAlpha=1) {
         let bg;
         if (num === 1) { bg = myGameArea.background1; }
         else if (num === 2) { bg = myGameArea.background2; }
@@ -114,7 +114,9 @@ var myGameArea = {
             bg.cnv.style.letterSpacing = String(Math.trunc(2*resizePerOne))+'px';
             bg.ctx.fillStyle = color;
             bg.ctx.textAlign = textAlign;
+            bg.ctx.globalAlpha = textAlpha;
             bg.ctx.fillText(text, bg.drawPosX + pos[0] * bg.width, bg.drawPosY + pos[1] * bg.height);
+            bg.ctx.globalAlpha = 1;
         }
     },
     animateInBackground: function (num, pos, img, animation) {
