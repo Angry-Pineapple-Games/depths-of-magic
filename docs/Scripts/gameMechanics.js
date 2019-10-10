@@ -240,7 +240,7 @@ var myGameMechanics = {
 }
 
 var myCombatMechanics = {
-    debug: true,
+    debug: false,
     countSwaps: 0,
     countCombats: 0,
     patternsPerEnemy: 3,
@@ -427,7 +427,7 @@ var myCutMechanics = {
 }
 
 var myStatsController = {
-    debug: true,
+    debug: false,
     loops: 0,//vueltas dadas al juego
     loopfactor: 0.1,//factor de mejora enemigos en cada vuelta al juego
     increaseFactor: 5,//factor de mejora para las estadisticas del heroe
