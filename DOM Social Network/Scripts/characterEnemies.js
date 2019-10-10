@@ -44,7 +44,7 @@ var myEnemiesProperties = {
             [0,15, "ropeCounterV",0,0,0]
         ],[
             [0,4, "ropeCounterH",0,0,0],
-            [0,8, "ropeBuffV",0,0,1],
+            [0,8, "ropeBuffV",0,3,1],
             [0,12, "ropeCounterH",0,0,0]
         ],[
             [0,14, "ropeCounterV",0,0,0],
@@ -72,22 +72,22 @@ var myEnemiesProperties = {
         gridRopes: [[
             [0,11, "ropeCounterH",0,0,0],
             [0,8, "ropeHealV",0,0,3],
-            [0,5, "ropeBuffH",0,0,1],
+            [0,5, "ropeBuffH",0,3,1],
             [0,9, "ropeCounterV",0,0,0],
             [0,13, "ropeCounterH",0,0,0]
         ],[
             [0,7, "ropeCounterV",0,0,0],
-            [0,11, "ropeBuffH",0,0,1],
+            [0,11, "ropeBuffH",0,3,1],
             [0,15, "ropeCounterV",0,0,0],
             [0,18, "ropeCounterH",0,0,0],
-            [0,21, "ropeDebuffV",0,0,2]
+            [0,21, "ropeDebuffV",0,2,2]
         ],[
             [0,0, "ropeCounterV",0,0,0],
             [0,4, "ropeHealH",0,0,3],
-            [0,1, "ropeDebuffV",0,0,2],
+            [0,1, "ropeDebuffV",0,2,2],
             [0,5, "ropeCounterH",0,0,0],
         ],[
-            [0,14, "ropeBuffV",0,0,1],
+            [0,14, "ropeBuffV",0,3,1],
             [0,18, "ropeCounterH",0,0,0],
             [0,12, "ropeCounterH",0,0,0],
             [0,16, "ropeCounterV",0,0,0],
@@ -106,24 +106,24 @@ var myEnemiesProperties = {
         animations:{},
         gridRopeNow: -1,
         gridRopes: [[
-            [0,3, "ropeDebuffH",0,0,2],
-            [0,7, "ropeBuffV",0,0,1],
+            [0,3, "ropeDebuffH",0,2,2],
+            [0,7, "ropeBuffV",0,3,1],
             [0,19, "ropeCounterH",0,0,0],
             [0,16, "ropeCounterV",0,0,0],
             [0,13, "ropeCounterH",0,0,0]
         ],[
-            [0,1, "ropeBuffV",0,0,1],
+            [0,1, "ropeBuffV",0,3,1],
             [0,5, "ropeCounterH",0,0,0],
-            [0,2, "ropeBuffV",0,0,1],
+            [0,2, "ropeBuffV",0,3,1],
             [0,14, "ropeCounterV",0,0,0],
             [0,18, "ropeHealH",0,0,3],
             [0,22, "ropeCounterV",0,0,0]
         ],[
             [0,5, "ropeCounterH",0,0,0],
-            [0,4, "ropeDebuffH",0,0,2],
+            [0,4, "ropeDebuffH",0,2,2],
             [0,7, "ropeCounterV",0,0,0],
             [0,11, "ropeHealH",0,0,3],
-            [0,12, "ropeBuffH",0,0,1],
+            [0,12, "ropeBuffH",0,3,1],
             [0,16, "ropeCounterV",0,0,0],
             [0,20, "ropeCounterH",0,0,0]
         ],[
@@ -131,7 +131,7 @@ var myEnemiesProperties = {
             [0,7, "ropeCounterV",0,0,0],
             [0,10, "ropeHealH",0,0,3],
             [0,6, "ropeCounterH",0,0,0],
-            [0,9, "ropeDebuffV",0,0,2],
+            [0,9, "ropeDebuffV",0,2,2],
             [0,19, "ropeCounterH",0,0,0],
             [0,23, "ropeCounterV",0,0,0]
         ]]
@@ -148,17 +148,17 @@ var myEnemiesProperties = {
         animations:{},
         gridRopeNow: -1,
         gridRopes: [[           
-            [0,14, "ropeBuffV",0,0,1],
+            [0,14, "ropeBuffV",0,3,1],
             [0,17, "ropeCounterH",0,0,0],
             [0,8, "ropeCounterV",0,0,0],
             [0,15, "ropeHealV",0,0,3],
             [0,22, "ropeCounterV",0,0,0],
-            [0,16, "ropeDebuffV",0,0,2],
+            [0,16, "ropeDebuffV",0,2,2],
             [0,20, "ropeCounterH",0,0,0]
         ],[            
             [0,4, "ropeHealH",0,0,3],
             [0,5, "ropeCounterH",0,0,0],
-            [0,9, "ropeBuffV",0,0,1],
+            [0,9, "ropeBuffV",0,3,1],
             [0,16, "ropeCounterV",0,0,0],
             [0,19, "ropeCounterH",0,0,0],
             [0,18, "ropeCounterH",0,0,0],
@@ -166,16 +166,16 @@ var myEnemiesProperties = {
             [0,10, "ropeCounterH",0,0,0]
         ],[
             [0,2, "ropeCounterV",0,0,0],
-            [0,6, "ropeDebuffH",0,0,2],
+            [0,6, "ropeDebuffH",0,2,2],
             [0,5, "ropeCounterH",0,0,0],
-            [0,8, "ropePowerV",0,0,4],
+            [0,8, "ropePowerV",0,1,4],
             [0,15, "ropeCounterV",0,0,0],
             [0,19, "ropeCounterH",0,0,0],
             [0,23, "ropeCounterV",0,0,0]
         ],[
-            [0,20, "ropeDebuffH",0,0,2],
+            [0,20, "ropeDebuffH",0,2,2],
             [0,23, "ropeCounterV",0,0,0],
-            [0,1, "ropePowerV",0,0,4],
+            [0,1, "ropePowerV",0,1,4],
             [0,0, "ropeHealV",0,0,3],
             [0,7, "ropeCounterV",0,0,0],
             [0,11, "ropeCounterH",0,0,0],
@@ -198,20 +198,20 @@ var myEnemiesProperties = {
         gridRopes: [[
             [0,10, "ropeCounterH",0,0,0],
             [0,7, "ropeCounterV",0,0,0],
-            [0,14, "ropeDebuffV",0,0,2],
+            [0,14, "ropeDebuffV",0,2,2],
             [0,18, "ropeCounterH",0,0,0],
             [0,19, "ropeHealH",0,0,3],
             [0,16, "ropeCounterV",0,0,0],
             [0,13, "ropeCounterH",0,0,0],
-            [0,9, "ropeDebuffV",0,0,2],
+            [0,9, "ropeDebuffV",0,2,2],
             [0,5, "ropeCounterH",0,0,0],
             [0,4, "ropeHealH",0,0,3]
         ],[
             [0,5, "ropeCounterH",0,0,0],
-            [0,4, "ropeDebuffH",0,0,2],
+            [0,4, "ropeDebuffH",0,2,2],
             [0,7, "ropeCounterV",0,0,0],
             [0,11, "ropeHealH",0,0,3],
-            [0,12, "ropeBuffH",0,0,1],
+            [0,12, "ropeBuffH",0,3,1],
             [0,16, "ropeCounterV",0,0,0],
             [0,20, "ropeCounterH",0,0,0]
         ],[
@@ -221,7 +221,7 @@ var myEnemiesProperties = {
             [0,13, "ropeCounterH",0,0,0],
             [0,18, "ropeCounterH",0,0,0],
             [0,19, "ropeCounterH",0,0,0],
-            [0,22, "ropePowerV",0,0,4]
+            [0,22, "ropePowerV",0,1,4]
         ],[
             [0,1, "ropeCounterV",0,0,0],
             [0,4, "ropeCounterH",0,0,0],
@@ -230,7 +230,7 @@ var myEnemiesProperties = {
             [0,11, "ropeCounterH",0,0,0],
             [0,12, "ropeCounterH",0,0,0],
             [0,15, "ropeCounterV",0,0,0],
-            [0,18, "ropeDebuffH",0,0,2],
+            [0,18, "ropeDebuffH",0,2,2],
             [0,19, "ropeCounterH",0,0,0],
             [0,22, "ropeCounterV",0,0,0]
         ]]
@@ -248,27 +248,27 @@ var myEnemiesProperties = {
         gridRopeNow: -1,
         gridRopes: [[
             [0,7, "ropeCounterV",0,0,0],
-            [0,11, "ropeBuffH",0,0,1],
+            [0,11, "ropeBuffH",0,3,1],
             [0,15, "ropeCounterV",0,0,0],
             [0,18, "ropeCounterH",0,0,0],
-            [0,21, "ropeDebuffV",0,0,2]
+            [0,21, "ropeDebuffV",0,2,2]
         ],[
             [0,7, "ropeCounterV",0,0,0],
             [0,14, "ropeCounterV",0,0,0],
-            [0,18, "ropePowerH",0,0,4],
+            [0,18, "ropePowerH",0,1,4],
             [0,15, "ropeCounterV",0,0,0],
             [0,8, "ropeCounterV",0,0,0],
             [0,5, "ropeHealH",0,0,3],
             [0,9, "ropeCounterV",0,0,0],
-            [0,16, "ropeBuffV",0,0,1],
+            [0,16, "ropeBuffV",0,3,1],
             [0,23, "ropeCounterV",0,0,0]
         ],[
             [0,3, "ropeCounterH",0,0,0],
-            [0,4, "ropeDebuffH",0,0,2],
+            [0,4, "ropeDebuffH",0,2,2],
             [0,8, "ropeCounterV",0,0,0],
             [0,15, "ropeCounterV",0,0,0],
             [0,22, "ropeCounterV",0,0,0],
-            [0,19, "ropeDebuffH",0,0,2],
+            [0,19, "ropeDebuffH",0,2,2],
             [0,20, "ropeHealH",0,0,3],
             [0,10, "ropeHealH",0,0,3],
             [0,14, "ropeHealV",0,0,3]
@@ -278,7 +278,7 @@ var myEnemiesProperties = {
             [0,6, "ropeCounterH",0,0,0],
             [0,17, "ropeCounterH",0,0,0],
             [0,18, "ropeCounterH",0,0,0],
-            [0,21, "ropeBuffV",0,0,1],
+            [0,21, "ropeBuffV",0,3,1],
             [0,22, "ropeHealV",0,0,3]
         ]]
     },
@@ -294,8 +294,8 @@ var myEnemiesProperties = {
         animations:{},
         gridRopeNow: -1,
         gridRopes: [[
-            [0,1, "ropeBuffV",0,0,1],
-            [0,2, "ropeBuffV",0,0,1],
+            [0,1, "ropeBuffV",0,3,1],
+            [0,2, "ropeBuffV",0,3,1],
             [0,5, "ropeCounterH",0,0,0],
             [0,14, "ropeCounterV",0,0,0],
             [0,18, "ropeHealH",0,0,3],
@@ -307,12 +307,12 @@ var myEnemiesProperties = {
             [0,13, "ropeCounterH",0,0,0],
             [0,18, "ropeCounterH",0,0,0],
             [0,19, "ropeCounterH",0,0,0],
-            [0,22, "ropePowerV",0,0,4]
+            [0,22, "ropePowerV",0,1,4]
         ],[
             [0,2, "ropeCounterV",0,0,0],
             [0,6, "ropeCounterH",0,0,0],
             [0,12, "ropeCounterH",0,0,0],
-            [0,16, "ropeBuffV",0,0,1],
+            [0,16, "ropeBuffV",0,3,1],
             [0,23, "ropeCounterV",0,0,0],
             [0,22, "ropeCounterV",0,0,0],
             [0,18, "ropeCounterH",0,0,0],
@@ -320,13 +320,13 @@ var myEnemiesProperties = {
         ],[
             [0,1, "ropeCounterV",0,0,0],
             [0,7, "ropeCounterV",0,0,0],
-            [0,9, "ropeBuffV",0,0,1],
+            [0,9, "ropeBuffV",0,3,1],
             [0,12, "ropeCounterH",0,0,0],
             [0,11, "ropeHealH",0,0,3],
             [0,15, "ropeCounterV",0,0,0],
             [0,18, "ropeCounterH",0,0,0],
             [0,19, "ropeCounterH",0,0,0],
-            [0,21, "ropeDebuffV",0,0,2],
+            [0,21, "ropeDebuffV",0,2,2],
             [0,23, "ropeCounterV",0,0,0]
         ]]
     },
@@ -344,37 +344,37 @@ var myEnemiesProperties = {
         gridRopes: [[
             [0,7, "ropeCounterV",0,0,0],
             [0,14, "ropeCounterV",0,0,0],
-            [0,18, "ropePowerH",0,0,4],
+            [0,18, "ropePowerH",0,1,4],
             [0,15, "ropeCounterV",0,0,0],
             [0,8, "ropeCounterV",0,0,0],
             [0,5, "ropeHealH",0,0,3],
             [0,9, "ropeCounterV",0,0,0],
-            [0,16, "ropeBuffV",0,0,1],
+            [0,16, "ropeBuffV",0,3,1],
             [0,23, "ropeCounterV",0,0,0]
         ],[
             [0,0, "ropeCounterV",0,0,0],
-            [0,3, "ropeDebuffH",0,0,2],
+            [0,3, "ropeDebuffH",0,2,2],
             [0,5, "ropeCounterH",0,0,0],
             [0,9, "ropeHealV",0,0,3],
             [0,12, "ropeCounterH",0,0,0],
             [0,11, "ropeCounterH",0,0,0],
-            [0,14, "ropePowerV",0,0,4],
+            [0,14, "ropePowerV",0,1,4],
             [0,18, "ropeCounterH",0,0,0],
             [0,20, "ropeCounterH",0,0,0],
-            [0,23, "ropeBuffV",0,0,1]
+            [0,23, "ropeBuffV",0,3,1]
         ],[
             [0,2, "ropeCounterV",0,0,0],
             [0,6, "ropeHealH",0,0,3],
             [0,4, "ropeCounterH",0,0,0],
-            [0,7, "ropeBuffV",0,0,1],
+            [0,7, "ropeBuffV",0,3,1],
             [0,11, "ropeCounterH",0,0,0],
-            [0,12, "ropeDebuffH",0,0,2],
+            [0,12, "ropeDebuffH",0,2,2],
             [0,16, "ropeCounterV",0,0,0],
             [0,19, "ropeCounterH",0,0,0],
             [0,17, "ropeCounterH",0,0,0],
             [0,21, "ropeHealV",0,0,3]
         ],[
-            [0,3, "ropeDebuffH",0,0,2],
+            [0,3, "ropeDebuffH",0,2,2],
             [0,7, "ropeHealV",0,0,3],
             [0,14, "ropeCounterV",0,0,0],
             [0,17, "ropeCounterH",0,0,0],
@@ -383,7 +383,7 @@ var myEnemiesProperties = {
             [0,15, "ropeCounterV",0,0,0],
             [0,22, "ropeHealV",0,0,3],
             [0,6, "ropeCounterH",0,0,0],
-            [0,9, "ropeBuffV",0,0,1],
+            [0,9, "ropeBuffV",0,3,1],
             [0,16, "ropeCounterV",0,0,0],
             [0,20, "ropeCounterH",0,0,0]
         ]]
@@ -402,16 +402,16 @@ var myEnemiesProperties = {
         gridRopes: [[
             [0,1, "ropeCounterV",0,0,0],
             [0,7, "ropeCounterV",0,0,0],
-            [0,9, "ropeBuffV",0,0,1],
+            [0,9, "ropeBuffV",0,3,1],
             [0,12, "ropeCounterH",0,0,0],
             [0,11, "ropeHealH",0,0,3],
             [0,15, "ropeCounterV",0,0,0],
             [0,18, "ropeCounterH",0,0,0],
             [0,19, "ropeCounterH",0,0,0],
-            [0,21, "ropeDebuffV",0,0,2],
+            [0,21, "ropeDebuffV",0,2,2],
             [0,23, "ropeCounterV",0,0,0]
         ],[
-            [0,3, "ropeDebuffH",0,0,2],
+            [0,3, "ropeDebuffH",0,2,2],
             [0,7, "ropeHealV",0,0,3],
             [0,14, "ropeCounterV",0,0,0],
             [0,17, "ropeCounterH",0,0,0],
@@ -420,7 +420,7 @@ var myEnemiesProperties = {
             [0,15, "ropeCounterV",0,0,0],
             [0,22, "ropeHealV",0,0,3],
             [0,6, "ropeCounterH",0,0,0],
-            [0,9, "ropeBuffV",0,0,1],
+            [0,9, "ropeBuffV",0,3,1],
             [0,16, "ropeCounterV",0,0,0],
             [0,20, "ropeCounterH",0,0,0]
         ],[
@@ -431,19 +431,19 @@ var myEnemiesProperties = {
             [0,17, "ropeCounterH",0,0,0],
             [0,21, "ropeCounterV",0,0,0],
             [0,1, "ropeCounterV",0,0,0],
-            [0,5, "ropeDebuffH",0,0,2],
-            [0,2, "ropePowerV",0,0,4],
+            [0,5, "ropeDebuffH",0,2,2],
+            [0,2, "ropePowerV",0,1,4],
             [0,6, "ropeCounterH",0,0,0],
             [0,13, "ropeCounterH",0,0,0],
             [0,16, "ropeHealV",0,0,3],
-            [0,20, "ropePowerH",0,0,4],
+            [0,20, "ropePowerH",0,1,4],
             [0,23, "ropeCounterV",0,0,0]
         ],[
-            [0,3, "ropeBuffH",0,0,1],
+            [0,3, "ropeBuffH",0,3,1],
             [0,4, "ropeCounterH",0,0,0],
             [0,5, "ropeCounterH",0,0,0],
-            [0,6, "ropeDebuffH",0,0,2],
-            [0,1, "ropePowerV",0,0,4],
+            [0,6, "ropeDebuffH",0,2,2],
+            [0,1, "ropePowerV",0,1,4],
             [0,8, "ropeCounterV",0,0,0],
             [0,12, "ropeHealH",0,0,3],
             [0,16, "ropeCounterV",0,0,0],
@@ -476,11 +476,11 @@ var myEnemiesProperties = {
             [0,17, "ropeHealH",0,0,3],
             [0,21, "ropeCounterV",0,0,0],
             [0,20, "ropeCounterH",0,0,0],
-            [0,23, "ropeBuffV",0,0,1]
+            [0,23, "ropeBuffV",0,3,1]
         ],[
             [0,1, "ropeCounterV",0,0,0],
             [0,4, "ropeHealH",0,0,3],
-            [0,5, "ropeDebuffH",0,0,2],
+            [0,5, "ropeDebuffH",0,2,2],
             [0,10, "ropeCounterH",0,0,0],
             [0,14, "ropeCounterV",0,0,0],
             [0,18, "ropeHealH",0,0,3],
@@ -488,18 +488,18 @@ var myEnemiesProperties = {
             [0,16, "ropeCounterV",0,0,0],
             [0,13, "ropeCounterH",0,0,0]
         ],[
-            [0,1, "ropeDebuffV",0,0,2],
+            [0,1, "ropeDebuffV",0,2,2],
             [0,5, "ropeCounterH",0,0,0],
             [0,9, "ropeCounterV",0,0,0],
-            [0,13, "ropeDebuffH",0,0,2],
-            [0,21, "ropeBuffV",0,0,1],
+            [0,13, "ropeDebuffH",0,2,2],
+            [0,21, "ropeBuffV",0,3,1],
             [0,14, "ropeCounterV",0,0,0],
-            [0,11, "ropeBuffH",0,0,1],
+            [0,11, "ropeBuffH",0,3,1],
             [0,15, "ropeCounterV",0,0,0],
             [0,19, "ropeHealH",0,0,3],
             [0,23, "ropeCounterV",0,0,0]
         ],[
-            [0,0, "ropeDebuffV",0,0,2],
+            [0,0, "ropeDebuffV",0,2,2],
             [0,3, "ropeHealH",0,0,3],
             [0,4, "ropeCounterH",0,0,0],
             [0,5, "ropeHealH",0,0,3],
@@ -507,9 +507,9 @@ var myEnemiesProperties = {
             [0,8, "ropeCounterV",0,0,0],
             [0,15, "ropeCounterV",0,0,0],
             [0,17, "ropeCounterH",0,0,0],
-            [0,18, "ropePowerH",0,0,4],
+            [0,18, "ropePowerH",0,1,4],
             [0,19, "ropeCounterH",0,0,0],
-            [0,23, "ropeBuffV",0,0,1],
+            [0,23, "ropeBuffV",0,3,1],
             [0,20, "ropeHealH",0,0,3]
         ]]
     }

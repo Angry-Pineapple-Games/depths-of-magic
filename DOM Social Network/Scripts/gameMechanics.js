@@ -492,5 +492,6 @@ var myStatsController = {
         hero.hp += Math.trunc((this.totalHeal - this.heal) * this.healFactor);
         if(hero.hp > hero.hpMax) {hero.hp = hero.hpMax;}
         enemy.hp += Math.trunc(this.heal * this.healFactor);
+        if(enemy.hp > enemy.hpMax){enemy.hp = enemy.hpMax;}
     }
 }
