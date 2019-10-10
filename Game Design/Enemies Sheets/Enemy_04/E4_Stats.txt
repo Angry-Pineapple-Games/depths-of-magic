@@ -1,0 +1,11 @@
+Name: Giwalev
+
+HP: 140
+
+Base attack: 70
+
+Base defense: 45
+
+Attack buff/debuff: 0 (modifiable in-game)
+
+Defense buff/debuff: 0 (modifiable in-game)

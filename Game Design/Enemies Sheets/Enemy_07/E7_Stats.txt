@@ -1,0 +1,11 @@
+Name: Glanxyor 
+
+HP: 180
+
+Base attack: 95
+
+Base defense: 80
+
+Attack buff/debuff: 0 (modifiable in-game)
+
+Defense buff/debuff: 0 (modifiable in-game)

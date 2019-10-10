@@ -1,6 +1,8 @@
 var myHeroCharacter = {
     hp: 100,
+    hpIni: 100,
     hpMax: 100,
+    damage: 0,
     buff: 0,
     ap: 40,
     apMax: 40,
@@ -36,7 +38,7 @@ var myHeroCharacter = {
         this.animations.victory = new Animation(spritesheet, 60, 119);//placeholder
     },
     resetHeroStats: function() {
-        this.hp = this.hpMax;
+        this.hp = this.hpIni;
         this.ap = this.apMax;
         this.dp = this.dpMax;
     }

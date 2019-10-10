@@ -1,0 +1,11 @@
+Name: Rawdramon
+
+HP: 135
+
+Base attack: 85 
+
+Base defense: 40
+
+Attack buff/debuff: 0 (modifiable in-game)
+
+Defense buff/debuff: 0 (modifiable in-game)

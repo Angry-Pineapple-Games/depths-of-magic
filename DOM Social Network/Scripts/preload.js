@@ -53,15 +53,51 @@ var myPreload = {
       width: 160,
       height: 40
     },
+    ropeHealV: {
+      src: 'Assets/combat/ropeHealV.png',
+      width: 40,
+      height: 160
+    },
+    ropeHealH: {
+      src: 'Assets/combat/ropeHealH.png',
+      width: 160,
+      height: 40
+    },
+    ropeBuffV: {
+      src: 'Assets/combat/ropeBuffV.png',
+      width: 40,
+      height: 160
+    },
+    ropeBuffH: {
+      src: 'Assets/combat/ropeBuffH.png',
+      width: 160,
+      height: 40
+    },
+    ropeDebuffV: {
+      src: 'Assets/combat/ropeDebuffV.png',
+      width: 40,
+      height: 160
+    },
+    ropeDebuffH: {
+      src: 'Assets/combat/ropeDebuffH.png',
+      width: 160,
+      height: 40
+    },
+    ropePowerV: {
+      src: 'Assets/combat/ropePowerV.png',
+      width: 40,
+      height: 160
+    },
+    ropePowerH: {
+      src: 'Assets/combat/ropePowerH.png',
+      width: 160,
+      height: 40
+    },
     backgroundBlack: {
       src: 'Assets/background/backgroundBlack.png',
       width: 1920,
       height: 1440
     },
-    //hero: {
-    //src: 'Assets/hero.jpg',
-    //width: 366,
-    //height: 688},
     enemy0: {
       src: 'Assets/spritesheet_test.png',
       width: 366,
@@ -113,47 +149,47 @@ var myPreload = {
       height: 688
     },
     room0: {
-      src: 'Assets/fondo1.jpg',
+      src: 'Assets/fondo1.png',
       width: 1920,
       height: 1440
     },
     room1: {
-      src: 'Assets/fondo2.jpg',
+      src: 'Assets/fondo2.png',
       width: 1920,
       height: 1440
     },
     room2: {
-      src: 'Assets/fondo3.jpg',
+      src: 'Assets/fondo3.png',
       width: 1920,
       height: 1440
     },
     room3: {
-      src: 'Assets/fondo4.jpg',
+      src: 'Assets/fondo4.png',
       width: 1920,
       height: 1440
     },
     room4: {
-      src: 'Assets/fondo5.jpg',
+      src: 'Assets/fondo5.png',
       width: 1920,
       height: 1440
     },
     room5: {
-      src: 'Assets/fondo6.jpg',
+      src: 'Assets/fondo6.png',
       width: 1920,
       height: 1440
     },
     room6: {
-      src: 'Assets/fondo7.jpg',
+      src: 'Assets/fondo7.png',
       width: 1920,
       height: 1440
     },
     room7: {
-      src: 'Assets/fondo8.jpg',
+      src: 'Assets/fondo8.png',
       width: 1920,
       height: 1440
     },
     room8: {
-      src: 'Assets/fondo9.jpg',
+      src: 'Assets/fondo9.png',
       width: 1920,
       height: 1440
     },
