@@ -2,6 +2,7 @@ var myHeroCharacter = {
     hp: 100,
     hpIni: 100,
     hpMax: 100,
+    damage: 0,
     buff: 0,
     ap: 40,
     apMax: 40,

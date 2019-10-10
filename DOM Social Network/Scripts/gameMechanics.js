@@ -240,7 +240,7 @@ var myGameMechanics = {
 }
 
 var myCombatMechanics = {
-    debug: false,
+    debug: true,
     countSwaps: 0,
     countCombats: 0,
     patternsPerEnemy: 3,
@@ -427,6 +427,7 @@ var myCutMechanics = {
 }
 
 var myStatsController = {
+    debug: true,
     loops: 0,//vueltas dadas al juego
     loopfactor: 0.1,//factor de mejora enemigos en cada vuelta al juego
     increaseFactor: 5,//factor de mejora para las estadisticas del heroe
@@ -485,13 +486,21 @@ var myStatsController = {
         enemy.ap *= 22;
         hero.buff = this.buff * (hero.ap + hero.dp) * this.buffFactor - (this.totalDebuff - this.debuff) * (enemy.ap + enemy.dp) * this.debuffFactor;
         enemy.buff = (this.totalBuff - this.buff) * (enemy.ap + enemy.dp) * this.buffFactor - this.debuff * (hero.ap + hero.dp) * this.debuffFactor;
-        
+
+        let heroLastHp = hero.hp;
         hero.hp = Math.trunc(((hero.buff + (hero.hp * hero.dp)) - ((this.totalCounter - this.counter) * enemy.ap + (enemy.ap * this.loops * this.loopfactor) + enemy.buff)) / hero.dp);
+        let enemyLastHp = enemy.hp;
         enemy.hp = Math.trunc(((enemy.buff + (enemy.hp * enemy.dp) + (enemy.dp * this.loops * this.loopfactor)) - ((this.counter * hero.ap + hero.buff) * myCutMechanics.concatenatedCuts)) / enemy.dp);
     
         hero.hp += Math.trunc((this.totalHeal - this.heal) * this.healFactor);
         if(hero.hp > hero.hpMax) {hero.hp = hero.hpMax;}
         enemy.hp += Math.trunc(this.heal * this.healFactor);
         if(enemy.hp > enemy.hpMax){enemy.hp = enemy.hpMax;}
+
+        hero.damage = heroLastHp - hero.hp;
+        enemy.damage = enemyLastHp - enemy.hp;
+        myTextManager.resetEventualText();
+
+        if(this.debug){console.log("applyStats");}
     }
 }

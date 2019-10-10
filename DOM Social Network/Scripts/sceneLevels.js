@@ -25,6 +25,8 @@ var myLevel1 = {
         //myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
         myGameArea.animateInBackground(1, this.posEnemy, this.enemy.img, this.enemy.currentAnimation);
         myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation);
+        myTextManager.drawTextInBackground(1, "hp", [0.15,0.45], "green", 30, "right");
+        myTextManager.drawTextInBackground(1, " "+String(this.hero.hp), [0.15,0.45], "green", 30, "left");
 
         if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
             myGameArea.resizeBackground(myPreload.images.grid, 2);
@@ -42,6 +44,10 @@ var myLevel1 = {
             myGameArea.drawInBackground(1, [0, 0], myPreload.images.backgroundBlack);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.backgroundBlack);
             myTextManager.drawTextInBackground(1, "pause", [0.5,0.5], "white", 50, "center");
+        } else { //eventos particulares a que el juego no este en pausa
+            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.25, 0.45], "red", 30, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.75,0.45], "red", 30, "center", true);
+            myTextManager.applyDecay();
         }
 
         myFade.fade(1);

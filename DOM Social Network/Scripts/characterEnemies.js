@@ -30,6 +30,7 @@ var myEnemiesProperties = {
     0: {
         name: "Raygler",
         hp: 90,
+        damage: 0,
         hpMax: 90,
         buff: 0,
         ap: 35,
@@ -61,6 +62,7 @@ var myEnemiesProperties = {
     1: {
         name: "Sawyrah",
         hp: 80,
+        damage: 0,
         hpMax: 80,
         buff: 0,
         ap: 55,
@@ -97,6 +99,7 @@ var myEnemiesProperties = {
     2: {
         name: "Gorpovar",
         hp: 110,
+        damage: 0,
         hpMax: 110,
         buff: 0,
         ap: 25,
@@ -139,6 +142,7 @@ var myEnemiesProperties = {
     3: {
         name: "Giwalev", 
         hp: 140,
+        damage: 0,
         hpMax: 140,
         buff: 0,
         ap: 70,
@@ -187,6 +191,7 @@ var myEnemiesProperties = {
     4: {
         name: "Rawdramon",
         hp: 135,
+        damage: 0,
         hpMax: 135,
         buff: 0,
         ap: 85,
@@ -238,6 +243,7 @@ var myEnemiesProperties = {
     5: {
         name: "Shadrix",
         hp: 160,
+        damage: 0,
         hpMax: 160,
         buff: 0,
         ap: 55,
@@ -285,6 +291,7 @@ var myEnemiesProperties = {
     6: {
         name: "Glanxyor",
         hp: 180,
+        damage: 0,
         hpMax: 180,
         buff: 0,
         ap: 95,
@@ -333,6 +340,7 @@ var myEnemiesProperties = {
     7: {
         name: "Wrotalus",
         hp: 240,
+        damage: 0,
         hpMax: 240,
         buff: 0,
         ap: 70,
@@ -391,6 +399,7 @@ var myEnemiesProperties = {
     8: {
         name: "Gumlisar", 
         hp: 160,
+        damage: 0,
         hpMax: 160,
         buff: 0,
         ap: 55,
@@ -456,6 +465,7 @@ var myEnemiesProperties = {
     9: {
         name: "The Abyss",
         hp: 250,
+        damage: 0,
         hpMax: 250,
         buff: 0,
         ap: 145,
