@@ -240,7 +240,7 @@ var myGameMechanics = {
 }
 
 var myCombatMechanics = {
-    debug: true,
+    debug: false,
     countSwaps: 0,
     countCombats: 0,
     patternsPerEnemy: 3,
@@ -256,7 +256,7 @@ var myCombatMechanics = {
         myFade.in(2);
         myCutMechanics.cutRopes = 0;
         myCutMechanics.totalRopes = 0;
-        myCutMechanics.concatenatedCuts = 0;
+        myCutMechanics.concatenatedCuts = 1;
         myGameMechanics.timeOrder = 0;
         myGameManager.addTimer(this.updateState, this.scene.limitTimePerPatron, "timersSwap");
         myGameMechanics.generateGridRopes(this.scene.enemy);
@@ -367,7 +367,7 @@ var myCutMechanics = {
     debug: false,
     cutRopes: 0,
     totalRopes: 0,
-    concatenatedCuts: 0,
+    concatenatedCuts: 1,
     rope: {},
     gridRope: {},
     lastPosTrace: 0,
@@ -442,6 +442,7 @@ var myStatsController = {
     counterDebuff: 0,
     totalDebuff: 0,
     heal: 0,
+    healFactor: 10,
     counterHeal: 0,
     totalHeal: 0,
     resetLoops: function () {
@@ -480,11 +481,16 @@ var myStatsController = {
         this.counterBuff = 0;
         this.counterDebuff = 0;
     },
-    applyStats: function (hero, enemy) {//aplica los daños
+    applyStats: function (hero, enemy) {//aplica los daños y curaciones
+        enemy.ap *= 22;
         hero.buff = this.buff * (hero.ap + hero.dp) * this.buffFactor - (this.totalDebuff - this.debuff) * (enemy.ap + enemy.dp) * this.debuffFactor;
         enemy.buff = (this.totalBuff - this.buff) * (enemy.ap + enemy.dp) * this.buffFactor - this.debuff * (hero.ap + hero.dp) * this.debuffFactor;
         
         hero.hp = Math.trunc(((hero.buff + (hero.hp * hero.dp)) - ((this.totalCounter - this.counter) * enemy.ap + (enemy.ap * this.loops * this.loopfactor) + enemy.buff)) / hero.dp);
-        enemy.hp = Math.trunc(((enemy.buff + (enemy.hp * enemy.dp) + (enemy.ap * this.loops * this.loopfactor)) - ((this.counter * hero.ap + hero.buff)) / enemy.dp) * myCutMechanics.concatenatedCuts);
+        enemy.hp = Math.trunc(((enemy.buff + (enemy.hp * enemy.dp) + (enemy.dp * this.loops * this.loopfactor)) - ((this.counter * hero.ap + hero.buff) * myCutMechanics.concatenatedCuts)) / enemy.dp);
+    
+        hero.hp += Math.trunc((this.totalHeal - this.heal) * this.healFactor);
+        if(hero.hp > hero.hpMax) {hero.hp = hero.hpMax;}
+        enemy.hp += Math.trunc(this.heal * this.healFactor);
     }
 }

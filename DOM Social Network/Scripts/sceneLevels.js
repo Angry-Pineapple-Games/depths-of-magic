@@ -38,6 +38,12 @@ var myLevel1 = {
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.gridNodes);
         }
 
+        if (myGameManager.pause) {//si el juego esta en pausa
+            myGameArea.drawInBackground(1, [0, 0], myPreload.images.backgroundBlack);
+            myGameArea.drawInBackground(2, [0, 0], myPreload.images.backgroundBlack);
+            myTextManager.drawTextInBackground(1, "pause", [0.5,0.5], "white", 50, "center");
+        }
+
         myFade.fade(1);
         myFade.fade(2);
     }
