@@ -21,19 +21,19 @@ var myGame = {
         that.sceneStarted = false;
         if (that.scene < that.scenes.length-2) {that.scene++;}
         else {
-            that.scene=0;
+            that.scene= 0;
             myStatsController.loops++;
         }
         if(that.debug){console.log("SwapScene");}
     },
     gameOver : function() {
         this.sceneStarted = false;
-        this.scene = this.scenes[this.scenes.length-1];
+        this.scene = this.scenes.length - 1;
         if(this.debug){console.log("GameOver");}
     },
     restart: function() {
         this.sceneStarted = false;
-        this.scene = this.scenes[0];
+        this.scene = 0;
         if(this.debug){console.log("GameRestart");}
     }
 }
