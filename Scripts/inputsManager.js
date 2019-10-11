@@ -10,11 +10,14 @@ var myInputsManager = {
     start: function () {
         let that = myInputsManager;
         let pause = myGameManager.pause;
-        
-        $("#canvas1").mouseup(function(event) {
-            if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scene[myGame.scene] || myTransitionScene === myGame.scene[myGame.scene] ) {myGame.swapScene();}
-            else if (myGameOver === myGame.scenes[myGame.scene]) {myGame.restart();}
+
+        $("#canvas1").mouseup(function (event) {
+            that.passCertainScenes(event);
         });
+
+        document.getElementById("canvas1").ontouchend =  function (event) {
+            that.passCertainScenes(event);
+        }
 
         $("#canvas2").mousedown(function (event) {
             if (!pause && !that.blocked) {
@@ -36,22 +39,34 @@ var myInputsManager = {
             }
         });
 
+        document.getElementById("canvas2").ontouchstart =  function (event) {
+            if (!pause && !that.blocked) {
+                that.trace = [];
+                that.trace.push(that.traceLive.slice());
+                that.leftMouseDown = true;
+            }
+        }
+
         $("#canvas2").mousemove(function (event) {
             if (!pause && !that.blocked) {
                 if (that.leftMouseDown) {
                     that.trace.push([event.pageX - parseInt(myGameArea.canvas2.style.left), event.pageY - parseInt(myGameArea.canvas2.style.top)])
-                    /*var msg = "Move to: ";
-                    msg += (event.pageX - parseInt(myGameArea.canvas2.style.left)) + ", " + (event.pageY - parseInt(myGameArea.canvas2.style.top));
-                    console.log(msg)*/
                 }
             }
         });
+
+        document.getElementById("canvas2").ontouchmove = function (event) {
+            if (!pause && !that.blocked) {
+                if (that.leftMouseDown) {
+                    that.trace.push([event.touches[0].clientX - parseInt(myGameArea.canvas2.style.left), event.touches[0].clientY - parseInt(myGameArea.canvas2.style.top)])
+                }
+            }
+        }
 
         $("#canvas2").mouseup(function (event) {
             if (!pause && !that.blocked) {
                 switch (event.which) {
                     case 1:
-                        //console.log('left mouse stop press')
                         that.leftMouseDown = false;
                         if (that.trace.length > 1) {
                             myGameMechanics.traces.push(that.trace);
@@ -69,7 +84,16 @@ var myInputsManager = {
             }
         });
 
-        $(document).keyup( function (e) {
+        document.getElementById("canvas2").ontouchend = function (event) {
+            if (!pause && !that.blocked) {
+                that.leftMouseDown = false;
+                if (that.trace.length > 1) {
+                    myGameMechanics.traces.push(that.trace);
+                }
+            }
+        }
+
+        $(document).keyup(function (e) {
             if (e.key === "Escape" && myTransitionScene !== myGame.scenes[myGame.scene]) {//pausa la partida, excepto si estas en la pantalla de transicion
                 if (!pause) {
                     myGameManager.pause = true;
@@ -81,13 +105,17 @@ var myInputsManager = {
                     pause = false;
                     myGameManager.resumeTimers("all");
                 }
-            }else if(e.key === "Backspace") { //si la tecla era "retroceso" vuelve a la pagina anterior
+            } else if (e.key === "Backspace") { //si la tecla era "retroceso" vuelve a la pagina anterior
                 window.history.back();
-            }else if(e.key ==="a" && that.debugAnimationTransitions){//Para debuggear transiciones entre animaciones
-                myAnimManager.changeAnimation(myHeroCharacter, "attack", function(){
+            } else if (e.key === "a" && that.debugAnimationTransitions) {//Para debuggear transiciones entre animaciones
+                myAnimManager.changeAnimation(myHeroCharacter, "attack", function () {
                     myAnimManager.changeAnimation(myHeroCharacter, "idle");
                 });
             }
         });
+    },
+    passCertainScenes: function() {
+        if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scene[myGame.scene] || myTransitionScene === myGame.scene[myGame.scene]) { myGame.swapScene(); }
+            else if (myGameOver === myGame.scenes[myGame.scene]) { myGame.restart(); }
     }
 }

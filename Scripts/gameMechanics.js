@@ -443,8 +443,8 @@ var myStatsController = {
     counterDebuff: 0,
     totalDebuff: 0,
     heal: 0,
+    healNoCutsCounter: 0,
     healFactor: 10,
-    counterHeal: 0,
     totalHeal: 0,
     resetLoops: function () {
         this.loops = 0;
@@ -470,15 +470,21 @@ var myStatsController = {
         if (rope[5] === 0) { this.counter++; this.counterCounter++; }
         else if (rope[5] === 1) { this.buff++; this.counterBuff++; }
         else if (rope[5] === 2) { this.debuff++; this.counterDebuff++; }
-        else if (rope[5] === 3) { this.heal++; this.counterHeal++; }
+        else if (rope[5] === 3) { this.heal++; }
         else if (rope[5] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
     },
     increaseStats: function(hero) {//incrementa las estadisticas
-        hero.hp += this.increaseFactor * this.counterHeal;
-        this.counterHeal = 0;
+        hero.hp += this.increaseFactor * this.healNoCutsCounter;
+        this.healNoCutsCounter = 0;
         hero.ap += this.increaseFactor * this.counterCounter;
         this.counterCounter = 0;
         hero.dp += this.increaseFactor * (this.counterBuff + this.counterDebuff);
+        this.counterBuff = 0;
+        this.counterDebuff = 0;
+    },
+    resetIncreaseStats: function() {
+        this.healNoCutsCounter = 0;
+        this.counterCounter = 0;
         this.counterBuff = 0;
         this.counterDebuff = 0;
     },
@@ -492,6 +498,7 @@ var myStatsController = {
         let enemyLastHp = enemy.hp;
         enemy.hp = Math.trunc(((enemy.buff + (enemy.hp * enemy.dp) + (enemy.dp * this.loops * this.loopfactor)) - ((this.counter * hero.ap + hero.buff) * myCutMechanics.concatenatedCuts)) / enemy.dp);
     
+        this.healNoCutsCounter += this.totalHeal - this.heal;
         hero.hp += Math.trunc((this.totalHeal - this.heal) * this.healFactor);
         if(hero.hp > hero.hpMax) {hero.hp = hero.hpMax;}
         enemy.hp += Math.trunc(this.heal * this.healFactor);
