@@ -2,8 +2,8 @@ var myLevel1 = {
     hero: {},
     enemies: [],
     enemy: {},
-    posHero: [200, 400],
-    posEnemy: [800, 400],
+    posHero: [50, 390],
+    posEnemy: [950, 440],
     rooms: [],
     room: {},
     enemiesMax: 4,
@@ -23,8 +23,8 @@ var myLevel1 = {
         myGameArea.resizeBackground(this.room, 1);
 
         //myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
-        myGameArea.animateInBackground(1, this.posEnemy, this.enemy.img, this.enemy.currentAnimation);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation);
+        myGameArea.animateInBackground(1, this.posEnemy, this.enemy.img, this.enemy.currentAnimation, 2.5);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
         myTextManager.drawTextInBackground(1, "hp", [0.15,0.45], "green", 60, "right");
         myTextManager.drawTextInBackground(1, " "+String(this.hero.hp), [0.15,0.45], "green", 60, "left");
 
@@ -73,7 +73,7 @@ var myIntro = {
 
 var myTransitionScene = {
     hero: {},
-    posHero: [0, 0],
+    posHero: [50, 390],
     enemiesMax: 4,
     room: {},
     timeTransition: 8000,
@@ -90,7 +90,7 @@ var myTransitionScene = {
     },
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
 
         myTextManager.drawTextInBackground(1, "currentLevel", [0.7,0.2], "black", 50, "right");
         myTextManager.drawTextInBackground(1, "healthPoints", [0.7,0.35], "black", 50, "right");
@@ -127,8 +127,8 @@ var myLevel2 = {
     hero: {},
     enemies: [],
     enemy: {},
-    posHero: [0, 0],
-    posEnemy: [0, 0],
+    posHero: [50, 390],
+    posEnemy: [950, 440],
     rooms: [],
     room: {},
     enemiesMax: 7,
@@ -147,8 +147,9 @@ var myLevel2 = {
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
 
-        myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation);
+
+        myGameArea.animateInBackground(1, this.posEnemy, this.enemy.img, this.enemy.currentAnimation, 2.5);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
 
         if (!myInputsManager.blocked) {
             myGameArea.resizeBackground(myPreload.images.grid, 2);
@@ -177,8 +178,8 @@ var myLevel3 = {
     hero: {},
     enemies: [],
     enemy: {},
-    posHero: [0, 0],
-    posEnemy: [0, 0],
+    posHero: [50, 390],
+    posEnemy: [950, 440],
     rooms: [],
     room: {},
     enemiesMax: 10,
@@ -197,8 +198,8 @@ var myLevel3 = {
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
 
-        myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation);
+        myGameArea.animateInBackground(1, this.posEnemy, this.enemy.img, this.enemy.currentAnimation, 2.5);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
 
         if (!myInputsManager.blocked) {
             myGameArea.resizeBackground(myPreload.images.grid, 2);

@@ -99,7 +99,7 @@ var myPreload = {
       height: 1440
     },
     enemy0: {
-      src: 'Assets/spritesheet_test.png',
+      src: 'Assets/spritesheet_enemy3.png',
       width: 366,
       height: 688
     },
@@ -213,7 +213,7 @@ var myPreload = {
     //enemies
     0: {
       src: 'Assets/spritesheet_test.png',
-      json: spritesheet_test,
+      json: spritesheet_enemy3,
       frames: []
     },
     1: {
@@ -222,7 +222,7 @@ var myPreload = {
       frames: []
     },
     2: {
-      src: 'Assets/spritesheet_test1.png',
+      src: 'Assets/spritesheet_test.png',
       json: spritesheet_test,
       frames: []
     },

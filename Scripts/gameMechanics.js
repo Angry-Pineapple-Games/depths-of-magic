@@ -278,6 +278,7 @@ var myCombatMechanics = {
     updateState: function () {
         that = myCombatMechanics;
         myStatsController.applyStats(that.scene.hero, that.scene.enemy);
+        myGameMechanics.un_blockInputs();
         if (that.scene.hero.hp <= 0) {
             //Secuencia: 1. enemigo ataca, 2. enemigo vuelve a idle y heroe muere 3. game over
             myAnimManager.changeAnimation(that.scene.enemy, "attack", function(){
@@ -285,6 +286,7 @@ var myCombatMechanics = {
                 myAnimManager.changeAnimation(that.scene.hero, "death", function(){
                     myAnimManager.changeAnimation(that.scene.hero,"idle");
                     myGame.gameOver();
+                    myGameMechanics.un_blockInputs();
                 });
             }); 
         }
@@ -294,9 +296,11 @@ var myCombatMechanics = {
                 myAnimManager.changeAnimation(that.scene.enemy, "death");
                 myAnimManager.changeAnimation(that.scene.hero, "victory", function(){
                     myAnimManager.changeAnimation(that.scene.hero, "idle");
+                    myAnimManager.changeAnimation(that.scene.enemy, "idle");
                     that.swapEnemy();
+                    myGameMechanics.un_blockInputs();
                 });
-            });            
+            });
         }
         //correspondiente animacion y cuando termine que llame a swapPattern el y eliminar el contenido del else if de abajo
         else if(++that.countSwaps < that.patternsPerEnemy) {
@@ -307,6 +311,7 @@ var myCombatMechanics = {
                     myAnimManager.changeAnimation(that.scene.enemy, "damage", function(){
                         myAnimManager.changeAnimation(that.scene.enemy, "idle");
                         that.swapPattern();
+                        myGameMechanics.un_blockInputs();
                     });
                 });
             }
@@ -321,6 +326,7 @@ var myCombatMechanics = {
                             myAnimManager.changeAnimation(that.scene.hero, "damage", function(){
                                 myAnimManager.changeAnimation(that.scene.hero, "idle");
                                 that.swapPattern();
+                                myGameMechanics.un_blockInputs();
                             });
                         });
                     });
@@ -333,11 +339,15 @@ var myCombatMechanics = {
                     myAnimManager.changeAnimation(that.scene.hero, "damage", function(){
                         myAnimManager.changeAnimation(that.scene.hero,"idle");
                         that.swapPattern();
+                        myGameMechanics.un_blockInputs();
                     });
                 });
             }
-            }
-        else {that.swapEnemy();}
+        
+        }else {
+            that.swapEnemy();
+            myGameMechanics.un_blockInputs();
+        }
     }
 }
 
