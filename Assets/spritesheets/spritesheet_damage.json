@@ -1,4 +1,4 @@
-{"frames": [
+spritesheet_damage = [
 
 {
 	"filename": "1.png",
@@ -47,14 +47,4 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":600,"h":800},
 	"sourceSize": {"w":600,"h":800}
-}],
-"meta": {
-	"app": "https://www.codeandweb.com/texturepacker",
-	"version": "1.0",
-	"image": "spritesheet_damage.png",
-	"format": "RGBA8888",
-	"size": {"w":1800,"h":1600},
-	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:0fdf52588d4b5bc725b01a4dd4b00c06:f926e62dbae0d5675b15b99b680d6f13:35f4b15b0c94637b4c1f2353677e0332$"
-}
-}
+}]

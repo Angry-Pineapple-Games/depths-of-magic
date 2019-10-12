@@ -202,65 +202,98 @@ var myPreload = {
       src: 'Assets/spritesheets/spritesheet_hero.png',
       width: 1024,
       height: 2048
+    },
+    damage: {
+      src: 'Assets/spritesheets/spritesheet_damage.png',
+      width: 1800,
+      height: 2400
+    },
+    heal: {
+      src: 'Assets/spritesheets/spritesheet_curacion.png',
+      width: 1800,
+      height: 2400
+    },
+    buff: {
+      src: 'Assets/spritesheets/spritesheet_buff.png',
+      width: 1800,
+      height: 2400
+    },
+    debuff: {
+      src: 'Assets/spritesheets/spritesheet_debuff.png',
+      width: 1800,
+      height: 2400
+    },
+    superbuff: {
+      src: 'Assets/spritesheets/spritesheet_superbuff.png',
+      width: 1800,
+      height: 2400
     }
   },
   spritesInfo: {
     hero: {
-      src: 'Assets/spritesheets/spritesheet_hero.png',
       json: spritesheet_hero,
       frames: []
     },
     //enemies
     0: {
-      src: 'Assets/spritesheets/spritesheet_test.png',
       json: spritesheet_test,
       frames: []
     },
     1: {
-      src: 'Assets/spritesheets/spritesheet_enemy1.png',
       json: spritesheet_enemy1,
       frames: []
     },
     2: {
-      src: 'Assets/spritesheets/spritesheet_test.png',
       json: spritesheet_test,
       frames: []
     },
     3: {
-      src: 'Assets/spritesheets/spritesheet_test.png',
       json: spritesheet_test,
       frames: []
     },
     4: {
-      src: 'Assets/spritesheets/spritesheet_test1.png',
       json: spritesheet_test,
       frames: []
     },
     5: {
-      src: 'Assets/spritesheets/spritesheet_test.png',
       json: spritesheet_test,
       frames: []
     },
     6: {
-      src: 'Assets/spritesheets/spritesheet_test1.png',
       json: spritesheet_test,
       frames: []
     },
     7: {
-      src: 'Assets/spritesheets/spritesheet_enemy7.png',
       json: spritesheet_enemy7,
       frames: []
     },
     8: {
-      src: 'Assets/spritesheets/spritesheet_test1.png',
       json: spritesheet_test,
       frames: []
     },
     9: {
-      src: 'Assets/spritesheets/spritesheet_test.png',
       json: spritesheet_test,
       frames: []
-
+    },
+    damage: {
+      json: spritesheet_damage,
+      frames: []
+    },
+    heal:{
+      json: spritesheet_curacion,
+      frames: []
+    },
+    buff:{
+      json: spritesheet_buff,
+      frames: []
+    },
+    debuff:{
+      json: spritesheet_debuff,
+      frames: []
+    },
+    superbuff:{
+      json: spritesheet_superbuff,
+      frames: []
     }
   },
   loadImages: function (callback) {
