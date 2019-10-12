@@ -130,7 +130,6 @@ var myGameMechanics = {
                                 myStatsController.updateStats(gridRope[z]);
                                 concatenatedCuts++;
                             }
-                            else { myCutMechanics.concatenatedCuts = 0; }
                             ropeFound = true;
                         }
                         z++;
@@ -506,11 +505,11 @@ var myStatsController = {
         enemy.buff = (1 + (this.totalBuff - this.buff) * this.buffFactor) / (1 + this.debuff * this.debuffFactor);
 
         let heroLastHp = hero.hp;
-        hero.damage = Math.ceil((this.totalCounter - this.counter) * enemy.ap * this.enemyFactor * enemy.buff * (1 + (this.loops * this.loopfactor)) / (hero.dp * hero.buff));
+        hero.damage = Math.trunc((this.totalCounter - this.counter) * enemy.ap * this.enemyFactor * enemy.buff * (1 + (this.loops * this.loopfactor)) / (hero.dp * hero.buff));
         hero.hp = Math.trunc(hero.hp - hero.damage);
         let enemyLastHp = enemy.hp;
         if (myCutMechanics.concatenatedCuts > 1) { this.concatenationFactor = 0.35; } else { this.concatenationFactor = 1; }
-        enemy.damage = Math.ceil((this.counter * (hero.ap * this.heroFactor * hero.buff * myCutMechanics.concatenatedCuts * this.concatenationFactor)) / (enemy.dp * enemy.buff * (1 + (this.loops * this.loopfactor))));
+        enemy.damage = Math.trunc((this.counter * (hero.ap * this.heroFactor * hero.buff * myCutMechanics.concatenatedCuts * this.concatenationFactor)) / (enemy.dp * enemy.buff * (1 + (this.loops * this.loopfactor))));
         enemy.hp = Math.trunc(enemy.hp - enemy.damage);
 
         this.healNoCutsCounter += this.totalHeal - this.heal;
