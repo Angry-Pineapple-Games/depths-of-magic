@@ -3,7 +3,6 @@ var myLevel1 = {
     enemies: [],
     enemy: {},
     posHero: [50, 390],
-    posEnemy: [950, 440],
     rooms: [],
     room: {},
     enemiesMax: 4,
@@ -23,7 +22,7 @@ var myLevel1 = {
         myGameArea.resizeBackground(this.room, 1);
 
         //myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
-        myGameArea.animateInBackground(1, this.posEnemy, this.enemy.img, this.enemy.currentAnimation, 2.5);
+        myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
         myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
         myTextManager.drawTextInBackground(1, "hp", [0.15,0.45], "green", 60, "right");
         myTextManager.drawTextInBackground(1, " "+String(this.hero.hp), [0.15,0.45], "green", 60, "left");
@@ -128,7 +127,6 @@ var myLevel2 = {
     enemies: [],
     enemy: {},
     posHero: [50, 390],
-    posEnemy: [950, 440],
     rooms: [],
     room: {},
     enemiesMax: 7,
@@ -148,7 +146,7 @@ var myLevel2 = {
         myGameArea.resizeBackground(this.room, 1);
 
 
-        myGameArea.animateInBackground(1, this.posEnemy, this.enemy.img, this.enemy.currentAnimation, 2.5);
+        myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
         myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
 
         if (!myInputsManager.blocked) {
@@ -179,7 +177,6 @@ var myLevel3 = {
     enemies: [],
     enemy: {},
     posHero: [50, 390],
-    posEnemy: [950, 440],
     rooms: [],
     room: {},
     enemiesMax: 10,
@@ -198,7 +195,7 @@ var myLevel3 = {
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
 
-        myGameArea.animateInBackground(1, this.posEnemy, this.enemy.img, this.enemy.currentAnimation, 2.5);
+        myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
         myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
 
         if (!myInputsManager.blocked) {

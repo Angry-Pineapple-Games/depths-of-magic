@@ -134,7 +134,7 @@ var myPreload = {
       height: 688
     },
     enemy7: {
-      src: 'Assets/spritesheets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_enemy7.png',
       width: 366,
       height: 688
     },

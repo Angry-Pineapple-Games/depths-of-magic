@@ -38,6 +38,8 @@ var myEnemiesProperties = {
         img: 'enemy0',
         currentAnimation: {},
         animations:{},
+        pos: [950, 440],
+        resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
             [0,7, "ropeCounterV",0,0,0],
@@ -70,6 +72,8 @@ var myEnemiesProperties = {
         img: 'enemy1',
         currentAnimation: {},
         animations:{},
+        pos: [1050, 590],
+        resize: 2,
         gridRopeNow: -1,
         gridRopes: [[
             [0,11, "ropeCounterH",0,0,0],
@@ -107,6 +111,8 @@ var myEnemiesProperties = {
         img: 'enemy2',
         currentAnimation: {},
         animations:{},
+        pos: [950, 440],
+        resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
             [0,3, "ropeDebuffH",0,2,2],
@@ -150,6 +156,8 @@ var myEnemiesProperties = {
         img: 'enemy3',
         currentAnimation: {},
         animations:{},
+        pos: [950, 440],
+        resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[           
             [0,14, "ropeBuffV",0,3,1],
@@ -199,6 +207,8 @@ var myEnemiesProperties = {
         img: 'enemy4',
         currentAnimation: {},
         animations:{},
+        pos: [950, 440],
+        resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
             [0,10, "ropeCounterH",0,0,0],
@@ -251,6 +261,8 @@ var myEnemiesProperties = {
         img: 'enemy5',
         currentAnimation: {},
         animations:{},
+        pos: [950, 440],
+        resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
             [0,7, "ropeCounterV",0,0,0],
@@ -299,6 +311,8 @@ var myEnemiesProperties = {
         img: 'enemy6',
         currentAnimation: {},
         animations:{},
+        pos: [950, 440],
+        resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
             [0,1, "ropeBuffV",0,3,1],
@@ -348,6 +362,8 @@ var myEnemiesProperties = {
         img: 'enemy7',
         currentAnimation: {},
         animations:{},
+        pos: [950, 440],
+        resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
             [0,7, "ropeCounterV",0,0,0],
@@ -407,6 +423,8 @@ var myEnemiesProperties = {
         img: 'enemy8',
         currentAnimation: {},
         animations:{},
+        pos: [950, 440],
+        resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
             [0,1, "ropeCounterV",0,0,0],
@@ -473,6 +491,8 @@ var myEnemiesProperties = {
         img: 'enemy9',
         currentAnimation: {},
         animations:{},
+        pos: [950, 440],
+        resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
             [0,0, "ropeCounterV",0,0,0],
