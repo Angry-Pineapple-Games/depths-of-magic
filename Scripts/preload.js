@@ -99,52 +99,52 @@ var myPreload = {
       height: 1440
     },
     enemy0: {
-      src: 'Assets/spritesheet_enemy3.png',
+      src: 'Assets/spritesheets/spritesheet_test.png',
       width: 366,
       height: 688
     },
     enemy1: {
-      src: 'Assets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_enemy1.png',
       width: 366,
       height: 688
     },
     enemy2: {
-      src: 'Assets/spritesheet_test1.png',
+      src: 'Assets/spritesheets/spritesheet_test1.png',
       width: 366,
       height: 688
     },
     enemy3: {
-      src: 'Assets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_test.png',
       width: 366,
       height: 688
     },
     enemy4: {
-      src: 'Assets/spritesheet_test1.png',
+      src: 'Assets/spritesheets/spritesheet_test1.png',
       width: 366,
       height: 688
     },
     enemy5: {
-      src: 'Assets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_test.png',
       width: 366,
       height: 688
     },
     enemy6: {
-      src: 'Assets/spritesheet_test1.png',
+      src: 'Assets/spritesheets/spritesheet_test1.png',
       width: 366,
       height: 688
     },
     enemy7: {
-      src: 'Assets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_test.png',
       width: 366,
       height: 688
     },
     enemy8: {
-      src: 'Assets/spritesheet_test1.png',
+      src: 'Assets/spritesheets/spritesheet_test1.png',
       width: 366,
       height: 688
     },
     enemy9: {
-      src: 'Assets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_test.png',
       width: 366,
       height: 688
     },
@@ -199,65 +199,65 @@ var myPreload = {
       height: 1440
     },
     hero: {
-      src: 'Assets/spritesheet_hero.png',
+      src: 'Assets/spritesheets/spritesheet_hero.png',
       width: 1024,
       height: 2048
     }
   },
   spritesInfo: {
     hero: {
-      src: 'Assets/spritesheet_hero.png',
+      src: 'Assets/spritesheets/spritesheet_hero.png',
       json: spritesheet_hero,
       frames: []
     },
     //enemies
     0: {
-      src: 'Assets/spritesheet_test.png',
-      json: spritesheet_enemy3,
-      frames: []
-    },
-    1: {
-      src: 'Assets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_test.png',
       json: spritesheet_test,
       frames: []
     },
+    1: {
+      src: 'Assets/spritesheets/spritesheet_enemy1.png',
+      json: spritesheet_enemy1,
+      frames: []
+    },
     2: {
-      src: 'Assets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_test.png',
       json: spritesheet_test,
       frames: []
     },
     3: {
-      src: 'Assets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_test.png',
       json: spritesheet_test,
       frames: []
     },
     4: {
-      src: 'Assets/spritesheet_test1.png',
+      src: 'Assets/spritesheets/spritesheet_test1.png',
       json: spritesheet_test,
       frames: []
     },
     5: {
-      src: 'Assets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_test.png',
       json: spritesheet_test,
       frames: []
     },
     6: {
-      src: 'Assets/spritesheet_test1.png',
+      src: 'Assets/spritesheets/spritesheet_test1.png',
       json: spritesheet_test,
       frames: []
     },
     7: {
-      src: 'Assets/spritesheet_test.png',
-      json: spritesheet_test,
+      src: 'Assets/spritesheets/spritesheet_enemy7.png',
+      json: spritesheet_enemy7,
       frames: []
     },
     8: {
-      src: 'Assets/spritesheet_test1.png',
+      src: 'Assets/spritesheets/spritesheet_test1.png',
       json: spritesheet_test,
       frames: []
     },
     9: {
-      src: 'Assets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_test.png',
       json: spritesheet_test,
       frames: []
 

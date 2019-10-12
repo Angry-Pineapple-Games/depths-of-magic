@@ -534,10 +534,10 @@ var myEnemiesAnimFrames = {
         death: {start: 64, end: 70},
     },
     1: {
-        idle: {start: 22, end: 40},
-        attack: {start: 0, end: 18},
-        damage: {start: 41, end: 63},
-        death: {start: 64, end: 70},
+        idle: {start: 0, end: 48},
+        attack: {start: 48, end: 96},
+        damage: {start: 96, end: 136},
+        death: {start: 136, end: 194},
     },
     2: {
         idle: {start: 22, end: 40},
@@ -570,10 +570,10 @@ var myEnemiesAnimFrames = {
         death: {start: 64, end: 70},
     },
     7:{
-        idle: {start: 22, end: 40},
-        attack: {start: 0, end: 18},
-        damage: {start: 41, end: 63},
-        death: {start: 64, end: 70},
+        idle: {start: 0, end: 48},
+        attack: {start: 49, end: 99},
+        damage: {start: 99, end: 145},
+        death: {start: 145, end: 200},
     },
     8:{
         idle: {start: 22, end: 40},

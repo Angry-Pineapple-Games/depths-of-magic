@@ -1,0 +1,9 @@
+Animaciones Enemigo 5
+
+Idle: 1-49
+Atacar: 49-97
+Recibir daño: 97-137
+Morir: 137-195
+
+Dimensiones actuales: 181,30 x 300,70
+Dimensiones originales: 371,40 x 615,90
