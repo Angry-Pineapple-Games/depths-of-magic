@@ -97,7 +97,7 @@ var myTransitionScene = {
         myTextManager.drawTextInBackground(1, "attackPoints", [0.7,0.5], "black", 50, "right");
         myTextManager.drawTextInBackground(1, "defensePoints", [0.7,0.65], "black", 50, "right");
         myTextManager.drawTextInBackground(1, "numberLaps", [0.7,0.8], "black", 50, "right");
-        myTextManager.drawTextInBackground(1, "clickToConinue", [0.9,0.95], "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "clickToConinue", [0.9,0.95], "white", 50, "center");
         myFade.fade(1);
     }
 }
