@@ -111,11 +111,15 @@ var myInputsManager = {
                 myAnimManager.changeAnimation(myHeroCharacter, "attack", function () {
                     myAnimManager.changeAnimation(myHeroCharacter, "idle");
                 });
+            } else if(e.key === "s" && that.debugAnimationTransitions){
+                mySFX.playSFX("damage", myLevel1.posHero, function(){
+                    console.log("Efect ended");
+                });
             }
         });
     },
     passCertainScenes: function() {
-        if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scene[myGame.scene] || myTransitionScene === myGame.scene[myGame.scene]) { myGame.swapScene(); }
+        if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scenes[myGame.scene] || myTransitionScene === myGame.scenes[myGame.scene]) { myGame.swapScene(); }
             else if (myGameOver === myGame.scenes[myGame.scene]) { myGame.restart(); }
     }
 }

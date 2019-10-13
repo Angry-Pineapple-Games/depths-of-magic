@@ -54,22 +54,22 @@ var myGameMechanics = {
             }
         });
         this.gridRopes = enemy.gridRopes[enemy.gridRopeNow];
-        if(this.gridRopes[0][3] === 1) { //si es una cuerda especial
+        if (this.gridRopes[0][3] === 1) { //si es una cuerda especial
             this.un_blockInputs();
             myGameManager.pauseTimers("timersSwap");
             this.generateGridWithOrder();
         }
     },
-    generateGridWithOrder: function() {
-        if(this.timeOrder < this.gridRopes.length) {
-            for (let g=0; g<this.gridRopes.length; g++) {
+    generateGridWithOrder: function () {
+        if (this.timeOrder < this.gridRopes.length) {
+            for (let g = 0; g < this.gridRopes.length; g++) {
                 if (g !== this.timeOrder) {
                     this.gridRopes[g][0] = -1;
-                }else{this.gridRopes[g][0] = 0;}
+                } else { this.gridRopes[g][0] = 0; }
             }
             myGameManager.addTimer(this.timeOrderAddOne, 2000, "timersOrderPattern");
-        }else if (this.timeOrder === this.gridRopes.length){
-            for (let g=0; g<this.gridRopes.length; g++) {
+        } else if (this.timeOrder === this.gridRopes.length) {
+            for (let g = 0; g < this.gridRopes.length; g++) {
                 this.gridRopes[g][0] = 0;
             }
             this.timeOrderAddOne();
@@ -77,7 +77,7 @@ var myGameMechanics = {
         }
     },
     generateEnemy: function (enemies, enemiesMax, nEnemies) {
-        let nextEnemy = enemies[Math.floor(Math.random() * (enemiesMax-1))];
+        let nextEnemy = enemies[Math.floor(Math.random() * (enemiesMax - 1))];
         if (myRoomMechanics.countSwaps === myRoomMechanics.nRooms && myCombatMechanics.countCombats === nEnemies) {
             nextEnemy = enemies[enemiesMax - 1];
         }
@@ -97,18 +97,18 @@ var myGameMechanics = {
     },
     timeOrderAddOne: function () {
         let that = myGameMechanics;
-        if(that.debug){console.log("TimeOrderAddone");}
+        if (that.debug) { console.log("TimeOrderAddone"); }
         that.timeOrder++;
         that.generateGridWithOrder();
     },
-    un_blockInputs: function() {
+    un_blockInputs: function () {
         let that = myGameMechanics;
         if (!myInputsManager.blocked) {
-            if(that.debug){console.log("blockInputs");}
+            if (that.debug) { console.log("blockInputs"); }
             myInputsManager.blocked = true;
         }
         else {
-            if(that.debug){console.log("unblockInputs");}
+            if (that.debug) { console.log("unblockInputs"); }
             myInputsManager.blocked = false;
             myGameManager.resumeTimers("timersSwap");
             myGameManager.clearTimers("timersOrderPattern");
@@ -130,7 +130,6 @@ var myGameMechanics = {
                                 myStatsController.updateStats(gridRope[z]);
                                 concatenatedCuts++;
                             }
-                            else { myCutMechanics.concatenatedCuts = 0; }
                             ropeFound = true;
                         }
                         z++;
@@ -278,70 +277,114 @@ var myCombatMechanics = {
     updateState: function () {
         that = myCombatMechanics;
         myStatsController.applyStats(that.scene.hero, that.scene.enemy);
+        let sfxSequenceHero = [];
+        let sfxSequenceEnemy = [];
+
+        if(myStatsController.buff > 0){
+            sfxSequenceHero.push(["buff", that.scene.posHero]);
+        }
+        if(myStatsController.buff < myStatsController.totalBuff){
+            sfxSequenceEnemy.push(["buff", that.scene.enemy.pos]);
+        }
+        if(myStatsController.debuff > 0){
+            sfxSequenceHero.push(["debuff", that.scene.enemy.pos]);
+        }
+        if(myStatsController.debuff < myStatsController.totalDebuff){
+            sfxSequenceEnemy.push(["debuff", that.scene.posHero]);
+        }
+        if(myStatsController.counter > 0){
+            sfxSequenceHero.push(["damage", that.scene.enemy.pos]);
+        }
+        if(myStatsController.counter < myStatsController.totalCounter){
+            sfxSequenceEnemy.push(["damage", that.scene.posHero]);
+        }
+        if(myStatsController.heal > 0){
+            sfxSequenceEnemy.push(["heal", that.scene.enemy.pos]);
+        }
+        if(myStatsController.heal < myStatsController.totalHeal){
+            sfxSequenceHero.push(["heal", that.scene.posHero]);
+        }
+         
+        myGameMechanics.un_blockInputs();
         if (that.scene.hero.hp <= 0) {
             //Secuencia: 1. enemigo ataca, 2. enemigo vuelve a idle y heroe muere 3. game over
-            myAnimManager.changeAnimation(that.scene.enemy, "attack", function(){
+            myAnimManager.changeAnimation(that.scene.enemy, "attack", function () {
                 myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                myAnimManager.changeAnimation(that.scene.hero, "death", function(){
-                    myAnimManager.changeAnimation(that.scene.hero,"idle");
+                myAnimManager.changeAnimation(that.scene.hero, "death", function () {
+                    myAnimManager.changeAnimation(that.scene.hero, "idle");
                     myGame.gameOver();
+                    myGameMechanics.un_blockInputs();
                 });
-            }); 
+            });
         }
         else if (that.scene.enemy.hp <= 0) {
             //Secuencia: 1. heroe ataca, 2. enemigo muere y heroe celebra victoria, 3. cambio de enemigo
-            myAnimManager.changeAnimation(that.scene.hero, "attack", function(){
-                myAnimManager.changeAnimation(that.scene.enemy, "death");
-                myAnimManager.changeAnimation(that.scene.hero, "victory", function(){
+            myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
+                myAnimManager.changeAnimation(that.scene.hero, "victory", function () {
                     myAnimManager.changeAnimation(that.scene.hero, "idle");
-                    that.swapEnemy();
                 });
-            });            
-        }
-        //correspondiente animacion y cuando termine que llame a swapPattern el y eliminar el contenido del else if de abajo
-        else if(++that.countSwaps < that.patternsPerEnemy) {
-            if(myCutMechanics.cutRopes >= myCutMechanics.totalRopes){
-                //Secuencia:1. heroe ataca, 2. heroe vuelve a idle y enemigo recibe daño
-                myAnimManager.changeAnimation(that.scene.hero, "attack", function(){
-                    myAnimManager.changeAnimation(that.scene.hero, "idle");
-                    myAnimManager.changeAnimation(that.scene.enemy, "damage", function(){
+                myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
+                    myAnimManager.changeAnimation(that.scene.enemy, "death", function () {
                         myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                        that.swapPattern();
+                        myAnimManager.changeAnimation(that.scene.hero, "idle");
+                        that.swapEnemy();
+                        myGameMechanics.un_blockInputs();
                     });
                 });
-            }
-            else if(myCutMechanics.cutRopes > 0){
-                //Secuencia: 1. heroe ataca, 2. heroe vuelve a idle, enemigo recibe daño
-                //3. enemigo ataca, 4.enemigo vuelve al idle, heroe recibe daño, 5. heroe vuelve al idle, cambio de patron.
-                myAnimManager.changeAnimation(that.scene.hero, "attack", function(){
-                    myAnimManager.changeAnimation(that.scene.hero, "idle");
-                    myAnimManager.changeAnimation(that.scene.enemy, "damage", function(){
-                        myAnimManager.changeAnimation(that.scene.enemy, "attack", function(){
+            });
+        }
+        else if (sfxSequenceEnemy.length <= 0) {
+            //Secuencia:1. heroe ataca, 2. heroe vuelve a idle y se reproduce la secuencia de efectos, 3. enemigo recibe daño
+            myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
+                myAnimManager.changeAnimation(that.scene.hero, "idle");
+                myAnimManager.playSequenceSFX(sfxSequenceHero, that.scene.sfx, function(){
+                    myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
+                        myAnimManager.changeAnimation(that.scene.enemy, "idle");
+                        that.swapPattern();
+                        myGameMechanics.un_blockInputs();
+                    });
+                });
+            });
+        }
+        else if (sfxSequenceHero.length > 0) {
+            //Secuencia: 1. heroe ataca, 2. heroe vuelve a idle, se reproduce la secuencia de efectos, 3. enemigo recibe daño
+            //4. enemigo ataca, 5. enemigo vuelve al idle, se reproduce la secuencia de efectos, 6. heroe recibe daño, 
+            //7. heroe vuelve al idle, cambio de patron.
+            myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
+                myAnimManager.changeAnimation(that.scene.hero, "idle");
+                myAnimManager.playSequenceSFX(sfxSequenceHero, that.scene.sfx, function(){
+                    myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
+                        myAnimManager.changeAnimation(that.scene.enemy, "attack", function () {
                             myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                            myAnimManager.changeAnimation(that.scene.hero, "damage", function(){
-                                myAnimManager.changeAnimation(that.scene.hero, "idle");
-                                that.swapPattern();
+                            myAnimManager.playSequenceSFX(sfxSequenceEnemy, that.scene.sfx, function(){
+                                myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
+                                    myAnimManager.changeAnimation(that.scene.hero, "idle");
+                                    that.swapPattern();
+                                    myGameMechanics.un_blockInputs();
+                                });
                             });
                         });
                     });
-                });
-            }else{
-                //Secuencia: 1.enemigo ataca, 2. enemigo vuelve a idle y heroe recibe daño
-                //3. heroe vuelve a idle y se cambia el patron
-                myAnimManager.changeAnimation(that.scene.enemy, "attack", function(){
-                    myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                    myAnimManager.changeAnimation(that.scene.hero, "damage", function(){
-                        myAnimManager.changeAnimation(that.scene.hero,"idle");
+                }); 
+            });
+        } else {
+            //Secuencia: 1.enemigo ataca,2. enemigo vuelve a idle y se reproduce la secuencia de efectos, 3. heroe recibe daño
+            //3. heroe vuelve a idle y se cambia el patron
+            myAnimManager.changeAnimation(that.scene.enemy, "attack", function () {
+                myAnimManager.changeAnimation(that.scene.enemy, "idle");
+                myAnimManager.playSequenceSFX(sfxSequenceEnemy, that.scene.sfx, function(){
+                    myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
+                        myAnimManager.changeAnimation(that.scene.hero, "idle");
                         that.swapPattern();
+                        myGameMechanics.un_blockInputs();
                     });
                 });
-            }
-            }
-        else {that.swapEnemy();}
+            });
+        }
     }
 }
 
-var myRoomMechanics={
+var myRoomMechanics = {
     debug: false,
     scene: {},
     countSwaps: 0,
@@ -359,7 +402,7 @@ var myRoomMechanics={
             this.scene.room = this.scene.rooms[Math.floor(Math.random() * this.scene.roomsMax)];
             if (this.debug) { console.log("SwapRoom"); }
             myCombatMechanics.startCombat(this.scene);
-        } else {myGame.swapScene();}
+        } else { myGame.swapScene(); }
     }
 }
 
@@ -376,12 +419,14 @@ var myCutMechanics = {
     checkRopeType: function (gridRope, posRopeInGrid, track, x) {
         this.gridRope = gridRope;
         this.rope = gridRope[posRopeInGrid];
-        this.lastPosTrace = track[x - 1];
-        this.posTrace = track[x];
-        this.nextPosTrace = (x + 1 === track.length) ? -1 : track[x + 1];
-        if(this.rope[3]===0){return this.checkCutType();}
-        else if(this.rope[3] === 1) {return this.checkCutInOrder(posRopeInGrid);}
-        else {console.log("Fail gamemechanics/mycutmechanics/checkRopeType");}
+        if (this.rope[0] === 0) {
+            this.lastPosTrace = track[x - 1];
+            this.posTrace = track[x];
+            this.nextPosTrace = (x + 1 === track.length) ? -1 : track[x + 1];
+            if (this.rope[3] === 0) { return this.checkCutType(); }
+            else if (this.rope[3] === 1) { return this.checkCutInOrder(posRopeInGrid); }
+            else { console.log("Fail gamemechanics/mycutmechanics/checkRopeType"); }
+        } else { return false; }
     },
     checkSimpleCut: function () {
         this.rope[0] = -1;
@@ -408,12 +453,12 @@ var myCutMechanics = {
         }
         return false;
     },
-    checkCutType: function() {
-        if(this.rope[4] === 0) {return this.checkSimpleCut();}
-        else if(this.rope[4] === 1) {return this.checkDoubleCut();}
-        else if(this.rope[4] === 2) {return this.checkDirectionalCut(-1);}
-        else if(this.rope[4] === 3) {return this.checkDirectionalCut(1);}
-        else {console.log("Fail gamemechanics/mycutmechanics/checkcuttype");}
+    checkCutType: function () {
+        if (this.rope[4] === 0) { return this.checkSimpleCut(); }
+        else if (this.rope[4] === 1) { return this.checkDoubleCut(); }
+        else if (this.rope[4] === 2) { return this.checkDirectionalCut(-1); }
+        else if (this.rope[4] === 3) { return this.checkDirectionalCut(1); }
+        else { console.log("Fail gamemechanics/mycutmechanics/checkcuttype"); }
     },
     checkCutInOrder: function (posRope) {
         if (this.cutRopes === posRope) {
@@ -429,23 +474,26 @@ var myCutMechanics = {
 var myStatsController = {
     debug: false,
     loops: 0,//vueltas dadas al juego
-    loopfactor: 0.1,//factor de mejora enemigos en cada vuelta al juego
+    loopfactor: 0.4,//factor de mejora enemigos en cada vuelta al juego
     increaseFactor: 5,//factor de mejora para las estadisticas del heroe
     counter: 0,
     counterCounter: 0,
     totalCounter: 0,
     buff: 0,
-    buffFactor: 0.1,
+    buffFactor: 0.45,
     counterBuff: 0,
     totalBuff: 0,
     debuff: 0,
-    debuffFactor: 0.1,
+    debuffFactor: 0.25,
     counterDebuff: 0,
     totalDebuff: 0,
     heal: 0,
     healNoCutsCounter: 0,
-    healFactor: 10,
+    healFactor: 6.0,
     totalHeal: 0,
+    heroFactor: 4.0,//Variable de balanceo. Cuando sea definitivo se cambian los stats y se elimina esta variable
+    enemyFactor: 8.0,//Variable de balanceo. Cuando sea definitivo se cambian los stats y se elimina esta variable
+    concatenationFactor: 0.35,
     resetLoops: function () {
         this.loops = 0;
     },
@@ -458,7 +506,7 @@ var myStatsController = {
         this.totalBuff = 0;
         this.totalDebuff = 0;
         this.totalHeal = 0;
-        for (var idx=0; idx<pattern.length; idx++) {
+        for (var idx = 0; idx < pattern.length; idx++) {
             if (pattern[idx][5] === 0) { this.totalCounter++; }
             else if (pattern[idx][5] === 1) { this.totalBuff++; }
             else if (pattern[idx][5] === 2) { this.totalDebuff++; }
@@ -473,7 +521,7 @@ var myStatsController = {
         else if (rope[5] === 3) { this.heal++; }
         else if (rope[5] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
     },
-    increaseStats: function(hero) {//incrementa las estadisticas
+    increaseStats: function (hero) {//incrementa las estadisticas
         hero.hp += this.increaseFactor * this.healNoCutsCounter;
         this.healNoCutsCounter = 0;
         hero.ap += this.increaseFactor * this.counterCounter;
@@ -482,32 +530,33 @@ var myStatsController = {
         this.counterBuff = 0;
         this.counterDebuff = 0;
     },
-    resetIncreaseStats: function() {
+    resetIncreaseStats: function () {
         this.healNoCutsCounter = 0;
         this.counterCounter = 0;
         this.counterBuff = 0;
         this.counterDebuff = 0;
     },
     applyStats: function (hero, enemy) {//aplica los daños y curaciones
-        enemy.ap *= 22;
-        hero.buff = this.buff * (hero.ap + hero.dp) * this.buffFactor - (this.totalDebuff - this.debuff) * (enemy.ap + enemy.dp) * this.debuffFactor;
-        enemy.buff = (this.totalBuff - this.buff) * (enemy.ap + enemy.dp) * this.buffFactor - this.debuff * (hero.ap + hero.dp) * this.debuffFactor;
+        hero.buff = (1 + this.buff * this.buffFactor) / (1 + (this.totalDebuff - this.debuff) * this.debuffFactor);
+        enemy.buff = (1 + (this.totalBuff - this.buff) * this.buffFactor) / (1 + this.debuff * this.debuffFactor);
 
         let heroLastHp = hero.hp;
-        hero.hp = Math.trunc(((hero.buff + (hero.hp * hero.dp)) - ((this.totalCounter - this.counter) * enemy.ap + (enemy.ap * this.loops * this.loopfactor) + enemy.buff)) / hero.dp);
+        hero.damage = Math.trunc((this.totalCounter - this.counter) * enemy.ap * this.enemyFactor * enemy.buff * (1 + (this.loops * this.loopfactor)) / (hero.dp * hero.buff));
+        hero.hp = Math.trunc(hero.hp - hero.damage);
         let enemyLastHp = enemy.hp;
-        enemy.hp = Math.trunc(((enemy.buff + (enemy.hp * enemy.dp) + (enemy.dp * this.loops * this.loopfactor)) - ((this.counter * hero.ap + hero.buff) * myCutMechanics.concatenatedCuts)) / enemy.dp);
-    
+        if (myCutMechanics.concatenatedCuts > 1) { this.concatenationFactor = 0.35; } else { this.concatenationFactor = 1; }
+        enemy.damage = Math.trunc((this.counter * (hero.ap * this.heroFactor * hero.buff * myCutMechanics.concatenatedCuts * this.concatenationFactor)) / (enemy.dp * enemy.buff * (1 + (this.loops * this.loopfactor))));
+        enemy.hp = Math.trunc(enemy.hp - enemy.damage);
+
         this.healNoCutsCounter += this.totalHeal - this.heal;
         hero.hp += Math.trunc((this.totalHeal - this.heal) * this.healFactor);
-        if(hero.hp > hero.hpMax) {hero.hp = hero.hpMax;}
+        if (hero.hp > hero.hpMax) { hero.hp = hero.hpMax; }
+        if (hero.hp < 0) { hero.hp = 0; }
         enemy.hp += Math.trunc(this.heal * this.healFactor);
-        if(enemy.hp > enemy.hpMax){enemy.hp = enemy.hpMax;}
+        if (enemy.hp > enemy.hpMax) { enemy.hp = enemy.hpMax; }
 
-        hero.damage = heroLastHp - hero.hp;
-        enemy.damage = enemyLastHp - enemy.hp;
         myTextManager.resetEventualText();
 
-        if(this.debug){console.log("applyStats");}
+        if (this.debug) { console.log("applyStats"); }
     }
 }

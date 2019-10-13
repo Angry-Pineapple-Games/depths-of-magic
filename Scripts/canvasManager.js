@@ -119,14 +119,14 @@ var myGameArea = {
             bg.ctx.globalAlpha = 1;
         }
     },
-    animateInBackground: function (num, pos, img, animation) {
+    animateInBackground: function (num, pos, img, animation, resize) {
         let bg;
         if (num === 1) { bg = this.background1; }
         else if (num === 2) { bg = this.background2; }
         else { console.log("Error en canvasManager/animateInBackground/num"); }
         if (bg !== undefined) {
             let resizePerOne = this.resizeBackgroundPerOne(bg);
-            animation.animate(bg.ctx, img, bg.drawPosX + pos[0], bg.drawPosY + pos[1], resizePerOne);
+            animation.animate(bg.ctx, img, bg.drawPosX + pos[0] * resizePerOne , bg.drawPosY + pos[1] * resizePerOne, resizePerOne*resize);
         }
     },
     resizeBackgroundPerOne: function (bg) {

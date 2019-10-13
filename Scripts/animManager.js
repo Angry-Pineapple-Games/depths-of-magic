@@ -50,10 +50,18 @@ var myAnimManager = {
                 break;
             default:
                 console.log("wrong animation name");
+                break;
         }
         character.currentAnimation.reset();
         character.currentAnimation.callback = callback;
     },
+    playSequenceSFX: function(sequence, sfx, callback){
+        let nextCallback = callback;
+        for(var i = sequence.length - 1; i >= 0; i--){
+            nextCallback = sfx.playSFX.bind(sfx, sequence[i][0], sequence[i][1], nextCallback);
+        }
+        nextCallback();//reproduce el primer efecto de la secuencia y va haciendo los callbacks hasta el que llega por parametro
+    }
 }
 
 //Clase para las animaciones, que controla el estado de ellas
@@ -64,23 +72,101 @@ class Animation{
         this.currentFrame = 0;
         this.length = this.framesInfo.length;
         this.even = true;
+        this.hidden = false;
         this.callback = this.reset;
     }
     animate(ctx, img, x, y, resize){
-        myAnimManager.drawFrame(ctx, img, this.framesInfo, this.currentFrame, x, y, resize);
-        //La animacion solo avanza en frames impares para que vaya a 30fps mientras el game loop va a 60fps
-        if(!this.even && !myGameManager.pause){
-            this.currentFrame++;
-        }
-        this.even = !this.even;
-        if(this.currentFrame >= this.length){
-            this.callback();
+        if(!this.hidden){
+            myAnimManager.drawFrame(ctx, img, this.framesInfo, this.currentFrame, x, y, resize);
+            //La animacion solo avanza en frames impares para que vaya a 30fps mientras el game loop va a 60fps
+            if(!this.even && !myGameManager.pause){
+                this.currentFrame++;
+            }
+            this.even = !this.even;
+            if(this.currentFrame >= this.length){
+                this.callback();
+            }
         }
     }
     reset(){
         this.currentFrame = 0;
         this.even = true;
+        this.hidden = false;
+    }
+    hide(){
+        this.hidden = true;
     }
 }
 
+var mySFX = {
+    animations:{
+        damage:{},
+        buff:{},
+        debuff:{},
+        heal:{},
+        superbuff:{}
+    },
+    imgs:{
+        damage:{},
+        buff:{},
+        debuff:{},
+        heal:{},
+        superbuff:{}
+    },
+    currentAnimation:{},
+    currentImg:{},
+    pos:[0,0],
+    generateSFX: function(){
+        this.generateAnimationsInfo();
+        this.saveImages();
+        this.currentImg = this.imgs.damage;
+        this.currentAnimation = this.animations.damage;
+        this.currentAnimation.hide();
+        return this;
+    },
+    generateAnimationsInfo: function(){
+        this.animations.damage = new Animation(myPreload.spritesInfo.damage, 0, 5);
+        this.animations.buff = new Animation(myPreload.spritesInfo.buff, 0, 8);
+        this.animations.debuff = new Animation(myPreload.spritesInfo.debuff, 0, 8);
+        this.animations.heal = new Animation(myPreload.spritesInfo.heal, 0, 13);
+        this.animations.superbuff = new Animation(myPreload.spritesInfo.superbuff, 0, 7);
+    },
+    saveImages: function(){
+        this.imgs.damage = myPreload.images.damage;
+        this.imgs.buff = myPreload.images.buff;
+        this.imgs.debuff = myPreload.images.debuff;
+        this.imgs.heal = myPreload.images.heal;
+        this.imgs.superbuff = myPreload.images.superbuff;
+    },
+    playSFX: function(type, pos, callback = function(){}){
+        this.pos = pos;
+        switch(type){
+            case "damage":
+                this.currentImg = this.imgs.damage;
+                this.currentAnimation = this.animations.damage;
+                break;
+            case "buff":
+                this.currentImg = this.imgs.buff;
+                this.currentAnimation = this.animations.buff;
+                break;
+            case "debuff":
+                this.currentImg = this.imgs.debuff;
+                this.currentAnimation = this.animations.debuff;
+                break;
+            case "heal":
+                this.currentImg = this.imgs.heal;
+                this.currentAnimation = this.animations.heal;
+                break;
+            case "superbuff":
+                this.currentImg = this.imgs.superbuff;
+                this.currentAnimation = this.animations.superbuff;
+                break;
+            default:
+                console.log("wrong animation name");
+                break;
+        }
+        this.currentAnimation.reset();
+        this.currentAnimation.callback = function(){ callback(); this.hide();};
+    }
+}
 //referencias: https://www.encodedna.com/javascript/convert-data-in-json-file-in-an-array-using-javascript-or-jquery.htm
