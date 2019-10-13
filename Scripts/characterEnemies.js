@@ -39,7 +39,7 @@ var myEnemiesProperties = {
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
-        resize: 2.5,
+        resize: 2,
         gridRopeNow: -1,
         gridRopes: [[
             [0,7, "ropeCounterV",0,0,0],
@@ -111,8 +111,8 @@ var myEnemiesProperties = {
         img: 'enemy2',
         currentAnimation: {},
         animations:{},
-        pos: [950, 440],
-        resize: 2.5,
+        pos: [950, 840],
+        resize: 2,
         gridRopeNow: -1,
         gridRopes: [[
             [0,3, "ropeDebuffH",0,2,2],
@@ -423,8 +423,8 @@ var myEnemiesProperties = {
         img: 'enemy8',
         currentAnimation: {},
         animations:{},
-        pos: [950, 440],
-        resize: 2.5,
+        pos: [950, 240],
+        resize: 2,
         gridRopeNow: -1,
         gridRopes: [[
             [0,1, "ropeCounterV",0,0,0],
@@ -548,10 +548,10 @@ var myEnemiesProperties = {
 //Frames son placeholders
 var myEnemiesAnimFrames = {
     0: {
-        idle: {start: 22, end: 40},
-        attack: {start: 0, end: 18},
-        damage: {start: 41, end: 63},
-        death: {start: 64, end: 70},
+        idle: {start: 0, end: 39},
+        attack: {start: 39, end: 99},
+        damage: {start: 99, end: 129},
+        death: {start: 129, end: 179},
     },
     1: {
         idle: {start: 0, end: 48},
@@ -560,10 +560,10 @@ var myEnemiesAnimFrames = {
         death: {start: 136, end: 194},
     },
     2: {
-        idle: {start: 22, end: 40},
-        attack: {start: 0, end: 18},
-        damage: {start: 41, end: 63},
-        death: {start: 64, end: 70},
+        idle: {start: 0, end: 59},
+        attack: {start: 59, end: 119},
+        damage: {start: 119, end: 209},
+        death: {start: 209, end: 269},
     },
     3:{
         idle: {start: 22, end: 40},
@@ -596,10 +596,10 @@ var myEnemiesAnimFrames = {
         death: {start: 145, end: 200},
     },
     8:{
-        idle: {start: 22, end: 40},
-        attack: {start: 0, end: 18},
-        damage: {start: 41, end: 63},
-        death: {start: 64, end: 70},
+        idle: {start: 0, end: 39},
+        attack: {start: 39, end: 99},
+        damage: {start: 99, end: 129},
+        death: {start: 129, end: 179},
     },
     9:{
         idle: {start: 22, end: 40},

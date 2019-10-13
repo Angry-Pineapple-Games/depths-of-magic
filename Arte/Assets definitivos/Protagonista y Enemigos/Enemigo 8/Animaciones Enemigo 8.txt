@@ -1,0 +1,9 @@
+Animaciones Enemigo 8:
+
+Idle: 1-60
+Atacar: 60-90
+Recibir daño: 90-155
+Morir: 155-210
+
+Dimensiones actuales: 280,30 x 210,75
+Dimensiones originales: 585,25 x 440,05

@@ -1,0 +1,9 @@
+Animaciones Enemigo 11:
+
+Idle: 1-40
+Atacar: 40-100
+Recibir daño: 100-130
+Morir: 130-180
+
+Dimensiones actuales: 217,55 x 228,10
+Dimensiones originales: 429,10 x 449,90

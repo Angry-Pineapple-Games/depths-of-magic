@@ -99,7 +99,7 @@ var myPreload = {
       height: 1440
     },
     enemy0: {
-      src: 'Assets/spritesheets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_enemy8.png',
       width: 366,
       height: 688
     },
@@ -109,7 +109,7 @@ var myPreload = {
       height: 688
     },
     enemy2: {
-      src: 'Assets/spritesheets/spritesheet_test1.png',
+      src: 'Assets/spritesheets/spritesheet_enemy2.png',
       width: 366,
       height: 688
     },
@@ -139,7 +139,7 @@ var myPreload = {
       height: 688
     },
     enemy8: {
-      src: 'Assets/spritesheets/spritesheet_test1.png',
+      src: 'Assets/spritesheets/spritesheet_enemy8.png',
       width: 366,
       height: 688
     },
@@ -236,7 +236,7 @@ var myPreload = {
     },
     //enemies
     0: {
-      json: spritesheet_test,
+      json: spritesheet_enemy8,
       frames: []
     },
     1: {
@@ -244,7 +244,7 @@ var myPreload = {
       frames: []
     },
     2: {
-      json: spritesheet_test,
+      json: spritesheet_enemy2,
       frames: []
     },
     3: {
@@ -268,7 +268,7 @@ var myPreload = {
       frames: []
     },
     8: {
-      json: spritesheet_test,
+      json: spritesheet_enemy8,
       frames: []
     },
     9: {
@@ -304,6 +304,7 @@ var myPreload = {
     }
     for (var src in this.sources) {
       this.images[src] = new Image();
+      this.images[src].decoding = 'async';
       this.images[src].onload = function () {
         myGameArea.resizeBackground(myLoading.images[Math.trunc((loadedImages / numImages) * myLoading.numImages)], 1);
         if (++loadedImages >= numImages) {

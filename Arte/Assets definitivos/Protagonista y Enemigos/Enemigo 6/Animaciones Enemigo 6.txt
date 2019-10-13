@@ -1,0 +1,9 @@
+Animaciones Enemigo 6:
+
+Idle: 1-60
+Atacar: 60-120
+Recibir daño: 120-155
+Morir: 155-220
+
+Dimensiones actuales: 132,30 x 235,25
+Dimensiones originales: 290,30 x 516,15

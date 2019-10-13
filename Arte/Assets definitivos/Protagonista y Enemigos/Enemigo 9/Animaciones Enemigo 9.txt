@@ -1,0 +1,9 @@
+Animaciones Enemigo 9:
+
+Idle: 1-60
+Atacar: 60-120
+Recibir daño: 120-210
+Morir: 210-270
+
+Dimensiones actuales: 390,55 x 232,50
+Dimensiones originales: 617,60 x 367,75

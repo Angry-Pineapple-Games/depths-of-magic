@@ -1,9 +1,9 @@
 Animaciones Enemigo 3:
 
-Idle: 1-49
-Atacar: 50-100
-Recibir daï¿½o: 100-146
-Morir: 146-201
+Idle: 1-30
+Atacar: 30-70
+Recibir daño: 70-108
+Morir: 108-149
 
 Dimensiones actuales: 415,50 x 569,25
 Dimensiones originales: 415,50 x 569,25
