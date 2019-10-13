@@ -129,6 +129,7 @@ var myLevel2 = {
     hero: {},
     enemies: [],
     enemy: {},
+    sfx: {},
     posHero: [50, 390],
     rooms: [],
     room: {},
@@ -141,6 +142,7 @@ var myLevel2 = {
         this.hero = myHeroCharacter.generateHero(myPreload.images.hero);
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
+        this.sfx = mySFX.generateSFX();
         myRoomMechanics.startRoom(this);
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar
@@ -151,6 +153,7 @@ var myLevel2 = {
 
         myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
         myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
+        myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
         myTextManager.drawTextInBackground(1, "hp", [0.15, 0.45], "green", 60, "right");
         myTextManager.drawTextInBackground(1, " " + String(this.hero.hp), [0.15, 0.45], "green", 60, "left");
 
@@ -185,6 +188,7 @@ var myLevel3 = {
     hero: {},
     enemies: [],
     enemy: {},
+    sfx: {},
     posHero: [50, 390],
     rooms: [],
     room: {},
@@ -197,6 +201,7 @@ var myLevel3 = {
         this.hero = myHeroCharacter.generateHero(myPreload.images.hero);
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
+        this.sfx = mySFX.generateSFX();
         myRoomMechanics.startRoom(this);
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar
@@ -206,6 +211,7 @@ var myLevel3 = {
 
         myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
         myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
+        myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
         myTextManager.drawTextInBackground(1, "hp", [0.15,0.45], "green", 60, "right");
         myTextManager.drawTextInBackground(1, " "+String(this.hero.hp), [0.15,0.45], "green", 60, "left");
 

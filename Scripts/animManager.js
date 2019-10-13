@@ -55,6 +55,13 @@ var myAnimManager = {
         character.currentAnimation.reset();
         character.currentAnimation.callback = callback;
     },
+    playSequenceSFX: function(sequence, sfx, callback){
+        let nextCallback = callback;
+        for(var i = sequence.length - 1; i >= 0; i--){
+            nextCallback = sfx.playSFX.bind(sfx, sequence[i][0], sequence[i][1], nextCallback);
+        }
+        nextCallback();//reproduce el primer efecto de la secuencia y va haciendo los callbacks hasta el que llega por parametro
+    }
 }
 
 //Clase para las animaciones, que controla el estado de ellas
@@ -159,7 +166,7 @@ var mySFX = {
                 break;
         }
         this.currentAnimation.reset();
-        this.currentAnimation.callback = function(){ callback(); this.currentAnimation.hide();};
+        this.currentAnimation.callback = function(){ callback(); this.hide();};
     }
 }
 //referencias: https://www.encodedna.com/javascript/convert-data-in-json-file-in-an-array-using-javascript-or-jquery.htm

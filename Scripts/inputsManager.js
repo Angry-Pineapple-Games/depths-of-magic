@@ -111,6 +111,10 @@ var myInputsManager = {
                 myAnimManager.changeAnimation(myHeroCharacter, "attack", function () {
                     myAnimManager.changeAnimation(myHeroCharacter, "idle");
                 });
+            } else if(e.key === "s" && that.debugAnimationTransitions){
+                mySFX.playSFX("damage", myLevel1.posHero, function(){
+                    console.log("Efect ended");
+                });
             }
         });
     },

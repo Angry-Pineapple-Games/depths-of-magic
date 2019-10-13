@@ -277,6 +277,34 @@ var myCombatMechanics = {
     updateState: function () {
         that = myCombatMechanics;
         myStatsController.applyStats(that.scene.hero, that.scene.enemy);
+        let sfxSequenceHero = [];
+        let sfxSequenceEnemy = [];
+
+        if(myStatsController.buff > 0){
+            sfxSequenceHero.push(["buff", that.scene.posHero]);
+        }
+        if(myStatsController.buff < myStatsController.totalBuff){
+            sfxSequenceEnemy.push(["buff", that.scene.enemy.pos]);
+        }
+        if(myStatsController.debuff > 0){
+            sfxSequenceHero.push(["debuff", that.scene.enemy.pos]);
+        }
+        if(myStatsController.debuff < myStatsController.totalDebuff){
+            sfxSequenceEnemy.push(["debuff", that.scene.posHero]);
+        }
+        if(myStatsController.counter > 0){
+            sfxSequenceHero.push(["damage", that.scene.enemy.pos]);
+        }
+        if(myStatsController.counter < myStatsController.totalCounter){
+            sfxSequenceEnemy.push(["damage", that.scene.posHero]);
+        }
+        if(myStatsController.heal > 0){
+            sfxSequenceEnemy.push(["heal", that.scene.enemy.pos]);
+        }
+        if(myStatsController.heal < myStatsController.totalHeal){
+            sfxSequenceHero.push(["heal", that.scene.posHero]);
+        }
+         
         myGameMechanics.un_blockInputs();
         if (that.scene.hero.hp <= 0) {
             //Secuencia: 1. enemigo ataca, 2. enemigo vuelve a idle y heroe muere 3. game over
@@ -305,43 +333,51 @@ var myCombatMechanics = {
                 });
             });
         }
-        //correspondiente animacion y cuando termine que llame a swapPattern el y eliminar el contenido del else if de abajo
-        else if (myCutMechanics.cutRopes >= myCutMechanics.totalRopes) {
-            //Secuencia:1. heroe ataca, 2. heroe vuelve a idle y enemigo recibe daño
+        else if (sfxSequenceEnemy.length <= 0) {
+            //Secuencia:1. heroe ataca, 2. heroe vuelve a idle y se reproduce la secuencia de efectos, 3. enemigo recibe daño
             myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
                 myAnimManager.changeAnimation(that.scene.hero, "idle");
-                myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
-                    myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                    that.swapPattern();
-                    myGameMechanics.un_blockInputs();
-                });
-            });
-        }
-        else if (myCutMechanics.cutRopes > 0) {
-            //Secuencia: 1. heroe ataca, 2. heroe vuelve a idle, enemigo recibe daño
-            //3. enemigo ataca, 4.enemigo vuelve al idle, heroe recibe daño, 5. heroe vuelve al idle, cambio de patron.
-            myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
-                myAnimManager.changeAnimation(that.scene.hero, "idle");
-                myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
-                    myAnimManager.changeAnimation(that.scene.enemy, "attack", function () {
+                myAnimManager.playSequenceSFX(sfxSequenceHero, that.scene.sfx, function(){
+                    myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
                         myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                        myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
-                            myAnimManager.changeAnimation(that.scene.hero, "idle");
-                            that.swapPattern();
-                            myGameMechanics.un_blockInputs();
-                        });
+                        that.swapPattern();
+                        myGameMechanics.un_blockInputs();
                     });
                 });
             });
+        }
+        else if (sfxSequenceHero.length > 0) {
+            //Secuencia: 1. heroe ataca, 2. heroe vuelve a idle, se reproduce la secuencia de efectos, 3. enemigo recibe daño
+            //4. enemigo ataca, 5. enemigo vuelve al idle, se reproduce la secuencia de efectos, 6. heroe recibe daño, 
+            //7. heroe vuelve al idle, cambio de patron.
+            myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
+                myAnimManager.changeAnimation(that.scene.hero, "idle");
+                myAnimManager.playSequenceSFX(sfxSequenceHero, that.scene.sfx, function(){
+                    myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
+                        myAnimManager.changeAnimation(that.scene.enemy, "attack", function () {
+                            myAnimManager.changeAnimation(that.scene.enemy, "idle");
+                            myAnimManager.playSequenceSFX(sfxSequenceEnemy, that.scene.sfx, function(){
+                                myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
+                                    myAnimManager.changeAnimation(that.scene.hero, "idle");
+                                    that.swapPattern();
+                                    myGameMechanics.un_blockInputs();
+                                });
+                            });
+                        });
+                    });
+                }); 
+            });
         } else {
-            //Secuencia: 1.enemigo ataca, 2. enemigo vuelve a idle y heroe recibe daño
+            //Secuencia: 1.enemigo ataca,2. enemigo vuelve a idle y se reproduce la secuencia de efectos, 3. heroe recibe daño
             //3. heroe vuelve a idle y se cambia el patron
             myAnimManager.changeAnimation(that.scene.enemy, "attack", function () {
                 myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
-                    myAnimManager.changeAnimation(that.scene.hero, "idle");
-                    that.swapPattern();
-                    myGameMechanics.un_blockInputs();
+                myAnimManager.playSequenceSFX(sfxSequenceEnemy, that.scene.sfx, function(){
+                    myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
+                        myAnimManager.changeAnimation(that.scene.hero, "idle");
+                        that.swapPattern();
+                        myGameMechanics.un_blockInputs();
+                    });
                 });
             });
         }
@@ -483,7 +519,7 @@ var myStatsController = {
         else if (rope[5] === 1) { this.buff++; this.counterBuff++; }
         else if (rope[5] === 2) { this.debuff++; this.counterDebuff++; }
         else if (rope[5] === 3) { this.heal++; }
-        else if (rope[5] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++; }
+        else if (rope[5] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
     },
     increaseStats: function (hero) {//incrementa las estadisticas
         hero.hp += this.increaseFactor * this.healNoCutsCounter;
