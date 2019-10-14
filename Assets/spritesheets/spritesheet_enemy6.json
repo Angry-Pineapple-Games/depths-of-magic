@@ -1,4 +1,4 @@
-﻿{"frames": [
+﻿spritesheet_enemy6 = [
 
 {
 	"filename": "Animacion instancia 10000",
@@ -1919,13 +1919,4 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":432,"h":288},
 	"sourceSize": {"w":432,"h":288}
-}],
-"meta": {
-	"app": "Adobe Animate",
-	"version": "18.0.2.126",
-	"image": "Enemigo 8.png",
-	"format": "RGBA8888",
-	"size": {"w":4096,"h":8192},
-	"scale": "1"
-}
-}
+}]
