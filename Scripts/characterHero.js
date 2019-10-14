@@ -8,34 +8,47 @@ var myHeroCharacter = {
     apMax: 40,
     dp: 30,
     dpMax: 30,
-    img:{},
+    currentImg:{},
+    imgs:{
+        idle:{},
+        attack:{},
+        damage:{},
+        death:{},
+        victory:{},
+    },
     currentAnimation:{},
     animations:{
         idle:{},
         attack:{},
-        attack2:{},
         damage:{},
         death:{},
         victory:{}
     },
     generateHero: function(img) {
-        this.img = img;
+        this.saveImages();
+        //this.img = img;
         this.hp = this.hpMax;
         this.buff = 0;
         this.ap = this.apMax;
         this.dp = this.dpMax;
         this.generateAnimationsInfo();
         this.currentAnimation = this.animations.idle;
+        this.currentImg = this.imgs.idle;
         return this;
     },
     generateAnimationsInfo: function(){
-        let spritesheet = myPreload.spritesInfo.hero;
-        this.animations.idle = new Animation(spritesheet, 0, 59);//placeholder
-        this.animations.attack = new Animation(spritesheet, 250, 294);//placeholder
-        this.animations.attack2 = new Animation(spritesheet, 0, 18);//placeholder
-        this.animations.damage = new Animation(spritesheet, 120, 149);//placeholder
-        this.animations.death = new Animation(spritesheet, 150, 249);//placeholder
-        this.animations.victory = new Animation(spritesheet, 60, 119);//placeholder
+        this.animations.idle = new Animation(myPreload.spritesInfo.hero_idle, 0, 59);
+        this.animations.attack = new Animation(myPreload.spritesInfo.hero_attack, 0, 49);
+        this.animations.damage = new Animation(myPreload.spritesInfo.hero_damage, 0, 25);
+        this.animations.death = new Animation(myPreload.spritesInfo.hero_death, 0, 89);
+        this.animations.victory = new Animation(myPreload.spritesInfo.hero_victory, 0, 61);
+    },
+    saveImages: function(){
+        this.imgs.idle = myPreload.images.hero_idle;
+        this.imgs.attack = myPreload.images.hero_attack;
+        this.imgs.damage = myPreload.images.hero_damage;
+        this.imgs.death = myPreload.images.hero_death;
+        this.imgs.victory = myPreload.images.hero_victory;
     },
     resetHeroStats: function() {
         this.hp = this.hpIni;

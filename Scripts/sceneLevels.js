@@ -3,7 +3,7 @@ var myLevel1 = {
     enemies: [],
     sfx: {},
     enemy: {},
-    posHero: [50, 390],
+    posHero: [50, 440],
     rooms: [],
     room: {},
     enemiesMax: 4,
@@ -24,8 +24,8 @@ var myLevel1 = {
         myGameArea.resizeBackground(this.room, 1);
 
         //myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
-        myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
+        myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.currentImg, this.enemy.currentAnimation, this.enemy.resize);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
         myTextManager.drawTextInBackground(1, "hp", [0.15, 0.45], "green", 60, "right");
         myTextManager.drawTextInBackground(1, " " + String(this.hero.hp), [0.15, 0.45], "green", 60, "left");

@@ -104,7 +104,7 @@ var myPreload = {
       height: 688
     },
     enemy1: {
-      src: 'Assets/spritesheets/spritesheet_enemy1.png',
+      src: 'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_idle.png',
       width: 366,
       height: 688
     },
@@ -199,7 +199,7 @@ var myPreload = {
       height: 1440
     },
     hero: {
-      src: 'Assets/spritesheets/spritesheet_hero.png',
+      src: 'Assets/spritesheets/spritesheet_hero/spritesheet_hero_idle.png',
       width: 1024,
       height: 2048
     },
@@ -227,11 +227,57 @@ var myPreload = {
       src: 'Assets/spritesheets/spritesheet_superbuff.png',
       width: 1800,
       height: 2400
+    },
+    //Prueba
+    hero_idle:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_idle.png',
+      width: 0,
+      height: 0
+    },
+    hero_damage:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_damage.png',
+      width: 0,
+      height: 0
+    },
+    hero_death:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_death.png',
+      width: 0,
+      height: 0
+    },
+    hero_attack:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_attack.png',
+      width: 0,
+      height: 0
+    },
+    hero_victory:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_victory.png',
+      width: 0,
+      height: 0
+    },
+    enemy1_idle:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_idle.png',
+      width: 0,
+      height: 0
+    },
+    enemy1_damage:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_damage.png',
+      width: 0,
+      height: 0
+    },
+    enemy1_attack:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_attack.png',
+      width: 0,
+      height: 0
+    },
+    enemy1_death:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_death.png',
+      width: 0,
+      height: 0
     }
   },
   spritesInfo: {
     hero: {
-      json: spritesheet_hero,
+      json: spritesheet_hero_idle,
       frames: []
     },
     //enemies
@@ -240,7 +286,7 @@ var myPreload = {
       frames: []
     },
     1: {
-      json: spritesheet_enemy1,
+      json: spritesheet_enemy1_idle,
       frames: []
     },
     2: {
@@ -294,6 +340,43 @@ var myPreload = {
     superbuff:{
       json: spritesheet_superbuff,
       frames: []
+    },
+    //Prueba
+    hero_idle:{
+      json: spritesheet_hero_idle,
+      frames:[]
+    },
+    hero_attack:{
+      json: spritesheet_hero_attack,
+      frames:[]
+    },
+    hero_damage:{
+      json: spritesheet_hero_damage,
+      frames:[]
+    },
+    hero_death:{
+      json: spritesheet_hero_death,
+      frames:[]
+    },
+    hero_victory:{
+      json: spritesheet_hero_victory,
+      frames:[]
+    },
+    enemy1_idle:{
+      json: spritesheet_enemy1_idle,
+      frames:[]
+    },
+    enemy1_attack:{
+      json: spritesheet_enemy1_attack,
+      frames:[]
+    },
+    enemy1_damage:{
+      json: spritesheet_enemy1_damage,
+      frames:[]
+    },
+    enemy1_death:{
+      json: spritesheet_enemy1_death,
+      frames:[]
     }
   },
   loadImages: function (callback) {

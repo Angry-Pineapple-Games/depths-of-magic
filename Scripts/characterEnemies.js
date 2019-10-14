@@ -7,18 +7,27 @@ var myCharacterEnemies = {
         }
         for (var e=this.enemies.length; e<scene.enemiesMax; e++) {
             this.enemies.push(myEnemiesProperties[String(e)]);
-            this.enemies[e].img = myPreload.images[this.enemies[e].img]
-            this.generateAnimationsInfo(this.enemies[e], myPreload.spritesInfo[e], myEnemiesAnimFrames[e]);
+            //this.enemies[e].img = myPreload.images[this.enemies[e].img]
+            this.saveImages(this.enemies[e]);
+            this.generateAnimationsInfo(this.enemies[e], myEnemiesAnimFrames[e]);
             this.enemies[e].currentAnimation = this.enemies[e].animations.idle;
+            this.enemies[e].currentImg = this.enemies[e].imgs.idle;
         }
         return this.enemies;
     },
 
-    generateAnimationsInfo: function(character, spritesheet, frames){
-        character.animations.idle = new Animation(spritesheet, frames.idle.start, frames.idle.end);
-        character.animations.attack = new Animation(spritesheet, frames.attack.start, frames.attack.end);
-        character.animations.damage = new Animation(spritesheet, frames.damage.start, frames.damage.end);
-        character.animations.death = new Animation(spritesheet, frames.death.start, frames.death.end);
+    generateAnimationsInfo: function(character, frames){
+        character.animations.idle = new Animation(myPreload.spritesInfo[character.img + "_idle"], frames.idle.start, frames.idle.end);
+        character.animations.attack = new Animation(myPreload.spritesInfo[character.img + "_attack"], frames.attack.start, frames.attack.end);
+        character.animations.damage = new Animation(myPreload.spritesInfo[character.img + "_damage"], frames.damage.start, frames.damage.end);
+        character.animations.death = new Animation(myPreload.spritesInfo[character.img + "_death"], frames.death.start, frames.death.end);
+    },
+
+    saveImages: function(character){
+        character.imgs.idle = myPreload.images[character.img + "_idle"];
+        character.imgs.attack = myPreload.images[character.img + "_attack"];
+        character.imgs.damage = myPreload.images[character.img + "_damage"];
+        character.imgs.death = myPreload.images[character.img + "_death"];
     }
 }
 //rope[deleted, pos, "image name", typeOrder, typeCut, typeRope] 
@@ -35,7 +44,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 35,
         dp: 25,
-        img: 'enemy0',
+        img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -70,6 +81,8 @@ var myEnemiesProperties = {
         ap: 55,
         dp: 15,
         img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [1050, 590],
@@ -108,7 +121,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 25,
         dp: 40,
-        img: 'enemy2',
+        img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 840],
@@ -153,7 +168,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 70,
         dp: 45,
-        img: 'enemy3',
+        img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -204,7 +221,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 85,
         dp: 40,
-        img: 'enemy4',
+        img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -258,7 +277,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 55,
         dp: 70,
-        img: 'enemy5',
+        img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -308,7 +329,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 95,
         dp: 80,
-        img: 'enemy6',
+        img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -359,7 +382,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 70,
         dp: 100,
-        img: 'enemy7',
+        img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -420,7 +445,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 55,
         dp: 70,
-        img: 'enemy8',
+        img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 240],
@@ -488,7 +515,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 145,
         dp: 120,
-        img: 'enemy9',
+        img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -555,9 +584,13 @@ var myEnemiesAnimFrames = {
     },
     1: {
         idle: {start: 0, end: 48},
+        /*
         attack: {start: 48, end: 96},
         damage: {start: 96, end: 136},
-        death: {start: 136, end: 194},
+        death: {start: 136, end: 194},*/
+        attack: {start: 0, end: 96},
+        damage: {start: 0, end: 39},
+        death: {start: 0, end: 58},
     },
     2: {
         idle: {start: 0, end: 59},
