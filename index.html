@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
   <title>Angry-Pineapple-Games</title>
 
   <!-- Bootstrap core CSS -->
@@ -28,7 +27,12 @@
           <input type="radio" name="options" id="btnSpanish" autocomplete="off"> Spanish
         </label>
       </div>
-      <a id="btnContact" class="py-2 d-none d-md-inline-block" href="#">Contact</a>
+      <a id="btnGDD" class="py-2 d-none d-md-inline-block" href="https://angry-pineapple-games.github.io/">GDD</a>
+      <a id="btnTwitter" class="py-2 d-none d-md-inline-block" href="https://twitter.com/AngryPineappleG">Twitter</a>
+      <a id="btnYoutube" class="py-2 d-none d-md-inline-block" href="https://www.youtube.com/channel/UC-beom-Ex559oRHYl8knUAQ">Youtube</a>
+      <a id="btnItchio" class="py-2 d-none d-md-inline-block" href="https://angrypineapplegames.itch.io/">Itch.io</a>
+      <a id="btnFacebook" class="py-2 d-none d-md-inline-block" href="https://www.facebook.com/juanantonio.martingarcia.33671?ref=bookmarks">Facebook</a>
+      <a id="btnGithub" class="py-2 d-none d-md-inline-block" href="https://github.com/Angry-Pineapple-Games/">Github</a>
     </div>
   </nav>
 
@@ -42,13 +46,22 @@
     <hr class="featurette-divider">
 
     <!--Tutoriales-->
+    <div id="gddDiv" class="col-md-7">
+        <h2 id="gddTitle" class="featurette-heading">Game Design Document</h2>
+        <p id="gddText" class="lead">GDDn Depths of Magic you'll explore a dungeon by fighting against dangerous enemies! These enemies attack you with magic spells that you'll counter by slashing the screen. 
+            When the spell is drawn, use your mouse or your touch screen and cut the ropes before the time ends. If you succeed, you'll return the spell to the enemy and damage it! 
+            There are two kind of spells:
+            1. Unordered: The spell will be drawn and immediately you can start to cut it however you want.
+            2. Ordered: Before you can start to make the cuts, the ropes of the spell will be drawn in a particular order that you'll need to follow to successfully counter the attacks.
+            Good luck on your quest! </h4>
+      </div>
     <div class="row featurette">
       <div class="col-md-7">
         <h2 id="tutorial1" class="featurette-heading">Tutorial 1:</h2>
         <p id="description1" class="lead">Detailed description</p>
       </div>
       <div class="col-md-5">
-        <img src="webAssets/tut1.png" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+        <img id="tutorialImg1" src="webAssets/tut1.png" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
           alt="Generic placeholder image">
       </div>
     </div>
@@ -61,7 +74,7 @@
         <p id="description2" class="lead">Detailed description</p>
       </div>
       <div class="col-md-5 order-md-1">
-        <img src="webAssets/tut2.png" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+        <img id="tutorialImg2" src="webAssets/tut2.png" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
           alt="Generic placeholder image">
       </div>
     </div>
@@ -74,57 +87,60 @@
         <p id="description3" class="lead">Detailed description</p>
       </div>
       <div class="col-md-5">
-        <img src="webAssets/tut3.png" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
+        <img id="tutorialImg3" src="webAssets/tut3.png" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
           alt="Generic placeholder image">
       </div>
     </div>
 
     <hr class="featurette-divider">
 
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
+    <div class=col-md-7>
+        <h1 id="presentation" class="featurette-heading">Get to know us!</h2>
+    </div>
+
+    <!-- Five columns of text below the carousel -->
+    <div id="roles" class="row">
       <div class="col-lg-2">
         <img class="rounded-circle"
           src="webAssets/team1.png"
           alt="Generic placeholder image" width="140" height="140">
         <h2 id="name1">Juan</h2>
         <p id="role1">Game designer, project manager and community manager.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View Git &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
+        <p><a class="btn btn-secondary" href="https://github.com/JuanAM8" role="button">View Git &raquo;</a></p>
+      </div><!-- /.col-lg-2 -->
       <div class="col-lg-2">
         <img class="rounded-circle"
           src="webAssets/team2.png"
           alt="Generic placeholder image" width="140" height="140">
         <h2 id="name2">Mario</h2>
         <p id="role2">Artist and animator.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View Git &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
+        <p><a class="btn btn-secondary" href="https://github.com/AcEiOfficial" role="button">View Git &raquo;</a></p>
+      </div><!-- /.col-lg-2 -->
       <div class="col-lg-2">
         <img class="rounded-circle"
           src="webAssets/team3.png"
           alt="Generic placeholder image" width="140" height="140">
         <h2 id="name3">Javier</h2>
         <p id="role3">Programmer and game designer.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View Git &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
+        <p><a class="btn btn-secondary" href="https://github.com/AlbaranezJavier" role="button">View Git &raquo;</a></p>
+      </div><!-- /.col-lg-2 -->
       <div class="col-lg-2">
         <img class="rounded-circle"
           src="webAssets/team4.png"
           alt="Generic placeholder image" width="140" height="140">
         <h2 id="name4">Laura</h2>
         <p id="role4">Artist and animator.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View Git &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
+        <p><a class="btn btn-secondary" href="https://github.com/LauraLuna96" role="button">View Git &raquo;</a></p>
+      </div><!-- /.col-lg-2 -->
       <div class="col-lg-2">
         <img class="rounded-circle"
           src="webAssets/team5.png"
           alt="Generic placeholder image" width="140" height="140">
         <h2 id="name5">César</h2>
         <p id="role5">Programmer and sound designer.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View Git &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
+        <p><a class="btn btn-secondary" href="https://github.com/Mixto83" role="button">View Git &raquo;</a></p>
+      </div><!-- /.col-lg-2 -->
     </div><!-- /.row -->
-
   </div><!-- /.container -->
 
   <footer class="container py-5">
@@ -139,6 +155,7 @@
           <li><a class="text-muted" href="#">example</a></li>
         </ul>
       </div>
+      
       <div class="col-6 col-md">
         <h5 id="images">Images</h5>
         <ul class="list-unstyled text-small">
@@ -157,16 +174,25 @@
           <li><a class="text-muted" href="#">example</a></li>
         </ul>
       </div>
+      <div class="col-6 col-md">
+          <h5 id="code">Marketing</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">example</a></li>
+          </ul>
+        </div>
     </div>
+    
     <p class="float-right"><a id="backTop" href="#">Back to top</a></p>
+    <div>
+      <p id="gddFake" src="readme.MD"></p>
+    </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="lang.js"></script>
   <script src="https://connect.facebook.net/en_US/fbinstant.6.0.js"></script>
-  <script>
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="lang.js"></script>
 </body>
 
 </html>
