@@ -1,10 +1,10 @@
 Animaciones Protagonista:
 
-Idle: 1-40
-Victoria: 40-89
-Recibir daño: 89-110
-Morir: 110-190
-Atacar: 191-235
+Idle: 1-60
+Victoria: 60-120
+Recibir daño: 120-145
+Morir: 145-235
+Atacar: 235-285
 
-Dimensiones actuales: 175,10 x 288,75
-Dimensiones originales: 311,45 x 513,55
+Dimensiones actuales: 159,95 x 263,75
+Dimensiones originales: 316,90 x 522,60

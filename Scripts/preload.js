@@ -114,7 +114,7 @@ var myPreload = {
       height: 688
     },
     enemy3: {
-      src: 'Assets/spritesheets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_enemy3.png',
       width: 366,
       height: 688
     },
@@ -129,7 +129,7 @@ var myPreload = {
       height: 688
     },
     enemy6: {
-      src: 'Assets/spritesheets/spritesheet_test1.png',
+      src: 'Assets/spritesheets/spritesheet_enemy6.png',
       width: 366,
       height: 688
     },
@@ -144,7 +144,7 @@ var myPreload = {
       height: 688
     },
     enemy9: {
-      src: 'Assets/spritesheets/spritesheet_test.png',
+      src: 'Assets/spritesheets/spritesheet_test1.png',
       width: 366,
       height: 688
     },
@@ -248,7 +248,7 @@ var myPreload = {
       frames: []
     },
     3: {
-      json: spritesheet_test,
+      json: spritesheet_enemy3,
       frames: []
     },
     4: {
@@ -260,7 +260,7 @@ var myPreload = {
       frames: []
     },
     6: {
-      json: spritesheet_test,
+      json: spritesheet_enemy6,
       frames: []
     },
     7: {

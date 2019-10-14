@@ -1,0 +1,9 @@
+Animaciones Enemigo 12:
+
+Idle: 1-30
+Atacar: 30-75
+Recibir daño: 75-130
+Morir: 130-180
+
+Dimensiones actuales: 255,85 x 342,75
+Dimensiones originales: 506,10 x 678,00
