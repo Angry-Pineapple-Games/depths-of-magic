@@ -312,8 +312,8 @@ var myCombatMechanics = {
                 myAnimManager.changeAnimation(that.scene.enemy, "idle");
                 myAnimManager.changeAnimation(that.scene.hero, "death", function () {
                     myAnimManager.changeAnimation(that.scene.hero, "idle");
-                    myGame.gameOver();
                     myGameMechanics.un_blockInputs();
+                    myGame.gameOver();
                 });
             });
         }
@@ -327,8 +327,8 @@ var myCombatMechanics = {
                     myAnimManager.changeAnimation(that.scene.enemy, "death", function () {
                         myAnimManager.changeAnimation(that.scene.enemy, "idle");
                         myAnimManager.changeAnimation(that.scene.hero, "idle");
-                        that.swapEnemy();
                         myGameMechanics.un_blockInputs();
+                        that.swapEnemy();
                     });
                 });
             });
@@ -340,8 +340,8 @@ var myCombatMechanics = {
                 myAnimManager.playSequenceSFX(sfxSequenceHero, that.scene.sfx, function(){
                     myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
                         myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                        that.swapPattern();
                         myGameMechanics.un_blockInputs();
+                        that.swapPattern();
                     });
                 });
             });
@@ -359,8 +359,8 @@ var myCombatMechanics = {
                             myAnimManager.playSequenceSFX(sfxSequenceEnemy, that.scene.sfx, function(){
                                 myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
                                     myAnimManager.changeAnimation(that.scene.hero, "idle");
-                                    that.swapPattern();
                                     myGameMechanics.un_blockInputs();
+                                    that.swapPattern();
                                 });
                             });
                         });
@@ -375,8 +375,8 @@ var myCombatMechanics = {
                 myAnimManager.playSequenceSFX(sfxSequenceEnemy, that.scene.sfx, function(){
                     myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
                         myAnimManager.changeAnimation(that.scene.hero, "idle");
-                        that.swapPattern();
                         myGameMechanics.un_blockInputs();
+                        that.swapPattern();
                     });
                 });
             });
@@ -522,7 +522,7 @@ var myStatsController = {
         else if (rope[5] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
     },
     increaseStats: function (hero) {//incrementa las estadisticas
-        hero.hp += this.increaseFactor * this.healNoCutsCounter;
+        hero.hpMax += this.increaseFactor * this.healNoCutsCounter;
         this.healNoCutsCounter = 0;
         hero.ap += this.increaseFactor * this.counterCounter;
         this.counterCounter = 0;
