@@ -450,7 +450,7 @@ var myEnemiesProperties = {
         imgs: {},
         currentAnimation: {},
         animations:{},
-        pos: [950, 240],
+        pos: [950, 440],
         resize: 2,
         gridRopeNow: -1,
         gridRopes: [[

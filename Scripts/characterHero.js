@@ -4,10 +4,10 @@ var myHeroCharacter = {
     hpMax: 100,
     damage: 0,
     buff: 0,
-    ap: 40000,
-    apMax: 40000,
-    dp: 30000,
-    dpMax: 30000,
+    ap: 40,
+    apMax: 40,
+    dp: 30,
+    dpMax: 30,
     currentImg:{},
     imgs:{
         idle:{},
@@ -24,7 +24,7 @@ var myHeroCharacter = {
         death:{},
         victory:{}
     },
-    generateHero: function(img) {
+    generateHero: function() {
         this.saveImages();
         //this.img = img;
         this.hp = this.hpMax;
