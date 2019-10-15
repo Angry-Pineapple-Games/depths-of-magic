@@ -1,8 +1,8 @@
-# Depths of Magic: Documento de Diseño de Juego
+﻿# Depths of Magic: Documento de Diseño de Juego
 
 > Angry Pineapple Games
 
-> Versión del Documento: 1.3
+> Versión del Documento: 1.4
 
 > Plantilla de GDD adaptada de la escrita por: [Benjamin “HeadClot” Stanley](https://docs.google.com/document/d/1-I08qX76DgSFyN1ByIGtPuqXh7bVKraHcNIA25tpAzE/ "Enlace al documento de plantilla")
 
@@ -13,6 +13,7 @@
 * 1.1: Milestones, posibles ampliaciones, assets requeridos, secuencias cinemáticas y modificaciones de apartados anteriores.
 * 1.2: Inclusión de imágenes descriptivas, modelo de negocio y correciones menores.
 * 1.3: Reestructuración de apartados, más ampliaciones, cambios en mecánicas y correciones menores.
+* 1.4: Cambios de diseño, especificación del último milestone, arreglo de imágenes.
 ## 2. Concepto de juego
 ### 2.1. Género y Setting
 **Depths of Magic** es un juego del género *dungeon crawler* con elementos de *roguelike* que utiliza un sistema de combate automático basado en cortar diferentes patrones mediante el ratón o la pantalla táctil para contraatacar a los enemigos y obtener recompensas. 
@@ -24,9 +25,9 @@ Ambientado en un mundo donde la magia es posible, nuestra protagonista deberá e
 * **Secuencias de combates aleatorias**: La secuencia de enemigos de un nivel de la mazmorra no estará preestablecida, por lo que en cada iteración del juego se podrá disfrutar de un orden distinto a la hora de afrontar los retos o incluso aparecerán enemigos que no se han visto en la primera partida, fomentando así la rejugabilidad del título.
 * **Ataques con patrones**:  Los enemigos tendrán unos ataques predeterminados que ejecutarán de forma aleatoria. Cada uno de estos ataques estará enlazado con un patrón de dibujo con el que deberá interactuar el jugador.
 * **Contraataques con *slashes***: El jugador deberá cortar los patrones enemigos de la forma más rápida y precisa posible. Será su manera de interactuar con el entorno y, por tanto, de evitar que le inflijan daño y de contraatacar al enemigo.
-* **Efectos**: Los patrones que dibujan los enemigos tendrán distintos efectos que se dispararán al ser cortados. Cada efecto vendrá asociado con una apariencia estética que lo identifique. Algunos de estos efectos serán curación de vida, daño sorpresa, multiplicador al daño en contraataque o modificadores de *stats* del oponente.
+* **Efectos**: Los patrones que dibujan los enemigos tendrán distintos efectos que se dispararán al ser cortados. Cada efecto vendrá asociado con una apariencia estética que lo identifique. Algunos de estos efectos serán curación de vida, multiplicador al daño en contraataque o modificadores de *stats* del oponente.
 ### 2.3. Plataformas
-**Depths of Magic** estará disponible para web en Itch.io, Facebook Instant Games y en la propia web del videojuego.
+**Depths of Magic** está disponible para web en Itch.io, Facebook Instant Games y en la propia web del videojuego.
 El juego podrá ejecutarse tanto en PC como en móviles y tabletas.
 ### 2.4. Idiomas
 Se podrá jugar tanto en inglés como en español.
@@ -34,7 +35,7 @@ Se podrá jugar tanto en inglés como en español.
 * **Escala económica y de tiempo**:
 	* **Presupuesto inicial**: 0 euros.
 	* **Fecha de inicio**: 9 de septiembre de 2019.
-	* **Fecha estimada de finalización del prototipo**: 16 de octubre de 2019.
+	* **Fecha estimada de finalización del prototipo**:  19 de octubre de 2019.
 * **Equipo**:
 	* **Mario Aceituno Cordero**: Arte y animación.
 	* **Javier Albaráñez Martínez**:Game design y programación.
@@ -48,67 +49,127 @@ Se podrá jugar tanto en inglés como en español.
 * **Darkest Dungeon**: El enfoque de la cámara y la distribución de la interfaz de usuario de los combates será similar al de esta obra.
 * **Octopath Traveler**: Se buscará una estética en los efectos mágicos similar a la presentada en este título.
 * **Crypt of the Necrodancer**: La ambientación de la historia será similar, enfrentándose a los peligros y amenazas que se encuentren en la mazmorra.
+* **Theatrhythm Final Fantasy**: El flujo de juego se desarrolla de manera similar, con la interacción del jugador en una pantalla y las animaciones de combate en la en otra.
 ## 3. Elevator Pitch
 En **Depths of Magic** se premia al jugador habilidoso gracias al sistema de combate basado en trazados. Es un juego inmediato, frenético y rejugable gracias a la generación aleatoria de los combates.
 Jugando a **Depths of Magic** el jugador se encontrará con una experiencia de *dungeon crawler* con elementos de *roguelike* alejada de los repetitivos pasillos aleatorios y sin necesidad de planificar una estrategia preestablecida para los combates enemigos. La toma de contacto es sencilla y rápida, enseñando los fundamentos del juego sin aburrir al jugador y permitiéndole disfrutar lo antes posible.
 Con el fuerte y contrastado apartado visual, se busca que los jugadores puedan sentir el poder de lanzar los hechizos y acribillar a sus enemigos, incentivando así sus ganas de continuar.
+La dificultad es exigente, pero justa, haciendo que la primera toma de contacto resulte interesante pero no permita ver todo a un jugador salvo que sea muy habilidoso, incentivando así al típico fenónemo de _"una vez más"._
 ## 4. Historia y Gameplay
 ### 4.1. Sinopsis de la historia
-Rhaxtir es una nigromante sin rumbo, que en uno de sus viajes descubre una misteriosa mazmorra que emana una extraña aura. Intrigada por ello, la protagonista se adentra dentro de la mazmorra dispuesta a descubrir todos los secretos mágicos que esta pueda albergar y que le ayuden a fortalecerse.
+Rhaxtir es una nigromante sin rumbo, que en uno de sus viajes descubre una misteriosa mazmorra. Intrigada por ello, la protagonista se adentra dentro de la mazmorra dispuesta a descubrir todos los secretos mágicos que esta pueda albergar y que le ayuden a fortalecerse.
 ### 4.2. Historia en detalle
 La carga de la historia es pequeña. Y en el guión se cuenta de manera sutil y sin descripción activa de lo que está ocurriendo más allá de dos imágenes.
 Ambas secuencias serán omisibles, de cara a permitir a los jugadores pasar a la acción cuanto antes.
 * **Secuencia introductoria**: Se muestra la siguiente frase:     _"ENG: Whoever fights with monsters should see to it that he does not become a monster in the process." / ESP: "Quien con monstruos lucha cuide de no convertirse a su vez en monstruo"_ , acto seguido, la frase desaparece y comienza a formarse una llama. Cuando la llama llega a la máxima intensidad, aparece otra frase _"ENG: And when you gaze long into an abyss, the abyss also gazes into you."  / ESP: "Cuando miras largo tiempo a un abismo, el abismo también mira dentro de ti",_ con _Friderich Nietzsche_ escrito debajo como subtítulo de autoría. Acto seguido, la frase comienza a desaparecer y se muestra un plano medio de Rhaxtir de espaldas mirando hacia la caverna, mientras el viento agita su pelo.
 * **Secuencia final**: Esta secuencia se mostrará cuando Rhaxtir derrote al jefe final en el nivel 3. En ella se verá un primer plano de su mano sosteniendo una llama del color del enemigo final. Volverá a aparecer la frase _"ENG: Whoever fights with monsters should see to it that he does not become a monster in the process." / ESP: "Quien con monstruos lucha cuide de no convertirse a su vez en monstruo"_, y cuando esta desaparezca, la mano se cerrará de golpe, absorbiendo la energía mágica de la llama. Habrá un fundido a negro, en el que aparecerá otra vez la segunda parte de la frase, esta vez sin referenciar a Nietzsche: _ENG: "And when you gaze long into an abyss, the abyss also gazes into you. "/ ESP: "Cuando miras largo tiempo a un abismo, el abismo también mira dentro de ti"_, y cuando esta frase desaparezca, se verá en la oscuridad cómo se abren los ojos de Rhaxtir, emanando el color del jefe final, en señal de que ha absorbido su poder. De esta manera, se enlaza la historia con la jugabilidad, justificando que Rhaxtir ha sido consumida por su ambición de poder y ahora solo le queda continuar en la mazmorra hasta la extenuación (el _Game Over_).
 
-![](https://github.com/Angry-Pineapple-Games/depths-of-magic/blob/master/Game%20Design/Storyboard.jpg "Storyboard")
+![Imgur](https://i.imgur.com/RVgpn0C.jpg "Storyboard de la intro y el ending")
 ### 4.3. Gameplay resumido
-El juego se desarrollará como una secuencia de combates, uno tras otro y con transiciones entre ellos. Habrá tres niveles, cada uno con tres salas y varios combates en cada sala. Al finalizar cada nivel se informará al jugador de la progresión obtenida y se pasará al siguiente.
+El juego se desarrollará como una secuencia de combates, uno tras otro y con transiciones entre ellos. Habrá tres niveles, cada uno con tres salas y cuatro combates en cada sala. Al finalizar cada nivel se informará al jugador de la progresión obtenida y se pasará al siguiente.
 Los combates se desarrollarán mediante la jugabilidad basada en corte de patrones planteada en los apartados anteriores.
 ### 4.4. Gameplay en detalle
 #### 4.4.1. Información ingame
-* **Rhaxtir**: Se mostrarán numéricamente sus puntos de vida (HP), así como si tiene algún buff / debuff en ataque (AP) y defensa (DP), pero sin reflejo numérico de estos stats.
-* **Enemigos**: La salud total del enemigo (HP) será información oculta para el jugador. Los buff / debuff del enemigo se mostrarán en el momento de aplicarse, pero no habrá información estática en la interfaz que lo refleje.
-* **Daños y efectos**: Cuando se realice daño (tanto a Rhaxtir como a los enemigos), se mostrará en pantalla de manera numérica el daño realizado. Los buffs, debuffs y efectos de veneno se mostrarán con animaciones en el momento de aplicarse.
+* **Rhaxtir**: Se mostrarán numéricamente sus puntos de vida (HP).
+* **Enemigos**: La salud total del enemigo (HP) será información oculta para el jugador.
+* **Daños y efectos**: Cuando se realice daño (tanto a Rhaxtir como a los enemigos), se mostrará en pantalla de manera numérica el daño realizado. Los buffs, debuffs y curación se mostrarán con animaciones en el momento de aplicarse.
 #### 4.4.2. Progreso del juego
-* **Estructura de niveles**: El juego constará de tres niveles, cada uno de ellos formados a su vez por tres salas, y en cada una de las salas se realizarán cuatro combates, dando lugar a un total de 36 combates. Al finalizar un nivel, se mostrarán los stats del personaje para reflejar el progreso. Cuando se finalice el tercer nivel, se volverá al primero con los stats de los enemigos modificados, y así sucesivamente. El juego finalizará cuando el personaje muera, perdiendo el progreso.
+* **Estructura de niveles**: El juego constará de tres niveles, cada uno de ellos formados a su vez por tres salas, y en cada una de las salas se realizarán cuatro combates, dando lugar a un total de 36 combates. Al finalizar un nivel, se mostrarán los stats del personaje para reflejar el progreso. Cuando se finalice el tercer nivel, se volverá al primero con los stats de los enemigos modificados, y así sucesivamente. El juego finalizará cuando el personaje muera, perdiendo todo el progreso.
 * **Aparición de los enemigos**: Los enemigos aparecerán en secuencias aleatorias, fomentando la rejugabilidad del título. En principio se contará con un abanico de 10 enemigos. En el nivel 1 podrán aparecer 3 enemigos distintos, en el nivel 2 podrán aparecer 6, incluyendo a los 3 anteriores, y en el nivel 3 podrán aparecer los 10 posibles.
 * **Combate contra jefes**: Al final de cada nivel, el último enemigo será predefinido y siempre será un combate contra un jefe final. El jefe del nivel 1 será un enemigo común del nivel 2, mientras que el jefe del nivel 2 será un enemigo común del nivel 3. El jefe del nivel 3 será un enemigo exclusivo contra el que solo se podrá combatir en la batalla final.
 * **Desarrollo del combate**: En todos los combates se seguirá la siguiente secuencia: el enemigo selecciona al azar uno de sus cuatro posibles ataques -> ejecuta dicho ataque dibujando el patrón de cadenas en la pantalla de acción -> el jugador corta las cadenas en el tiempo establecido -> se realizan las animaciones y se aplican los efectos en función a los cortes realizados -> si el enemigo y el jugador siguen con vida, se repite el bucle.
+* **Ataques y patrones**: Cada uno de los ataques del enemigo se formará por varias cuerdas de distinto tipo. Se contará con un tiempo límite para cortar estas cuerdas, por lo que el jugador deberá ser muy hábil o tomar rápidamente una decisión de qué cuerdas le conviene dejar sin cortar. Los patrones pueden ser de dos tipos:
+	* **Ordenados**: El patrón se irá dibujando poco a poco y el jugador deberá estar atento, ya que solo se le permitirá cortar las cuerdas cuando haya terminado de dibujarse y tendrá que realizarlo en el orden establecido.
+	* **Desordenados**: El patrón aparece sin más y el jugador puede cortarlo sin esperas.
 * **Transiciones entre combates**: Durante el combate, la protagonista recibirá cambios temporales en los atributos o en su estado. Al finalizar un combate y pasar al siguiente:
 	* Los puntos de vida (HP) se mantienen como estuviesen, sin recuperación de vida de un combate a otro. Sí se recupera toda la vida al finalizar un nivel completo.
-	* Los buffs y debuffs se pasan de un combate a otro, pero se resetean al finalizar una sala.
+	* Los buffs y debuffs solamente actúan en el ataque en el que se han cortado sus cuerdas correspondientes.
 * **Progresión de la dificultad**: El juego debe tener una curva de dificultad que aumente progresivamente y que exija al jugador demostraciones de las habilidades aprendidas, pero mantieniéndole siempre entretenido para no romper el flujo de juego. Para ello, se aplicarán las decisiones de diseño de los siguientes apartados.
+![](https://cdn.discordapp.com/attachments/378114383869640714/632709209355452457/Flujo_de_recorrido_del_usuario2.png "Diagrama de flujo de juego")
 #### 4.4.3. Cadenas
-Las cadenas que forman los patrones mágicos de los enemigos tendrán distintas formas y efectos. Enlazar varios cortes incrementará los efectos que tengan las cadenas cortadas.
-* **Cadena de contraataque:** Cortarla prevendrá el daño que se fuese a hacer al protagonista y se realizará un contraataque que dañará al enemigo en función de los stats del protagonista y del propio enemigo.
-* **Cadena de buff**: Cortarla aumentará un stat del personaje (ataque primero, luego defensa) hasta finalizar una sala. Fallar el corte aumentará un stat del enemigo y se mantendrá hasta que este sea derrotado.
-* **Cadena de debuff**: Cortarla disminuye un stat del enemigo hasta que este sea derrotado. Fallar disminuirá un stat del personaje hasta finalizar la sala. Los buffs y debuffs son acumulativos (se pueden tener varios buffs en el mismo stat), y uno anula a otro si se aplican al mismo stat.
-* **Cadena de superbuff**: Requerirá ser cortada dos veces. Al cortarla aumentará los dos stats del personaje y fallar el corte no tendrá castigo.
+Las cadenas que forman los patrones mágicos de los enemigos tendrán distintas formas y efectos. Enlazar varios cortes incrementará los efectos que tengan las cadenas cortadas. Cada tipo de cadena requerirá de un corte distinto para ser destruida.
+* **Cadena de contraataque:** Cortarla prevendrá el daño que se fuese a hacer al protagonista y se realizará un contraataque que dañará al enemigo en función de los stats del protagonista y del propio enemigo. Se puede cortar de cualquier manera.
+* **Cadena de buff**: Cortarla aumentará los stats de Rhaxtir y fallarála aumentará los del enemigo. Debe cortarse desde la izquierda o desde arriba, dependiendo de si está en vertical u horizontal.
+* **Cadena de debuff**: Cortarla disminuye los stats del enemigo y fallar disminuye los de Rhaxtir. Debe cortarse desde la derecha o desde abajo, dependiendo de si está en vertical u horizontal.
 * **Cadena de curación**: Cortarla devolverá el hechizo al enemigo y le curará vida. No cortarla recuperará vida a Rhaxtir. De esta manera se incentiva a no cortar todas las cadenas sin pensar.
-#### 4.4.4. Enemigos
-A continuación se detalla el esquema del primer enemigo. Se ampliará el documento con el diseño de todos los enemigos en posteriores versiones.
+* **Cadena de power**: Requerirá ser cortada dos veces sin soltar el ratón/dedo de la pantalla. Aplicará todos los efectos positivos de las anteriores cadenas al ser cortada y si no se corta no tendrá castigo.
+![Imgur](https://i.imgur.com/q282Rbx.png "Tipos de cadenas")
+#### 4.4.4. Grimorio 
+El grimorio es la segunda pantalla, el grid donde se desarrolla la acción principal del juego. Las cadenas se dispondrán sobre este grimorio y deberán ser cortadas por el jugador. El grimorio se encontrará en dos posibles estados:
+* **Rojo**: Indica al jugador que en ese momento no puede interactuar, ya sea porque se está dibujando un patrón ordenado o porque está teniendo lugar una animación.
+* **Azul**: El jugador puede interactuar y cortar las cuerdas antes de que finalice el tiempo.
+![Imgur](https://i.imgur.com/Ha6GXvI.png "Posibles estados del Grid")
+#### 4.4.5. Enemigos
 * Enemigo 1:
 	* **Nombre:** Raygler
 	* **HP**: 90
 	* **Base AP**: 35
 	* **Base DP**: 25
-* _TODO_: Resto de enemigos
-#### 4.4.5. Cámara
+![](https://pbs.twimg.com/media/EGgRMp5W4AEFLXI?format=png&name=360x360 "Raygler")
+* Enemigo 2:
+	* **Nombre:** Sawyrah
+	* **HP**: 80
+	* **Base AP**: 55
+	* **Base DP**: 15
+![](https://pbs.twimg.com/media/EGgRMp4WkAM_u-n?format=png&name=360x360 "Sawyrah")
+* Enemigo 3:
+	* **Nombre:** Gorpovar
+	* **HP**: 110
+	* **Base AP**: 25
+	* **Base DP**: 40
+![](https://pbs.twimg.com/media/EG4TATNW4AATLD6?format=png&name=small "Gorpovar")
+* Enemigo 4 [JEFE DEL NIVEL 1]:
+	* **Nombre:** Giwalev
+	* **HP**: 140
+	* **Base AP**: 70
+	* **Base DP**: 45
+* Enemigo 5:
+	* **Nombre:** Rawdramon
+	* **HP**: 135
+	* **Base AP**: 85 
+	* **Base DP**: 40
+* Enemigo 6:
+	* **Nombre:** Shadrix
+	* **HP**: 160
+	* **Base AP**: 55
+	* **Base DP**: 70
+	![](https://pbs.twimg.com/media/EGgthXvXoAALu2Z?format=png&name=small "Shadrix")
+* Enemigo 7 [JEFE DEL NIVEL 2]:
+	* **Nombre:** Glanxyor 
+	* **HP**: 180
+	* **Base AP**: 95
+	* **Base DP**: 80
+* Enemigo 8:
+	* **Nombre:** Wrotalus
+	* **HP**: 240
+	* **Base AP**: 70
+	* **Base DP**: 100
+* Enemigo 9:
+	* **Nombre:** Gumlisar
+	* **HP**: 160
+	* **Base AP**: 55
+	* **Base DP**: 70
+* Enemigo 10 [JEFE FINAL]:
+	* **Nombre:** The Abyss
+	* **HP**: 250
+	* **Base AP**: 145
+	* **Base DP**: 120
+#### 4.4.6. Cámara
 Vista lateral en dos dimensiones. En todo momento se podrán apreciar a la protagonista a la izquierda y al enemigo a batir en la derecha, por encima de la imagen de fondo. La interfaz de usuario estará separada, mostrándose a la derecha o abajo en función de la navegación por la página web, y en ella será donde se lleve a cabo la jugabilidad del trazado de runas y donde se muestre la información relevante al combate, como puntos de salud.
-#### 4.4.6. Controles
+![Imgur](https://i.imgur.com/LEZusjU.png "Vista del gameplay")
+#### 4.4.7. Controles
 El juego se controlará enteramente por ratón o por interacción con pantalla táctil, que controlarán las zonas donde se está cortando.
 El botón ESC pone en pausa el juego, mientras que en tablets y móviles la pausa se realizará cuando se ponga en segundo plano la aplicación del navegador.
-#### 4.4.7. Puntuación
-El progreso del jugador se verá reflejado en un incremento en las stats de Rhaxtir, que aumentarán en función de cómo se combata.
-#### 4.4.8. Modos de juego
-Habrá dos modos de juego:
-* **Individual**: Campaña principal en la que un único jugador se enfrentará al desafío principal.
-* **Cooperativo**: Dos jugadores podrán participar en conexión online a la vez. Se enfrentarán a enemigos más fuertes (stats incrementados) desde un inicio y cortarán las cadenas por turnos: ataque del enemigo -> corta el jugador 1 -> siguiente ataque -> corta el jugador 2. En este modo de juego, el _Game Over_ llegará cuando ambos jugadores pierdan, y si solo uno de los dos muere en combate, se le restaurará la vida al finalizar una sala.
-#### 4.4.9. Sistema de guardado
-El juego no contará con sistema de guardado, ya que está orientado a partidas de jugar hasta perder. Queda abierta la posibilidad de guardar el progreso de los jugadores al finalizar las partidas a modo de ranking.
+#### 4.4.8. Puntuación
+El progreso del jugador se verá reflejado en un incremento en las stats de Rhaxtir, que aumentarán en función de cómo se combata: se llevará la cuenta del número de cuerdas de cada tipo que se ha cortado y, en función de ello, los stats relacionados con dichos tipos crecerán más o menos.
+
+A su vez, se guardarán las 10 mejores puntuaciones globales del juego a modo de ranking para incentivar a los jugadores a superarse unos a otros. Estas puntuaciones se verán determinadas por el número de niveles máximo al que haya conseguido llegar cada jugador.
+#### 4.4.9. Modos de juego
+Habrá un único modo de juego individual en la que un jugador se enfrentará en solitario a los desafíos del juego.
+#### 4.4.10. Sistema de guardado
+El juego no contará con sistema de guardado, ya que está orientado a partidas de jugar hasta perder, pero sí se guarda la puntuación obtenida de cara al ranking.
 ## 5. Modelo de Negocio
-![](https://github.com/Angry-Pineapple-Games/depths-of-magic/blob/master/Bussiness%2C%20Marketing%20and%20Management/Canvas.jpg "Modelo de negocio - Canvas")
+![Imgur](https://i.imgur.com/F0elgsb.jpg "Modelo de negocio Canvas")
 ## 6. Assets necesarios
 ### 6.1. Sprites
 * Protagonista
@@ -235,18 +296,18 @@ El juego no contará con sistema de guardado, ya que está orientado a partidas 
 * **Game Design**: Guión, storyboard, diseño de los enemigos (ataques y parámetros), diseño de los niveles (número de salas por nivel, número de enemigos por sala, jefes finales), diseño de los efectos de las cadenas, mockup del diseño de interfaz.
 * **Assets**: Diseños definitivos, fondos, animaciones de la protagonista.
 * **Marketing y gestión**: Movimiento en cuentas de Twitter, canvas del modelo de negocio, planes de monetización, lanzamiento de la web definitiva por Github Pages.
-#### Milestone 3 - 11 / 10 / 2019
+#### Milestone 3 - 11 / 10 / 2019 [FINALIZADO]
 ##### Objetivo: Finalización del grueso del proyecto
 * **Programación**: Se puede jugar una partida de principio a fin, con todas sus pantallas (inicio, game over, cinemáticas, todos los niveles y combates).
 * **Game Design**: Balanceo de tiempo límite para cortar, de los buffs/debuffs, de los stats de personaje y enemigos y de la curva de dificultad.
 * **Assets**: Interfaz, sonido y música, animaciones finales, fondos finales.
-* **Marketing y gestión**: Mantenimiento y actualización de las redes sociales y la web. Detallar y decorar los modelos de negocio y monetización de cara a la presentación.
-#### Milestone 4 - 15 / 10 / 2019
+* **Marketing y gestión**: Mantenimiento y actualización de las redes sociales y la web. 
+#### Milestone 4 - 18 / 10 / 2019
 ##### Objetivo: Pequeños detalles, corrección de errores y publicación
-* **Programación**: Testing, corrección de bugs e integración de los últimos assets. Implementación del modo multijugador.
-* **Game Design**: Ajustes finales de balanceo. Mockups de las posibles ampliaciones del juego.
-* **Assets**: Animaciones y efectos que hayan quedado pendientes del anterior milestrone.
-* **Marketing y gestión**: Creación del tráiler, PowerPoint de presentación y planificación de la exposición al público. Campaña de marketing en las redes sociales.
+* **Programación**: Finalización de la implementación de todo el flujo de juego y corrección de bufs finales.
+* **Game Design**: Ajustes finales de balanceo e integración de la última mecánica (patrones con tiempo). Mockups de las posibles ampliaciones del juego.
+* **Assets**: Animaciones, sonidos y efectos que hayan quedado pendientes del anterior milestrone.
+* **Marketing y gestión**: Creación del tráiler, PowerPoint de presentación y planificación de la exposición al público. Campaña de marketing en las redes sociales. Detallar y decorar los modelos de negocio y monetización de cara a la presentación.
 
 ## 8. Posibles ampliaciones
 ### 8.1. Más cadenas
