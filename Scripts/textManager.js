@@ -3,8 +3,8 @@ myTextManager = {
     eventualText: [0, -0.01],
     texts: {},
     changeLang: function () {
-        if(localStorage.getItem("langDom") !== null) {
-            this.langVersion = localStorage.getItem("langDom");
+        if(sessionStorage.getItem("langDom") !== null) {
+            this.langVersion = sessionStorage.getItem("langDom");
         }
         if (this.langVersion === 'english') { this.texts = myEnglishVersion; }
         else if (this.langVersion === 'spanish') { this.texts = mySpanishVersion; }

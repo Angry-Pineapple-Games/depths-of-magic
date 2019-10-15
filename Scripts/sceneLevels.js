@@ -27,8 +27,8 @@ var myLevel1 = {
         myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
         myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
-        myTextManager.drawTextInBackground(1, "hp", [0.15, 0.45], "green", 60, "right");
-        myTextManager.drawTextInBackground(1, " " + String(this.hero.hp), [0.15, 0.45], "green", 60, "left");
+        myTextManager.drawTextInBackground(1, "hp", [0.10, 0.99], "green", 80, "right");
+        myTextManager.drawTextInBackground(1, " " + String(this.hero.hp), [0.10, 0.99], "green", 80, "left");
 
         if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
             myGameArea.resizeBackground(myPreload.images.grid, 2);
@@ -47,8 +47,8 @@ var myLevel1 = {
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.backgroundBlack);
             myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "white", 50, "center");
         } else { //eventos particulares a que el juego no este en pausa
-            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.25, 0.45], "red", 60, "center", true);
-            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.75, 0.45], "red", 60, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.25, 0.35], "red", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.65, 0.35], "red", 80, "center", true);
             myTextManager.applyDecay();
         }
 
@@ -59,6 +59,7 @@ var myLevel1 = {
 
 var myIntro = {
     start: function () {
+        myScoreManager.downloadBestScores();//Deberia ir en otro sitio
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
     },
@@ -154,8 +155,8 @@ var myLevel2 = {
         myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
         myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
-        myTextManager.drawTextInBackground(1, "hp", [0.15, 0.45], "green", 60, "right");
-        myTextManager.drawTextInBackground(1, " " + String(this.hero.hp), [0.15, 0.45], "green", 60, "left");
+        myTextManager.drawTextInBackground(1, "hp", [0.10, 0.99], "green", 80, "right");
+        myTextManager.drawTextInBackground(1, " " + String(this.hero.hp), [0.10, 0.99], "green", 80, "left");
 
         if (!myInputsManager.blocked) {
             myGameArea.resizeBackground(myPreload.images.grid, 2);
@@ -174,8 +175,8 @@ var myLevel2 = {
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.backgroundBlack);
             myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "white", 50, "center");
         } else { //eventos particulares a que el juego no este en pausa
-            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.25, 0.45], "red", 60, "center", true);
-            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.75, 0.45], "red", 60, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.25, 0.35], "red", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.65, 0.35], "red", 80, "center", true);
             myTextManager.applyDecay();
         }
 
@@ -212,8 +213,8 @@ var myLevel3 = {
         myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
         myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
-        myTextManager.drawTextInBackground(1, "hp", [0.15,0.45], "green", 60, "right");
-        myTextManager.drawTextInBackground(1, " "+String(this.hero.hp), [0.15,0.45], "green", 60, "left");
+        myTextManager.drawTextInBackground(1, "hp", [0.10, 0.99], "green", 80, "right");
+        myTextManager.drawTextInBackground(1, " "+String(this.hero.hp), [0.10, 0.99], "green", 80, "left");
 
         if (!myInputsManager.blocked) {
             myGameArea.resizeBackground(myPreload.images.grid, 2);
@@ -232,8 +233,8 @@ var myLevel3 = {
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.backgroundBlack);
             myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "white", 50, "center");
         } else { //eventos particulares a que el juego no este en pausa
-            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.25, 0.45], "red", 60, "center", true);
-            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.75,0.45], "red", 60, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.35, 0.45], "red", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.65, 0.35], "red", 80, "center", true);
             myTextManager.applyDecay();
         }
 
@@ -244,6 +245,9 @@ var myLevel3 = {
 
 var myGameOver = {
     start: function () {
+        myScoreManager.currentScore = myStatsController.loops;//+1 para probar
+        console.log(myScoreManager.currentScore);
+        if(myScoreManager.updateBestScores()){myScoreManager.uploadBestScores();}
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
         myHeroCharacter.resetHeroStats();
