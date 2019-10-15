@@ -3,7 +3,7 @@ var myLevel1 = {
     enemies: [],
     sfx: {},
     enemy: {},
-    posHero: [50, 390],
+    posHero: [50, 440],
     rooms: [],
     room: {},
     enemiesMax: 4,
@@ -12,7 +12,7 @@ var myLevel1 = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
-        this.hero = myHeroCharacter.generateHero(myPreload.images.hero);
+        this.hero = myHeroCharacter.generateHero();
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
@@ -24,8 +24,8 @@ var myLevel1 = {
         myGameArea.resizeBackground(this.room, 1);
 
         //myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
-        myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
+        myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.currentImg, this.enemy.currentAnimation, this.enemy.resize);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
         myTextManager.drawTextInBackground(1, "hp", [0.10, 0.99], "green", 80, "right");
         myTextManager.drawTextInBackground(1, " " + String(this.hero.hp), [0.10, 0.99], "green", 80, "left");
@@ -83,7 +83,7 @@ var myTransitionScene = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
-        this.hero = myHeroCharacter.generateHero(myPreload.images.hero);
+        this.hero = myHeroCharacter.generateHero();
         myStatsController.increaseStats(this.hero);
         this.room = myPreload.images["room1"];
         //myGameManager.addTimer(myGame.swapScene, this.timeTransition, "timersSwap");
@@ -93,7 +93,7 @@ var myTransitionScene = {
     },
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
 
         myTextManager.drawTextInBackground(1, "currentLevel", [0.7, 0.2], "black", 50, "right");
         myTextManager.drawTextInBackground(1, "healthPoints", [0.7, 0.35], "black", 50, "right");
@@ -131,7 +131,7 @@ var myLevel2 = {
     enemies: [],
     enemy: {},
     sfx: {},
-    posHero: [50, 390],
+    posHero: [50, 440],
     rooms: [],
     room: {},
     enemiesMax: 7,
@@ -140,7 +140,7 @@ var myLevel2 = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
-        this.hero = myHeroCharacter.generateHero(myPreload.images.hero);
+        this.hero = myHeroCharacter.generateHero();
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
@@ -151,9 +151,8 @@ var myLevel2 = {
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
 
-
-        myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
+        myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.currentImg, this.enemy.currentAnimation, this.enemy.resize);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
         myTextManager.drawTextInBackground(1, "hp", [0.10, 0.99], "green", 80, "right");
         myTextManager.drawTextInBackground(1, " " + String(this.hero.hp), [0.10, 0.99], "green", 80, "left");
@@ -190,7 +189,7 @@ var myLevel3 = {
     enemies: [],
     enemy: {},
     sfx: {},
-    posHero: [50, 390],
+    posHero: [50, 440],
     rooms: [],
     room: {},
     enemiesMax: 10,
@@ -199,7 +198,7 @@ var myLevel3 = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
-        this.hero = myHeroCharacter.generateHero(myPreload.images.hero);
+        this.hero = myHeroCharacter.generateHero();
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
@@ -210,8 +209,8 @@ var myLevel3 = {
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
 
-        myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.img, this.enemy.currentAnimation, this.enemy.resize);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
+        myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.currentImg, this.enemy.currentAnimation, this.enemy.resize);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
         myTextManager.drawTextInBackground(1, "hp", [0.10, 0.99], "green", 80, "right");
         myTextManager.drawTextInBackground(1, " "+String(this.hero.hp), [0.10, 0.99], "green", 80, "left");

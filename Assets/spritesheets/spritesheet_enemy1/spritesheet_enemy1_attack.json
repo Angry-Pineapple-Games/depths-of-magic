@@ -1,0 +1,794 @@
+﻿spritesheet_enemy1_attack = [
+
+{
+	"filename": "attack instancia 10000",
+	"frame": {"x":0,"y":0,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10001",
+	"frame": {"x":420,"y":0,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10002",
+	"frame": {"x":840,"y":0,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10003",
+	"frame": {"x":1260,"y":0,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10004",
+	"frame": {"x":1680,"y":0,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10005",
+	"frame": {"x":2100,"y":0,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10006",
+	"frame": {"x":2520,"y":0,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10007",
+	"frame": {"x":2940,"y":0,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10008",
+	"frame": {"x":3360,"y":0,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10009",
+	"frame": {"x":0,"y":354,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10010",
+	"frame": {"x":420,"y":354,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10011",
+	"frame": {"x":840,"y":354,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10012",
+	"frame": {"x":1260,"y":354,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10013",
+	"frame": {"x":1680,"y":354,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10014",
+	"frame": {"x":2100,"y":354,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10015",
+	"frame": {"x":2520,"y":354,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10016",
+	"frame": {"x":2940,"y":354,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10017",
+	"frame": {"x":3360,"y":354,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10018",
+	"frame": {"x":0,"y":708,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10019",
+	"frame": {"x":420,"y":708,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10020",
+	"frame": {"x":840,"y":708,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10021",
+	"frame": {"x":1260,"y":708,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10022",
+	"frame": {"x":1680,"y":708,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10023",
+	"frame": {"x":2100,"y":708,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10024",
+	"frame": {"x":2520,"y":708,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10025",
+	"frame": {"x":2940,"y":708,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10026",
+	"frame": {"x":3360,"y":708,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10027",
+	"frame": {"x":0,"y":1062,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10028",
+	"frame": {"x":420,"y":1062,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10029",
+	"frame": {"x":840,"y":1062,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10030",
+	"frame": {"x":1260,"y":1062,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10031",
+	"frame": {"x":1680,"y":1062,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10032",
+	"frame": {"x":2100,"y":1062,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10033",
+	"frame": {"x":2520,"y":1062,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10034",
+	"frame": {"x":2940,"y":1062,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10035",
+	"frame": {"x":3360,"y":1062,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10036",
+	"frame": {"x":0,"y":1416,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10037",
+	"frame": {"x":420,"y":1416,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10038",
+	"frame": {"x":840,"y":1416,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10039",
+	"frame": {"x":1260,"y":1416,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10040",
+	"frame": {"x":1680,"y":1416,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10041",
+	"frame": {"x":2100,"y":1416,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10042",
+	"frame": {"x":2520,"y":1416,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10043",
+	"frame": {"x":2940,"y":1416,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10044",
+	"frame": {"x":3360,"y":1416,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10045",
+	"frame": {"x":0,"y":1770,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10046",
+	"frame": {"x":420,"y":1770,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10047",
+	"frame": {"x":840,"y":1770,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10048",
+	"frame": {"x":1260,"y":1770,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10049",
+	"frame": {"x":1680,"y":1770,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10050",
+	"frame": {"x":2100,"y":1770,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10051",
+	"frame": {"x":2520,"y":1770,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10052",
+	"frame": {"x":2940,"y":1770,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10053",
+	"frame": {"x":3360,"y":1770,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10054",
+	"frame": {"x":0,"y":2124,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10055",
+	"frame": {"x":420,"y":2124,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10056",
+	"frame": {"x":840,"y":2124,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10057",
+	"frame": {"x":1260,"y":2124,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10058",
+	"frame": {"x":1680,"y":2124,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10059",
+	"frame": {"x":2100,"y":2124,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10060",
+	"frame": {"x":2520,"y":2124,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10061",
+	"frame": {"x":2940,"y":2124,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10062",
+	"frame": {"x":3360,"y":2124,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10063",
+	"frame": {"x":0,"y":2478,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10064",
+	"frame": {"x":420,"y":2478,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10065",
+	"frame": {"x":840,"y":2478,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10066",
+	"frame": {"x":1260,"y":2478,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10067",
+	"frame": {"x":1680,"y":2478,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10068",
+	"frame": {"x":2100,"y":2478,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10069",
+	"frame": {"x":2520,"y":2478,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10070",
+	"frame": {"x":2940,"y":2478,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10071",
+	"frame": {"x":3360,"y":2478,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10072",
+	"frame": {"x":0,"y":2832,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10073",
+	"frame": {"x":420,"y":2832,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10074",
+	"frame": {"x":840,"y":2832,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10075",
+	"frame": {"x":1260,"y":2832,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10076",
+	"frame": {"x":1680,"y":2832,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10077",
+	"frame": {"x":2100,"y":2832,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10078",
+	"frame": {"x":2520,"y":2832,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10079",
+	"frame": {"x":2940,"y":2832,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10080",
+	"frame": {"x":3360,"y":2832,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10081",
+	"frame": {"x":0,"y":3186,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10082",
+	"frame": {"x":420,"y":3186,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10083",
+	"frame": {"x":840,"y":3186,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10084",
+	"frame": {"x":1260,"y":3186,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10085",
+	"frame": {"x":1680,"y":3186,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10086",
+	"frame": {"x":2100,"y":3186,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10087",
+	"frame": {"x":2520,"y":3186,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10088",
+	"frame": {"x":2940,"y":3186,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10089",
+	"frame": {"x":3360,"y":3186,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10090",
+	"frame": {"x":0,"y":3540,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10091",
+	"frame": {"x":420,"y":3540,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10092",
+	"frame": {"x":840,"y":3540,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10093",
+	"frame": {"x":1260,"y":3540,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10094",
+	"frame": {"x":1680,"y":3540,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10095",
+	"frame": {"x":2100,"y":3540,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10096",
+	"frame": {"x":2520,"y":3540,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10097",
+	"frame": {"x":2940,"y":3540,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}
+,{
+	"filename": "attack instancia 10098",
+	"frame": {"x":3360,"y":3540,"w":420,"h":354},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":354},
+	"sourceSize": {"w":420,"h":354}
+}]

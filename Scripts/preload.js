@@ -104,7 +104,7 @@ var myPreload = {
       height: 688
     },
     enemy1: {
-      src: 'Assets/spritesheets/spritesheet_enemy1.png',
+      src: 'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_idle.png',
       width: 366,
       height: 688
     },
@@ -199,7 +199,7 @@ var myPreload = {
       height: 1440
     },
     hero: {
-      src: 'Assets/spritesheets/spritesheet_hero.png',
+      src: 'Assets/spritesheets/spritesheet_hero/spritesheet_hero_idle.png',
       width: 1024,
       height: 2048
     },
@@ -227,11 +227,247 @@ var myPreload = {
       src: 'Assets/spritesheets/spritesheet_superbuff.png',
       width: 1800,
       height: 2400
+    },
+    //Prueba
+    hero_idle:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_idle.png',
+      width: 0,
+      height: 0
+    },
+    hero_damage:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_damage.png',
+      width: 0,
+      height: 0
+    },
+    hero_death:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_death.png',
+      width: 0,
+      height: 0
+    },
+    hero_attack:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_attack.png',
+      width: 0,
+      height: 0
+    },
+    hero_victory:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_victory.png',
+      width: 0,
+      height: 0
+    },
+    //Enemy0 FALTA
+    enemy0_idle:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_idle.png',
+      width: 0,
+      height: 0
+    },
+    enemy0_damage:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_damage.png',
+      width: 0,
+      height: 0
+    },
+    enemy0_attack:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_attack.png',
+      width: 0,
+      height: 0
+    },
+    enemy0_death:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_death.png',
+      width: 0,
+      height: 0
+    },
+    //Enemy1
+    enemy1_idle:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_idle.png',
+      width: 0,
+      height: 0
+    },
+    enemy1_damage:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_damage.png',
+      width: 0,
+      height: 0
+    },
+    enemy1_attack:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_attack.png',
+      width: 0,
+      height: 0
+    },
+    enemy1_death:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_death.png',
+      width: 0,
+      height: 0
+    },
+    //Enemy2
+    enemy2_idle:{
+      src:'Assets/spritesheets/spritesheet_enemy2/spritesheet_enemy2_idle.png',
+      width: 0,
+      height: 0
+    },
+    enemy2_damage:{
+      src:'Assets/spritesheets/spritesheet_enemy2/spritesheet_enemy2_damage.png',
+      width: 0,
+      height: 0
+    },
+    enemy2_attack:{
+      src:'Assets/spritesheets/spritesheet_enemy2/spritesheet_enemy2_attack.png',
+      width: 0,
+      height: 0
+    },
+    enemy2_death:{
+      src:'Assets/spritesheets/spritesheet_enemy2/spritesheet_enemy2_death.png',
+      width: 0,
+      height: 0
+    },
+    //Enemy3
+    enemy3_idle:{
+      src:'Assets/spritesheets/spritesheet_enemy3/spritesheet_enemy3_idle.png',
+      width: 0,
+      height: 0
+    },
+    enemy3_damage:{
+      src:'Assets/spritesheets/spritesheet_enemy3/spritesheet_enemy3_damage.png',
+      width: 0,
+      height: 0
+    },
+    enemy3_attack:{
+      src:'Assets/spritesheets/spritesheet_enemy3/spritesheet_enemy3_attack.png',
+      width: 0,
+      height: 0
+    },
+    enemy3_death:{
+      src:'Assets/spritesheets/spritesheet_enemy3/spritesheet_enemy3_death.png',
+      width: 0,
+      height: 0
+    },
+    //Enemy4
+    enemy4_idle:{
+      src:'Assets/spritesheets/spritesheet_enemy4/spritesheet_enemy4_idle.png',
+      width: 0,
+      height: 0
+    },
+    enemy4_damage:{
+      src:'Assets/spritesheets/spritesheet_enemy4/spritesheet_enemy4_damage.png',
+      width: 0,
+      height: 0
+    },
+    enemy4_attack:{
+      src:'Assets/spritesheets/spritesheet_enemy4/spritesheet_enemy4_attack.png',
+      width: 0,
+      height: 0
+    },
+    enemy4_death:{
+      src:'Assets/spritesheets/spritesheet_enemy4/spritesheet_enemy4_death.png',
+      width: 0,
+      height: 0
+    },
+    //Enemy5 FALTA
+    enemy5_idle:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_idle.png',
+      width: 0,
+      height: 0
+    },
+    enemy5_damage:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_damage.png',
+      width: 0,
+      height: 0
+    },
+    enemy5_attack:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_attack.png',
+      width: 0,
+      height: 0
+    },
+    enemy5_death:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_death.png',
+      width: 0,
+      height: 0
+    },
+    //Enemy6
+    enemy6_idle:{
+      src:'Assets/spritesheets/spritesheet_enemy6/spritesheet_enemy6_idle.png',
+      width: 0,
+      height: 0
+    },
+    enemy6_damage:{
+      src:'Assets/spritesheets/spritesheet_enemy6/spritesheet_enemy6_damage.png',
+      width: 0,
+      height: 0
+    },
+    enemy6_attack:{
+      src:'Assets/spritesheets/spritesheet_enemy6/spritesheet_enemy6_attack.png',
+      width: 0,
+      height: 0
+    },
+    enemy6_death:{
+      src:'Assets/spritesheets/spritesheet_enemy6/spritesheet_enemy6_death.png',
+      width: 0,
+      height: 0
+    },
+    //Enemy7
+    enemy7_idle:{
+      src:'Assets/spritesheets/spritesheet_enemy7/spritesheet_enemy7_idle.png',
+      width: 0,
+      height: 0
+    },
+    enemy7_damage:{
+      src:'Assets/spritesheets/spritesheet_enemy7/spritesheet_enemy7_damage.png',
+      width: 0,
+      height: 0
+    },
+    enemy7_attack:{
+      src:'Assets/spritesheets/spritesheet_enemy7/spritesheet_enemy7_attack.png',
+      width: 0,
+      height: 0
+    },
+    enemy7_death:{
+      src:'Assets/spritesheets/spritesheet_enemy7/spritesheet_enemy7_death.png',
+      width: 0,
+      height: 0
+    },
+    //Enemy8
+    enemy8_idle:{
+      src:'Assets/spritesheets/spritesheet_enemy8/spritesheet_enemy8_idle.png',
+      width: 0,
+      height: 0
+    },
+    enemy8_damage:{
+      src:'Assets/spritesheets/spritesheet_enemy8/spritesheet_enemy8_damage.png',
+      width: 0,
+      height: 0
+    },
+    enemy8_attack:{
+      src:'Assets/spritesheets/spritesheet_enemy8/spritesheet_enemy8_attack.png',
+      width: 0,
+      height: 0
+    },
+    enemy8_death:{
+      src:'Assets/spritesheets/spritesheet_enemy8/spritesheet_enemy8_death.png',
+      width: 0,
+      height: 0
+    },
+    //Enemy9 FALTA
+    enemy9_idle:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_idle.png',
+      width: 0,
+      height: 0
+    },
+    enemy9_damage:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_damage.png',
+      width: 0,
+      height: 0
+    },
+    enemy9_attack:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_attack.png',
+      width: 0,
+      height: 0
+    },
+    enemy9_death:{
+      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_death.png',
+      width: 0,
+      height: 0
     }
   },
   spritesInfo: {
     hero: {
-      json: spritesheet_hero,
+      json: spritesheet_hero_idle,
       frames: []
     },
     //enemies
@@ -240,7 +476,7 @@ var myPreload = {
       frames: []
     },
     1: {
-      json: spritesheet_enemy1,
+      json: spritesheet_enemy1_idle,
       frames: []
     },
     2: {
@@ -294,6 +530,197 @@ var myPreload = {
     superbuff:{
       json: spritesheet_superbuff,
       frames: []
+    },
+    //Hero
+    hero_idle:{
+      json: spritesheet_hero_idle,
+      frames:[]
+    },
+    hero_attack:{
+      json: spritesheet_hero_attack,
+      frames:[]
+    },
+    hero_damage:{
+      json: spritesheet_hero_damage,
+      frames:[]
+    },
+    hero_death:{
+      json: spritesheet_hero_death,
+      frames:[]
+    },
+    hero_victory:{
+      json: spritesheet_hero_victory,
+      frames:[]
+    },
+    //Enemy0 FALTA
+    enemy0_idle:{
+      json: spritesheet_enemy1_idle,
+      frames:[]
+    },
+    enemy0_attack:{
+      json: spritesheet_enemy1_attack,
+      frames:[]
+    },
+    enemy0_damage:{
+      json: spritesheet_enemy1_damage,
+      frames:[]
+    },
+    enemy0_death:{
+      json: spritesheet_enemy1_death,
+      frames:[]
+    },
+    //Enemy1
+    enemy1_idle:{
+      json: spritesheet_enemy1_idle,
+      frames:[]
+    },
+    enemy1_attack:{
+      json: spritesheet_enemy1_attack,
+      frames:[]
+    },
+    enemy1_damage:{
+      json: spritesheet_enemy1_damage,
+      frames:[]
+    },
+    enemy1_death:{
+      json: spritesheet_enemy1_death,
+      frames:[]
+    },
+    //Enemy2
+    enemy2_idle:{
+      json: spritesheet_enemy2_idle,
+      frames:[]
+    },
+    enemy2_attack:{
+      json: spritesheet_enemy2_attack,
+      frames:[]
+    },
+    enemy2_damage:{
+      json: spritesheet_enemy2_damage,
+      frames:[]
+    },
+    enemy2_death:{
+      json: spritesheet_enemy2_death,
+      frames:[]
+    },
+    //Enemy3
+    enemy3_idle:{
+      json: spritesheet_enemy3_idle,
+      frames:[]
+    },
+    enemy3_attack:{
+      json: spritesheet_enemy3_attack,
+      frames:[]
+    },
+    enemy3_damage:{
+      json: spritesheet_enemy3_damage,
+      frames:[]
+    },
+    enemy3_death:{
+      json: spritesheet_enemy3_death,
+      frames:[]
+    },
+    //Enemy4
+    enemy4_idle:{
+      json: spritesheet_enemy4_idle,
+      frames:[]
+    },
+    enemy4_attack:{
+      json: spritesheet_enemy4_attack,
+      frames:[]
+    },
+    enemy4_damage:{
+      json: spritesheet_enemy4_damage,
+      frames:[]
+    },
+    enemy4_death:{
+      json: spritesheet_enemy4_death,
+      frames:[]
+    },
+    //Enemy5 FALTA
+    enemy5_idle:{
+      json: spritesheet_enemy1_idle,
+      frames:[]
+    },
+    enemy5_attack:{
+      json: spritesheet_enemy1_attack,
+      frames:[]
+    },
+    enemy5_damage:{
+      json: spritesheet_enemy1_damage,
+      frames:[]
+    },
+    enemy5_death:{
+      json: spritesheet_enemy1_death,
+      frames:[]
+    },
+    //Enemy6
+    enemy6_idle:{
+      json: spritesheet_enemy6_idle,
+      frames:[]
+    },
+    enemy6_attack:{
+      json: spritesheet_enemy6_attack,
+      frames:[]
+    },
+    enemy6_damage:{
+      json: spritesheet_enemy6_damage,
+      frames:[]
+    },
+    enemy6_death:{
+      json: spritesheet_enemy6_death,
+      frames:[]
+    },
+    //Enemy7
+    enemy7_idle:{
+      json: spritesheet_enemy7_idle,
+      frames:[]
+    },
+    enemy7_attack:{
+      json: spritesheet_enemy7_attack,
+      frames:[]
+    },
+    enemy7_damage:{
+      json: spritesheet_enemy7_damage,
+      frames:[]
+    },
+    enemy7_death:{
+      json: spritesheet_enemy7_death,
+      frames:[]
+    },
+    //Enemy8
+    enemy8_idle:{
+      json: spritesheet_enemy8_idle,
+      frames:[]
+    },
+    enemy8_attack:{
+      json: spritesheet_enemy8_attack,
+      frames:[]
+    },
+    enemy8_damage:{
+      json: spritesheet_enemy8_damage,
+      frames:[]
+    },
+    enemy8_death:{
+      json: spritesheet_enemy8_death,
+      frames:[]
+    },
+    //Enemy9 FALTA
+    enemy9_idle:{
+      json: spritesheet_enemy1_idle,
+      frames:[]
+    },
+    enemy9_attack:{
+      json: spritesheet_enemy1_attack,
+      frames:[]
+    },
+    enemy9_damage:{
+      json: spritesheet_enemy1_damage,
+      frames:[]
+    },
+    enemy9_death:{
+      json: spritesheet_enemy1_death,
+      frames:[]
     }
   },
   loadImages: function (callback) {

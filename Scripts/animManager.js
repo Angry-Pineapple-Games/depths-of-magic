@@ -35,18 +35,23 @@ var myAnimManager = {
         switch (type){
             case "idle":
                 character.currentAnimation = character.animations.idle;
+                character.currentImg = character.imgs.idle;
                 break;
             case "attack":
                 character.currentAnimation = character.animations.attack;
+                character.currentImg = character.imgs.attack;
                 break;
             case "damage":
                 character.currentAnimation = character.animations.damage;
+                character.currentImg = character.imgs.damage;
                 break;
             case "death":
                 character.currentAnimation = character.animations.death;
+                character.currentImg = character.imgs.death;
                 break;
             case "victory":
                 character.currentAnimation = character.animations.victory;
+                character.currentImg = character.imgs.victory;
                 break;
             default:
                 console.log("wrong animation name");

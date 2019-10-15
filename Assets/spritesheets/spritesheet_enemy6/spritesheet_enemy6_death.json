@@ -1,0 +1,554 @@
+﻿spritesheet_enemy6_death = [
+
+{
+	"filename": "death instancia 10000",
+	"frame": {"x":0,"y":0,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10001",
+	"frame": {"x":348,"y":0,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10002",
+	"frame": {"x":696,"y":0,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10003",
+	"frame": {"x":1044,"y":0,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10004",
+	"frame": {"x":1392,"y":0,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10005",
+	"frame": {"x":1740,"y":0,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10006",
+	"frame": {"x":2088,"y":0,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10007",
+	"frame": {"x":2436,"y":0,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10008",
+	"frame": {"x":2784,"y":0,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10009",
+	"frame": {"x":3132,"y":0,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10010",
+	"frame": {"x":3480,"y":0,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10011",
+	"frame": {"x":0,"y":300,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10012",
+	"frame": {"x":348,"y":300,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10013",
+	"frame": {"x":696,"y":300,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10014",
+	"frame": {"x":1044,"y":300,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10015",
+	"frame": {"x":1392,"y":300,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10016",
+	"frame": {"x":1740,"y":300,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10017",
+	"frame": {"x":2088,"y":300,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10018",
+	"frame": {"x":2436,"y":300,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10019",
+	"frame": {"x":2784,"y":300,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10020",
+	"frame": {"x":3132,"y":300,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10021",
+	"frame": {"x":3480,"y":300,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10022",
+	"frame": {"x":0,"y":600,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10023",
+	"frame": {"x":348,"y":600,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10024",
+	"frame": {"x":696,"y":600,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10025",
+	"frame": {"x":1044,"y":600,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10026",
+	"frame": {"x":1392,"y":600,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10027",
+	"frame": {"x":1740,"y":600,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10028",
+	"frame": {"x":2088,"y":600,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10029",
+	"frame": {"x":2436,"y":600,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10030",
+	"frame": {"x":2784,"y":600,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10031",
+	"frame": {"x":3132,"y":600,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10032",
+	"frame": {"x":3480,"y":600,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10033",
+	"frame": {"x":0,"y":900,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10034",
+	"frame": {"x":348,"y":900,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10035",
+	"frame": {"x":696,"y":900,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10036",
+	"frame": {"x":1044,"y":900,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10037",
+	"frame": {"x":1392,"y":900,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10038",
+	"frame": {"x":1740,"y":900,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10039",
+	"frame": {"x":2088,"y":900,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10040",
+	"frame": {"x":2436,"y":900,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10041",
+	"frame": {"x":2784,"y":900,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10042",
+	"frame": {"x":3132,"y":900,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10043",
+	"frame": {"x":3480,"y":900,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10044",
+	"frame": {"x":0,"y":1200,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10045",
+	"frame": {"x":348,"y":1200,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10046",
+	"frame": {"x":696,"y":1200,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10047",
+	"frame": {"x":1044,"y":1200,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10048",
+	"frame": {"x":1392,"y":1200,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10049",
+	"frame": {"x":1740,"y":1200,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10050",
+	"frame": {"x":2088,"y":1200,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10051",
+	"frame": {"x":2436,"y":1200,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10052",
+	"frame": {"x":2784,"y":1200,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10053",
+	"frame": {"x":3132,"y":1200,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10054",
+	"frame": {"x":3480,"y":1200,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10055",
+	"frame": {"x":0,"y":1500,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10056",
+	"frame": {"x":348,"y":1500,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10057",
+	"frame": {"x":696,"y":1500,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10058",
+	"frame": {"x":1044,"y":1500,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10059",
+	"frame": {"x":1392,"y":1500,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10060",
+	"frame": {"x":1740,"y":1500,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10061",
+	"frame": {"x":2088,"y":1500,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10062",
+	"frame": {"x":2436,"y":1500,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10063",
+	"frame": {"x":2784,"y":1500,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10064",
+	"frame": {"x":3132,"y":1500,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10065",
+	"frame": {"x":3480,"y":1500,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10066",
+	"frame": {"x":0,"y":1800,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10067",
+	"frame": {"x":348,"y":1800,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}
+,{
+	"filename": "death instancia 10068",
+	"frame": {"x":696,"y":1800,"w":348,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
+	"sourceSize": {"w":348,"h":300}
+}]

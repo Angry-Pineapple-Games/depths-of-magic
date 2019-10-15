@@ -7,18 +7,27 @@ var myCharacterEnemies = {
         }
         for (var e=this.enemies.length; e<scene.enemiesMax; e++) {
             this.enemies.push(myEnemiesProperties[String(e)]);
-            this.enemies[e].img = myPreload.images[this.enemies[e].img]
-            this.generateAnimationsInfo(this.enemies[e], myPreload.spritesInfo[e], myEnemiesAnimFrames[e]);
+            //this.enemies[e].img = myPreload.images[this.enemies[e].img]
+            this.saveImages(this.enemies[e]);
+            this.generateAnimationsInfo(this.enemies[e], myEnemiesAnimFrames[e]);
             this.enemies[e].currentAnimation = this.enemies[e].animations.idle;
+            this.enemies[e].currentImg = this.enemies[e].imgs.idle;
         }
         return this.enemies;
     },
 
-    generateAnimationsInfo: function(character, spritesheet, frames){
-        character.animations.idle = new Animation(spritesheet, frames.idle.start, frames.idle.end);
-        character.animations.attack = new Animation(spritesheet, frames.attack.start, frames.attack.end);
-        character.animations.damage = new Animation(spritesheet, frames.damage.start, frames.damage.end);
-        character.animations.death = new Animation(spritesheet, frames.death.start, frames.death.end);
+    generateAnimationsInfo: function(character, frames){
+        character.animations.idle = new Animation(myPreload.spritesInfo[character.img + "_idle"], frames.idle.start, frames.idle.end);
+        character.animations.attack = new Animation(myPreload.spritesInfo[character.img + "_attack"], frames.attack.start, frames.attack.end);
+        character.animations.damage = new Animation(myPreload.spritesInfo[character.img + "_damage"], frames.damage.start, frames.damage.end);
+        character.animations.death = new Animation(myPreload.spritesInfo[character.img + "_death"], frames.death.start, frames.death.end);
+    },
+
+    saveImages: function(character){
+        character.imgs.idle = myPreload.images[character.img + "_idle"];
+        character.imgs.attack = myPreload.images[character.img + "_attack"];
+        character.imgs.damage = myPreload.images[character.img + "_damage"];
+        character.imgs.death = myPreload.images[character.img + "_death"];
     }
 }
 //rope[deleted, pos, "image name", typeOrder, typeCut, typeRope] 
@@ -35,7 +44,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 35,
         dp: 25,
-        img: 'enemy0',
+        img: 'enemy8',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -70,6 +81,8 @@ var myEnemiesProperties = {
         ap: 55,
         dp: 15,
         img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [1050, 590],
@@ -109,6 +122,8 @@ var myEnemiesProperties = {
         ap: 25,
         dp: 40,
         img: 'enemy2',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 840],
@@ -154,10 +169,12 @@ var myEnemiesProperties = {
         ap: 70,
         dp: 45,
         img: 'enemy3',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
-        pos: [950, 440],
-        resize: 2.5,
+        pos: [850, 440],
+        resize: 3,
         gridRopeNow: -1,
         gridRopes: [[           
             [0,14, "ropeBuffV",0,3,1],
@@ -205,6 +222,8 @@ var myEnemiesProperties = {
         ap: 85,
         dp: 40,
         img: 'enemy4',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -258,7 +277,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 55,
         dp: 70,
-        img: 'enemy5',
+        img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -309,6 +330,8 @@ var myEnemiesProperties = {
         ap: 95,
         dp: 80,
         img: 'enemy6',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -360,6 +383,8 @@ var myEnemiesProperties = {
         ap: 70,
         dp: 100,
         img: 'enemy7',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -421,9 +446,11 @@ var myEnemiesProperties = {
         ap: 55,
         dp: 70,
         img: 'enemy8',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
-        pos: [950, 240],
+        pos: [950, 440],
         resize: 2,
         gridRopeNow: -1,
         gridRopes: [[
@@ -488,7 +515,9 @@ var myEnemiesProperties = {
         buff: 0,
         ap: 145,
         dp: 120,
-        img: 'enemy9',
+        img: 'enemy1',
+        currentImg:{},
+        imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
@@ -549,27 +578,27 @@ var myEnemiesProperties = {
 var myEnemiesAnimFrames = {
     0: {
         idle: {start: 0, end: 39},
-        attack: {start: 39, end: 99},
-        damage: {start: 99, end: 129},
-        death: {start: 129, end: 179},
+        attack: {start: 0, end: 60},
+        damage: {start: 0, end: 30},
+        death: {start: 0, end: 50},
     },
     1: {
         idle: {start: 0, end: 48},
-        attack: {start: 48, end: 96},
-        damage: {start: 96, end: 136},
-        death: {start: 136, end: 194},
+        attack: {start: 0, end: 96},
+        damage: {start: 0, end: 39},
+        death: {start: 0, end: 58},
     },
     2: {
         idle: {start: 0, end: 59},
-        attack: {start: 59, end: 119},
-        damage: {start: 119, end: 209},
-        death: {start: 209, end: 269},
+        attack: {start: 0, end: 60},
+        damage: {start: 0, end: 80},
+        death: {start: 0, end: 60},
     },
     3:{
         idle: {start: 0, end: 59},
-        attack: {start: 59, end: 119},
-        damage: {start: 119, end: 154},
-        death: {start: 154, end: 219},
+        attack: {start: 0, end: 30},
+        damage: {start: 0, end: 65},
+        death: {start: 0, end: 55},
     },
     4:{
         idle: {start: 0, end: 29},
@@ -577,35 +606,36 @@ var myEnemiesAnimFrames = {
         damage: {start: 74, end: 129},
         death: {start: 129, end: 179},
     },
+    //FALTA
     5:{
-        idle: {start: 22, end: 40},
-        attack: {start: 0, end: 18},
-        damage: {start: 41, end: 63},
-        death: {start: 64, end: 70},
+        idle: {start: 0, end: 48},
+        attack: {start: 0, end: 96},
+        damage: {start: 0, end: 39},
+        death: {start: 0, end: 58},
     },
     6:{
         idle: {start: 0, end: 59},
-        attack: {start: 59, end: 89},
-        damage: {start: 89, end: 154},
-        death: {start: 154, end: 209},
+        attack: {start: 0, end: 60},
+        damage: {start: 0, end: 35},
+        death: {start: 0, end: 65},
     },
     7:{
-        idle: {start: 0, end: 48},
-        attack: {start: 49, end: 99},
-        damage: {start: 99, end: 145},
-        death: {start: 145, end: 200},
+        idle: {start: 0, end: 29},
+        attack: {start: 0, end: 40},
+        damage: {start: 0, end: 38},
+        death: {start: 0, end: 41},
     },
     8:{
         idle: {start: 0, end: 39},
-        attack: {start: 39, end: 99},
-        damage: {start: 99, end: 129},
-        death: {start: 129, end: 179},
+        attack: {start: 0, end: 60},
+        damage: {start: 0, end: 30},
+        death: {start: 0, end: 50},
     },
+    //FALTA
     9:{
-        idle: {start: 22, end: 40},
-        attack: {start: 0, end: 18},
-        attack2: {start: 0, end: 18},
-        damage: {start: 41, end: 63},
-        death: {start: 64, end: 70},
+        idle: {start: 0, end: 48},
+        attack: {start: 0, end: 96},
+        damage: {start: 0, end: 39},
+        death: {start: 0, end: 58},
     },
 }
