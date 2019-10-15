@@ -1,4 +1,4 @@
-﻿{"frames": [
+﻿spritesheet_enemy2_attack = [
 
 {
 	"filename": "attack instancia 10000",
@@ -503,13 +503,4 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":417,"h":256},
 	"sourceSize": {"w":417,"h":256}
-}],
-"meta": {
-	"app": "Adobe Animate",
-	"version": "18.0.2.126",
-	"image": "spritesheet_enemy2_attack.png",
-	"format": "RGBA8888",
-	"size": {"w":2048,"h":4096},
-	"scale": "1"
-}
-}
+}]

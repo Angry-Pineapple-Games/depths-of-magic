@@ -1,4 +1,4 @@
-﻿{"frames": [
+﻿spritesheet_enemy6_death = [
 
 {
 	"filename": "death instancia 10000",
@@ -551,13 +551,4 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
 	"sourceSize": {"w":348,"h":300}
-}],
-"meta": {
-	"app": "Adobe Animate",
-	"version": "18.0.2.126",
-	"image": "spritesheet_enemy6_death.png",
-	"format": "RGBA8888",
-	"size": {"w":4096,"h":2181},
-	"scale": "1"
-}
-}
+}]

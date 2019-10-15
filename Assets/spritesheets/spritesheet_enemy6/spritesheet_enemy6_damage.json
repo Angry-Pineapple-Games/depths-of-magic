@@ -1,4 +1,4 @@
-﻿{"frames": [
+﻿spritesheet_enemy6_damage = [
 
 {
 	"filename": "damage instancia 10000",
@@ -311,13 +311,4 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":348,"h":300},
 	"sourceSize": {"w":348,"h":300}
-}],
-"meta": {
-	"app": "Adobe Animate",
-	"version": "18.0.2.126",
-	"image": "spritesheet_enemy6_damage.png",
-	"format": "RGBA8888",
-	"size": {"w":1755,"h":2532},
-	"scale": "1"
-}
-}
+}]

@@ -1,0 +1,17 @@
+NIVEL 1
+0. Laura tierra
+1. Bicho mosquito
+2. Cocodrilo
+JEFE: Araña (?)
+
+NIVEL 2
+3. Araña
+4. Escorpión
+5. Mariposa laura
+JEFE: Dragón / Volador / Bicho
+
+NIVEL 3
+6. Dragón VOlador bicho
+7. cuervo
+8. volador verde
+9. JEFE: The Abyss
