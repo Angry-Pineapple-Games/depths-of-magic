@@ -92,7 +92,7 @@ var myTransitionScene = {
     },
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
-        myGameArea.animateInBackground(1, this.posHero, this.hero.img, this.hero.currentAnimation, 2);
+        myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
 
         myTextManager.drawTextInBackground(1, "currentLevel", [0.7, 0.2], "black", 50, "right");
         myTextManager.drawTextInBackground(1, "healthPoints", [0.7, 0.35], "black", 50, "right");
