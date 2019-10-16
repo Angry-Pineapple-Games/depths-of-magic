@@ -331,29 +331,34 @@ var myCombatMechanics = {
             //Secuencia: 1. enemigo ataca, 2. enemigo vuelve a idle y heroe muere 3. game over
             myAnimManager.changeAnimation(that.scene.enemy, "attack", function () {
                 myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                myAnimManager.changeAnimation(that.scene.hero, "death", function () {
-                    myAnimManager.changeAnimation(that.scene.hero, "idle");
-                    myGameMechanics.un_blockInputs();
-                    myGame.gameOver();
+                myAnimManager.playSequenceSFX(sfxSequenceEnemy, that.scene.sfx, function(){
+                    myAnimManager.changeAnimation(that.scene.hero, "death", function () {
+                        myAnimManager.changeAnimation(that.scene.hero, "idle");
+                        myGameMechanics.un_blockInputs();
+                        myGame.gameOver();
+                    });
                 });
             });
         }
         else if (that.scene.enemy.hp <= 0) {
             //Secuencia: 1. heroe ataca, 2. enemigo muere y heroe celebra victoria, 3. cambio de enemigo
             myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
-                myAnimManager.changeAnimation(that.scene.hero, "victory", function () {
-                    myAnimManager.changeAnimation(that.scene.hero, "idle");
-                });
-                myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
-                    myAnimManager.changeAnimation(that.scene.enemy, "death", function () {
-                        myAnimManager.changeAnimation(that.scene.enemy, "idle");
+                myAnimManager.changeAnimation(that.scene.hero, "idle");
+                myAnimManager.playSequenceSFX(sfxSequenceHero, that.scene.sfx, function(){
+                    myAnimManager.changeAnimation(that.scene.hero, "victory", function () {
                         myAnimManager.changeAnimation(that.scene.hero, "idle");
-                        myGameMechanics.un_blockInputs();
-                        myScoreManager.currentScore += that.scene.enemy.defeatScore;
-                        that.swapEnemy();
+                    });
+                    myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
+                        myAnimManager.changeAnimation(that.scene.enemy, "death", function () {
+                            myAnimManager.changeAnimation(that.scene.enemy, "idle");
+                            myAnimManager.changeAnimation(that.scene.hero, "idle");
+                            myGameMechanics.un_blockInputs();
+                            myScoreManager.currentScore += that.scene.enemy.defeatScore;
+                            that.swapEnemy();
                     });
                 });
             });
+        });
         }
         else if (sfxSequenceEnemy.length <= 0) {
             //Secuencia:1. heroe ataca, 2. heroe vuelve a idle y se reproduce la secuencia de efectos, 3. enemigo recibe daño

@@ -1,1 +1,1 @@
-Las animaciones están hechas para ir a 15fps, también podrían ir a 20 si las veis mejor más rápidas.
+Ahora las animaciones funcionan a 30 fps.

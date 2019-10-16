@@ -185,7 +185,7 @@ var myEnemiesProperties = {
         currentAnimation: {},
         animations:{},
         pos: [750, 600],
-        sfxPos:[0, 0],
+        sfxPos:[300, 0],
         resize: 3,
         gridRopeNow: -1,
         gridRopes: [[           
@@ -355,7 +355,7 @@ var myEnemiesProperties = {
         currentAnimation: {},
         animations:{},
         pos: [750, 250],
-        sfxPos:[0, 0],
+        sfxPos:[200, 200],
         resize: 3.8,
         gridRopeNow: -1,
         gridRopes: [[
