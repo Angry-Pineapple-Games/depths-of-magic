@@ -75,10 +75,10 @@
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "spritesheet_mariposa_ataque.png",
+	"image": "spritesheet_mariposa_attack.png",
 	"format": "RGBA8888",
 	"size": {"w":2100,"h":1962},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:e800c12727cb3b1a7375c7627d47ee6e:5414adc58076ea09911901e2c68ae2df:61ee9060b66a9a96b5b58fe31be0e67c$"
+	"smartupdate": "$TexturePacker:SmartUpdate:a91d8bd8bb0bfce18c4d2106aeea871c:7604dcab87d8a221721c20f706f47f0e:f63c2d4481c5b75bd377276bb8f2656c$"
 }
 }
