@@ -136,6 +136,7 @@ var myGameArea = {
 
 var myFade = {
     canvas: [], //cnv, ctx, fade
+    images: {},
     in: function (num) {
         this.canvas[num - 1][2] = [1, -0.08];
     },
@@ -162,5 +163,25 @@ var myFade = {
             ctx1.fillRect(0, 0, cnv.width, cnv.height);
             ctx1.globalAlpha = 1;
         }
+    },
+    addImage: function(img, name, time, num) {
+        this.images[name] = {};
+        if(num===1){ this.images[name].ctx = myGameArea.context1; }
+        else if(num===2){ this.images[name].ctx = myGameArea.context2; }
+        else {console.log("Fail canvasManager/myFade/addImage context don't found");}
+        this.images[name].img = img;
+        this.images[name].timeStart = time;
+        this.images[name].num = num;
+    }, 
+    fadeOutImage: function(name, pos, time, timeRange) {
+        let currentTime = time - this.images[name].timeStart;
+        if (timeRange > currentTime) {
+            this.images[name].ctx.globalAlpha = currentTime/timeRange;
+            myGameArea.drawInBackground(this.images[name].num, pos, this.images[name].img);
+            this.images[name].ctx.globalAlpha = 1;
+        }
+    },
+    clearImage: function() {
+        this.images = {};
     }
 }

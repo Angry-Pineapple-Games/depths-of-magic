@@ -258,6 +258,7 @@ var myCombatMechanics = {
         myCutMechanics.concatenatedCuts = 1;
         myGameMechanics.timeOrder = 0;
         myGameManager.addTimer(this.updateState, this.scene.limitTimePerPatron, "timersSwap");
+        myFade.addImage(myPreload.images.gridBlocked, "gridBlocked", Date.now(), 2)
         myGameMechanics.generateGridRopes(this.scene.enemy);
         if (this.debug) { console.log("SwapPattern"); }
     },
@@ -541,19 +542,19 @@ var myStatsController = {
         hero.buff = (1 + this.buff * this.buffFactor) / (1 + (this.totalDebuff - this.debuff) * this.debuffFactor);
         enemy.buff = (1 + (this.totalBuff - this.buff) * this.buffFactor) / (1 + this.debuff * this.debuffFactor);
 
-        let heroLastHp = hero.hp;
         hero.damage = Math.trunc((this.totalCounter - this.counter) * enemy.ap * this.enemyFactor * enemy.buff * (1 + (this.loops * this.loopfactor)) / (hero.dp * hero.buff));
         hero.hp = Math.trunc(hero.hp - hero.damage);
-        let enemyLastHp = enemy.hp;
         if (myCutMechanics.concatenatedCuts > 1) { this.concatenationFactor = 0.35; } else { this.concatenationFactor = 1; }
         enemy.damage = Math.trunc((this.counter * (hero.ap * this.heroFactor * hero.buff * myCutMechanics.concatenatedCuts * this.concatenationFactor)) / (enemy.dp * enemy.buff * (1 + (this.loops * this.loopfactor))));
         enemy.hp = Math.trunc(enemy.hp - enemy.damage);
 
         this.healNoCutsCounter += this.totalHeal - this.heal;
-        hero.hp += Math.trunc((this.totalHeal - this.heal) * this.healFactor);
+        hero.healing = Math.trunc((this.totalHeal - this.heal) * this.healFactor);
+        hero.hp += hero.healing;
         if (hero.hp > hero.hpMax) { hero.hp = hero.hpMax; }
         if (hero.hp < 0) { hero.hp = 0; }
-        enemy.hp += Math.trunc(this.heal * this.healFactor);
+        enemy.healing = Math.trunc(this.heal * this.healFactor);
+        enemy.hp += enemy.healing;
         if (enemy.hp > enemy.hpMax) { enemy.hp = enemy.hpMax; }
 
         myTextManager.resetEventualText();

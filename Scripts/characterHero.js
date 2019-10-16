@@ -3,6 +3,7 @@ var myHeroCharacter = {
     hpIni: 100,
     hpMax: 100,
     damage: 0,
+    healing: 0,
     buff: 0,
     ap: 40,
     apMax: 40,
@@ -26,7 +27,6 @@ var myHeroCharacter = {
     },
     generateHero: function() {
         this.saveImages();
-        //this.img = img;
         this.hp = this.hpMax;
         this.buff = 0;
         this.ap = this.apMax;

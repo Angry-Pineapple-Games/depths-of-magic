@@ -6,6 +6,7 @@ var myScoreManager = {
     currentScore : 0,
 
     downloadBestScores : function(){//Descarga desde localStorage las 10 mejores puntuaciones
+        this.bestScores = [];
         var downloaded = localStorage.getItem("bestScores");
         if (downloaded != null){
             this.bestScores = JSON.parse(downloaded);
