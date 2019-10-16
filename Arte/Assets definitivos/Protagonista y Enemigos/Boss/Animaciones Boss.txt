@@ -1,0 +1,15 @@
+Animaciones Final Boss:
+
+Idle: 50+2 fotogramas
+Atacar: 71+2 fotogramas
+Recibir daño: 91+2 fotogramas
+Morir:  
+	Morir pt.1: 91+2 fotogramas
+	Morir pt.2: 1+85+2 fotogramas
+	Morir pt.3: 1+80+2 fotogramas
+	Morir pt.4: 1+87+2 fotogramas
+	Morir pt.5: 1+77+2 fotogramas
+
+
+Dimensiones actuales: 300,00 x 270,10
+Dimensiones originales: 820,20 x 738,45

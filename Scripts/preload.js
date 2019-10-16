@@ -98,7 +98,7 @@ var myPreload = {
       width: 1920,
       height: 1440
     },
-    enemy0: {
+    /*enemy0: {
       src: 'Assets/spritesheets/spritesheet_enemy8.png',
       width: 366,
       height: 688
@@ -147,7 +147,7 @@ var myPreload = {
       src: 'Assets/spritesheets/spritesheet_test1.png',
       width: 366,
       height: 688
-    },
+    },*/
     room0: {
       src: 'Assets/fondo1.png',
       width: 1920,
@@ -197,12 +197,12 @@ var myPreload = {
       src: 'Assets/gameover.jpg',
       width: 1920,
       height: 1440
-    },
+    },/*
     hero: {
       src: 'Assets/spritesheets/spritesheet_hero/spritesheet_hero_idle.png',
       width: 1024,
       height: 2048
-    },
+    },*/
     damage: {
       src: 'Assets/spritesheets/spritesheet_damage.png',
       width: 1800,
@@ -228,7 +228,7 @@ var myPreload = {
       width: 1800,
       height: 2400
     },
-    //Prueba
+    //Hero lvl1
     hero_idle:{
       src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_idle.png',
       width: 0,
@@ -251,6 +251,58 @@ var myPreload = {
     },
     hero_victory:{
       src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero_victory.png',
+      width: 0,
+      height: 0
+    },
+    //Hero lvl2
+    hero2_idle:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero2_idle.png',
+      width: 0,
+      height: 0
+    },
+    hero2_damage:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero2_damage.png',
+      width: 0,
+      height: 0
+    },
+    hero2_death:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero2_death.png',
+      width: 0,
+      height: 0
+    },
+    hero2_attack:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero2_attack.png',
+      width: 0,
+      height: 0
+    },
+    hero2_victory:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero2_victory.png',
+      width: 0,
+      height: 0
+    },
+    //Hero lvl3
+    hero3_idle:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero3_idle.png',
+      width: 0,
+      height: 0
+    },
+    hero3_damage:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero3_damage.png',
+      width: 0,
+      height: 0
+    },
+    hero3_death:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero3_death.png',
+      width: 0,
+      height: 0
+    },
+    hero3_attack:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero3_attack.png',
+      width: 0,
+      height: 0
+    },
+    hero3_victory:{
+      src:'Assets/spritesheets/spritesheet_hero/spritesheet_hero3_victory.png',
       width: 0,
       height: 0
     },
@@ -466,6 +518,7 @@ var myPreload = {
     }
   },
   spritesInfo: {
+    /*
     hero: {
       json: spritesheet_hero_idle,
       frames: []
@@ -511,6 +564,7 @@ var myPreload = {
       json: spritesheet_test,
       frames: []
     },
+    */
     damage: {
       json: spritesheet_damage,
       frames: []
@@ -531,7 +585,7 @@ var myPreload = {
       json: spritesheet_superbuff,
       frames: []
     },
-    //Hero
+    //Hero lvl3
     hero_idle:{
       json: spritesheet_hero_idle,
       frames:[]
@@ -550,6 +604,48 @@ var myPreload = {
     },
     hero_victory:{
       json: spritesheet_hero_victory,
+      frames:[]
+    },
+    //Hero lvl2
+    hero2_idle:{
+      json: spritesheet_hero2_idle,
+      frames:[]
+    },
+    hero2_attack:{
+      json: spritesheet_hero2_attack,
+      frames:[]
+    },
+    hero2_damage:{
+      json: spritesheet_hero2_damage,
+      frames:[]
+    },
+    hero2_death:{
+      json: spritesheet_hero2_death,
+      frames:[]
+    },
+    hero2_victory:{
+      json: spritesheet_hero2_victory,
+      frames:[]
+    },
+    //Hero lvl3
+    hero3_idle:{
+      json: spritesheet_hero3_idle,
+      frames:[]
+    },
+    hero3_attack:{
+      json: spritesheet_hero3_attack,
+      frames:[]
+    },
+    hero3_damage:{
+      json: spritesheet_hero3_damage,
+      frames:[]
+    },
+    hero3_death:{
+      json: spritesheet_hero3_death,
+      frames:[]
+    },
+    hero3_victory:{
+      json: spritesheet_hero3_victory,
       frames:[]
     },
     //Enemy0 FALTA

@@ -12,7 +12,7 @@ var myLevel1 = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
-        this.hero = myHeroCharacter.generateHero();
+        this.hero = myHeroCharacter.generateHero(1);
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
@@ -144,7 +144,7 @@ var myLevel2 = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
-        this.hero = myHeroCharacter.generateHero();
+        this.hero = myHeroCharacter.generateHero(2);
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
@@ -207,7 +207,7 @@ var myLevel3 = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
-        this.hero = myHeroCharacter.generateHero();
+        this.hero = myHeroCharacter.generateHero(3);
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();

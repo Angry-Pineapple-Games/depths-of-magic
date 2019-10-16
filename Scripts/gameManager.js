@@ -13,10 +13,10 @@ function startGame() {
 var myGameManager = {
     debug: false,
     lastFrameTimeMs: 0,
-    maxFPS: 60,
+    maxFPS: 30,
     delta: 0,
-    timestep: 1000 / 60,
-    fps: 60,
+    timestep: 1000 / 30,
+    fps: 30,
     framesThisSecond: 0,
     lastFpsUpdate: 0,
     timersSwap: [],

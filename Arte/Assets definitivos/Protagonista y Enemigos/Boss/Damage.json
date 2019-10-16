@@ -1,0 +1,755 @@
+﻿{"frames": [
+
+{
+	"filename": "Damage instancia 10000",
+	"frame": {"x":0,"y":0,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10001",
+	"frame": {"x":577,"y":0,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10002",
+	"frame": {"x":1154,"y":0,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10003",
+	"frame": {"x":1731,"y":0,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10004",
+	"frame": {"x":2308,"y":0,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10005",
+	"frame": {"x":2885,"y":0,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10006",
+	"frame": {"x":3462,"y":0,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10007",
+	"frame": {"x":0,"y":318,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10008",
+	"frame": {"x":577,"y":318,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10009",
+	"frame": {"x":1154,"y":318,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10010",
+	"frame": {"x":1731,"y":318,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10011",
+	"frame": {"x":2308,"y":318,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10012",
+	"frame": {"x":2885,"y":318,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10013",
+	"frame": {"x":3462,"y":318,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10014",
+	"frame": {"x":0,"y":636,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10015",
+	"frame": {"x":577,"y":636,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10016",
+	"frame": {"x":1154,"y":636,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10017",
+	"frame": {"x":1731,"y":636,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10018",
+	"frame": {"x":2308,"y":636,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10019",
+	"frame": {"x":2885,"y":636,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10020",
+	"frame": {"x":3462,"y":636,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10021",
+	"frame": {"x":0,"y":954,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10022",
+	"frame": {"x":577,"y":954,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10023",
+	"frame": {"x":1154,"y":954,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10024",
+	"frame": {"x":1731,"y":954,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10025",
+	"frame": {"x":2308,"y":954,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10026",
+	"frame": {"x":2885,"y":954,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10027",
+	"frame": {"x":3462,"y":954,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10028",
+	"frame": {"x":0,"y":1272,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10029",
+	"frame": {"x":577,"y":1272,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10030",
+	"frame": {"x":1154,"y":1272,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10031",
+	"frame": {"x":1731,"y":1272,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10032",
+	"frame": {"x":2308,"y":1272,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10033",
+	"frame": {"x":2885,"y":1272,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10034",
+	"frame": {"x":3462,"y":1272,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10035",
+	"frame": {"x":0,"y":1590,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10036",
+	"frame": {"x":577,"y":1590,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10037",
+	"frame": {"x":1154,"y":1590,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10038",
+	"frame": {"x":1731,"y":1590,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10039",
+	"frame": {"x":2308,"y":1590,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10040",
+	"frame": {"x":2885,"y":1590,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10041",
+	"frame": {"x":3462,"y":1590,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10042",
+	"frame": {"x":0,"y":1908,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10043",
+	"frame": {"x":577,"y":1908,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10044",
+	"frame": {"x":1154,"y":1908,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10045",
+	"frame": {"x":1731,"y":1908,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10046",
+	"frame": {"x":2308,"y":1908,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10047",
+	"frame": {"x":2885,"y":1908,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10048",
+	"frame": {"x":3462,"y":1908,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10049",
+	"frame": {"x":0,"y":2226,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10050",
+	"frame": {"x":577,"y":2226,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10051",
+	"frame": {"x":1154,"y":2226,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10052",
+	"frame": {"x":1731,"y":2226,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10053",
+	"frame": {"x":2308,"y":2226,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10054",
+	"frame": {"x":2885,"y":2226,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10055",
+	"frame": {"x":3462,"y":2226,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10056",
+	"frame": {"x":0,"y":2544,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10057",
+	"frame": {"x":577,"y":2544,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10058",
+	"frame": {"x":1154,"y":2544,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10059",
+	"frame": {"x":1731,"y":2544,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10060",
+	"frame": {"x":2308,"y":2544,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10061",
+	"frame": {"x":2885,"y":2544,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10062",
+	"frame": {"x":3462,"y":2544,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10063",
+	"frame": {"x":0,"y":2862,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10064",
+	"frame": {"x":577,"y":2862,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10065",
+	"frame": {"x":1154,"y":2862,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10066",
+	"frame": {"x":1731,"y":2862,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10067",
+	"frame": {"x":2308,"y":2862,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10068",
+	"frame": {"x":2885,"y":2862,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10069",
+	"frame": {"x":3462,"y":2862,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10070",
+	"frame": {"x":0,"y":3180,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10071",
+	"frame": {"x":577,"y":3180,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10072",
+	"frame": {"x":1154,"y":3180,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10073",
+	"frame": {"x":1731,"y":3180,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10074",
+	"frame": {"x":2308,"y":3180,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10075",
+	"frame": {"x":2885,"y":3180,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10076",
+	"frame": {"x":3462,"y":3180,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10077",
+	"frame": {"x":0,"y":3498,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10078",
+	"frame": {"x":577,"y":3498,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10079",
+	"frame": {"x":1154,"y":3498,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10080",
+	"frame": {"x":1731,"y":3498,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10081",
+	"frame": {"x":2308,"y":3498,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10082",
+	"frame": {"x":2885,"y":3498,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10083",
+	"frame": {"x":3462,"y":3498,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10084",
+	"frame": {"x":0,"y":3816,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10085",
+	"frame": {"x":577,"y":3816,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10086",
+	"frame": {"x":1154,"y":3816,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10087",
+	"frame": {"x":1731,"y":3816,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10088",
+	"frame": {"x":2308,"y":3816,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10089",
+	"frame": {"x":2885,"y":3816,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10090",
+	"frame": {"x":3462,"y":3816,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10091",
+	"frame": {"x":0,"y":4134,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}
+,{
+	"filename": "Damage instancia 10092",
+	"frame": {"x":577,"y":4134,"w":577,"h":318},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":318},
+	"sourceSize": {"w":577,"h":318}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "18.0.2.126",
+	"image": "Damage.png",
+	"format": "RGBA8888",
+	"size": {"w":4096,"h":4800},
+	"scale": "1"
+}
+}

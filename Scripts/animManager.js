@@ -76,7 +76,6 @@ class Animation{
         this.framesInfo = myAnimManager.getAnimFrames(spritesheet, start, end);
         this.currentFrame = 0;
         this.length = this.framesInfo.length;
-        this.even = true;
         this.hidden = false;
         this.callback = this.reset;
     }
@@ -84,10 +83,9 @@ class Animation{
         if(!this.hidden){
             myAnimManager.drawFrame(ctx, img, this.framesInfo, this.currentFrame, x, y, resize);
             //La animacion solo avanza en frames impares para que vaya a 30fps mientras el game loop va a 60fps
-            if(!this.even && !myGameManager.pause){
+            if(!myGameManager.pause){
                 this.currentFrame++;
             }
-            this.even = !this.even;
             if(this.currentFrame >= this.length){
                 this.callback();
             }
@@ -95,7 +93,6 @@ class Animation{
     }
     reset(){
         this.currentFrame = 0;
-        this.even = true;
         this.hidden = false;
     }
     hide(){
