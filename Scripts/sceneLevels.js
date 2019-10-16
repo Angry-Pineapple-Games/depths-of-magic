@@ -16,6 +16,7 @@ var myLevel1 = {
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
+        myFade.clearImage();
         myRoomMechanics.startRoom(this);
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar
@@ -27,11 +28,12 @@ var myLevel1 = {
         myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.currentImg, this.enemy.currentAnimation, this.enemy.resize);
         myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
-        myTextManager.drawTextInBackground(1, "hp", [0.10, 0.99], "green", 80, "right");
-        myTextManager.drawTextInBackground(1, " " + String(this.hero.hp), [0.10, 0.99], "green", 80, "left");
+        myTextManager.drawTextInBackground(1, "hp", [0.18, 0.99], String(this.hero.hp), "#65fe08", 80, "center");
+        myTextManager.drawTextInBackground(1, "", [0.5, 0.05], String(myCombatMechanics.countCombats), "white", 80, "center");
 
         if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
             myGameArea.resizeBackground(myPreload.images.grid, 2);
+            myFade.fadeOutImage("gridBlocked", [0, 0], Date.now(), this.limitTimePerPatron)
             myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.gridNodes);
             myGameMechanics.trackingTraces(myGameArea.background2);
@@ -45,10 +47,12 @@ var myLevel1 = {
         if (myGameManager.pause) {//si el juego esta en pausa
             myGameArea.drawInBackground(1, [0, 0], myPreload.images.backgroundBlack);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.backgroundBlack);
-            myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "white", 50, "center");
+            myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "", "white", 50, "center");
         } else { //eventos particulares a que el juego no este en pausa
-            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.25, 0.35], "red", 80, "center", true);
-            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.65, 0.35], "red", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.05, 0.50], "", "#ff073a", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.95, 0.50], "", "#ff073a", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.hero.healing), [0.05, 0.53], "", "#65fe08", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.enemy.healing), [0.95, 0.53], "", "#65fe08", 80, "center", true);
             myTextManager.applyDecay();
         }
 
@@ -69,14 +73,14 @@ var myIntro = {
         myGameArea.resizeBackground(myPreload.images.backgroundBlack, 1);
         //animacion intro
         //cuando termine pasar al siguiente level (ya esta implementado que al soltar el raton se pasa)
-        myTextManager.drawTextInBackground(1, "clickToSkip", [0.9, 0.95], "white", 50, "center");
+        myTextManager.drawTextInBackground(1, "clickToSkip", [0.9, 0.95], "", "white", 50, "center");
         myFade.fade(1);
     }
 }
 
 var myTransitionScene = {
     hero: {},
-    posHero: [50, 440],
+    posHero: [300, 440],
     enemiesMax: 4,
     room: {},
     timeTransition: 8000,
@@ -95,12 +99,12 @@ var myTransitionScene = {
         myGameArea.resizeBackground(this.room, 1);
         myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
 
-        myTextManager.drawTextInBackground(1, "currentLevel", [0.7, 0.2], "black", 50, "right");
-        myTextManager.drawTextInBackground(1, "healthPoints", [0.7, 0.35], "black", 50, "right");
-        myTextManager.drawTextInBackground(1, "attackPoints", [0.7, 0.5], "black", 50, "right");
-        myTextManager.drawTextInBackground(1, "defensePoints", [0.7, 0.65], "black", 50, "right");
-        myTextManager.drawTextInBackground(1, "numberLaps", [0.7, 0.8], "black", 50, "right");
-        myTextManager.drawTextInBackground(1, "clickToConinue", [0.9, 0.95], "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "currentLevel", [0.7, 0.2], String(myRoomMechanics.countSwaps), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "healthPoints", [0.7, 0.35], String(myHeroCharacter.hpMax), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "attackPoints", [0.7, 0.5], String(myHeroCharacter.ap), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "defensePoints", [0.7, 0.65], String(myHeroCharacter.dp), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "numberLaps", [0.7, 0.8], String(myStatsController.loops), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "clickToConinue", [0.9, 0.95], "", "white", 50, "center");
         myFade.fade(1);
     }
 }
@@ -121,7 +125,7 @@ var myEnding = {
         myGameArea.resizeBackground(myPreload.images.backgroundBlack, 1);
         //animacion ending
         //cuando termine pasar al siguiente level (ya esta implementado que al soltar el raton se pasa)
-        myTextManager.drawTextInBackground(1, "clickToSkip", [0.9, 0.95], "white", 50, "center");
+        myTextManager.drawTextInBackground(1, "clickToSkip", [0.9, 0.95], "", "white", 50, "center");
         myFade.fade(1);
     }
 }
@@ -144,6 +148,7 @@ var myLevel2 = {
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
+        myFade.clearImage();
         myRoomMechanics.startRoom(this);
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar
@@ -151,14 +156,16 @@ var myLevel2 = {
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
 
+        //myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
         myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.currentImg, this.enemy.currentAnimation, this.enemy.resize);
         myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
-        myTextManager.drawTextInBackground(1, "hp", [0.10, 0.99], "green", 80, "right");
-        myTextManager.drawTextInBackground(1, " " + String(this.hero.hp), [0.10, 0.99], "green", 80, "left");
+        myTextManager.drawTextInBackground(1, "hp", [0.18, 0.99], String(this.hero.hp), "#65fe08", 80, "center");
+        myTextManager.drawTextInBackground(1, "", [0.5, 0.05], String(myCombatMechanics.countCombats), "white", 80, "center");
 
-        if (!myInputsManager.blocked) {
+        if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
             myGameArea.resizeBackground(myPreload.images.grid, 2);
+            myFade.fadeOutImage("gridBlocked", [0, 0], Date.now(), this.limitTimePerPatron)
             myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.gridNodes);
             myGameMechanics.trackingTraces(myGameArea.background2);
@@ -172,10 +179,12 @@ var myLevel2 = {
         if (myGameManager.pause) {//si el juego esta en pausa
             myGameArea.drawInBackground(1, [0, 0], myPreload.images.backgroundBlack);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.backgroundBlack);
-            myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "white", 50, "center");
+            myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "", "white", 50, "center");
         } else { //eventos particulares a que el juego no este en pausa
-            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.25, 0.35], "red", 80, "center", true);
-            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.65, 0.35], "red", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.05, 0.50], "", "#ff073a", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.95, 0.50], "", "#ff073a", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.hero.healing), [0.05, 0.53], "", "#65fe08", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.enemy.healing), [0.95, 0.53], "", "#65fe08", 80, "center", true);
             myTextManager.applyDecay();
         }
 
@@ -202,6 +211,7 @@ var myLevel3 = {
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
+        myFade.clearImage();
         myRoomMechanics.startRoom(this);
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar
@@ -209,14 +219,16 @@ var myLevel3 = {
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(this.room, 1);
 
+        //myGameArea.drawInBackground(1, this.posEnemy, this.enemy.img);
         myGameArea.animateInBackground(1, this.enemy.pos, this.enemy.currentImg, this.enemy.currentAnimation, this.enemy.resize);
         myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
-        myTextManager.drawTextInBackground(1, "hp", [0.10, 0.99], "green", 80, "right");
-        myTextManager.drawTextInBackground(1, " "+String(this.hero.hp), [0.10, 0.99], "green", 80, "left");
+        myTextManager.drawTextInBackground(1, "hp", [0.18, 0.99], String(this.hero.hp), "#65fe08", 80, "center");
+        myTextManager.drawTextInBackground(1, "", [0.5, 0.05], String(myCombatMechanics.countCombats), "white", 80, "center");
 
-        if (!myInputsManager.blocked) {
+        if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
             myGameArea.resizeBackground(myPreload.images.grid, 2);
+            myFade.fadeOutImage("gridBlocked", [0, 0], Date.now(), this.limitTimePerPatron)
             myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.gridNodes);
             myGameMechanics.trackingTraces(myGameArea.background2);
@@ -230,10 +242,12 @@ var myLevel3 = {
         if (myGameManager.pause) {//si el juego esta en pausa
             myGameArea.drawInBackground(1, [0, 0], myPreload.images.backgroundBlack);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.backgroundBlack);
-            myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "white", 50, "center");
+            myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "", "white", 50, "center");
         } else { //eventos particulares a que el juego no este en pausa
-            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.35, 0.45], "red", 80, "center", true);
-            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.65, 0.35], "red", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.05, 0.50], "", "#ff073a", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.95, 0.50], "", "#ff073a", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.hero.healing), [0.05, 0.53], "", "#65fe08", 80, "center", true);
+            myTextManager.drawTextInBackground(1, String(this.enemy.healing), [0.95, 0.53], "", "#65fe08", 80, "center", true);
             myTextManager.applyDecay();
         }
 
@@ -245,7 +259,7 @@ var myLevel3 = {
 var myGameOver = {
     start: function () {
         myScoreManager.currentScore = myStatsController.loops;//TODO: Establecer puntuacion definitva
-        if(myScoreManager.updateBestScores()){myScoreManager.uploadBestScores();}
+        if (myScoreManager.updateBestScores()) { myScoreManager.uploadBestScores(); }
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
         myHeroCharacter.resetHeroStats();
@@ -256,9 +270,9 @@ var myGameOver = {
     },
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(myPreload.images.backgroundBlack, 1);
-        myTextManager.drawTextInBackground(1, "gameOver", [0.5, 0.1], "white", 100, "center");
-        myTextManager.drawTextInBackground(1, "thanks", [0.5, 0.5], "white", 60, "center");
-        myTextManager.drawTextInBackground(1, "clickToRestart", [0.9, 0.95], "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "gameOver", [0.5, 0.1],"", "white", 100, "center");
+        myTextManager.drawTextInBackground(1, "thanks", [0.5, 0.5],"", "white", 60, "center");
+        myTextManager.drawTextInBackground(1, "clickToRestart", [0.9, 0.95],"", "white", 50, "center");
         myFade.fade(1);
     }
 }

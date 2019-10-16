@@ -9,13 +9,13 @@ myTextManager = {
         if (this.langVersion === 'english') { this.texts = myEnglishVersion; }
         else if (this.langVersion === 'spanish') { this.texts = mySpanishVersion; }
     },
-    drawTextInBackground: function (num, text, pos, color = "white", textHeight = 20, textAlign = "center", isEventualText = false) {
+    drawTextInBackground: function (num, text, pos, text1="", color = "white", textHeight = 20, textAlign = "center", isEventualText = false) {
         if (isEventualText && this.eventualText[0] > 0) {//si es un texto eventual ira desapareciendo poco a poco
-            myGameArea.drawTextInBackground(num, text, pos, color, textHeight, textAlign, this.eventualText[0]);
+            myGameArea.drawTextInBackground(num, text + text1, pos, color, textHeight, textAlign, this.eventualText[0]);
         } else if (typeof this.texts[text] === "undefined" && !isEventualText) {//si no es eventual y tampoco tiene traduccion
-            myGameArea.drawTextInBackground(num, text, pos, color, textHeight, textAlign);
+            myGameArea.drawTextInBackground(num, text + text1, pos, color, textHeight, textAlign);
         } else if (!isEventualText){
-            myGameArea.drawTextInBackground(num, this.texts[text], pos, color, textHeight, textAlign);
+            myGameArea.drawTextInBackground(num, this.texts[text] + text1, pos, color, textHeight, textAlign);
         }
     },
     resetEventualText: function() {
