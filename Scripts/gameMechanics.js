@@ -328,6 +328,7 @@ var myCombatMechanics = {
                         myAnimManager.changeAnimation(that.scene.enemy, "idle");
                         myAnimManager.changeAnimation(that.scene.hero, "idle");
                         myGameMechanics.un_blockInputs();
+                        myScoreManager.currentScore += that.scene.enemy.defeatScore;
                         that.swapEnemy();
                     });
                 });

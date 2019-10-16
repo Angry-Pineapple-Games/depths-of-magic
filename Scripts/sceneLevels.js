@@ -245,7 +245,6 @@ var myLevel3 = {
 var myGameOver = {
     start: function () {
         myScoreManager.currentScore = myStatsController.loops;//TODO: Establecer puntuacion definitva
-        console.log(myScoreManager.currentScore);
         if(myScoreManager.updateBestScores()){myScoreManager.uploadBestScores();}
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
