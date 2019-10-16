@@ -1,0 +1,1 @@
+Las animaciones están hechas para ir a 20fps, el idle también podría ir a 15.
