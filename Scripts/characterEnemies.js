@@ -50,6 +50,7 @@ var myEnemiesProperties = {
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
+        sfxPos:[0, 0],
         resize: 2,
         gridRopeNow: -1,
         gridRopes: [[
@@ -86,6 +87,7 @@ var myEnemiesProperties = {
         currentAnimation: {},
         animations:{},
         pos: [1050, 590],
+        sfxPos:[0, 0],
         resize: 2,
         gridRopeNow: -1,
         gridRopes: [[
@@ -127,6 +129,7 @@ var myEnemiesProperties = {
         currentAnimation: {},
         animations:{},
         pos: [950, 840],
+        sfxPos:[0, -200],
         resize: 2,
         gridRopeNow: -1,
         gridRopes: [[
@@ -173,7 +176,8 @@ var myEnemiesProperties = {
         imgs: {},
         currentAnimation: {},
         animations:{},
-        pos: [850, 440],
+        pos: [750, 600],
+        sfxPos:[0, 0],
         resize: 3,
         gridRopeNow: -1,
         gridRopes: [[           
@@ -227,6 +231,7 @@ var myEnemiesProperties = {
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
+        sfxPos:[0, 0],
         resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
@@ -283,6 +288,7 @@ var myEnemiesProperties = {
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
+        sfxPos:[0, 0],
         resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
@@ -334,8 +340,9 @@ var myEnemiesProperties = {
         imgs: {},
         currentAnimation: {},
         animations:{},
-        pos: [950, 440],
-        resize: 2.5,
+        pos: [750, 250],
+        sfxPos:[0, 0],
+        resize: 3.8,
         gridRopeNow: -1,
         gridRopes: [[
             [0,1, "ropeBuffV",0,3,1],
@@ -387,7 +394,8 @@ var myEnemiesProperties = {
         imgs: {},
         currentAnimation: {},
         animations:{},
-        pos: [950, 440],
+        pos: [950, 400],
+        sfxPos:[0, 0],
         resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
@@ -451,6 +459,7 @@ var myEnemiesProperties = {
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
+        sfxPos:[0, 0],
         resize: 2,
         gridRopeNow: -1,
         gridRopes: [[
@@ -521,6 +530,7 @@ var myEnemiesProperties = {
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
+        sfxPos:[0, 0],
         resize: 2.5,
         gridRopeNow: -1,
         gridRopes: [[
@@ -602,9 +612,9 @@ var myEnemiesAnimFrames = {
     },
     4:{
         idle: {start: 0, end: 29},
-        attack: {start: 29, end: 74},
-        damage: {start: 74, end: 129},
-        death: {start: 129, end: 179},
+        attack: {start: 0, end: 45},
+        damage: {start: 0, end: 55},
+        death: {start: 0, end: 50},
     },
     //FALTA
     5:{

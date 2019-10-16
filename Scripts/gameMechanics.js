@@ -284,22 +284,22 @@ var myCombatMechanics = {
             sfxSequenceHero.push(["buff", that.scene.posHero]);
         }
         if(myStatsController.buff < myStatsController.totalBuff){
-            sfxSequenceEnemy.push(["buff", that.scene.enemy.pos]);
+            sfxSequenceEnemy.push(["buff", [that.scene.enemy.pos[0] + that.scene.enemy.sfxPos[0], that.scene.enemy.pos[1] + that.scene.enemy.sfxPos[1]]]);
         }
         if(myStatsController.debuff > 0){
-            sfxSequenceHero.push(["debuff", that.scene.enemy.pos]);
+            sfxSequenceHero.push(["debuff", [that.scene.enemy.pos[0] + that.scene.enemy.sfxPos[0], that.scene.enemy.pos[1] + that.scene.enemy.sfxPos[1]]]);
         }
         if(myStatsController.debuff < myStatsController.totalDebuff){
             sfxSequenceEnemy.push(["debuff", that.scene.posHero]);
         }
         if(myStatsController.counter > 0){
-            sfxSequenceHero.push(["damage", that.scene.enemy.pos]);
+            sfxSequenceHero.push(["damage", [that.scene.enemy.pos[0] + that.scene.enemy.sfxPos[0], that.scene.enemy.pos[1] + that.scene.enemy.sfxPos[1]]]);
         }
         if(myStatsController.counter < myStatsController.totalCounter){
             sfxSequenceEnemy.push(["damage", that.scene.posHero]);
         }
         if(myStatsController.heal > 0){
-            sfxSequenceEnemy.push(["heal", that.scene.enemy.pos]);
+            sfxSequenceEnemy.push(["heal", [that.scene.enemy.pos[0] + that.scene.enemy.sfxPos[0], that.scene.enemy.pos[1] + that.scene.enemy.sfxPos[1]]]);
         }
         if(myStatsController.heal < myStatsController.totalHeal){
             sfxSequenceHero.push(["heal", that.scene.posHero]);

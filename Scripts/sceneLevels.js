@@ -76,7 +76,7 @@ var myIntro = {
 
 var myTransitionScene = {
     hero: {},
-    posHero: [50, 390],
+    posHero: [50, 440],
     enemiesMax: 4,
     room: {},
     timeTransition: 8000,
