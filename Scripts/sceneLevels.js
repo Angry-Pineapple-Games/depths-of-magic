@@ -7,6 +7,7 @@ var myLevel1 = {
     rooms: [],
     room: {},
     enemiesMax: 4,
+    enemiesRandom: [],
     roomsMax: 3,
     limitTimePerPatron: 2300,
     start: function () {
@@ -29,7 +30,8 @@ var myLevel1 = {
         myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
         myTextManager.drawTextInBackground(1, "hp", [0.18, 0.99], String(this.hero.hp), "#65fe08", 80, "center");
-        myTextManager.drawTextInBackground(1, "", [0.5, 0.05], String(myCombatMechanics.countCombats), "white", 80, "center");
+        myTextManager.drawTextInBackground(1, "", [0.05, 0.05], String(myRoomMechanics.countSwaps)+ " - " + String(myCombatMechanics.countCombats), "#00f9ff", 80, "center");
+        myTextManager.drawTextInBackground(1, "", [0.98, 0.05], String(myScoreManager.currentScore), "#00f9ff", 80, "right");
 
         if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
             myGameArea.resizeBackground(myPreload.images.grid, 2);
@@ -81,7 +83,6 @@ var myIntro = {
 var myTransitionScene = {
     hero: {},
     posHero: [300, 440],
-    enemiesMax: 4,
     room: {},
     timeTransition: 8000,
     start: function () {
@@ -161,7 +162,8 @@ var myLevel2 = {
         myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
         myTextManager.drawTextInBackground(1, "hp", [0.18, 0.99], String(this.hero.hp), "#65fe08", 80, "center");
-        myTextManager.drawTextInBackground(1, "", [0.5, 0.05], String(myCombatMechanics.countCombats), "white", 80, "center");
+        myTextManager.drawTextInBackground(1, "", [0.05, 0.05], String(myRoomMechanics.countSwaps)+ " - " + String(myCombatMechanics.countCombats), "#00f9ff", 80, "center");
+        myTextManager.drawTextInBackground(1, "", [0.98, 0.05], String(myScoreManager.currentScore), "#00f9ff", 80, "right");
 
         if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
             myGameArea.resizeBackground(myPreload.images.grid, 2);
@@ -224,7 +226,8 @@ var myLevel3 = {
         myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
         myTextManager.drawTextInBackground(1, "hp", [0.18, 0.99], String(this.hero.hp), "#65fe08", 80, "center");
-        myTextManager.drawTextInBackground(1, "", [0.5, 0.05], String(myCombatMechanics.countCombats), "white", 80, "center");
+        myTextManager.drawTextInBackground(1, "", [0.05, 0.05], String(myRoomMechanics.countSwaps)+ " - " + String(myCombatMechanics.countCombats), "#00f9ff", 80, "center");
+        myTextManager.drawTextInBackground(1, "", [0.98, 0.05], String(myScoreManager.currentScore), "#00f9ff", 80, "right");
 
         if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
             myGameArea.resizeBackground(myPreload.images.grid, 2);

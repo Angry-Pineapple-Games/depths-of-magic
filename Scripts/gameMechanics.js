@@ -42,8 +42,26 @@ var myGameMechanics = {
             that.traces.shift();
         }
     },
+    generateArrayRandomOrder: function (length, enemies=false) {
+        if(enemies) {length--;}
+        let _array = [];
+        for(var i=0; i<length; i++) {
+            _array.push(i);
+        }
+        let _aux, _idx;
+        for(var j=0; j<length-2; j++) {
+            let ran = Math.random();
+            _idx = j + Math.round(ran % (length - j));
+            _aux = _array[_idx];
+            _array[_idx] = j;
+            _array[j] = _aux;
+        }
+        if(enemies) {_array.push(length);}
+        return _array;
+    },
     generateGridRopes: function (enemy) {//coge un nuevo grid aleatorio y lo pinta, contando el número de cuerdas totales y modificando los stats
-        enemy.gridRopeNow = Math.floor(Math.random() * enemy.gridRopes.length);
+        enemy.gridRopeNow = myCombatMechanics.patternsRandomArray.shift();
+        myCombatMechanics.patternsRandomArray.push(enemy.gridRopeNow);
         myStatsController.reset(enemy.gridRopes[enemy.gridRopeNow]);
         enemy.gridRopes[enemy.gridRopeNow].forEach(function (rope) {
             if (typeof rope[2] === "string") {//si es un string en vez de una imagen
@@ -77,7 +95,7 @@ var myGameMechanics = {
         }
     },
     generateEnemy: function (enemies, enemiesMax, nEnemies) {
-        let nextEnemy = enemies[Math.floor(Math.random() * (enemiesMax - 1))];
+        let nextEnemy = enemies[myRoomMechanics.enemiesRandomArray.shift()];
         if (myRoomMechanics.countSwaps === myRoomMechanics.nRooms && myCombatMechanics.countCombats === nEnemies) {
             nextEnemy = enemies[enemiesMax - 1];
         }
@@ -242,7 +260,8 @@ var myCombatMechanics = {
     debug: false,
     countSwaps: 0,
     countCombats: 0,
-    patternsPerEnemy: 3,
+    patternsPerEnemy: 4,
+    patternsRandomArray: [],
     nEnemies: 3,
     scene: {},
     startCombat: function (scene) {
@@ -265,6 +284,7 @@ var myCombatMechanics = {
     swapEnemy: function () {
         myFade.in(1);
         this.countSwaps = 0;
+        this.patternsRandomArray = myGameMechanics.generateArrayRandomOrder(this.patternsPerEnemy);
         if (this.countCombats++ < this.nEnemies) {
             this.scene.enemy = myGameMechanics.generateEnemy(this.scene.enemies, this.scene.enemiesMax, this.nEnemies);
             if (this.debug) { console.log("SwapEnemy"); }
@@ -390,6 +410,7 @@ var myRoomMechanics = {
     debug: false,
     scene: {},
     countSwaps: 0,
+    enemiesRandomArray: [],
     nRooms: 3,
     startRoom: function (scene) {
         this.scene = scene;
@@ -400,6 +421,7 @@ var myRoomMechanics = {
         myFade.in(1);
         myFade.in(2);
         this.scene.hero.buff = 0;
+        this.enemiesRandomArray = myGameMechanics.generateArrayRandomOrder(this.scene.enemiesMax, true);
         if (this.countSwaps++ < this.nRooms) {
             this.scene.room = this.scene.rooms[Math.floor(Math.random() * this.scene.roomsMax)];
             if (this.debug) { console.log("SwapRoom"); }
