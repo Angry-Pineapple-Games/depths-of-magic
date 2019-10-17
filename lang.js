@@ -8,6 +8,8 @@ var myWebContent = {
     title2ESP : "Tipos de cadenas",
     title3ENG : "How to combat",
     title3ESP : "Cómo combatir",
+    title4ENG : "What you see on screen",
+    title4ESP : "Qué ves en pantalla", 
 
     tutorial1ENG : "In Depths of Magic you'll explore a dungeon by fighting against dangerous enemies! These enemies attack you with magic spells that you'll counter by slashing the screen. \n" +
     "When the spell is drawn, use your mouse or your touch screen and cut the chains before the time ends. If you succeed, you'll return the spell to the enemy and damage it! \n" +
@@ -39,9 +41,14 @@ var myWebContent = {
     tutorial3ESP : "Los hechizos se dibujan en el grimorio, que es donde deberás realizar tus cortes. Puede encontrarse en dos estados:\n"+
     "- Bloqueado: Cuando el grimorio está rojo, no puedes interactuar. Esto ocurrirá cuando un hechizo ordenado se esté dibujando o cuando se estén mostrando animaciones de combate en la otra pantalla.\n"+
     "- Desbloqueado: Cuando el grimorio está azul, eres libre de hacer los cortes y de defenderte. ¡Disfruta!",
-
+    tutorial4ENG: "At first sight, maybe you wouldn't understand what's going on. In this game there are two screens: \n" + 
+    "The left one (or the one above, depending on what resolution you're playing) is the animations scene, where Rhaxtir is going to fight against monsters by throwing different magic spells, and also where you can see in which room from the level you are, your current score and what's your remaining health.\n"+
+    " The right one (or below) is the action screen: this is where you're going to play as explained before. Check out the rest of tutorials if you want to know more or if you have more doubts!",
+    tutorial4ESP: "A primera vista quizás no entiendas qué es lo que está pasando. En este juego hay dos pantallas: \nEn la de la izquierda (o arriba, dependiendo de en qué resolución estés jugando) podrás ver las animaciones, donde Rhaxtir se encargará de pelear contra los monstruos lanzándoles hechizos, y además es donde podrás ver en qué sala del nivel te encuentras, tu puntuación actual y tu salud restante." +
+    " \n La otra pantalla es la de acción: es donde vas a jugar de la manera que se ha explicado en el anterior tutorial. ¡Echa un vistazo al resto de tutoriales si quieres saber más o sigues con dudas!",
+    
     //About us
-    role1ENG : "Game designer, project manager and community manager.",
+    role1ENG : "Game designer, project manager, community manager and sound designer.",
     role1ESP : "Diseñador de juego, gestor de proyecto y community manager.",
     role2ENG : "Artist and animator.",
     role2ESP : "Artista y animador.",
@@ -64,43 +71,62 @@ var myWebContent = {
             for (var i = 0; i < this.MAX_SCORES; i++){
                 this.bestScores.push(0.0);
             }
-        }
-        console.log("Why naut");
-        $('#score1').html("1st: " + this.bestScores[0]);
-        $('#score2').html("2nd: " +this.bestScores[1]);
-        $('#score3').html("3rd: " +this.bestScores[2]);
-        $('#score4').html("4th: " +this.bestScores[3]);
-        $('#score5').html("5th: " +this.bestScores[4]);
-        $('#score6').html("6th: " +this.bestScores[5]);
-        $('#score7').html("7th: " +this.bestScores[6]);
-        $('#score8').html("8th: " +this.bestScores[7]);
-        $('#score9').html("9th: " +this.bestScores[8]);
-        $('#score10').html("10th: " +this.bestScores[9]);
+        }      
     },
 
     initialSetup : function () {
         $('#tutorial1').html(myWebContent.title1ENG);
         $('#tutorial2').html(myWebContent.title2ENG);
         $('#tutorial3').html(myWebContent.title3ENG);
+        $('#tutorial4').html(myWebContent.title4ENG);
         $('#description1').html(myWebContent.tutorial1ENG);
         $('#description2').html(myWebContent.tutorial2ENG);
         $('#description3').html(myWebContent.tutorial3ENG);
+        $('#description4').html(myWebContent.tutorial4ENG);
+    },
+
+    showScores : function (lang) {
+        if (lang == "es"){
+            $('#score1').html("1ero: " + this.bestScores[0]);
+            $('#score2').html("2do: " +this.bestScores[1]);
+            $('#score3').html("3ero: " +this.bestScores[2]);
+            $('#score4').html("4to: " +this.bestScores[3]);
+            $('#score5').html("5to: " +this.bestScores[4]);
+            $('#score6').html("6to: " +this.bestScores[5]);
+            $('#score7').html("7to: " +this.bestScores[6]);
+            $('#score8').html("8vo: " +this.bestScores[7]);
+            $('#score9').html("9no: " +this.bestScores[8]);
+            $('#score10').html("10mo: " +this.bestScores[9]);
+        } else {
+            $('#score1').html("1st: " + this.bestScores[0]);
+            $('#score2').html("2nd: " +this.bestScores[1]);
+            $('#score3').html("3rd: " +this.bestScores[2]);
+            $('#score4').html("4th: " +this.bestScores[3]);
+            $('#score5').html("5th: " +this.bestScores[4]);
+            $('#score6').html("6th: " +this.bestScores[5]);
+            $('#score7').html("7th: " +this.bestScores[6]);
+            $('#score8').html("8th: " +this.bestScores[7]);
+            $('#score9').html("9th: " +this.bestScores[8]);
+            $('#score10').html("10th: " +this.bestScores[9]);
+        }
     }
 }
 
 $(document).ready(function () {
     myWebContent.initialSetup();
     myWebContent.downloadBestScores();
+    myWebContent.showScores("en");
 
     $("#btnSpanish").change(function () {
         sessionStorage.setItem("langDom", "spanish");
         changeLangHtml("es");
-        console.log(myWebContent.bestScores[0]);
+        myWebContent.showScores("es");
     });
 
     $("#btnEnglish").change(function () {
         sessionStorage.setItem("langDom", "english");
         changeLangHtml("en");
+        myWebContent.showScores("en");
     });
 });
 
@@ -110,13 +136,8 @@ var ids = [["#btnSpanish", "radio", "Spanish", "Español"], ["#btnEnglish","radi
  ["name1", "normal", "Juan", "Juan"],["role1", "normal", myWebContent.role1ENG, myWebContent.role1ESP],["name2", "normal", "Mario", "Mario"],["role2", "normal", myWebContent.role2ENG, myWebContent.role2ESP], ["name3", "normal", "Javier", "Javier"],
  ["role3", "normal", myWebContent.role3ENG, myWebContent.role3ESP],["name4", "normal", "Laura", "Laura"],["role4", "normal", myWebContent.role4ENG, myWebContent.role4ESP],["name5", "normal", "César", "César"], 
  ["role5", "normal", myWebContent.role5ENG, myWebContent.role5ESP], ["references", "normal", "References", "Referencias"],["code", "normal", "Code", "Código"],["images", "normal", "Images", "Imágenes"],
- ["animation", "normal", "Animation", "Animación"], ["music", "normal", "Music", "Música"],["backTop", "normal", "Back to top", "Vuelta arriba"],
- ["score1", "normal", "1st: " + myWebContent.bestScores[0], "1o: " + myWebContent.bestScores[0]], ["score2", "normal", "2nd: " + myWebContent.bestScores[1], "2o: " + myWebContent.bestScores[1]],
- ["score3", "normal", "3rd: " + myWebContent.bestScores[2], "3o: " + myWebContent.bestScores[2]], ["score4", "normal", "4th: " + myWebContent.bestScores[3], "4o: " + myWebContent.bestScores[3]],
- ["score5", "normal", "5th: " + myWebContent.bestScores[4], "5o: " + myWebContent.bestScores[4]], ["score6", "normal", "6th: " + myWebContent.bestScores[5], "6o: " + myWebContent.bestScores[5]],
- ["score7", "normal", "7th: " + myWebContent.bestScores[6], "7o: " + myWebContent.bestScores[6]], ["score8", "normal", "8th: " + myWebContent.bestScores[7], "1o: " + myWebContent.bestScores[7]],
- ["score9", "normal", "9th: " + myWebContent.bestScores[8], "9o: " + myWebContent.bestScores[8]], ["score10", "normal", "10th: " + myWebContent.bestScores[9], "10o: " + myWebContent.bestScores[9]],
- ["bestScores", "normal", "Your 10 best scores:", "Tus 10 mejores puntuaciones"]];
+ ["animation", "normal", "Animation", "Animación"], ["music", "normal", "Music", "Música"],["backTop", "normal", "Back to top", "Vuelta arriba"],["bestScores", "normal", "Your 10 best scores:", "Tus 10 mejores puntuaciones"],
+ ["tutorial4", "normal", myWebContent.title4ENG, myWebContent.title4ESP],["description4", "normal", myWebContent.tutorial4ENG, myWebContent.tutorial4ESP]];
 
 function changeLangHtml(lang) {
     let newLang = 2;
