@@ -14,33 +14,33 @@ var myWebContent = {
     tutorial1ENG : "In Depths of Magic you'll explore a dungeon by fighting against dangerous enemies! These enemies attack you with magic spells that you'll counter by slashing the screen. \n" +
     "When the spell is drawn, use your mouse or your touch screen and cut the chains before the time ends. If you succeed, you'll return the spell to the enemy and damage it! \n" +
     "There are two kind of spells:\n"+
-    "1. Unordered: The spell will be drawn and immediately you can start to cut it however you want.\n"+
-    "2. Ordered: Before you can start to make the cuts, the chains of the spell will be drawn in a particular order that you'll need to follow to successfully counter the attacks.\n"+
+    "<b>1. Unordered:</b> The spell will be drawn and immediately you can start to cut it however you want.\n"+
+    "<b>2. Ordered:</b> Before you can start to make the cuts, the chains of the spell will be drawn in a particular order that you'll need to follow to successfully counter the attacks.\n"+
     "Good luck on your quest!",
     tutorial1ESP : "¡En Depths of Magic vas a explorar una mazmorra peleando con peligrosos enemigos! Estos te atacarán con diferentes hechizos mágicos que debes contrarrestar haciendo cortes sobre la pantalla. \n"+
     "Cuando un hechizo se dibuje por pantalla, utiliza el ratón o la pantalla táctil y corta las cadenas que lo forman antes de que termine el tiempo. Si lo consigues, ¡devolverás el hechizo al enemigo y le harás daño! \n"+
     "Hay dos tipos de hechizo: \n"+
-    "1. Desordenado: El hechizo se dibujará e inmediatamente puedes empezar a cortar como quieras.\n"+
-    "2. Ordenado: Antes de que comiences a cortar, las cadenas del hechizo se dibujarán en un orden particular que tendrás que seguir para contrarrestar los ataques.\n"+
+    "<b>1. Desordenado:</b> El hechizo se dibujará e inmediatamente puedes empezar a cortar como quieras.\n"+
+    "<b>2. Ordenado:</b> Antes de que comiences a cortar, las cadenas del hechizo se dibujarán en un orden particular que tendrás que seguir para contrarrestar los ataques.\n"+
     "¡Mucha suerte en tu aventura!",
     tutorial2ENG : "Magic spells have five kinds of chains that have different effects and need to be cut in different ways in order to guide you to victory:\n"+
-    "1. Counter: This chain can be cut any way you want and by cutting it you'll avoid the damage that this chain would do and return it to the enemy. If you cut several chains without lifting your finger or mouse, you'll make even more damage. Cut as much as you can to not take damage and kill the monsters!\n"+
-    "2. Heal: This chain also can be cut any way you want, but you may not want to do it since it would heal the enemy! You should avoid cutting these chains to heal yourself. Don't make brainless plays!\n"+
-    "3. Buff: You only can cut this chain if you start cutting it from its left or above it. Cutting this chain would give you a boost in your stats for the next attack: you're going to do more damage and your endurance is going to increase. But watch out! This also applies to the enemy if you miss the cut: it'll do you more damage and its defense will grow.\n"+
-    "4. Debuff: You only can cut this chain if you start cutting it from its right or below it. If you cut this chain, a negative buff will be applied to the enemy, making it more vulnerable to your attacks and less dangerous to you. As with the buff chain, if you miss the cut, it would be applied to you and your stats will decrease.\n"+
-    "5. Power: This is a special chain that needs to be dealt with a double cut. If you can cut this, it'll apply all the benefits of the other chains, so it's a great tool to use. Not cutting it doesn't harm you, so you should focus on the other chains first. Remember that you have limited time!",
+    "<b>1. Counter:</b> This chain can be cut any way you want and by cutting it you'll avoid the damage that this chain would do and return it to the enemy. If you cut several chains without lifting your finger or mouse, you'll make even more damage. Cut as much as you can to not take damage and kill the monsters!\n"+
+    "<b>2. Heal:</b> This chain also can be cut any way you want, but you may not want to do it since it would heal the enemy! You should avoid cutting these chains to heal yourself. Don't make brainless plays!\n"+
+    "<b>3. Buff:</b> You only can cut this chain if you start cutting it from its left or above it. Cutting this chain would give you a boost in your stats for the next attack: you're going to do more damage and your endurance is going to increase. But watch out! This also applies to the enemy if you miss the cut: it'll do you more damage and its defense will grow.\n"+
+    "<b>4. Debuff:</b> You only can cut this chain if you start cutting it from its right or below it. If you cut this chain, a negative buff will be applied to the enemy, making it more vulnerable to your attacks and less dangerous to you. As with the buff chain, if you miss the cut, it would be applied to you and your stats will decrease.\n"+
+    "<b>5. Power:</b> This is a special chain that needs to be dealt with a double cut. If you can cut this, it'll apply all the benefits of the other chains, so it's a great tool to use. Not cutting it doesn't harm you, so you should focus on the other chains first. Remember that you have limited time!",
     tutorial2ESP : "Los hechizos mágicos tienen cinco tipos de cadenas. Cada cadena tiene un efecto distinto y debe ser cortada de una manera concreta para poder alzarte con la victoria:\n"+
-    "1. Contraataque: Esta cadena puede cortarse de cualquier manera y, al hacerlo, evitarás el daño que fuese a hacerte y se lo devolverás al enemigo. Si cortas varias seguidas sin levantar el dedo o ratón, harás aún más daño. ¡Corta todas las que puedas para no recibir daño y matar a los monstruos!\n"+
-    "2. Curación: Esta cadena también se puede cortar de cualquier forma, pero no deberías hacerlo, ¡ya que curará el enemigo! Debes evitar cortar estas cadenas para curarte. ¡Piensa tus jugadas!\n"+
-    "3. Buff: Solo puedes cortar esta cadena si comienzas a realizar el corte desde su izquierda o sobre ella. Cortar esta cadena aumentará tus estadísticas para el siguiente ataque: harás más daño y serás más resistente. ¡Pero cuidado! Esto también se aplica al enemigo si fallas: te hará más daño y su defensa crecerá.\n"+
-    "4. Debuff: Solo puedes cortar esta cadena si comienzas a realizar el corte desde su derecha o debajo de ella. Cortarla bajará las estadísticas del enemigo, haciéndolo más vulnerable a tus ataques y menos peligroso. Como con la cadena de buff, si fallas el corte, esto ser aplicará a ti y tus estadísticas bajarán. \n"+
-    "5. Power: Esta es una cadena especial a la que se debe realizar un corte doble. Si puedes cortarla, se te aplicarán los beneficios de todas las otras cadenas, así que es un objetivo muy interesante. No cortarla no te hace daño, así que deberías centrarte en cortar las otras cadenas primero. ¡Recuerda que el tiempo es limitado!",
+    "<b>1. Contraataque:</b> Esta cadena puede cortarse de cualquier manera y, al hacerlo, evitarás el daño que fuese a hacerte y se lo devolverás al enemigo. Si cortas varias seguidas sin levantar el dedo o ratón, harás aún más daño. ¡Corta todas las que puedas para no recibir daño y matar a los monstruos!\n"+
+    "<b>2. Curación:</b> Esta cadena también se puede cortar de cualquier forma, pero no deberías hacerlo, ¡ya que curará el enemigo! Debes evitar cortar estas cadenas para curarte. ¡Piensa tus jugadas!\n"+
+    "<b>3. Buff:</b> Solo puedes cortar esta cadena si comienzas a realizar el corte desde su izquierda o sobre ella. Cortar esta cadena aumentará tus estadísticas para el siguiente ataque: harás más daño y serás más resistente. ¡Pero cuidado! Esto también se aplica al enemigo si fallas: te hará más daño y su defensa crecerá.\n"+
+    "<b>4. Debuff:</b> Solo puedes cortar esta cadena si comienzas a realizar el corte desde su derecha o debajo de ella. Cortarla bajará las estadísticas del enemigo, haciéndolo más vulnerable a tus ataques y menos peligroso. Como con la cadena de buff, si fallas el corte, esto ser aplicará a ti y tus estadísticas bajarán. \n"+
+    "<b>5. Power:</b> Esta es una cadena especial a la que se debe realizar un corte doble. Si puedes cortarla, se te aplicarán los beneficios de todas las otras cadenas, así que es un objetivo muy interesante. No cortarla no te hace daño, así que deberías centrarte en cortar las otras cadenas primero. ¡Recuerda que el tiempo es limitado!",
     tutorial3ENG : "The grimoire is where the spells are drawn is where you are going to make your cuts. It can be in two stats:\n"+
-    "- Blocked: When the grimoire is red, it means that you can't make any moves. This is going to occur when an ordered spell is being drawn or when the combat animation is being showed on the other screen.\n"+
-    "- Unblocked: When the grimoire is blue, you can make your cuts and defend yourself. Have fun!",
+    "<b>- Blocked:</b> When the grimoire is red, it means that you can't make any moves. This is going to occur when an ordered spell is being drawn or when the combat animation is being showed on the other screen.\n"+
+    "<b>- Unblocked:</b> When the grimoire is blue, you can make your cuts and defend yourself. Have fun!",
     tutorial3ESP : "Los hechizos se dibujan en el grimorio, que es donde deberás realizar tus cortes. Puede encontrarse en dos estados:\n"+
-    "- Bloqueado: Cuando el grimorio está rojo, no puedes interactuar. Esto ocurrirá cuando un hechizo ordenado se esté dibujando o cuando se estén mostrando animaciones de combate en la otra pantalla.\n"+
-    "- Desbloqueado: Cuando el grimorio está azul, eres libre de hacer los cortes y de defenderte. ¡Disfruta!",
+    "<b>- Bloqueado:</b> Cuando el grimorio está rojo, no puedes interactuar. Esto ocurrirá cuando un hechizo ordenado se esté dibujando o cuando se estén mostrando animaciones de combate en la otra pantalla.\n"+
+    "<b>- Desbloqueado:</b> Cuando el grimorio está azul, eres libre de hacer los cortes y de defenderte. ¡Disfruta!",
     tutorial4ENG: "At first sight, maybe you wouldn't understand what's going on. In this game there are two screens: \n" + 
     "The left one (or the one above, depending on what resolution you're playing) is the animations scene, where Rhaxtir is going to fight against monsters by throwing different magic spells, and also where you can see in which room from the level you are, your current score and what's your remaining health.\n"+
     " The right one (or below) is the action screen: this is where you're going to play as explained before. Check out the rest of tutorials if you want to know more or if you have more doubts!",
@@ -52,8 +52,8 @@ var myWebContent = {
     role1ESP : "Diseñador de juego, gestor de proyecto y community manager.",
     role2ENG : "Artist and animator.",
     role2ESP : "Artista y animador.",
-    role3ENG : "Programmer and game designer.",
-    role3ESP : "Programador y diseñador de juego.",
+    role3ENG : "Programmer, musician and game designer.",
+    role3ESP : "Programador, músico y diseñador de juego.",
     role4ENG : "Artist and animator.",
     role4ESP : "Artista y animadora.",
     role5ENG : "Programmer and sound designer.",
@@ -65,7 +65,7 @@ var myWebContent = {
     downloadBestScores : function(){//Descarga desde localStorage las 10 mejores puntuaciones
         this.bestScores = [];
         var downloaded = localStorage.getItem("bestScores");
-        if (downloaded != null){
+        if (downloaded != null || typeof(downloaded) !== undefined){
             this.bestScores = JSON.parse(downloaded);
         } else {
             for (var i = 0; i < this.MAX_SCORES; i++){
@@ -143,8 +143,8 @@ function changeLangHtml(lang) {
     let newLang = 2;
     if(lang==="es") {newLang = 3;}
     for(var idx=0; idx<ids.length; idx++){
-        if(ids[idx][1]==="radio") {$(ids[idx][0]).get(0).nextSibling.textContent = ids[idx][newLang];}
-        else if(ids[idx][1]==="span") {document.getElementById(ids[idx][0]).textContent = ids[idx][newLang];}
-        else{document.getElementById(ids[idx][0]).textContent = ids[idx][newLang];}
+        if(ids[idx][1]==="radio") {$(ids[idx][0]).get(0).nextSibling.innerHTML = ids[idx][newLang];}
+        else if(ids[idx][1]==="span") {document.getElementById(ids[idx][0]).innerHTML = ids[idx][newLang];}
+        else{document.getElementById(ids[idx][0]).innerHTML = ids[idx][newLang];}
     }
 }
