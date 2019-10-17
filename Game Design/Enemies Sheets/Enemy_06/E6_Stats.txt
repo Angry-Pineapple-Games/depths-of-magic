@@ -1,4 +1,4 @@
-Name: Shadrix
+Name: Glapdger
 
 HP: 160
 
