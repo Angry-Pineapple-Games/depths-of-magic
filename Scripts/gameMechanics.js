@@ -355,13 +355,13 @@ var myCombatMechanics = {
                     myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
                         myAnimManager.changeAnimation(that.scene.enemy, "death", function () {
                             //Si es el jefe final, reproduce su animacion de muerte entera
-                            //if(that.scene.enemy.name !== "The Abyss"){
+                            if(that.scene.enemy.name !== "The Abyss"){
                                 myAnimManager.changeAnimation(that.scene.enemy, "idle");
                                 myAnimManager.changeAnimation(that.scene.hero, "idle");
                                 myGameMechanics.un_blockInputs();
                                 myScoreManager.currentScore += that.scene.enemy.defeatScore;
                                 that.swapEnemy();
-                            /*}else{
+                            }else{
                                 console.log("death2 playing");
                                 myAnimManager.changeAnimation(that.scene.enemy, "death2", function () {
                                     console.log("death3 playing");
@@ -380,7 +380,7 @@ var myCombatMechanics = {
                                         });
                                     });
                                 });
-                            }*/
+                            }
                             
                     });
                 });

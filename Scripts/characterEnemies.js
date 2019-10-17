@@ -12,6 +12,7 @@ var myCharacterEnemies = {
             this.generateAnimationsInfo(this.enemies[e], myEnemiesAnimFrames[e]);
             if(this.enemies[e].name === "The Abyss"){
                 this.generateBossDeathAnimationsInfo(this.enemies[e], myEnemiesAnimFrames[e]);
+                this.saveBossDeathImages(this.enemies[e], myEnemiesAnimFrames[e]);
             }
             this.enemies[e].currentAnimation = this.enemies[e].animations.idle;
             this.enemies[e].currentImg = this.enemies[e].imgs.idle;
@@ -68,7 +69,7 @@ var myEnemiesProperties = {
         imgs: {},
         currentAnimation: {},
         animations:{},
-        pos: [950, 440],
+        pos: [950, 480],
         sfxPos:[0, 0],
         resize: 2,
         gridRopeNow: -1,
@@ -493,7 +494,7 @@ var myEnemiesProperties = {
         imgs: {},
         currentAnimation: {},
         animations:{},
-        pos: [950, 440],
+        pos: [950, 480],
         sfxPos:[0, 0],
         resize: 2,
         gridRopeNow: -1,
@@ -653,7 +654,6 @@ var myEnemiesAnimFrames = {
         damage: {start: 0, end: 55},
         death: {start: 0, end: 50},
     },
-    //FALTA
     5:{
         idle: {start: 0, end: 15},
         attack: {start: 0, end: 15},
