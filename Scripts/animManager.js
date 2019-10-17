@@ -53,6 +53,22 @@ var myAnimManager = {
                 character.currentAnimation = character.animations.victory;
                 character.currentImg = character.imgs.victory;
                 break;
+            case "death2":
+                character.currentAnimation = character.animations.death2;
+                character.currentImg = character.imgs.death2;
+                break;
+            case "death3":
+                character.currentAnimation = character.animations.death3;
+                character.currentImg = character.imgs.death3;
+                break;
+            case "death4":
+                character.currentAnimation = character.animations.death4;
+                character.currentImg = character.imgs.death4;
+                break; 
+            case "death5":
+                character.currentAnimation = character.animations.death5;
+                character.currentImg = character.imgs.death5;
+                break; 
             default:
                 console.log("wrong animation name");
                 break;
