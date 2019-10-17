@@ -1,6 +1,7 @@
 var myWebContent = {
     //Score
     bestScores : [],
+    MAX_SCORES : 10,
     //Tutorials
     title1ENG : "How to play",
     title1ESP : "Cómo jugar",
@@ -65,14 +66,14 @@ var myWebContent = {
     downloadBestScores : function(){//Descarga desde localStorage las 10 mejores puntuaciones
         this.bestScores = [];
         var downloaded = localStorage.getItem("bestScores");
-        if (downloaded != null || typeof(downloaded) !== undefined){
+        if (downloaded != null && typeof downloaded !== "undefined"){
             this.bestScores = JSON.parse(downloaded);
         } else {
             for (var i = 0; i < this.MAX_SCORES; i++){
                 this.bestScores.push(0.0);
             }
         }
-        //this.showScores("en");      
+        this.showScores("en");      
     },
 
     initialSetup : function () {
@@ -120,13 +121,13 @@ $(document).ready(function () {
     $("#btnSpanish").change(function () {
         sessionStorage.setItem("langDom", "spanish");
         changeLangHtml("es");
-        //myWebContent.showScores("es");
+        myWebContent.showScores("es");
     });
 
     $("#btnEnglish").change(function () {
         sessionStorage.setItem("langDom", "english");
         changeLangHtml("en");
-        //myWebContent.showScores("en");
+        myWebContent.showScores("en");
     });
 });
 
@@ -136,7 +137,7 @@ var ids = [["#btnSpanish", "radio", "Spanish", "Español"], ["#btnEnglish","radi
  ["name1", "normal", "Juan", "Juan"],["role1", "normal", myWebContent.role1ENG, myWebContent.role1ESP],["name2", "normal", "Mario", "Mario"],["role2", "normal", myWebContent.role2ENG, myWebContent.role2ESP], ["name3", "normal", "Javier", "Javier"],
  ["role3", "normal", myWebContent.role3ENG, myWebContent.role3ESP],["name4", "normal", "Laura", "Laura"],["role4", "normal", myWebContent.role4ENG, myWebContent.role4ESP],["name5", "normal", "César", "César"], 
  ["role5", "normal", myWebContent.role5ENG, myWebContent.role5ESP], ["references", "normal", "References", "Referencias"],["code", "normal", "Code", "Código"],["images", "normal", "Images", "Imágenes"],
- ["animation", "normal", "Animation", "Animación"], ["music", "normal", "Music", "Música"],["backTop", "normal", "Back to top", "Vuelta arriba"],["bestScores", "normal", "Your 10 best scores:", "Tus 10 mejores puntuaciones"],
+ ["animation", "normal", "Animation", "Animación"], ["music", "normal", "Music", "Música"],["backTop", "normal", "Back to top", "Vuelta arriba"],["bestScores", "normal", "Your 10 best scores", "Tus 10 mejores puntuaciones"],
  ["tutorial4", "normal", myWebContent.title4ENG, myWebContent.title4ESP],["description4", "normal", myWebContent.tutorial4ENG, myWebContent.tutorial4ESP]];
 
 function changeLangHtml(lang) {

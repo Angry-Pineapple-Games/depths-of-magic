@@ -5,8 +5,8 @@ var myLoading = {
   source: {
     firstFrame: {
       src: 'Assets/preload/DepthsOfMagic',
-      width: 2100,
-      height: 1500
+      width: 640,
+      height: 640
     }
   },
   loadImages: function (callback) {
