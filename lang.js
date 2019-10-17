@@ -71,7 +71,8 @@ var myWebContent = {
             for (var i = 0; i < this.MAX_SCORES; i++){
                 this.bestScores.push(0.0);
             }
-        }      
+        }
+        this.showScores("en");      
     },
 
     initialSetup : function () {
@@ -115,7 +116,6 @@ var myWebContent = {
 $(document).ready(function () {
     myWebContent.initialSetup();
     myWebContent.downloadBestScores();
-    myWebContent.showScores("en");
 
     $("#btnSpanish").change(function () {
         sessionStorage.setItem("langDom", "spanish");
