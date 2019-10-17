@@ -72,7 +72,7 @@ var myWebContent = {
                 this.bestScores.push(0.0);
             }
         }
-        this.showScores("en");      
+        //this.showScores("en");      
     },
 
     initialSetup : function () {
@@ -120,13 +120,13 @@ $(document).ready(function () {
     $("#btnSpanish").change(function () {
         sessionStorage.setItem("langDom", "spanish");
         changeLangHtml("es");
-        myWebContent.showScores("es");
+        //myWebContent.showScores("es");
     });
 
     $("#btnEnglish").change(function () {
         sessionStorage.setItem("langDom", "english");
         changeLangHtml("en");
-        myWebContent.showScores("en");
+        //myWebContent.showScores("en");
     });
 });
 
