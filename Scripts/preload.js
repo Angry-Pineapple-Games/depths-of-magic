@@ -98,56 +98,6 @@ var myPreload = {
       width: 1920,
       height: 1440
     },
-    /*enemy0: {
-      src: 'Assets/spritesheets/spritesheet_enemy8.png',
-      width: 366,
-      height: 688
-    },
-    enemy1: {
-      src: 'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_idle.png',
-      width: 366,
-      height: 688
-    },
-    enemy2: {
-      src: 'Assets/spritesheets/spritesheet_enemy2.png',
-      width: 366,
-      height: 688
-    },
-    enemy3: {
-      src: 'Assets/spritesheets/spritesheet_enemy3.png',
-      width: 366,
-      height: 688
-    },
-    enemy4: {
-      src: 'Assets/spritesheets/spritesheet_test1.png',
-      width: 366,
-      height: 688
-    },
-    enemy5: {
-      src: 'Assets/spritesheets/spritesheet_test.png',
-      width: 366,
-      height: 688
-    },
-    enemy6: {
-      src: 'Assets/spritesheets/spritesheet_enemy6.png',
-      width: 366,
-      height: 688
-    },
-    enemy7: {
-      src: 'Assets/spritesheets/spritesheet_enemy7.png',
-      width: 366,
-      height: 688
-    },
-    enemy8: {
-      src: 'Assets/spritesheets/spritesheet_enemy8.png',
-      width: 366,
-      height: 688
-    },
-    enemy9: {
-      src: 'Assets/spritesheets/spritesheet_test1.png',
-      width: 366,
-      height: 688
-    },*/
     room0: {
       src: 'Assets/fondo1.png',
       width: 1920,
@@ -197,12 +147,8 @@ var myPreload = {
       src: 'Assets/gameover.jpg',
       width: 1920,
       height: 1440
-    },/*
-    hero: {
-      src: 'Assets/spritesheets/spritesheet_hero/spritesheet_hero_idle.png',
-      width: 1024,
-      height: 2048
-    },*/
+    },
+    //SFX
     damage: {
       src: 'Assets/spritesheets/spritesheet_damage.png',
       width: 1800,
@@ -495,76 +441,29 @@ var myPreload = {
       width: 0,
       height: 0
     },
-    //Enemy9 FALTA
+    //Enemy9
     enemy9_idle:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_idle.png',
+      src:'Assets/spritesheets/spritesheet_enemy9/spritesheet_enemy9_idle.png',
       width: 0,
       height: 0
     },
     enemy9_damage:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_damage.png',
+      src:'Assets/spritesheets/spritesheet_enemy9/spritesheet_enemy9_damage.png',
       width: 0,
       height: 0
     },
     enemy9_attack:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_attack.png',
+      src:'Assets/spritesheets/spritesheet_enemy9/spritesheet_enemy9_attack.png',
       width: 0,
       height: 0
     },
     enemy9_death:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_death.png',
+      src:'Assets/spritesheets/spritesheet_enemy9/spritesheet_enemy9_death.png',
       width: 0,
       height: 0
     }
   },
   spritesInfo: {
-    /*
-    hero: {
-      json: spritesheet_hero_idle,
-      frames: []
-    },
-    //enemies
-    0: {
-      json: spritesheet_enemy8,
-      frames: []
-    },
-    1: {
-      json: spritesheet_enemy1_idle,
-      frames: []
-    },
-    2: {
-      json: spritesheet_enemy2,
-      frames: []
-    },
-    3: {
-      json: spritesheet_enemy3,
-      frames: []
-    },
-    4: {
-      json: spritesheet_test,
-      frames: []
-    },
-    5: {
-      json: spritesheet_test,
-      frames: []
-    },
-    6: {
-      json: spritesheet_enemy6,
-      frames: []
-    },
-    7: {
-      json: spritesheet_enemy7,
-      frames: []
-    },
-    8: {
-      json: spritesheet_enemy8,
-      frames: []
-    },
-    9: {
-      json: spritesheet_test,
-      frames: []
-    },
-    */
     damage: {
       json: spritesheet_damage,
       frames: []
@@ -801,21 +700,21 @@ var myPreload = {
       json: spritesheet_enemy8_death,
       frames:[]
     },
-    //Enemy9 FALTA
+    //Enemy9
     enemy9_idle:{
-      json: spritesheet_enemy1_idle,
+      json: spritesheet_enemy9_idle,
       frames:[]
     },
     enemy9_attack:{
-      json: spritesheet_enemy1_attack,
+      json: spritesheet_enemy9_attack,
       frames:[]
     },
     enemy9_damage:{
-      json: spritesheet_enemy1_damage,
+      json: spritesheet_enemy9_damage,
       frames:[]
     },
     enemy9_death:{
-      json: spritesheet_enemy1_death,
+      json: spritesheet_enemy9_death,
       frames:[]
     }
   },
