@@ -481,6 +481,27 @@ var myPreload = {
       src:'Assets/spritesheets/spritesheet_enemy9/spritesheet_enemy9_death5.png',
       width: 0,
       height: 0
+    },
+    //UI Icons
+    health_icon:{
+      src:'Assets/UI/healthIcon.png',
+      width: 120,
+      height: 120
+    },
+    swordShield_icon:{
+      src:'Assets/UI/swordShieldIcon.png',
+      width: 120,
+      height: 120
+    },
+    buff_icon:{
+      src: 'Assets/UI/BuffIcon.png',
+      width: 120,
+      height: 120
+    },
+    debuff_icon:{
+      src:'Assets/UI/DebuffIcon.png',
+      width: 120,
+      height: 120
     }
   },
   spritesInfo: {

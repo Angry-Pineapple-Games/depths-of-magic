@@ -306,15 +306,19 @@ var myCombatMechanics = {
         let sfxSequenceEnemy = [];
 
         if(myStatsController.buff > 0){
+            that.scene.showBuffHero = true;
             sfxSequenceHero.push(["buff", that.scene.posHero]);
         }
         if(myStatsController.buff < myStatsController.totalBuff){
+            that.scene.showBuffEnemy = true;
             sfxSequenceEnemy.push(["buff", [that.scene.enemy.pos[0] + that.scene.enemy.sfxPos[0], that.scene.enemy.pos[1] + that.scene.enemy.sfxPos[1]]]);
         }
         if(myStatsController.debuff > 0){
+            that.scene.showDebuffEnemy = true;
             sfxSequenceHero.push(["debuff", [that.scene.enemy.pos[0] + that.scene.enemy.sfxPos[0], that.scene.enemy.pos[1] + that.scene.enemy.sfxPos[1]]]);
         }
         if(myStatsController.debuff < myStatsController.totalDebuff){
+            that.scene.showDebuffHero = true;
             sfxSequenceEnemy.push(["debuff", that.scene.posHero]);
         }
         if(myStatsController.counter > 0){
@@ -339,6 +343,10 @@ var myCombatMechanics = {
                     myAnimManager.changeAnimation(that.scene.hero, "death", function () {
                         myAnimManager.changeAnimation(that.scene.hero, "idle");
                         myGameMechanics.un_blockInputs();
+                        that.scene.showBuffHero = false;
+                        that.scene.showDebuffHero = false;
+                        that.scene.showBuffEnemy = false;
+                        that.scene.showDebuffEnemy = false;
                         myGame.gameOver();
                     });
                 });
@@ -360,6 +368,10 @@ var myCombatMechanics = {
                                 myAnimManager.changeAnimation(that.scene.hero, "idle");
                                 myGameMechanics.un_blockInputs();
                                 myScoreManager.currentScore += that.scene.enemy.defeatScore;
+                                that.scene.showBuffHero = false;
+                                that.scene.showDebuffHero = false;
+                                that.scene.showBuffEnemy = false;
+                                that.scene.showDebuffEnemy = false;
                                 that.swapEnemy();
                             }else{
                                 console.log("death2 playing");
@@ -375,6 +387,10 @@ var myCombatMechanics = {
                                                 myAnimManager.changeAnimation(that.scene.hero, "idle");
                                                 myGameMechanics.un_blockInputs();
                                                 myScoreManager.currentScore += that.scene.enemy.defeatScore;
+                                                that.scene.showBuffHero = false;
+                                                that.scene.showDebuffHero = false;
+                                                that.scene.showBuffEnemy = false;
+                                                that.scene.showDebuffEnemy = false;
                                                 that.swapEnemy();
                                             });
                                         });
@@ -395,6 +411,10 @@ var myCombatMechanics = {
                     myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
                         myAnimManager.changeAnimation(that.scene.enemy, "idle");
                         myGameMechanics.un_blockInputs();
+                        that.scene.showBuffHero = false;
+                        that.scene.showDebuffHero = false;
+                        that.scene.showBuffEnemy = false;
+                        that.scene.showDebuffEnemy = false;
                         that.swapPattern();
                     });
                 });
@@ -414,6 +434,10 @@ var myCombatMechanics = {
                                 myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
                                     myAnimManager.changeAnimation(that.scene.hero, "idle");
                                     myGameMechanics.un_blockInputs();
+                                    that.scene.showBuffHero = false;
+                                    that.scene.showDebuffHero = false;
+                                    that.scene.showBuffEnemy = false;
+                                    that.scene.showDebuffEnemy = false;
                                     that.swapPattern();
                                 });
                             });
@@ -430,6 +454,10 @@ var myCombatMechanics = {
                     myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
                         myAnimManager.changeAnimation(that.scene.hero, "idle");
                         myGameMechanics.un_blockInputs();
+                        that.scene.showBuffHero = false;
+                        that.scene.showDebuffHero = false;
+                        that.scene.showBuffEnemy = false;
+                        that.scene.showDebuffEnemy = false;
                         that.swapPattern();
                     });
                 });
