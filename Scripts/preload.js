@@ -461,6 +461,26 @@ var myPreload = {
       src:'Assets/spritesheets/spritesheet_enemy9/spritesheet_enemy9_death.png',
       width: 0,
       height: 0
+    },
+    enemy9_death2:{
+      src:'Assets/spritesheets/spritesheet_enemy9/spritesheet_enemy9_death2.png',
+      width: 0,
+      height: 0
+    },
+    enemy9_death3:{
+      src:'Assets/spritesheets/spritesheet_enemy9/spritesheet_enemy9_death3.png',
+      width: 0,
+      height: 0
+    },
+    enemy9_death4:{
+      src:'Assets/spritesheets/spritesheet_enemy9/spritesheet_enemy9_death4.png',
+      width: 0,
+      height: 0
+    },
+    enemy9_death5:{
+      src:'Assets/spritesheets/spritesheet_enemy9/spritesheet_enemy9_death5.png',
+      width: 0,
+      height: 0
     }
   },
   spritesInfo: {
@@ -715,6 +735,22 @@ var myPreload = {
     },
     enemy9_death:{
       json: spritesheet_enemy9_death,
+      frames:[]
+    },
+    enemy9_death2:{
+      json: spritesheet_enemy9_death2,
+      frames:[]
+    },
+    enemy9_death3:{
+      json: spritesheet_enemy9_death3,
+      frames:[]
+    },
+    enemy9_death4:{
+      json: spritesheet_enemy9_death4,
+      frames:[]
+    },
+    enemy9_death5:{
+      json: spritesheet_enemy9_death5,
       frames:[]
     }
   },

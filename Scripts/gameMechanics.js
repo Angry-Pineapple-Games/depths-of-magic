@@ -350,11 +350,34 @@ var myCombatMechanics = {
                     });
                     myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
                         myAnimManager.changeAnimation(that.scene.enemy, "death", function () {
-                            myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                            myAnimManager.changeAnimation(that.scene.hero, "idle");
-                            myGameMechanics.un_blockInputs();
-                            myScoreManager.currentScore += that.scene.enemy.defeatScore;
-                            that.swapEnemy();
+                            //Si es el jefe final, reproduce su animacion de muerte entera
+                            //if(that.scene.enemy.name !== "The Abyss"){
+                                myAnimManager.changeAnimation(that.scene.enemy, "idle");
+                                myAnimManager.changeAnimation(that.scene.hero, "idle");
+                                myGameMechanics.un_blockInputs();
+                                myScoreManager.currentScore += that.scene.enemy.defeatScore;
+                                that.swapEnemy();
+                            /*}else{
+                                console.log("death2 playing");
+                                myAnimManager.changeAnimation(that.scene.enemy, "death2", function () {
+                                    console.log("death3 playing");
+                                    myAnimManager.changeAnimation(that.scene.enemy, "death3", function () {
+                                        console.log("death4 playing");
+                                        myAnimManager.changeAnimation(that.scene.enemy, "death4", function () {
+                                            console.log("death5 playing");
+                                            myAnimManager.changeAnimation(that.scene.enemy, "death5", function () {
+                                                console.log("finished");
+                                                myAnimManager.changeAnimation(that.scene.enemy, "idle");
+                                                myAnimManager.changeAnimation(that.scene.hero, "idle");
+                                                myGameMechanics.un_blockInputs();
+                                                myScoreManager.currentScore += that.scene.enemy.defeatScore;
+                                                that.swapEnemy();
+                                            });
+                                        });
+                                    });
+                                });
+                            }*/
+                            
                     });
                 });
             });

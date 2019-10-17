@@ -10,8 +10,12 @@ var myCharacterEnemies = {
             //this.enemies[e].img = myPreload.images[this.enemies[e].img]
             this.saveImages(this.enemies[e]);
             this.generateAnimationsInfo(this.enemies[e], myEnemiesAnimFrames[e]);
+            if(this.enemies[e].name === "The Abyss"){
+                this.generateBossDeathAnimationsInfo(this.enemies[e], myEnemiesAnimFrames[e]);
+            }
             this.enemies[e].currentAnimation = this.enemies[e].animations.idle;
             this.enemies[e].currentImg = this.enemies[e].imgs.idle;
+
         }
         return this.enemies;
     },
@@ -23,12 +27,25 @@ var myCharacterEnemies = {
         character.animations.death = new Animation(myPreload.spritesInfo[character.img + "_death"], frames.death.start, frames.death.end);
     },
 
+    generateBossDeathAnimationsInfo: function(character, frames){
+        character.animations.death2 = new Animation(myPreload.spritesInfo[character.img + "_death2"], frames.death2.start, frames.death2.end);
+        character.animations.death3 = new Animation(myPreload.spritesInfo[character.img + "_death3"], frames.death3.start, frames.death3.end);
+        character.animations.death4 = new Animation(myPreload.spritesInfo[character.img + "_death4"], frames.death4.start, frames.death4.end);
+        character.animations.death5 = new Animation(myPreload.spritesInfo[character.img + "_death5"], frames.death5.start, frames.death5.end);
+    },
+
     saveImages: function(character){
         character.imgs.idle = myPreload.images[character.img + "_idle"];
         character.imgs.attack = myPreload.images[character.img + "_attack"];
         character.imgs.damage = myPreload.images[character.img + "_damage"];
         character.imgs.death = myPreload.images[character.img + "_death"];
-    }
+    },
+    saveBossDeathImages: function (character){
+        character.imgs.death2 = myPreload.images[character.img + "_death2"];
+        character.imgs.death3 = myPreload.images[character.img + "_death3"];
+        character.imgs.death4 = myPreload.images[character.img + "_death4"];
+        character.imgs.death5 = myPreload.images[character.img + "_death5"];
+    },
 }
 //rope[deleted, pos, "image name", typeOrder, typeCut, typeRope] 
 //typeOrder = 0 : disordered, 1: ordered
@@ -666,5 +683,9 @@ var myEnemiesAnimFrames = {
         attack: {start: 0, end: 70},
         damage: {start: 0, end: 90},
         death: {start: 0, end: 90},
+        death2: {start: 1, end: 85},
+        death3: {start: 1, end: 80},
+        death4: {start: 1, end: 87},
+        death5: {start: 1, end: 77},
     },
 }
