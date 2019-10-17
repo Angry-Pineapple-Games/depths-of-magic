@@ -179,7 +179,7 @@ var myFade = {
             this.images[name].ctx.globalAlpha = currentTime/timeRange;
             myGameArea.drawInBackground(this.images[name].num, pos, this.images[name].img);
             this.images[name].ctx.globalAlpha = 1;
-        }
+        } else {myGameArea.drawInBackground(this.images[name].num, pos, this.images[name].img);}
     },
     clearImage: function() {
         this.images = {};

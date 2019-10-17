@@ -8,6 +8,8 @@ var myLevel1 = {
     room: {},
     enemiesMax: 4,
     enemiesRandom: [],
+    orderRopesEvent: false,
+    roomsMin: 0,
     roomsMax: 3,
     limitTimePerPatron: 2300,
     start: function () {
@@ -30,8 +32,8 @@ var myLevel1 = {
         myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
         myGameArea.animateInBackground(1, this.sfx.pos, this.sfx.currentImg, this.sfx.currentAnimation, 1);
         myTextManager.drawTextInBackground(1, "hp", [0.18, 0.99], String(this.hero.hp), "#65fe08", 80, "center");
-        myTextManager.drawTextInBackground(1, "", [0.05, 0.05], String(myRoomMechanics.countSwaps)+ " - " + String(myCombatMechanics.countCombats), "#00f9ff", 80, "center");
-        myTextManager.drawTextInBackground(1, "", [0.98, 0.05], String(myScoreManager.currentScore), "#00f9ff", 80, "right");
+        myTextManager.drawTextInBackground(1, "roomCombat", [0.02, 0.05], String(myRoomMechanics.countSwaps)+ " - " + String(myCombatMechanics.countCombats), "#00f9ff", 80, "left");
+        myTextManager.drawTextInBackground(1, "score", [0.98, 0.05], String(myScoreManager.currentScore), "#00f9ff", 80, "right");
 
         if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
             myGameArea.resizeBackground(myPreload.images.grid, 2);
@@ -44,6 +46,8 @@ var myLevel1 = {
             myGameArea.resizeBackground(myPreload.images.gridBlocked, 2);
             myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.gridNodes);
+            if(this.orderRopesEvent) { myTextManager.drawTextInBackground(2, "remember", [0.5, 0.43], "", "black", 80, "center", true, 0.5);}
+            else {myTextManager.drawTextInBackground(2, "stop", [0.5, 0.43], "", "black", 80, "center", true, 0.5);}
         }
 
         if (myGameManager.pause) {//si el juego esta en pausa

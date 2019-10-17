@@ -74,8 +74,11 @@ var myGameMechanics = {
         this.gridRopes = enemy.gridRopes[enemy.gridRopeNow];
         if (this.gridRopes[0][3] === 1) { //si es una cuerda especial
             this.un_blockInputs();
+            myGame.scenes[myGame.scene].orderRopesEvent = true;
             myGameManager.pauseTimers("timersSwap");
             this.generateGridWithOrder();
+        } else {
+            myFade.addImage(myPreload.images.gridBlocked, "gridBlocked", Date.now(), 2)
         }
     },
     generateGridWithOrder: function () {
@@ -130,6 +133,8 @@ var myGameMechanics = {
             myInputsManager.blocked = false;
             myGameManager.resumeTimers("timersSwap");
             myGameManager.clearTimers("timersOrderPattern");
+            myFade.addImage(myPreload.images.gridBlocked, "gridBlocked", Date.now(), 2)
+            myGame.scenes[myGame.scene].orderRopesEvent = false;
         }
     },
     deleteRope: function (gridRope) { //elimina la cuerda analizando los tracks con el mapa de seguimiento
@@ -277,7 +282,6 @@ var myCombatMechanics = {
         myCutMechanics.concatenatedCuts = 1;
         myGameMechanics.timeOrder = 0;
         myGameManager.addTimer(this.updateState, this.scene.limitTimePerPatron, "timersSwap");
-        myFade.addImage(myPreload.images.gridBlocked, "gridBlocked", Date.now(), 2)
         myGameMechanics.generateGridRopes(this.scene.enemy);
         if (this.debug) { console.log("SwapPattern"); }
     },
@@ -428,7 +432,7 @@ var myRoomMechanics = {
         this.scene.hero.buff = 0;
         this.enemiesRandomArray = myGameMechanics.generateArrayRandomOrder(this.scene.enemiesMax, true);
         if (this.countSwaps++ < this.nRooms) {
-            this.scene.room = this.scene.rooms[Math.floor(Math.random() * this.scene.roomsMax)];
+            this.scene.room = this.scene.rooms[this.scene.roomsMin + this.countSwaps-1];
             if (this.debug) { console.log("SwapRoom"); }
             myCombatMechanics.startCombat(this.scene);
         } else { myGame.swapScene(); }

@@ -9,8 +9,10 @@ myTextManager = {
         if (this.langVersion === 'english') { this.texts = myEnglishVersion; }
         else if (this.langVersion === 'spanish') { this.texts = mySpanishVersion; }
     },
-    drawTextInBackground: function (num, text, pos, text1="", color = "white", textHeight = 20, textAlign = "center", isEventualText = false) {
-        if (isEventualText && this.eventualText[0] > 0) {//si es un texto eventual ira desapareciendo poco a poco
+    drawTextInBackground: function (num, text, pos, text1="", color = "white", textHeight = 20, textAlign = "center", isEventualText = false, fixedAlpha=1) {
+        if(isEventualText && typeof this.texts[text] !== "undefined") {
+            myGameArea.drawTextInBackground(num, this.texts[text] + text1, pos, color, textHeight, textAlign, fixedAlpha);
+        }else if (isEventualText && this.eventualText[0] > 0) {//si es un texto eventual ira desapareciendo poco a poco
             myGameArea.drawTextInBackground(num, text + text1, pos, color, textHeight, textAlign, this.eventualText[0]);
         } else if (typeof this.texts[text] === "undefined" && !isEventualText) {//si no es eventual y tampoco tiene traduccion
             myGameArea.drawTextInBackground(num, text + text1, pos, color, textHeight, textAlign);
@@ -45,7 +47,11 @@ myEnglishVersion = {
     text22: "   the abyss also gazes into you.",
     author: "Friderich Nietzsche",
     gameOver: "GAME OVER",
-    thanks: "The whole development team thanks you"
+    thanks: "The whole development team thanks you",
+    stop: "STOP",
+    remember: "REMEMBER",
+    score: "Score: ",
+    roomCombat: "Room - Combat: "
 }
 
 mySpanishVersion = {
@@ -67,5 +73,9 @@ mySpanishVersion = {
     text22: " el abismo a su vez mira dentro de ti.",
     author: "Friderich Nietzsche",
     gameOver: "FIN DE PARTIDA",
-    thanks: "Todo el equipo de desarrollo te da las gracias"
+    thanks: "Todo el equipo de desarrollo te da las gracias",
+    stop: "PARA",
+    remember: "RECUERDA",
+    score: "Puntos: ",
+    roomCombat: "Sala - Combate: "
 }
