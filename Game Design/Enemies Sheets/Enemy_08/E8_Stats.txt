@@ -1,4 +1,4 @@
-Name: Wrotalus
+Name: Gumlisar
 
 HP: 240
 

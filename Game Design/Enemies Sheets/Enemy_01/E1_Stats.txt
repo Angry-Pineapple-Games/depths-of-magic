@@ -1,4 +1,4 @@
-Name: Raygler
+Name: Glanxyor
 
 HP: 90
 
