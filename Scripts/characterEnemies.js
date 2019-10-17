@@ -311,14 +311,14 @@ var myEnemiesProperties = {
         ap: 55,
         dp: 70,
         defeatScore: 50,
-        img: 'enemy1',
+        img: 'enemy5',
         currentImg:{},
         imgs: {},
         currentAnimation: {},
         animations:{},
         pos: [950, 440],
         sfxPos:[0, 0],
-        resize: 2.5,
+        resize: 1,
         gridRopeNow: -1,
         gridRopes: [[
             [0,7, "ropeCounterV",1,0,0],
@@ -655,10 +655,10 @@ var myEnemiesAnimFrames = {
     },
     //FALTA
     5:{
-        idle: {start: 0, end: 48},
-        attack: {start: 0, end: 96},
-        damage: {start: 0, end: 39},
-        death: {start: 0, end: 58},
+        idle: {start: 0, end: 15},
+        attack: {start: 0, end: 15},
+        damage: {start: 0, end: 13},
+        death: {start: 0, end: 12},
     },
     6:{
         idle: {start: 0, end: 59},

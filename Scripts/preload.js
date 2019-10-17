@@ -357,24 +357,24 @@ var myPreload = {
       width: 0,
       height: 0
     },
-    //Enemy5 FALTA
+    //Enemy5
     enemy5_idle:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_idle.png',
+      src:'Assets/spritesheets/spritesheet_enemy5/spritesheet_enemy5_idle.png',
       width: 0,
       height: 0
     },
     enemy5_damage:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_damage.png',
+      src:'Assets/spritesheets/spritesheet_enemy5/spritesheet_enemy5_damage.png',
       width: 0,
       height: 0
     },
     enemy5_attack:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_attack.png',
+      src:'Assets/spritesheets/spritesheet_enemy5/spritesheet_enemy5_attack.png',
       width: 0,
       height: 0
     },
     enemy5_death:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_death.png',
+      src:'Assets/spritesheets/spritesheet_enemy5/spritesheet_enemy5_death.png',
       width: 0,
       height: 0
     },
@@ -652,21 +652,21 @@ var myPreload = {
       json: spritesheet_enemy4_death,
       frames:[]
     },
-    //Enemy5 FALTA
+    //Enemy5
     enemy5_idle:{
-      json: spritesheet_enemy1_idle,
+      json: spritesheet_enemy5_idle,
       frames:[]
     },
     enemy5_attack:{
-      json: spritesheet_enemy1_attack,
+      json: spritesheet_enemy5_attack,
       frames:[]
     },
     enemy5_damage:{
-      json: spritesheet_enemy1_damage,
+      json: spritesheet_enemy5_damage,
       frames:[]
     },
     enemy5_death:{
-      json: spritesheet_enemy1_death,
+      json: spritesheet_enemy5_death,
       frames:[]
     },
     //Enemy6

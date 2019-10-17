@@ -1,7 +1,7 @@
-{"frames": [
+spritesheet_enemy5_attack = [
 
 {
-	"filename": "1.2.png",
+	"filename": "1.png",
 	"frame": {"x":0,"y":0,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -9,7 +9,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "2.1.png",
+	"filename": "2.png",
 	"frame": {"x":750,"y":0,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -17,7 +17,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "2.2.png",
+	"filename": "3.png",
 	"frame": {"x":1500,"y":0,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -25,7 +25,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "3.1.png",
+	"filename": "4.png",
 	"frame": {"x":2250,"y":0,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -33,7 +33,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "3.2.png",
+	"filename": "5.png",
 	"frame": {"x":0,"y":700,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -41,7 +41,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "4.1.png",
+	"filename": "6.png",
 	"frame": {"x":750,"y":700,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -49,7 +49,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "4.2.png",
+	"filename": "7.png",
 	"frame": {"x":1500,"y":700,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -57,7 +57,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "5.1.png",
+	"filename": "8.png",
 	"frame": {"x":2250,"y":700,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -65,7 +65,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "5.2.png",
+	"filename": "9.png",
 	"frame": {"x":0,"y":1400,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -73,7 +73,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "6.png",
+	"filename": "10.png",
 	"frame": {"x":750,"y":1400,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -81,7 +81,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "7.png",
+	"filename": "11.png",
 	"frame": {"x":1500,"y":1400,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -89,7 +89,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "8.png",
+	"filename": "13.png",
 	"frame": {"x":2250,"y":1400,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -97,7 +97,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "9.png",
+	"filename": "14.png",
 	"frame": {"x":0,"y":2100,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -105,7 +105,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "10.png",
+	"filename": "15.png",
 	"frame": {"x":750,"y":2100,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -113,7 +113,7 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "11.png",
+	"filename": "16.png",
 	"frame": {"x":1500,"y":2100,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
@@ -121,20 +121,10 @@
 	"sourceSize": {"w":750,"h":700}
 },
 {
-	"filename": "12.png",
+	"filename": "17.png",
 	"frame": {"x":2250,"y":2100,"w":750,"h":700},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":750,"h":700},
 	"sourceSize": {"w":750,"h":700}
-}],
-"meta": {
-	"app": "https://www.codeandweb.com/texturepacker",
-	"version": "1.0",
-	"image": "spritesheet_mariposa_idle.png",
-	"format": "RGBA8888",
-	"size": {"w":3000,"h":2800},
-	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:a0dd776f92f7965938648d484ec79058:70448b8f950d0f0ed15f0cede2859ea0:c7167f2e00d5f5dd819bdc6f92f75d9e$"
-}
-}
+}]
