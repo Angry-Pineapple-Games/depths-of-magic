@@ -1,0 +1,7 @@
+Animaciones ojos:
+
+Diemnsiones actuales: 1004,60 x 502,30
+Dimensiones originales: 1004,60 x 502,30
+
+Esta animación dura simplemente 5 frames (empieza en el frame 330 -segundo 11 de la cinemática- hasta el frame 335), a partir de entonces, solo se muestra este último frame (con los ojos completamente abiertos) hasta el frame 450 -segundo 15-.
+Se puede hacer que los ojos se muevan ligeramente arriba y abajo para simular la respiración del protagonista, si es fácil de programar.

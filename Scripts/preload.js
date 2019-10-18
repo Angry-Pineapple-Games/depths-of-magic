@@ -518,7 +518,33 @@ var myPreload = {
       src:'Assets/spritesheets/spritesheet_intro/spritesheet_intro_hero.png',
       width:0,
       height:0
+    },
+    end_fist:{
+      src:'Assets/spritesheets/spritesheet_end/spritesheet_end_fist.png',
+      width:0,
+      height:0,
+    },
+    end_aura:{
+      src:'Assets/spritesheets/spritesheet_end/spritesheet_end_aura.png',
+      width:0,
+      height:0,
+    },
+    end_eyes:{
+      src:'Assets/spritesheets/spritesheet_end/spritesheet_end_eyes.png',
+      width:0,
+      height:0,
+    },
+    end_fist_light:{
+      src:"Assets/end_fist_light.png",
+      width:1920,
+      height:1440
+    },
+    end_hand:{
+      src:"Assets/end_hand.png",
+      width:1587,
+      height:892
     }
+
   },
   spritesInfo: {
     damage: {
@@ -797,6 +823,18 @@ var myPreload = {
     },
     intro_hero:{
       json:spritesheet_intro_hero,
+      frames:[]
+    },
+    end_aura:{
+      json:spritesheet_end_aura,
+      frames:[]
+    },
+    end_eyes:{
+      json:spritesheet_end_eyes,
+      frames:[]
+    },
+    end_fist:{
+      json:spritesheet_end_fist,
       frames:[]
     }
   },

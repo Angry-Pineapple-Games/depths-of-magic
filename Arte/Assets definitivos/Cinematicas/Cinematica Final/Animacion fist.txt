@@ -1,0 +1,10 @@
+Animacion puño:
+
+Dimensiones actuales: 124,45 x 203,60
+Dimensiones originales: 619,85 x 1013,70
+
+Duración 1 bucle: 60 fotogramas
+Duración total: 60 fotogramas (seg 4 - seg 6)
+
+A partir del segundo 6 hasta el segundo 8, el puño no cambia (es el mismo frame), pero sigue moviéndose linealmente hacia arriba.
+De igual forma, el .png "fist light" se mueve linealmente hacia arriba junto con el puño desde el segundo 4 hasta el segundo 8.

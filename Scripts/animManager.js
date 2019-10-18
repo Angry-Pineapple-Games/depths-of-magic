@@ -94,15 +94,18 @@ class Animation{
         this.length = this.framesInfo.length;
         this.hidden = false;
         this.callback = this.reset;
+        this.paused = false;
     }
     animate(ctx, img, x, y, resize){
         if(!this.hidden){
             myAnimManager.drawFrame(ctx, img, this.framesInfo, this.currentFrame, x, y, resize);
             //La animacion solo avanza en frames impares para que vaya a 30fps mientras el game loop va a 60fps
-            if(!myGameManager.pause){
+            if(!myGameManager.pause && !this.paused){
                 this.currentFrame++;
             }
-            if(this.currentFrame >= this.length){
+            if((this.currentFrame >= this.length) && !this.paused){
+                this.pause();
+                this.currentFrame = this.length - 1;
                 this.callback();
             }
         }
@@ -110,9 +113,13 @@ class Animation{
     reset(){
         this.currentFrame = 0;
         this.hidden = false;
+        this.paused = false;
     }
     hide(){
         this.hidden = true;
+    }
+    pause(){
+        this.paused = true;
     }
 }
 

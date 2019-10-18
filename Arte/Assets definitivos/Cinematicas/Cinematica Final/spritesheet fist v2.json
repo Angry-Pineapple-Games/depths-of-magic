@@ -1,0 +1,491 @@
+﻿{"frames": [
+
+{
+	"filename": "Animacion puño instancia 10000",
+	"frame": {"x":0,"y":0,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10001",
+	"frame": {"x":819,"y":0,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10002",
+	"frame": {"x":1638,"y":0,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10003",
+	"frame": {"x":2457,"y":0,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10004",
+	"frame": {"x":3276,"y":0,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10005",
+	"frame": {"x":4095,"y":0,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10006",
+	"frame": {"x":4914,"y":0,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10007",
+	"frame": {"x":5733,"y":0,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10008",
+	"frame": {"x":6552,"y":0,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10009",
+	"frame": {"x":7371,"y":0,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10010",
+	"frame": {"x":0,"y":899,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10011",
+	"frame": {"x":819,"y":899,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10012",
+	"frame": {"x":1638,"y":899,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10013",
+	"frame": {"x":2457,"y":899,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10014",
+	"frame": {"x":3276,"y":899,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10015",
+	"frame": {"x":4095,"y":899,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10016",
+	"frame": {"x":4914,"y":899,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10017",
+	"frame": {"x":5733,"y":899,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10018",
+	"frame": {"x":6552,"y":899,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10019",
+	"frame": {"x":7371,"y":899,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10020",
+	"frame": {"x":0,"y":1798,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10021",
+	"frame": {"x":819,"y":1798,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10022",
+	"frame": {"x":1638,"y":1798,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10023",
+	"frame": {"x":2457,"y":1798,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10024",
+	"frame": {"x":3276,"y":1798,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10025",
+	"frame": {"x":4095,"y":1798,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10026",
+	"frame": {"x":4914,"y":1798,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10027",
+	"frame": {"x":5733,"y":1798,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10028",
+	"frame": {"x":6552,"y":1798,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10029",
+	"frame": {"x":7371,"y":1798,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10030",
+	"frame": {"x":0,"y":2697,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10031",
+	"frame": {"x":819,"y":2697,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10032",
+	"frame": {"x":1638,"y":2697,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10033",
+	"frame": {"x":2457,"y":2697,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10034",
+	"frame": {"x":3276,"y":2697,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10035",
+	"frame": {"x":4095,"y":2697,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10036",
+	"frame": {"x":4914,"y":2697,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10037",
+	"frame": {"x":5733,"y":2697,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10038",
+	"frame": {"x":6552,"y":2697,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10039",
+	"frame": {"x":7371,"y":2697,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10040",
+	"frame": {"x":0,"y":3596,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10041",
+	"frame": {"x":819,"y":3596,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10042",
+	"frame": {"x":1638,"y":3596,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10043",
+	"frame": {"x":2457,"y":3596,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10044",
+	"frame": {"x":3276,"y":3596,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10045",
+	"frame": {"x":4095,"y":3596,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10046",
+	"frame": {"x":4914,"y":3596,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10047",
+	"frame": {"x":5733,"y":3596,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10048",
+	"frame": {"x":6552,"y":3596,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10049",
+	"frame": {"x":7371,"y":3596,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10050",
+	"frame": {"x":0,"y":4495,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10051",
+	"frame": {"x":819,"y":4495,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10052",
+	"frame": {"x":1638,"y":4495,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10053",
+	"frame": {"x":2457,"y":4495,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10054",
+	"frame": {"x":3276,"y":4495,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10055",
+	"frame": {"x":4095,"y":4495,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10056",
+	"frame": {"x":4914,"y":4495,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10057",
+	"frame": {"x":5733,"y":4495,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10058",
+	"frame": {"x":6552,"y":4495,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}
+,{
+	"filename": "Animacion puño instancia 10059",
+	"frame": {"x":7371,"y":4495,"w":819,"h":899},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":819,"h":899},
+	"sourceSize": {"w":819,"h":899}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "18.0.2.126",
+	"image": "spritesheet fist v2.png",
+	"format": "RGBA8888",
+	"size": {"w":8192,"h":6000},
+	"scale": "1"
+}
+}

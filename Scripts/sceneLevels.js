@@ -148,10 +148,10 @@ var myIntro = {
         myFade.in(1);
         let that = myIntro;
         that.showText = false;
+        posAnim= [-100, -400];
         that.currentAnimation = new Animation(myPreload.spritesInfo.intro_fire, 0, 59);
         that.currentAnimation.reset();
         that.animImg = myPreload.images.intro_fire;
-        posAnim= [-100, -400];
         that.animResize = 3;
         that.showAnim = true;
         myGameManager.addTimer(that.startSequence3, 3000, "timersSwap");
@@ -213,12 +213,26 @@ var myTransitionScene = {
 
 var myEnding = {
     displayed: false,
+    text1: "",
+    text2:"",
+    text3:"",
+    currentAnimation: {},
+    animImg: {},
+    extraImg:{},
+    animResize: 2,
+    posAnim: [0, 0],
+    posExtraImg: [0,0],
+    posText: [0.45, 0.3],
+    showText: false,
+    showAnim: false,
+    showExtraImg: false,
     start: function () {
         if (this.displayed) { myGame.swapScene(); }
         else {
             myGameManager.clearTimers("all");
             myGameArea.editTams(1);
             this.reproduced = true;
+            this.startSequence1();
         }
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar
@@ -226,9 +240,84 @@ var myEnding = {
     draw: function (interp, ctx1, ctx2, cnv1, cnv2) {//pintar el frame
         myGameArea.resizeBackground(myPreload.images.backgroundBlack, 1);
         //animacion ending
+        if(this.showExtraImg){
+            myGameArea.drawInBackground(1, this.posExtraImg, this.extraImg);
+        }
+        if(this.showAnim){
+            myGameArea.animateInBackground(1, this.posAnim, this.animImg, this.currentAnimation, this.animResize);
+        }
+        
+        if(this.showText){
+            myTextManager.drawTextInBackground(1, this.text1, this.posText, "", "white", 60);
+            myTextManager.drawTextInBackground(1, this.text2, [this.posText[0], this.posText[1] + 0.1], "", "white", 60);
+            myTextManager.drawTextInBackground(1, this.text3, [this.posText[0], this.posText[1] + 0.2], "", "white", 40);
+        }
         //cuando termine pasar al siguiente level (ya esta implementado que al soltar el raton se pasa)
         myTextManager.drawTextInBackground(1, "clickToSkip", [0.9, 0.95], "", "white", 50, "center");
         myFade.fade(1);
+    },
+    startSequence1: function(){
+        myFade.in(1);
+        let that = myEnding;
+        that.posAnim= [700, 0];
+        that.currentAnimation = new Animation(myPreload.spritesInfo.end_aura, 0, 59);
+        that.currentAnimation.reset();
+        that.animImg = myPreload.images.end_aura;
+        that.animResize = 1.8;
+        that.showAnim = true;
+        that.extraImg = myPreload.images.end_hand;
+        that.posExtraImg = [0, 550];
+        that.showExtraImg = true;
+        that.showText = false;
+        myGameManager.addTimer(that.startSequence2, 2000, "timersSwap");
+    },
+    startSequence2:function(){
+        let that = myEnding;
+        that.posText = [0.45, 0.3];
+        that.text1 = "text11";
+        that.text2 = "text12";
+        that.text3 = "";
+        that.showText = true;
+        myGameManager.addTimer(that.startSequence3, 2000, "timersSwap");
+    },
+    startSequence3:function(){
+        let that = myEnding;
+        myFade.in(1);
+        that.showText = false;
+        that.showExtraImg = false;
+        that.posAnim = [-1000, -1340];
+        that.animResize = 4.6;
+        that.currentAnimation = new Animation(myPreload.spritesInfo.end_fist, 0, 59);
+        that.currentAnimation.reset();
+        that.animImg = myPreload.images.end_fist;
+        that.currentAnimation.callback = function(){
+            myFade.in(1);
+        }
+        myGameManager.addTimer(that.startSequence4, 4000, "timersSwap");
+    },
+    startSequence4:function(){
+        myFade.in(1);
+        let that = myEnding;
+        that.showAnim = false;
+        that.showExtraImg = false;
+        that.posText = [0.45, 0.4];
+        that.text1 = "text21";
+        that.text2 = "text22";
+        that.text3 = "author";
+        that.showText = true;
+        myGameManager.addTimer(that.startSequence5, 3000, "timersSwap");
+    },
+    startSequence5:function(){
+        let that = myEnding;
+        that.showText = false;
+        that.animResize = 1;
+        that.posAnim = [500, 500];
+        that.currentAnimation = new Animation(myPreload.spritesInfo.end_eyes, 0, 4);
+        that.animImg = myPreload.images.end_eyes;
+        that.currentAnimation.reset();
+        that.currentAnimation.callback = function(){
+        }
+        that.showAnim = true;
     }
 }
 
