@@ -36,7 +36,7 @@ var myGameMechanics = {
             for (x = 2; x < trace.length; x++) {
                 ctx2.lineTo(trace[x][0], trace[x][1]);
             }
-            ctx2.stroke();
+            if(!myInputsManager.blocked) {ctx2.stroke();}
         });
         if (that.traces.length > 0 && that.traces[0][0][0] <= 0) {
             that.traces.shift();
@@ -281,7 +281,8 @@ var myCombatMechanics = {
         myCutMechanics.totalRopes = 0;
         myCutMechanics.concatenatedCuts = 1;
         myGameMechanics.timeOrder = 0;
-        myGameManager.addTimer(this.updateState, this.scene.limitTimePerPatron, "timersSwap");
+        if (this.countSwaps++ === 0) {myGameManager.addTimer(this.updateState, this.scene.limitTimePerPatron + 500, "timersSwap");}
+        else {myGameManager.addTimer(this.updateState, this.scene.limitTimePerPatron, "timersSwap");}
         myGameMechanics.generateGridRopes(this.scene.enemy);
         if (this.debug) { console.log("SwapPattern"); }
     },
@@ -289,6 +290,7 @@ var myCombatMechanics = {
         myFade.in(1);
         this.countSwaps = 0;
         this.patternsRandomArray = myGameMechanics.generateArrayRandomOrder(this.patternsPerEnemy);
+        mySoundManager.startSound("bassBell", false, 0.8);
         if (this.countCombats++ < this.nEnemies) {
             this.scene.enemy = myGameMechanics.generateEnemy(this.scene.enemies, this.scene.enemiesMax, this.nEnemies);
             if (this.debug) { console.log("SwapEnemy"); }

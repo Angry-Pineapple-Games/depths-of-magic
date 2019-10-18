@@ -99,7 +99,7 @@ var myGameArea = {
         else { console.log("Error en canvasManager/drawInBackground/num"); }
         if (bg !== undefined) {
             let resizePerOne = this.resizeBackgroundPerOne(bg);
-            bg.ctx.drawImage(img, bg.drawPosX + pos[0] * resizePerOne, bg.drawPosY + pos[1]*resizePerOne, img.initWidth * resizePerOne, img.initHeight * resizePerOne);
+            bg.ctx.drawImage(img, bg.drawPosX + pos[0] * bg.width, bg.drawPosY + pos[1] * bg.height, img.initWidth * resizePerOne, img.initHeight * resizePerOne);
         }
     },
     drawTextInBackground: function (num, text, pos, color = "white", textHeight = 20, textAlign = "center", textAlpha=1) {

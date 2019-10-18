@@ -27,7 +27,8 @@ var myLoading = {
 
 var myPreload = {
   images: {},
-  sources: {
+  audios: {},
+  sourcesI: {
     grid: {
       src: 'Assets/combat/grid.png',
       width: 640,
@@ -485,23 +486,23 @@ var myPreload = {
     //UI Icons
     health_icon:{
       src:'Assets/UI/healthIcon.png',
-      width: 120,
-      height: 120
+      width: 80,
+      height: 80
     },
     swordShield_icon:{
       src:'Assets/UI/swordShieldIcon.png',
-      width: 120,
-      height: 120
+      width: 80,
+      height: 80
     },
     buff_icon:{
       src: 'Assets/UI/BuffIcon.png',
-      width: 120,
-      height: 120
+      width: 80,
+      height: 80
     },
     debuff_icon:{
       src:'Assets/UI/DebuffIcon.png',
-      width: 120,
-      height: 120
+      width: 80,
+      height: 80
     }
   },
   spritesInfo: {
@@ -775,27 +776,54 @@ var myPreload = {
       frames:[]
     }
   },
+  sourcesA: {
+    menu: {
+      src: 'Assets/sonido/menu.ogg'
+    },
+    bassBell: {
+      src: 'Assets/sonido/bassCampana.ogg'
+    }
+  },
   loadImages: function (callback) {
+    let that = myPreload;
     let loadedImages = 0;
     let numImages = 0;
-    for (var src in this.sources) {
+    for (var src in this.sourcesI) {
       numImages++;
     }
-    for (var src in this.sources) {
+    for (var src in this.sourcesI) {
       this.images[src] = new Image();
       this.images[src].decoding = 'async';
       this.images[src].onload = function () {
-        myGameArea.resizeBackground(myLoading.images[Math.trunc((loadedImages / numImages) * myLoading.numImages)], 1);
+        myGameArea.resizeBackground(myLoading.images[Math.trunc((loadedImages / numImages) * myLoading.numImages * 0.5)], 1);
         if (++loadedImages >= numImages) {
-          callback();
+          that.loadAudio(callback, loadedImages, numImages);
         }
       };
-      this.images[src].src = this.sources[src].src;
-      this.images[src].initWidth = this.sources[src].width;
-      this.images[src].initHeight = this.sources[src].height;
+      this.images[src].src = this.sourcesI[src].src;
+      this.images[src].initWidth = this.sourcesI[src].width;
+      this.images[src].initHeight = this.sourcesI[src].height;
     }
     for (var spr in this.spritesInfo) {
       this.spritesInfo[spr].frames = myAnimManager.getFrameInfoFromJSON(this.spritesInfo[spr].json);
+    }
+  },
+  loadAudio: function(callback, loadedImages, numImages) {
+    let loadedAudios = 0;
+    let numAudios = 0;
+    for (var src in this.sourcesA) {
+      numAudios++;
+    }
+    for (var src in this.sourcesA) {
+      this.audios[src] = new Audio(this.sourcesA[src].src);
+      this.audios[src].oncanplaythrough = function () {
+        myGameArea.resizeBackground(myLoading.images[Math.trunc(((loadedImages+loadedAudios) / (numImages+numAudios)) * myLoading.numImages)], 1);
+        if (++loadedAudios == numAudios) {
+          myTextManager.drawTextInBackground(1, "clickToStart", [0.98, 0.95], "", "white", 25, "right");
+          $(document).click(startGame);
+        }
+      };
+      this.audios[src].load();
     }
   }
 }

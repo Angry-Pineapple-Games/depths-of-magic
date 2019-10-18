@@ -29,6 +29,7 @@ myTextManager = {
 }
 
 myEnglishVersion = {
+    clickToStart: "Press to start",
     clickToSkip: "Press to skip",
     clickToConinue: "Press to continue",
     clickToRestart: "Press to restart",
@@ -55,6 +56,7 @@ myEnglishVersion = {
 }
 
 mySpanishVersion = {
+    clickToStart: "Pulsa para empezar",
     clickToSkip: "Pulsa para omitir",
     clickToConinue: "Pulsa para continuar",
     clickToRestart: "Pulsa para reiniciar",
