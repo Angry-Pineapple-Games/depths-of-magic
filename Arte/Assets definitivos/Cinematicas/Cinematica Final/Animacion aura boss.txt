@@ -1,0 +1,7 @@
+Animacion Aura:
+
+Dimensaiones actuales: 137,50 x 415,65
+Dimensiones originales: 280,15 x 846,75
+
+Duracion 1 bucle: 60 fotogramas
+Duracion total: 120 fotogramas (seg 0 - seg 4)
