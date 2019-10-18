@@ -150,27 +150,27 @@ var myPreload = {
     },
     //SFX
     damage: {
-      src: 'Assets/spritesheets/spritesheet_damage.png',
+      src: 'Assets/spritesheets/spritesheet_sfx/spritesheet_damage.png',
       width: 1800,
       height: 2400
     },
     heal: {
-      src: 'Assets/spritesheets/spritesheet_curacion.png',
+      src: 'Assets/spritesheets/spritesheet_sfx/spritesheet_curacion.png',
       width: 1800,
       height: 2400
     },
     buff: {
-      src: 'Assets/spritesheets/spritesheet_buff.png',
+      src: 'Assets/spritesheets/spritesheet_sfx/spritesheet_buff.png',
       width: 1800,
       height: 2400
     },
     debuff: {
-      src: 'Assets/spritesheets/spritesheet_debuff.png',
+      src: 'Assets/spritesheets/spritesheet_sfx/spritesheet_debuff.png',
       width: 1800,
       height: 2400
     },
     superbuff: {
-      src: 'Assets/spritesheets/spritesheet_superbuff.png',
+      src: 'Assets/spritesheets/spritesheet_sfx/spritesheet_superbuff.png',
       width: 1800,
       height: 2400
     },
@@ -252,24 +252,24 @@ var myPreload = {
       width: 0,
       height: 0
     },
-    //Enemy0 FALTA
+    //Enemy0
     enemy0_idle:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_idle.png',
+      src:'Assets/spritesheets/spritesheet_enemy0/spritesheet_enemy0_idle.png',
       width: 0,
       height: 0
     },
     enemy0_damage:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_damage.png',
+      src:'Assets/spritesheets/spritesheet_enemy0/spritesheet_enemy0_damage.png',
       width: 0,
       height: 0
     },
     enemy0_attack:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_attack.png',
+      src:'Assets/spritesheets/spritesheet_enemy0/spritesheet_enemy0_attack.png',
       width: 0,
       height: 0
     },
     enemy0_death:{
-      src:'Assets/spritesheets/spritesheet_enemy1/spritesheet_enemy1_death.png',
+      src:'Assets/spritesheets/spritesheet_enemy0/spritesheet_enemy0_death.png',
       width: 0,
       height: 0
     },
@@ -502,6 +502,22 @@ var myPreload = {
       src:'Assets/UI/DebuffIcon.png',
       width: 120,
       height: 120
+    },
+    //Intro/Ending
+    intro_background:{
+      src:'Assets/background/intro_background.png',
+      width: 1920,
+      height: 1440,
+    },
+    intro_fire:{
+      src:'Assets/spritesheets/spritesheet_intro/spritesheet_intro_fire.png',
+      width:0,
+      height:0
+    },
+    intro_hero:{
+      src:'Assets/spritesheets/spritesheet_intro/spritesheet_intro_hero.png',
+      width:0,
+      height:0
     }
   },
   spritesInfo: {
@@ -588,21 +604,21 @@ var myPreload = {
       json: spritesheet_hero3_victory,
       frames:[]
     },
-    //Enemy0 FALTA
+    //Enemy0
     enemy0_idle:{
-      json: spritesheet_enemy1_idle,
+      json: spritesheet_enemy0_idle,
       frames:[]
     },
     enemy0_attack:{
-      json: spritesheet_enemy1_attack,
+      json: spritesheet_enemy0_attack,
       frames:[]
     },
     enemy0_damage:{
-      json: spritesheet_enemy1_damage,
+      json: spritesheet_enemy0_damage,
       frames:[]
     },
     enemy0_death:{
-      json: spritesheet_enemy1_death,
+      json: spritesheet_enemy0_death,
       frames:[]
     },
     //Enemy1
@@ -772,6 +788,15 @@ var myPreload = {
     },
     enemy9_death5:{
       json: spritesheet_enemy9_death5,
+      frames:[]
+    },
+    //Intro/Ending
+    intro_fire:{
+      json:spritesheet_intro_fire,
+      frames:[]
+    },
+    intro_hero:{
+      json:spritesheet_intro_hero,
       frames:[]
     }
   },

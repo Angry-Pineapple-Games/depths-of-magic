@@ -7,7 +7,6 @@ var myCharacterEnemies = {
         }
         for (var e=this.enemies.length; e<scene.enemiesMax; e++) {
             this.enemies.push(myEnemiesProperties[String(e)]);
-            //this.enemies[e].img = myPreload.images[this.enemies[e].img]
             this.saveImages(this.enemies[e]);
             this.generateAnimationsInfo(this.enemies[e], myEnemiesAnimFrames[e]);
             if(this.enemies[e].name === "The Abyss"){
@@ -64,14 +63,14 @@ var myEnemiesProperties = {
         ap: 35,
         dp: 25,
         defeatScore: 20,
-        img: 'enemy8',
+        img: 'enemy0',
         currentImg:{},
         imgs: {},
         currentAnimation: {},
         animations:{},
-        pos: [950, 480],
-        sfxPos:[0, 0],
-        resize: 2,
+        pos: [1000, 930],
+        sfxPos:[0, -300],
+        resize: 0.6,
         gridRopeNow: -1,
         gridRopes: [[
             [0,7, "ropeCounterV",0,0,0],
@@ -625,10 +624,10 @@ var myEnemiesProperties = {
 //Frames son placeholders
 var myEnemiesAnimFrames = {
     0: {
-        idle: {start: 0, end: 39},
-        attack: {start: 0, end: 60},
-        damage: {start: 0, end: 30},
-        death: {start: 0, end: 50},
+        idle: {start: 0, end: 15},
+        attack: {start: 0, end: 15},
+        damage: {start: 0, end: 15},
+        death: {start: 0, end: 13},
     },
     1: {
         idle: {start: 0, end: 48},

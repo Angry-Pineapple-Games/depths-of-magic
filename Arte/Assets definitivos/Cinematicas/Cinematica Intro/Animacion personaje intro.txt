@@ -1,0 +1,7 @@
+Animacion personaje:
+
+Dimensiones actuales: 264,50 x 381,40
+Dimensiones originales: 377,10 x 543,70
+
+Duración 1 bucle: 25 fotogramas
+Duración total: 150 fotogramas (seg 10 - seg 15)
