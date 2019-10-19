@@ -231,7 +231,6 @@ var myEnding = {
     displayed: false,
     text1: "",
     text2:"",
-    text3:"",
     currentAnimation: {},
     animImg: {},
     extraImg:{},
@@ -269,7 +268,6 @@ var myEnding = {
         if(this.showText){
             myTextManager.drawTextInBackground(1, this.text1, this.posText, "", "white", 100, "center");
             myTextManager.drawTextInBackground(1, this.text2, [this.posText[0], this.posText[1] + 0.1], "", "white", 100, "center");
-            myTextManager.drawTextInBackground(1, this.text3, [this.posText[0] + 0.12, this.posText[1] + 0.2], "", "white", 90, "center");
         }
         
         myTextManager.drawTextInBackground(1, this.clickTo[0], this.clickTo[2], "", this.clickTo[1], 80, this.clickTo[3]);
@@ -296,7 +294,6 @@ var myEnding = {
         that.posText = [0.5, 0.75];
         that.text1 = "text11";
         that.text2 = "text12";
-        that.text3 = "";
         that.showText = true;
         myGameManager.addTimer(that.startSequence3, 2000, "timersSwap");
     },
@@ -323,7 +320,6 @@ var myEnding = {
         that.posText = [0.45, 0.4];
         that.text1 = "text21";
         that.text2 = "text22";
-        that.text3 = "author";
         that.showText = true;
         myGameManager.addTimer(that.startSequence5, 3000, "timersSwap");
     },
@@ -332,10 +328,11 @@ var myEnding = {
         let that = myEnding;
         that.showText = false;
         that.animResize = 1;
-        that.posAnim = [500, 500];
+        that.posAnim = [450, 500];
         that.currentAnimation = new Animation(myPreload.spritesInfo.end_eyes, 0, 4);
         that.animImg = myPreload.images.end_eyes;
         that.currentAnimation.reset();
+        that.currentAnimation.callback = function(){/*callback vacio para que pause*/};
         that.showAnim = true;
         that.clickTo = ["clickToConinue", "white",[0.5,0.75], "center"];
     }
