@@ -46,25 +46,25 @@ var myLevel1 = {
         if (this.showBuffHero && this.showDebuffHero) {//si el heroe ha obtenido buff y debuff
             myGameArea.drawInBackground(1, [0.03, 0.94], myPreload.images.buff_icon);
             myGameArea.drawInBackground(1, [0.08, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.13, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.13, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showBuffHero) {//si solo buff
-            myGameArea.drawInBackground(1, [0.03, 0.94], myPreload.images.buff_icon);
-            myGameArea.drawInBackground(1, [0.13, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.08, 0.94], myPreload.images.buff_icon);
+            myGameArea.drawInBackground(1, [0.13, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showDebuffHero) {//si solo debuff
             myGameArea.drawInBackground(1, [0.08, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.13, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.13, 0.942], myPreload.images.swordShield_icon);
         }
 
         if (this.showBuffEnemy && this.showDebuffEnemy) {//si el enemigo ha obtenido buff y debuff
             myGameArea.drawInBackground(1, [0.82, 0.94], myPreload.images.buff_icon);
             myGameArea.drawInBackground(1, [0.87, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.92, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.92, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showBuffEnemy) {//si solo buff
-            myGameArea.drawInBackground(1, [0.82, 0.94], myPreload.images.buff_icon);
-            myGameArea.drawInBackground(1, [0.92, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.87, 0.94], myPreload.images.buff_icon);
+            myGameArea.drawInBackground(1, [0.92, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showDebuffEnemy) {//si solo debuff
             myGameArea.drawInBackground(1, [0.87, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.92, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.92, 0.942], myPreload.images.swordShield_icon);
         }
 
         if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
@@ -380,25 +380,25 @@ var myLevel2 = {
         if (this.showBuffHero && this.showDebuffHero) {//si el heroe ha obtenido buff y debuff
             myGameArea.drawInBackground(1, [0.03, 0.94], myPreload.images.buff_icon);
             myGameArea.drawInBackground(1, [0.08, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.13, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.13, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showBuffHero) {//si solo buff
-            myGameArea.drawInBackground(1, [0.03, 0.94], myPreload.images.buff_icon);
-            myGameArea.drawInBackground(1, [0.13, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.08, 0.94], myPreload.images.buff_icon);
+            myGameArea.drawInBackground(1, [0.13, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showDebuffHero) {//si solo debuff
             myGameArea.drawInBackground(1, [0.08, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.13, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.13, 0.942], myPreload.images.swordShield_icon);
         }
 
         if (this.showBuffEnemy && this.showDebuffEnemy) {//si el enemigo ha obtenido buff y debuff
             myGameArea.drawInBackground(1, [0.82, 0.94], myPreload.images.buff_icon);
             myGameArea.drawInBackground(1, [0.87, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.92, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.92, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showBuffEnemy) {//si solo buff
-            myGameArea.drawInBackground(1, [0.82, 0.94], myPreload.images.buff_icon);
-            myGameArea.drawInBackground(1, [0.92, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.87, 0.94], myPreload.images.buff_icon);
+            myGameArea.drawInBackground(1, [0.92, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showDebuffEnemy) {//si solo debuff
             myGameArea.drawInBackground(1, [0.87, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.92, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.92, 0.942], myPreload.images.swordShield_icon);
         }
 
         if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
@@ -480,25 +480,25 @@ var myLevel3 = {
         if (this.showBuffHero && this.showDebuffHero) {//si el heroe ha obtenido buff y debuff
             myGameArea.drawInBackground(1, [0.03, 0.94], myPreload.images.buff_icon);
             myGameArea.drawInBackground(1, [0.08, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.13, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.13, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showBuffHero) {//si solo buff
-            myGameArea.drawInBackground(1, [0.03, 0.94], myPreload.images.buff_icon);
-            myGameArea.drawInBackground(1, [0.13, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.08, 0.94], myPreload.images.buff_icon);
+            myGameArea.drawInBackground(1, [0.13, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showDebuffHero) {//si solo debuff
             myGameArea.drawInBackground(1, [0.08, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.13, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.13, 0.942], myPreload.images.swordShield_icon);
         }
 
         if (this.showBuffEnemy && this.showDebuffEnemy) {//si el enemigo ha obtenido buff y debuff
             myGameArea.drawInBackground(1, [0.82, 0.94], myPreload.images.buff_icon);
             myGameArea.drawInBackground(1, [0.87, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.92, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.92, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showBuffEnemy) {//si solo buff
-            myGameArea.drawInBackground(1, [0.82, 0.94], myPreload.images.buff_icon);
-            myGameArea.drawInBackground(1, [0.92, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.87, 0.94], myPreload.images.buff_icon);
+            myGameArea.drawInBackground(1, [0.92, 0.942], myPreload.images.swordShield_icon);
         } else if (this.showDebuffEnemy) {//si solo debuff
             myGameArea.drawInBackground(1, [0.87, 0.94], myPreload.images.debuff_icon);
-            myGameArea.drawInBackground(1, [0.92, 0.945], myPreload.images.swordShield_icon);
+            myGameArea.drawInBackground(1, [0.92, 0.942], myPreload.images.swordShield_icon);
         }
 
         if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
@@ -545,7 +545,7 @@ var myGameOver = {
         myGameArea.editTams(1);
         myHeroCharacter.resetHeroStats();
         myStatsController.resetLoops();
-        myStatsController.resetIncreaseStats(hero);
+        myStatsController.resetIncreaseStats(this.hero);
         mySoundManager.unPauseSound("menu");
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar

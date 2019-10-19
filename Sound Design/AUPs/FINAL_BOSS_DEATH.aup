@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="FINAL_BOSS_DEATH_data" version="1.3.0" audacityversion="2.3.1" sel0="0.0000000000" sel1="2.8867708333" vpos="0" h="0.0000000000" zoom="387.4638728324" rate="48000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="TITLE" value="Grabación (29)"/>
+		<tag name="Software" value="Lavf58.32.104"/>
+		<tag name="YEAR" value="2019"/>
+	</tags>
+	<wavetrack name="FINAL_BOSS_DEATH" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="138565">
+				<waveblock start="0">
+					<simpleblockfile filename="e08082d6.au" len="138565" min="-1.531045" max="1.427023" rms="0.275847"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="FINAL_BOSS_DEATH" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="138565">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808f96.au" len="138565" min="-1.526183" max="1.429722" rms="0.275472"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
