@@ -11,18 +11,18 @@ var myInputsManager = {
         let that = myInputsManager;
         let pause = myGameManager.pause;
 
-        $("#canvas1").mouseup(function (event) {
-            if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scenes[myGame.scene] || myTransitionScene === myGame.scenes[myGame.scene]) { myGame.swapScene(); }
-            else if (myGameOver === myGame.scenes[myGame.scene]) { myGame.restart(); }
-        });
+        document.getElementById("canvas1").onmouseup = function (event) {
+            console.log("ya");
+            event.stopPropagation();
+            that.passCertainScenes(event);
+        };
 
         document.getElementById("canvas1").ontouchend = function (event) {
-            if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scenes[myGame.scene] || myTransitionScene === myGame.scenes[myGame.scene]) { myGame.swapScene(); }
-            else if (myGameOver === myGame.scenes[myGame.scene]) { myGame.restart(); }
-            else {that.Pause();}
+            event.stopPropagation();
+            that.passCertainScenes(event);
         }
-
-        $("#canvas2").mousedown(function (event) {
+        document.getElementById("canvas2").onmousedown = function (event) {
+            event.stopPropagation();
             if (!pause && !that.blocked) {
                 switch (event.which) {
                     case 1:
@@ -40,25 +40,27 @@ var myInputsManager = {
                         console.log('Error in inputsManager/myInputsManager/start/mousedown');
                 }
             }
-        });
+        };
 
         document.getElementById("canvas2").ontouchstart = function (event) {
+            event.stopPropagation();
             if (!pause && !that.blocked) {
                 that.trace = [];
                 that.trace.push(that.traceLive.slice());
                 that.leftMouseDown = true;
             }
         }
-
-        $("#canvas2").mousemove(function (event) {
+        document.getElementById("canvas2").onmousemove = function (event) {
+            event.stopPropagation();
             if (!pause && !that.blocked) {
                 if (that.leftMouseDown) {
                     that.trace.push([event.pageX - parseInt(myGameArea.canvas2.style.left), event.pageY - parseInt(myGameArea.canvas2.style.top)])
                 }
             }
-        });
+        };
 
         document.getElementById("canvas2").ontouchmove = function (event) {
+            event.stopPropagation();
             if (!pause && !that.blocked) {
                 if (that.leftMouseDown) {
                     that.trace.push([event.touches[0].clientX - parseInt(myGameArea.canvas2.style.left), event.touches[0].clientY - parseInt(myGameArea.canvas2.style.top)])
@@ -67,6 +69,7 @@ var myInputsManager = {
         }
 
         $("#canvas2").mouseup(function (event) {
+            event.stopPropagation();
             if (!pause && !that.blocked) {
                 switch (event.which) {
                     case 1:
@@ -87,7 +90,8 @@ var myInputsManager = {
             }
         });
 
-        document.getElementById("canvas2").ontouchend = function (event) {
+        document.getElementById("canvas2").onmouseup = function (event) {
+            event.stopPropagation();
             if (!pause && !that.blocked) {
                 that.leftMouseDown = false;
                 if (that.trace.length > 1) {
@@ -97,9 +101,8 @@ var myInputsManager = {
         }
 
         $(document).keyup(function (e) {
-            if (e.key === "Escape" && myTransitionScene !== myGame.scenes[myGame.scene]) {//pausa la partida, excepto si estas en la pantalla de transicion
-                that.Pause();
-            } else if (e.key === "Backspace") { //si la tecla era "retroceso" vuelve a la pagina anterior
+            event.stopPropagation();
+            if (e.key === "Backspace") { //si la tecla era "retroceso" vuelve a la pagina anterior
                 window.history.back();
             } else if (e.key === "a" && that.debugAnimationTransitions) {//Para debuggear transiciones entre animaciones
                 myAnimManager.changeAnimation(myHeroCharacter, "attack", function () {
@@ -112,18 +115,23 @@ var myInputsManager = {
             }
         });
     },
-    passCertainScenes: function () {
+    passCertainScenes: function (event) {
+        event.stopPropagation();
         if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scenes[myGame.scene] || myTransitionScene === myGame.scenes[myGame.scene]) { myGame.swapScene(); }
         else if (myGameOver === myGame.scenes[myGame.scene]) { myGame.restart(); }
+        else {this.Pause(event);}
     },
-    Pause: function () {
+    Pause: function (event) {
+        event.stopPropagation();
         if (!myGameManager.pause) {
             myGameManager.pause = true;
             myGameManager.pauseTimers("all");
+            mySoundManager.pauseAll();
         }
         else {
             myGameManager.pause = false;
             myGameManager.resumeTimers("all");
+            mySoundManager.unPauseAll();
         }
     }
 }

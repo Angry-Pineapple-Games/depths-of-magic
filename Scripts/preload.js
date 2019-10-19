@@ -845,6 +845,12 @@ var myPreload = {
     },
     bassBell: {
       src: 'Assets/sonido/bassCampana.ogg'
+    },
+    intro1: {
+      src: 'Assets/sonido/intro1.ogg'
+    },
+    intro2: {
+      src: 'Assets/sonido/intro2.ogg'
     }
   },
   loadImages: function (callback) {
@@ -880,7 +886,7 @@ var myPreload = {
     for (var src in this.sourcesA) {
       this.audios[src] = new Audio(this.sourcesA[src].src);
       this.audios[src].oncanplaythrough = function () {
-        myGameArea.resizeBackground(myLoading.images[Math.trunc(((loadedImages+loadedAudios) / (numImages+numAudios)) * myLoading.numImages)], 1);
+        if(loadedAudios < numAudios) {myGameArea.resizeBackground(myLoading.images[Math.trunc(((loadedImages+loadedAudios) / (numImages+numAudios)) * myLoading.numImages)], 1);}
         if (++loadedAudios == numAudios) {
           myTextManager.drawTextInBackground(1, "clickToStart", [0.98, 0.95], "", "white", 25, "right");
           $(document).click(startGame);

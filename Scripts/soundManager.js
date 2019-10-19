@@ -6,11 +6,20 @@ var mySoundManager = {
         myPreload.audios[name].play();
     },
     pauseSound: function(name) {
-        myPreload.audios[name].loop = true;
         myPreload.audios[name].pause();
     }, 
+    pauseAll: function() {
+        for (var snd in myPreload.audios) {
+            if(myPreload.audios[snd].currentTime >= 1 && myPreload.audios[snd].currentTime !== myPreload.audios[snd].duration) {this.pauseSound(String(snd));}
+        }
+    },
     unPauseSound: function(name) {
         myPreload.audios[name].play();
+    },
+    unPauseAll: function() {
+        for (var snd in myPreload.audios) {
+            if(myPreload.audios[snd].currentTime >= 1 && myPreload.audios[snd].currentTime !== myPreload.audios[snd].duration) {this.unPauseSound(String(snd));}
+        }
     },
     reStartSound: function(name) {
         myPreload.audios[name].currentTime = 0;

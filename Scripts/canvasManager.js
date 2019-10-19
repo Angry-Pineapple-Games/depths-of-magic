@@ -137,8 +137,8 @@ var myGameArea = {
 var myFade = {
     canvas: [], //cnv, ctx, fade
     images: {},
-    in: function (num) {
-        this.canvas[num - 1][2] = [1, -0.08];
+    in: function (num, duration=-0.08) {
+        this.canvas[num - 1][2] = [1, duration];
     },
     out: function (num) {
         this.canvas[num - 1][2] = [0, 0.08];

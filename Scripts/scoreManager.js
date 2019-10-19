@@ -38,22 +38,3 @@ var myScoreManager = {
         return false;
     }
 }
-/*
-var myTestScore = {
-
-    fillScore : function(){
-        for (var i = 10; i > 0; i--){
-            myScoreManager.bestScores.push(i*10);
-            console.log("[MYTESTSCORE] " + i + ": " + i*10);
-        } 
-    },
-
-    checkBoolean : function(){
-        var estoFunciona = myScoreManager.updateBestScores();
-        console.log("[MYTESTSCORE] " + estoFunciona);
-        for (var i = 0; i < myScoreManager.bestScores.length; i++){
-            console.log("[MYTESTSCORE] Iteration " + i + ": " + myScoreManager.bestScores[i]);
-        }
-    }  
-}
-*/

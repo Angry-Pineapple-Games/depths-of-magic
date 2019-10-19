@@ -37,26 +37,27 @@ var myGameMechanics = {
                 ctx2.lineTo(trace[x][0], trace[x][1]);
             }
             if(!myInputsManager.blocked) {ctx2.stroke();}
+            else {ctx2.beginPath(); ctx2.stroke();}
         });
         if (that.traces.length > 0 && that.traces[0][0][0] <= 0) {
             that.traces.shift();
         }
     },
-    generateArrayRandomOrder: function (length, enemies=false) {
-        if(enemies) {length--;}
+    generateArrayRandomOrder: function (max, enemies=false, min=0) {
+        if(enemies) {max--;}
         let _array = [];
-        for(var i=0; i<length; i++) {
+        for(var i=min; i<max; i++) {
             _array.push(i);
         }
         let _aux, _idx;
-        for(var j=0; j<length-2; j++) {
+        for(var j=0; j<_array.length-2; j++) {
             let ran = Math.random();
-            _idx = j + Math.round(ran % (length - j));
+            _idx = j+1 + Math.round(ran % (max - j));
             _aux = _array[_idx];
-            _array[_idx] = j;
+            _array[_idx] = _array[j];
             _array[j] = _aux;
         }
-        if(enemies) {_array.push(length);}
+        if(enemies) {_array.push(max);}
         return _array;
     },
     generateGridRopes: function (enemy) {//coge un nuevo grid aleatorio y lo pinta, contando el número de cuerdas totales y modificando los stats
@@ -483,7 +484,7 @@ var myRoomMechanics = {
         myFade.in(1);
         myFade.in(2);
         this.scene.hero.buff = 0;
-        this.enemiesRandomArray = myGameMechanics.generateArrayRandomOrder(this.scene.enemiesMax, true);
+        this.enemiesRandomArray = myGameMechanics.generateArrayRandomOrder(this.scene.enemiesMax, true, this.scene.enemiesMin);
         if (this.countSwaps++ < this.nRooms) {
             this.scene.room = this.scene.rooms[this.scene.roomsMin + this.countSwaps-1];
             if (this.debug) { console.log("SwapRoom"); }
@@ -616,11 +617,14 @@ var myStatsController = {
         this.counterBuff = 0;
         this.counterDebuff = 0;
     },
-    resetIncreaseStats: function () {
+    resetIncreaseStats: function (hero) {
         this.healNoCutsCounter = 0;
         this.counterCounter = 0;
         this.counterBuff = 0;
         this.counterDebuff = 0;
+        hero.hp = hero.hpIni;
+        hero.ap = hero.apMax;
+        hero.dp = hero.dpMax;
     },
     applyStats: function (hero, enemy) {//aplica los daños y curaciones
         hero.buff = (1 + this.buff * this.buffFactor) / (1 + (this.totalDebuff - this.debuff) * this.debuffFactor);
