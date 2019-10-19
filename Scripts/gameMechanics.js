@@ -624,12 +624,13 @@ var myStatsController = {
         this.counterBuff = 0;
         this.counterDebuff = 0;
     },
-    resetIncreaseStats: function (hero) {
+    resetStats: function (hero) {
         this.healNoCutsCounter = 0;
         this.counterCounter = 0;
         this.counterBuff = 0;
         this.counterDebuff = 0;
         hero.hp = hero.hpIni;
+        hero.hpMax = hero.hpIni;
         hero.ap = hero.apMax;
         hero.dp = hero.dpMax;
     },

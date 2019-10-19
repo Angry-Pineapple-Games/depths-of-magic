@@ -90,6 +90,7 @@ var myLevel1 = {
             myGameArea.drawInBackground(1, [0, 0], myPreload.images.backgroundBlack);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.backgroundBlack);
             myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "", "white", 50, "center");
+            myFade.pauseImage("gridBlocked", Date.now());
         } else { //eventos particulares a que el juego no este en pausa
             myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.05, 0.50], "", "#ff073a", 80, "center", true);
             myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.95, 0.50], "", "#ff073a", 80, "center", true);
@@ -120,7 +121,8 @@ var myIntro = {
         myScoreManager.downloadBestScores();//Deberia ir en otro sitio
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
-        mySoundManager.pauseSound("menu");
+        mySoundManager.stopSound("menu");
+        mySoundManager.stopSound("boss");
         mySoundManager.startSound("intro1", false);
         this.background = myPreload.images.backgroundBlack;
         this.startSequence1();
@@ -430,6 +432,7 @@ var myLevel2 = {
             myGameArea.drawInBackground(1, [0, 0], myPreload.images.backgroundBlack);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.backgroundBlack);
             myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "", "white", 50, "center");
+            myFade.pauseImage("gridBlocked", Date.now());
         } else { //eventos particulares a que el juego no este en pausa
             myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.05, 0.50], "", "#ff073a", 80, "center", true);
             myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.95, 0.50], "", "#ff073a", 80, "center", true);
@@ -532,6 +535,7 @@ var myLevel3 = {
             myGameArea.drawInBackground(1, [0, 0], myPreload.images.backgroundBlack);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.backgroundBlack);
             myTextManager.drawTextInBackground(1, "pause", [0.5, 0.5], "", "white", 50, "center");
+            myFade.pauseImage("gridBlocked", Date.now());
         } else { //eventos particulares a que el juego no este en pausa
             myTextManager.drawTextInBackground(1, String(this.hero.damage), [0.05, 0.50], "", "#ff073a", 80, "center", true);
             myTextManager.drawTextInBackground(1, String(this.enemy.damage), [0.95, 0.50], "", "#ff073a", 80, "center", true);
@@ -555,9 +559,8 @@ var myGameOver = {
         myScoreManager.currentScore = 0;
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
-        myHeroCharacter.resetHeroStats();
         myStatsController.resetLoops();
-        myStatsController.resetIncreaseStats(this.hero);
+        myStatsController.resetStats(this.hero);
         mySoundManager.unPauseSound("menu");
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar

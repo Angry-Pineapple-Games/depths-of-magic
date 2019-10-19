@@ -102,7 +102,7 @@ var myGameArea = {
             bg.ctx.drawImage(img, bg.drawPosX + pos[0] * bg.width, bg.drawPosY + pos[1] * bg.height, img.initWidth * resizePerOne, img.initHeight * resizePerOne);
         }
     },
-    drawTextInBackground: function (num, text, pos, color = "white", textHeight = 20, textAlign = "center", textAlpha=1) {
+    drawTextInBackground: function (num, text, pos, color = "white", textHeight = 20, textAlign = "center", textAlpha = 1) {
         let bg;
         if (num === 1) { bg = myGameArea.background1; }
         else if (num === 2) { bg = myGameArea.background2; }
@@ -111,7 +111,7 @@ var myGameArea = {
             let resizePerOne = this.resizeBackgroundPerOne(bg);
             let height = Math.trunc(textHeight * resizePerOne);
             bg.ctx.font = String(height) + "px jamestandinawanao";
-            bg.cnv.style.letterSpacing = String(Math.trunc(2*resizePerOne))+'px';
+            bg.cnv.style.letterSpacing = String(Math.trunc(2 * resizePerOne)) + 'px';
             bg.ctx.fillStyle = color;
             bg.ctx.textAlign = textAlign;
             bg.ctx.globalAlpha = textAlpha;
@@ -126,7 +126,7 @@ var myGameArea = {
         else { console.log("Error en canvasManager/animateInBackground/num"); }
         if (bg !== undefined) {
             let resizePerOne = this.resizeBackgroundPerOne(bg);
-            animation.animate(bg.ctx, img, bg.drawPosX + pos[0] * resizePerOne , bg.drawPosY + pos[1] * resizePerOne, resizePerOne*resize);
+            animation.animate(bg.ctx, img, bg.drawPosX + pos[0] * resizePerOne, bg.drawPosY + pos[1] * resizePerOne, resizePerOne * resize);
         }
     },
     resizeBackgroundPerOne: function (bg) {
@@ -137,7 +137,7 @@ var myGameArea = {
 var myFade = {
     canvas: [], //cnv, ctx, fade
     images: {},
-    in: function (num, duration=-0.08) {
+    in: function (num, duration = -0.08) {
         this.canvas[num - 1][2] = [1, duration];
     },
     out: function (num) {
@@ -164,24 +164,30 @@ var myFade = {
             ctx1.globalAlpha = 1;
         }
     },
-    addImage: function(img, name, time, num) {
+    addImage: function (img, name, time, num) {
         this.images[name] = {};
-        if(num===1){ this.images[name].ctx = myGameArea.context1; }
-        else if(num===2){ this.images[name].ctx = myGameArea.context2; }
-        else {console.log("Fail canvasManager/myFade/addImage context don't found");}
+        if (num === 1) { this.images[name].ctx = myGameArea.context1; }
+        else if (num === 2) { this.images[name].ctx = myGameArea.context2; }
+        else { console.log("Fail canvasManager/myFade/addImage context don't found"); }
         this.images[name].img = img;
         this.images[name].timeStart = time;
+        this.images[name].lastTime = time;
         this.images[name].num = num;
-    }, 
-    fadeOutImage: function(name, pos, time, timeRange) {
+    },
+    fadeOutImage: function (name, pos, time, timeRange) {
         let currentTime = time - this.images[name].timeStart;
+        //this.images[name].lastTime = time;
         if (timeRange > currentTime) {
-            this.images[name].ctx.globalAlpha = currentTime/timeRange;
+            this.images[name].ctx.globalAlpha = currentTime / timeRange;
             myGameArea.drawInBackground(this.images[name].num, pos, this.images[name].img);
             this.images[name].ctx.globalAlpha = 1;
-        } else {myGameArea.drawInBackground(this.images[name].num, pos, this.images[name].img);}
+        } else { myGameArea.drawInBackground(this.images[name].num, pos, this.images[name].img); }
     },
-    clearImage: function() {
+    clearImage: function () {
         this.images = {};
+    },
+    pauseImage: function (name, time) {
+        this.images[name].timeStart += time - this.images[name].lastTime;
+        this.images[name].lastTime = time;
     }
 }

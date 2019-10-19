@@ -66,11 +66,6 @@ var myHeroCharacter = {
             this.imgs.death = myPreload.images["hero"+Id+"_death"];
             this.imgs.victory = myPreload.images["hero"+Id+"_victory"];
         }
-    },
-    resetHeroStats: function() {
-        this.hp = this.hpIni;
-        this.ap = this.apMax;
-        this.dp = this.dpMax;
     }
 }
 //https://konvajs.org/docs/sandbox/GIF_On_Canvas.html
