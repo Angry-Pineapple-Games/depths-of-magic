@@ -866,7 +866,46 @@ var myPreload = {
     },
     debuff:{
       src:'Assets/sonido/debuff.ogg'
-    }
+    },
+    hero_attack:{
+      src:'Assets/sonido/00_Rhaxtir_Attack.ogg'
+    },
+    hero_damage:{
+      src:'Assets/sonido/00_Rhaxtir_Damage.ogg'
+    },
+    enemy0:{
+      src:'Assets/sonido/01_Glanxyor.ogg'
+    },
+    enemy1:{
+      src:'Assets/sonido/02_Rawbuzz.ogg'
+    },
+    enemy2:{
+      src:'Assets/sonido/03_Gorpovar.ogg'
+    },
+    enemy3:{
+      src:'Assets/sonido/04_Shadrix.ogg'
+    },
+    enemy4:{
+      src:'Assets/sonido/05_Shawyrah.ogg'
+    },
+    enemy5:{
+      src:'Assets/sonido/06_Glapdger.ogg'
+    },
+    enemy6:{
+      src:'Assets/sonido/07_Giwalev.ogg'
+    },
+    enemy7:{
+      src:'Assets/sonido/08_Gumlisar.ogg'
+    },
+    enemy8:{
+      src:'Assets/sonido/09_Raygler.ogg'
+    },
+    enemy9:{
+      src:'Assets/sonido/10_Abyss_Attack.ogg'
+    },
+    enemy9_death:{
+      src:'Assets/sonido/10_Abyss_Death.ogg'
+    },
   },
   loadImages: function (callback) {
     let that = myPreload;
