@@ -851,6 +851,15 @@ var myPreload = {
     },
     intro2: {
       src: 'Assets/sonido/intro2.ogg'
+    },
+    ending1: {
+      src: 'Assets/sonido/ending1.ogg'
+    },
+    ending2: {
+      src: 'Assets/sonido/ending2.ogg'
+    },
+    boss: {
+      src: 'Assets/sonido/boss.ogg'
     }
   },
   loadImages: function (callback) {

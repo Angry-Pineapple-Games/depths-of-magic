@@ -13,13 +13,13 @@ var myInputsManager = {
 
         document.getElementById("canvas1").onmouseup = function (event) {
             event.stopPropagation();
-            that.passCertainScenes(event);
+            that.passCertainScenes();
         };
 
         document.getElementById("canvas1").ontouchend = function (event) {
             event.stopPropagation();
             event.preventDefault();
-            that.passCertainScenes(event);
+            that.passCertainScenes();
         }
 
         document.getElementById("canvas2").onmousedown = function (event) {
@@ -119,12 +119,12 @@ var myInputsManager = {
             }
         });
     },
-    passCertainScenes: function (event) {
-        if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scenes[myGame.scene] || myTransitionScene === myGame.scenes[myGame.scene] /*|| myLevel1 === myGame.scenes[myGame.scene] || myLevel2 === myGame.scenes[myGame.scene]*/) { myGame.swapScene(); }
+    passCertainScenes: function () {
+        if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scenes[myGame.scene] || myTransitionScene === myGame.scenes[myGame.scene] /*|| myLevel1 === myGame.scenes[myGame.scene] || myLevel2 === myGame.scenes[myGame.scene] || myLevel3 === myGame.scenes[myGame.scene]*/) { myGame.swapScene(); }
         else if (myGameOver === myGame.scenes[myGame.scene]) { myGame.restart(); }
         else {this.Pause(event);}
     },
-    Pause: function (event) {
+    Pause: function () {
         if (!myGameManager.pause) {
             myGameManager.pause = true;
             myGameManager.pauseTimers("all");

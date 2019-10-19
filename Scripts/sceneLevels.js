@@ -28,6 +28,9 @@ var myLevel1 = {
         mySoundManager.startSound("menu", true, 0.5);
         mySoundManager.stopSound("intro1");
         mySoundManager.stopSound("intro2");
+        mySoundManager.stopSound("ending1");
+        mySoundManager.stopSound("ending2");
+        mySoundManager.stopSound("boss");
         myRoomMechanics.startRoom(this);
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar
@@ -118,7 +121,7 @@ var myIntro = {
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
         mySoundManager.pauseSound("menu");
-        mySoundManager.startSound("intro1", false)
+        mySoundManager.startSound("intro1", false);
         this.background = myPreload.images.backgroundBlack;
         this.startSequence1();
     },
@@ -136,9 +139,7 @@ var myIntro = {
             myTextManager.drawTextInBackground(1, this.text2, [this.posText[0], this.posText[1] + 0.1], "", "white", 100, "center");
             myTextManager.drawTextInBackground(1, this.text3, [this.posText[0] + 0.12, this.posText[1] + 0.2], "", "white", 90, "center");
         }
-        
-        //animacion intro
-        //cuando termine pasar al siguiente level (ya esta implementado que al soltar el raton se pasa)
+
         myTextManager.drawTextInBackground(1, this.clickTo[0], this.clickTo[2], "", this.clickTo[1], 80, this.clickTo[3]);
         myFade.fade(1);
     },
@@ -146,7 +147,7 @@ var myIntro = {
         let that = myIntro;
         that.showAnim = false;
         that.background = myPreload.images.backgroundBlack;
-        posText = [0.45, 0.4];
+        posText = [0.5, 0.4];
         that.text1 = "text11";
         that.text2 = "text12";
         that.text3 = "";
@@ -204,7 +205,10 @@ var myTransitionScene = {
         this.hero = myHeroCharacter.generateHero();
         myStatsController.increaseStats(this.hero);
         this.room = myPreload.images["room1"];
-        mySoundManager.unPauseSound("menu");
+        mySoundManager.stopSound("boss");
+        mySoundManager.startSound("menu");
+        mySoundManager.stopSound("ending1");
+        mySoundManager.stopSound("ending2");
         myFade.in(1);
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar
@@ -231,10 +235,11 @@ var myEnding = {
     currentAnimation: {},
     animImg: {},
     extraImg:{},
+    clickTo: [],
     animResize: 2,
     posAnim: [0, 0],
     posExtraImg: [0,0],
-    posText: [0.45, 0.3],
+    posText: [0.5, 0.5],
     showText: false,
     showAnim: false,
     showExtraImg: false,
@@ -243,7 +248,8 @@ var myEnding = {
         else {
             myGameManager.clearTimers("all");
             myGameArea.editTams(1);
-            this.reproduced = true;
+            this.displayed = true;
+            mySoundManager.startSound("ending1", false);
             mySoundManager.pauseSound("menu");
             this.startSequence1();
         }
@@ -261,17 +267,18 @@ var myEnding = {
         }
         
         if(this.showText){
-            myTextManager.drawTextInBackground(1, this.text1, this.posText, "", "white", 90);
-            myTextManager.drawTextInBackground(1, this.text2, [this.posText[0], this.posText[1] + 0.1], "", "white", 90);
-            myTextManager.drawTextInBackground(1, this.text3, [this.posText[0], this.posText[1] + 0.2], "", "white", 90);
+            myTextManager.drawTextInBackground(1, this.text1, this.posText, "", "white", 100, "center");
+            myTextManager.drawTextInBackground(1, this.text2, [this.posText[0], this.posText[1] + 0.1], "", "white", 100, "center");
+            myTextManager.drawTextInBackground(1, this.text3, [this.posText[0] + 0.12, this.posText[1] + 0.2], "", "white", 90, "center");
         }
-        //cuando termine pasar al siguiente level (ya esta implementado que al soltar el raton se pasa)
-        myTextManager.drawTextInBackground(1, "clickToSkip", [0.98, 0.95], "", "white", 80, "right");
+        
+        myTextManager.drawTextInBackground(1, this.clickTo[0], this.clickTo[2], "", this.clickTo[1], 80, this.clickTo[3]);
         myFade.fade(1);
     },
     startSequence1: function(){
         myFade.in(1);
         let that = myEnding;
+        that.clickTo = ["clickToSkip", "white", [0.98,0.95], "right"];
         that.posAnim= [700, 0];
         that.currentAnimation = new Animation(myPreload.spritesInfo.end_aura, 0, 59);
         that.currentAnimation.reset();
@@ -286,7 +293,7 @@ var myEnding = {
     },
     startSequence2:function(){
         let that = myEnding;
-        that.posText = [0.45, 0.3];
+        that.posText = [0.5, 0.75];
         that.text1 = "text11";
         that.text2 = "text12";
         that.text3 = "";
@@ -321,6 +328,7 @@ var myEnding = {
         myGameManager.addTimer(that.startSequence5, 3000, "timersSwap");
     },
     startSequence5:function(){
+        mySoundManager.startSound("ending2", true);
         let that = myEnding;
         that.showText = false;
         that.animResize = 1;
@@ -328,9 +336,8 @@ var myEnding = {
         that.currentAnimation = new Animation(myPreload.spritesInfo.end_eyes, 0, 4);
         that.animImg = myPreload.images.end_eyes;
         that.currentAnimation.reset();
-        that.currentAnimation.callback = function(){
-        }
         that.showAnim = true;
+        that.clickTo = ["clickToConinue", "white",[0.5,0.75], "center"];
     }
 }
 
@@ -361,7 +368,8 @@ var myLevel2 = {
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
         myFade.clearImage();
-        mySoundManager.unPauseSound("menu");
+        mySoundManager.startSound("menu", true, 0.5);
+        mySoundManager.stopSound("boss");
         myRoomMechanics.startRoom(this);
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar
@@ -462,7 +470,8 @@ var myLevel3 = {
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
         myFade.clearImage();
-        mySoundManager.unPauseSound("menu");
+        mySoundManager.startSound("menu", true, 0.5);
+        mySoundManager.stopSound("boss");
         myRoomMechanics.startRoom(this);
     },
     update: function (delta) { //fisicas o pasos intermedios antes de pintar

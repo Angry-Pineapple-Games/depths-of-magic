@@ -101,6 +101,8 @@ var myGameMechanics = {
     generateEnemy: function (enemies, enemiesMax, nEnemies) {
         let nextEnemy = enemies[myRoomMechanics.enemiesRandomArray.shift()];
         if (myRoomMechanics.countSwaps === myRoomMechanics.nRooms && myCombatMechanics.countCombats === nEnemies) {
+            mySoundManager.stopSound("menu");
+            mySoundManager.startSound("boss", true, 0.5);
             nextEnemy = enemies[enemiesMax - 1];
         }
         nextEnemy.hp = nextEnemy.hpMax;
