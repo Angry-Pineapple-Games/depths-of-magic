@@ -12,15 +12,16 @@ var myInputsManager = {
         let pause = myGameManager.pause;
 
         document.getElementById("canvas1").onmouseup = function (event) {
-            console.log("ya");
             event.stopPropagation();
             that.passCertainScenes(event);
         };
 
         document.getElementById("canvas1").ontouchend = function (event) {
             event.stopPropagation();
+            event.preventDefault();
             that.passCertainScenes(event);
         }
+
         document.getElementById("canvas2").onmousedown = function (event) {
             event.stopPropagation();
             if (!pause && !that.blocked) {
@@ -44,6 +45,7 @@ var myInputsManager = {
 
         document.getElementById("canvas2").ontouchstart = function (event) {
             event.stopPropagation();
+            event.preventDefault();
             if (!pause && !that.blocked) {
                 that.trace = [];
                 that.trace.push(that.traceLive.slice());
@@ -61,6 +63,7 @@ var myInputsManager = {
 
         document.getElementById("canvas2").ontouchmove = function (event) {
             event.stopPropagation();
+            event.preventDefault();
             if (!pause && !that.blocked) {
                 if (that.leftMouseDown) {
                     that.trace.push([event.touches[0].clientX - parseInt(myGameArea.canvas2.style.left), event.touches[0].clientY - parseInt(myGameArea.canvas2.style.top)])
@@ -68,7 +71,7 @@ var myInputsManager = {
             }
         }
 
-        $("#canvas2").mouseup(function (event) {
+        document.getElementById("canvas2").onmouseup = function (event) {
             event.stopPropagation();
             if (!pause && !that.blocked) {
                 switch (event.which) {
@@ -88,10 +91,11 @@ var myInputsManager = {
                         console.log('Error in inputsManager/myInputsManager/start/mouseup');
                 }
             }
-        });
+        };
 
-        document.getElementById("canvas2").onmouseup = function (event) {
+        document.getElementById("canvas2").ontouchend = function (event) {
             event.stopPropagation();
+            event.preventDefault();
             if (!pause && !that.blocked) {
                 that.leftMouseDown = false;
                 if (that.trace.length > 1) {
@@ -116,13 +120,11 @@ var myInputsManager = {
         });
     },
     passCertainScenes: function (event) {
-        event.stopPropagation();
-        if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scenes[myGame.scene] || myTransitionScene === myGame.scenes[myGame.scene]) { myGame.swapScene(); }
+        if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scenes[myGame.scene] || myTransitionScene === myGame.scenes[myGame.scene] /*|| myLevel1 === myGame.scenes[myGame.scene] || myLevel2 === myGame.scenes[myGame.scene]*/) { myGame.swapScene(); }
         else if (myGameOver === myGame.scenes[myGame.scene]) { myGame.restart(); }
         else {this.Pause(event);}
     },
     Pause: function (event) {
-        event.stopPropagation();
         if (!myGameManager.pause) {
             myGameManager.pause = true;
             myGameManager.pauseTimers("all");

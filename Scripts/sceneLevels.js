@@ -67,13 +67,14 @@ var myLevel1 = {
             myGameArea.drawInBackground(1, [0.92, 0.942], myPreload.images.swordShield_icon);
         }
 
-        if (!myInputsManager.blocked) {//si no se permite interactuar con las cuerdas
+        if (!myInputsManager.blocked) {//si se permite interactuar con las cuerdas
             myGameArea.resizeBackground(myPreload.images.grid, 2);
             myFade.fadeOutImage("gridBlocked", [0, 0], Date.now(), this.limitTimePerPatron)
             myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.gridNodes);
             myGameMechanics.trackingTraces(myGameArea.background2);
             myGameMechanics.deleteRope(this.enemy.gridRopes[this.enemy.gridRopeNow]);
+            myTextManager.drawTextInBackground(2, "cut", [0.5, 0.43], "", "black", 80, "center", true, 0.5);
         } else {
             myGameArea.resizeBackground(myPreload.images.gridBlocked, 2);
             myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);
@@ -408,6 +409,7 @@ var myLevel2 = {
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.gridNodes);
             myGameMechanics.trackingTraces(myGameArea.background2);
             myGameMechanics.deleteRope(this.enemy.gridRopes[this.enemy.gridRopeNow]);
+            myTextManager.drawTextInBackground(2, "cut", [0.5, 0.43], "", "black", 80, "center", true, 0.5);
         } else {
             myGameArea.resizeBackground(myPreload.images.gridBlocked, 2);
             myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);
@@ -508,6 +510,7 @@ var myLevel3 = {
             myGameArea.drawInBackground(2, [0, 0], myPreload.images.gridNodes);
             myGameMechanics.trackingTraces(myGameArea.background2);
             myGameMechanics.deleteRope(this.enemy.gridRopes[this.enemy.gridRopeNow]);
+            myTextManager.drawTextInBackground(2, "cut", [0.5, 0.43], "", "black", 80, "center", true, 0.5);
         } else {
             myGameArea.resizeBackground(myPreload.images.gridBlocked, 2);
             myGameMechanics.drawRopes(this.enemy.gridRopes[this.enemy.gridRopeNow]);
