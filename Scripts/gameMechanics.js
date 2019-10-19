@@ -347,6 +347,7 @@ var myCombatMechanics = {
         myGameMechanics.un_blockInputs();
         if (that.scene.hero.hp <= 0) {
             //Secuencia: 1. enemigo ataca, 2. enemigo vuelve a idle y heroe muere 3. game over
+            mySoundManager.startSound(that.scene.enemy.img, false, 0.5);
             myAnimManager.changeAnimation(that.scene.enemy, "attack", function () {
                 myAnimManager.changeAnimation(that.scene.enemy, "idle");
                 myAnimManager.playSequenceSFX(sfxSequenceEnemy, that.scene.sfx, function(){
@@ -364,6 +365,7 @@ var myCombatMechanics = {
         }
         else if (that.scene.enemy.hp <= 0) {
             //Secuencia: 1. heroe ataca, 2. enemigo muere y heroe celebra victoria, 3. cambio de enemigo
+            mySoundManager.startSound("hero_attack", false, 0.3);
             myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
                 myAnimManager.changeAnimation(that.scene.hero, "idle");
                 myAnimManager.playSequenceSFX(sfxSequenceHero, that.scene.sfx, function(){
@@ -384,15 +386,11 @@ var myCombatMechanics = {
                                 that.scene.showDebuffEnemy = false;
                                 that.swapEnemy();
                             }else{
-                                console.log("death2 playing");
+                                mySoundManager.startSound("enemy9_death", false, 0.5);
                                 myAnimManager.changeAnimation(that.scene.enemy, "death2", function () {
-                                    console.log("death3 playing");
                                     myAnimManager.changeAnimation(that.scene.enemy, "death3", function () {
-                                        console.log("death4 playing");
                                         myAnimManager.changeAnimation(that.scene.enemy, "death4", function () {
-                                            console.log("death5 playing");
                                             myAnimManager.changeAnimation(that.scene.enemy, "death5", function () {
-                                                console.log("finished");
                                                 myAnimManager.changeAnimation(that.scene.enemy, "idle");
                                                 myAnimManager.changeAnimation(that.scene.hero, "idle");
                                                 myGameMechanics.un_blockInputs();
@@ -415,6 +413,7 @@ var myCombatMechanics = {
         }
         else if (sfxSequenceEnemy.length <= 0) {
             //Secuencia:1. heroe ataca, 2. heroe vuelve a idle y se reproduce la secuencia de efectos, 3. enemigo recibe daño
+            mySoundManager.startSound("hero_attack", false, 0.3);
             myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
                 myAnimManager.changeAnimation(that.scene.hero, "idle");
                 myAnimManager.playSequenceSFX(sfxSequenceHero, that.scene.sfx, function(){
@@ -434,13 +433,16 @@ var myCombatMechanics = {
             //Secuencia: 1. heroe ataca, 2. heroe vuelve a idle, se reproduce la secuencia de efectos, 3. enemigo recibe daño
             //4. enemigo ataca, 5. enemigo vuelve al idle, se reproduce la secuencia de efectos, 6. heroe recibe daño, 
             //7. heroe vuelve al idle, cambio de patron.
+            mySoundManager.startSound("hero_attack", false, 0.3);
             myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
                 myAnimManager.changeAnimation(that.scene.hero, "idle");
                 myAnimManager.playSequenceSFX(sfxSequenceHero, that.scene.sfx, function(){
                     myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
+                        mySoundManager.startSound(that.scene.enemy.img, false, 0.5);
                         myAnimManager.changeAnimation(that.scene.enemy, "attack", function () {
                             myAnimManager.changeAnimation(that.scene.enemy, "idle");
                             myAnimManager.playSequenceSFX(sfxSequenceEnemy, that.scene.sfx, function(){
+                                mySoundManager.startSound("hero_damage", false, 0.3);
                                 myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
                                     myAnimManager.changeAnimation(that.scene.hero, "idle");
                                     myGameMechanics.un_blockInputs();
@@ -458,9 +460,11 @@ var myCombatMechanics = {
         } else {
             //Secuencia: 1.enemigo ataca,2. enemigo vuelve a idle y se reproduce la secuencia de efectos, 3. heroe recibe daño
             //3. heroe vuelve a idle y se cambia el patron
+            mySoundManager.startSound(that.scene.enemy.img, false, 0.5);
             myAnimManager.changeAnimation(that.scene.enemy, "attack", function () {
                 myAnimManager.changeAnimation(that.scene.enemy, "idle");
                 myAnimManager.playSequenceSFX(sfxSequenceEnemy, that.scene.sfx, function(){
+                    mySoundManager.startSound("hero_damage", false, 0.3);
                     myAnimManager.changeAnimation(that.scene.hero, "damage", function () {
                         myAnimManager.changeAnimation(that.scene.hero, "idle");
                         myGameMechanics.un_blockInputs();
