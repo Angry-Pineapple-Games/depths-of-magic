@@ -141,6 +141,7 @@ var myGameMechanics = {
         }
     },
     deleteRope: function (gridRope) { //elimina la cuerda analizando los tracks con el mapa de seguimiento
+        let playSound = false;
         while (this.tracks.length > 0) {//mientras existan trazos
             let lastPosTrace = this.tracks[0][0];
             let concatenatedCuts = 0;
@@ -157,6 +158,7 @@ var myGameMechanics = {
                                 concatenatedCuts++;
                             }
                             ropeFound = true;
+                            playSound = true;
                         }
                         z++;
                     }
@@ -166,6 +168,9 @@ var myGameMechanics = {
             }
             myCutMechanics.checkConcatenateCut(concatenatedCuts);
             this.tracks.shift();
+        }
+        if(playSound){
+            mySoundManager.startSound("chain_cut", false, 0.4);
         }
     },
     trackingTraces: function (bg) { //seguimiento del trazo y registro

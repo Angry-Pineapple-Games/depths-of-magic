@@ -169,18 +169,22 @@ var mySFX = {
             case "damage":
                 this.currentImg = this.imgs.damage;
                 this.currentAnimation = this.animations.damage;
+                mySoundManager.startSound("damage", false, 0.4);
                 break;
             case "buff":
                 this.currentImg = this.imgs.buff;
                 this.currentAnimation = this.animations.buff;
+                mySoundManager.startSound("buff", false, 0.6);
                 break;
             case "debuff":
                 this.currentImg = this.imgs.debuff;
                 this.currentAnimation = this.animations.debuff;
+                mySoundManager.startSound("debuff", false, 0.6);
                 break;
             case "heal":
                 this.currentImg = this.imgs.heal;
                 this.currentAnimation = this.animations.heal;
+                mySoundManager.startSound("heal", false, 0.6);
                 break;
             case "superbuff":
                 this.currentImg = this.imgs.superbuff;

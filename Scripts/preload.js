@@ -860,6 +860,21 @@ var myPreload = {
     },
     boss: {
       src: 'Assets/sonido/boss.ogg'
+    },
+    chain_cut:{
+      src: 'Assets/sonido/chain_cut.ogg'
+    },
+    damage:{
+      src:'Assets/sonido/damage.ogg'
+    },
+    heal:{
+      src:'Assets/sonido/heal.ogg'
+    },
+    buff:{
+      src:'Assets/sonido/buff.ogg'
+    },
+    debuff:{
+      src:'Assets/sonido/debuff.ogg'
     }
   },
   loadImages: function (callback) {
