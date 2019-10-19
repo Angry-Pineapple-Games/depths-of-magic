@@ -51,6 +51,7 @@ myEnglishVersion = {
     thanks: "The whole development team thanks you",
     stop: "STOP",
     remember: "REMEMBER",
+    cut: "CUT",
     score: "Score: ",
     roomCombat: "Room - Combat: "
 }
@@ -78,6 +79,7 @@ mySpanishVersion = {
     thanks: "Todo el equipo de desarrollo te da las gracias",
     stop: "PARA",
     remember: "RECUERDA",
+    cut: "CORTA",
     score: "Puntos: ",
     roomCombat: "Sala - Combate: "
 }
