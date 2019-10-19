@@ -3,6 +3,10 @@ var myWebContent = {
     bestScores : [],
     MAX_SCORES : 10,
     //Tutorials
+    isTutorialVisible : false,
+    btnTutorialsContentENG: "Tutorials",
+    btnTutorialsContentESP: "Tutoriales",
+    
     title1ENG : "How to play",
     title1ESP : "Cómo jugar",
     title2ENG : "Types of chains",
@@ -85,6 +89,14 @@ var myWebContent = {
         $('#description2').html(myWebContent.tutorial2ENG);
         $('#description3').html(myWebContent.tutorial3ENG);
         $('#description4').html(myWebContent.tutorial4ENG);
+        $('#tut1Div').hide();
+        $('#tut2Div').hide();
+        $('#tut3Div').hide();
+        $('#tut4Div').hide();
+        $('#divider2').hide();
+        $('#divider3').hide();
+        $('#divider4').hide();
+        $('#divider5').hide();
     },
 
     showScores : function (lang) {
@@ -129,6 +141,35 @@ $(document).ready(function () {
         changeLangHtml("en");
         myWebContent.showScores("en");
     });
+
+    $('#btnMusic').click(function() {
+        console.log("Click works! Sub this console.log with audio play");
+    });
+
+    $("#btnTutorial").click(function () {
+        if (myWebContent.isTutorialVisible){
+            $('#tut1Div').hide();
+            $('#tut2Div').hide();
+            $('#tut3Div').hide();
+            $('#tut4Div').hide();
+            $('#divider2').hide();
+            $('#divider3').hide();
+            $('#divider4').hide();
+            $('#divider5').hide();
+            myWebContent.isTutorialVisible = false;
+        } else {
+            $('#tut1Div').show();
+            $('#tut2Div').show();
+            $('#tut3Div').show();
+            $('#tut4Div').show();
+            $('#divider').show();
+            $('#divider2').show();
+            $('#divider3').show();
+            $('#divider4').show();
+            $('#divider5').show();
+            myWebContent.isTutorialVisible = true;
+        }
+    })
 });
 
 var ids = [["#btnSpanish", "radio", "Spanish", "Español"], ["#btnEnglish","radio","English","Inglés"], ["NewGame","normal","New Game","Nueva partida"], ["presentation", "normal", "Get to know us!", "¡Conócenos!"],
@@ -138,7 +179,9 @@ var ids = [["#btnSpanish", "radio", "Spanish", "Español"], ["#btnEnglish","radi
  ["role3", "normal", myWebContent.role3ENG, myWebContent.role3ESP],["name4", "normal", "Laura", "Laura"],["role4", "normal", myWebContent.role4ENG, myWebContent.role4ESP],["name5", "normal", "César", "César"], 
  ["role5", "normal", myWebContent.role5ENG, myWebContent.role5ESP], ["references", "normal", "References", "Referencias"],["code", "normal", "Code", "Código"],["images", "normal", "Images", "Imágenes"],
  ["animation", "normal", "Animation", "Animación"], ["music", "normal", "Music", "Música"],["backTop", "normal", "Back to top", "Vuelta arriba"],["bestScores", "normal", "Your 10 best scores", "Tus 10 mejores puntuaciones"],
- ["tutorial4", "normal", myWebContent.title4ENG, myWebContent.title4ESP],["description4", "normal", myWebContent.tutorial4ENG, myWebContent.tutorial4ESP]];
+ ["tutorial4", "normal", myWebContent.title4ENG, myWebContent.title4ESP],["description4", "normal", myWebContent.tutorial4ENG, myWebContent.tutorial4ESP], ["btnTutorial","normal",myWebContent.btnTutorialsContentENG,myWebContent.btnTutorialsContentESP],
+ ["gameDesc", "normal", "Face your fears and unleash the power of magic in this dark roguelike", "Enfrenta a tus miedos y desata el poder de la magia en este oscuro roguelike"], ["btnMusic", "normal", "Play Soundtrack", "Reproducir Soundtrack"],
+ ["gameTitle2", "normal", "Coming soon", "Próximamente"], ["gameDesc2", "normal", "In the next weeks we'll show you our next project. Stay tuned!", "En las próximas semanas os mostraremos nuestro nuevo proyecto. ¡Permaneced atentxs!"]];
 
 function changeLangHtml(lang) {
     let newLang = 2;
