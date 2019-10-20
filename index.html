@@ -43,22 +43,6 @@
 
     <div class="container marketing" class="col-sm col-12">
       <div id="carouselDepths" class="carousel slide" data-interval="false" data-ride="carousel">
-        <style>
-          /* Large desktops and laptops */
-          @media (min-width: 1200px) {}
-
-          /* Landscape tablets and medium desktops */
-          @media (min-width: 992px) and (max-width: 1199px) {}
-
-          /* Portrait tablets and small desktops */
-          @media (min-width: 768px) and (max-width: 991px) {}
-
-          /* Landscape phones and portrait tablets */
-          @media (max-width: 767px) {}
-
-          /* Portrait phones and smaller */
-          @media (max-width: 480px) {}
-        </style>
         <ol class="carousel-indicators">
           <li data-target="#carouselDepths" data-slide-to="0" class="active"></li>
           <li data-target="#carouselDepths" data-slide-to="1"></li>
@@ -66,7 +50,7 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
-            <img src="webAssets/background5.png" alt="First slide">
+            <img id="carImg1" src="webAssets/background5.png" alt="First slide">
             <a id="NewGame" class="btn btn-outline-secondary" href="DOM.html">New Game</a>
             <a id="btnMusic" class="btn btn-secondary">Play Soundtrack</a>
             <div id="soundButtons" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -84,7 +68,7 @@
           </div>
 
           <div class="carousel-item">
-            <img src="webAssets/backgroundM.png" alt="Second slide">
+            <img id="carImg2" src="webAssets/backgroundM.png" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
               <h5 id="gameTitle2">Coming soon</h5>
               <p id="gameDesc2">In the next weeks we'll show you our next project. Stay tuned!</p>
@@ -92,7 +76,7 @@
           </div>
 
           <div class="carousel-item">
-            <img src="webAssets/backgroundS.png" alt="Third slide">
+            <img id="carImg3" src="webAssets/backgroundS.png" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
               <h5 id="presenTitle">Who we are?</h5>
               <p id="presenDesc">A group of people focused on your enjoyment. We do what we love and we love
@@ -300,6 +284,8 @@
             </li>
             <li><a class="text-muted" href="https://www.w3schools.com/bootstrap/">Bootstrap Documentation</a>
             </li>
+            <li><a class="text-muted" href="https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser">Detecting Mobile Browser</a>
+            </li>
           </ul>
         </div>
         <div class="col-2 col-md col-12 col-xs">
@@ -374,12 +360,9 @@
       </footer>
     </footer>
   </div>
-
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://connect.facebook.net/en_US/fbinstant.6.0.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="webManager.js"></script>
 </body>
-
 </html>

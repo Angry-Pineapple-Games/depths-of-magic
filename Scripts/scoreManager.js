@@ -15,7 +15,6 @@ var myScoreManager = {
                 this.bestScores.push(0.0);
             }
         }
-        console.log("[MYSCOREMANAGER] Best Scores: " + this.bestScores);
     },
 
     uploadBestScores : function(){//Sube a localStorage las 10 mejores puntuaciones actualizadas

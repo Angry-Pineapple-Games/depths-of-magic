@@ -195,9 +195,6 @@ var myIntro = {
         that.animImg = myPreload.images.intro_hero;
         that.background = myPreload.images.intro_background;
         that.clickTo = ["clickToStart", "black",[0.5,0.25], "center"];
-    },
-    pruebaTimer:function(){
-        console.log("mishon compree");
     }
 }
 

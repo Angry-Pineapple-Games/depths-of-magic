@@ -125,6 +125,13 @@ $(document).ready(function () {
     myWebContent.initialSetup();
     myWebContent.downloadBestScores();
     sessionStorage.setItem("soundDOM", true);
+    let isMobile = detectmob();
+    if (isMobile){
+        console.log("Entro");
+        $('#carImg1').attr('src', 'webAssets/background1_mobile.png');
+        $('#carImg2').attr('src', 'webAssets/background2_mobile.png');
+        $('#carImg3').attr('src', 'webAssets/background3_mobile.png');
+    }
 
     $("#btnSpanish").change(function () {
         sessionStorage.setItem("langDom", "spanish");
@@ -151,44 +158,28 @@ $(document).ready(function () {
 
     $('#btnON').change(function(){
         sessionStorage.setItem("soundDOM", true);
-        console.log(sessionStorage.getItem("soundDOM"));
     });
 
     $('#btnOFF').change(function(){
         sessionStorage.setItem("soundDOM", false);
-        console.log(sessionStorage.getItem("soundDOM"));
     })
 });
 
-// On window resized fire this event
-$(window).bind('resize',function() {
-    //Update slider
-    fitSlider();
-});
-// On window loaded fire this event
-$(window).load(function() {
-    fitSlider();
-});
-
-function fitSlider() {
-    var wH = $(window).height() - $('#top-header').height();
-    var wW = $(window).width();
-    var winRatio = wW / wH;
-    var imgH = $('#carouselDepths .carousel-inner').height();
-    var imgW = $('#carouselDepths .carousel-inner').width();
-    var imgRatio = imgW / imgH;
-    console.log(winRatio, imgRatio);
-
-    $('#carouselDepths').css('height', wH);
-
-    if ( imgRatio > winRatio )
-    {
-        $('#carouselDepths .carousel-inner .carousel-item img').addClass('fit-height');
-    }
-    else
-    {
-        $('#carouselDepths .carousel-inner .carousel-item img').removeClass('fit-height');
-    }
+function detectmob() { 
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ){
+       return true;
+     }
+    else {
+       return false;
+     }
+     //Reference: https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
 }
 
 var ids = [
