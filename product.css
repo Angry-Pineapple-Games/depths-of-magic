@@ -55,7 +55,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-150%, -50%);
+  transform: translate(-150%, -70%);
   -ms-transform: translate(-50%, -50%);
   background-color: #555;
   color: white;
@@ -67,11 +67,27 @@
   text-align: center;
 }
 
+#soundButtons {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-100%, +80%);
+  -ms-transform: translate(-45%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 5px;
+  padding: 5px 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+}
+
 #btnMusic {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(+0%, -50%);
+  transform: translate(+0%, -70%);
   -ms-transform: translate(-50%, -50%);
   background-color: #555;
   color: white;

@@ -56,7 +56,7 @@ myEnglishVersion = {
     cut: "CUT",
     score: "Score: ",
     roomCombat: "Room - Combat: ",
-    sound: "Sound: deactivated"
+    sound: "Sound: disabled"
 }
 
 mySpanishVersion = {

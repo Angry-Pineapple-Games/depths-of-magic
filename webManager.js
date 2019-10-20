@@ -156,6 +156,16 @@ $(document).ready(function () {
         }*/
     });
 
+    $('#btnON').change(function(){
+        sessionStorage.setItem("soundDOM", true);
+        console.log(sessionStorage.getItem("soundDOM"));
+    });
+
+    $('#btnOFF').change(function(){
+        sessionStorage.setItem("soundDOM", false);
+        console.log(sessionStorage.getItem("soundDOM"));
+    })
+
     $("#btnTutorial").click(function () {
         if (myWebContent.isTutorialVisible){
             $('#tut1Div').hide();

@@ -53,6 +53,14 @@
             <img src="webAssets/background5.png" alt="First slide">
             <a id="NewGame" class="btn btn-outline-secondary" href="DOM.html">New Game</a>
             <a id="btnMusic" class="btn btn-secondary">Play Soundtrack</a>
+            <div id="soundButtons" class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="btnON" autocomplete="off" checked> Music ON
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="btnOFF" autocomplete="off"> Music OFF
+              </label>
+            </div>
             <div class="carousel-caption d-none d-md-block">
               <h5 id="gameTitle">Depths of Magic</h5>
               <p id="gameDesc">Face your fears and unleash the power of magic in this dark roguelike</p>
