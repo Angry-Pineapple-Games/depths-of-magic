@@ -26,7 +26,7 @@ var myLevel1 = {
             idHero = 1;
         }
         this.hero = myHeroCharacter.generateHero(idHero);
-        this.enemies = myCharacterEnemies.generateEnemies(this);
+        this.enemies = myCharacterEnemies.generateEnemies(this.enemiesMax);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
         myFade.clearImage();
@@ -210,12 +210,11 @@ var myTransitionScene = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
+        this.idRoom = 3;
         if((myGame.scene === 2)&& (myStatsController.loops < 1)){
             this.idRoom = 1;
         } else if((myGame.scene === 4) && (myStatsController.loops < 1)){
             this.idRoom = 2;
-        } else {
-            this.idRoom = 3;
         }
         this.hero = myHeroCharacter.generateHero(this.idRoom);
         myStatsController.increaseStats(this.hero);
@@ -381,7 +380,7 @@ var myLevel2 = {
             idHero = 2;
         }
         this.hero = myHeroCharacter.generateHero(idHero);
-        this.enemies = myCharacterEnemies.generateEnemies(this);
+        this.enemies = myCharacterEnemies.generateEnemies(this.enemiesMax);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
         myFade.clearImage();
@@ -484,7 +483,7 @@ var myLevel3 = {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
         this.hero = myHeroCharacter.generateHero(3);
-        this.enemies = myCharacterEnemies.generateEnemies(this);
+        this.enemies = myCharacterEnemies.generateEnemies(this.enemiesMax);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
         myFade.clearImage();
