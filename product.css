@@ -70,7 +70,7 @@
 #soundButtons {
   position: absolute;
   top: 50%;
-  left: 48%;
+  left: 55%;
   transform: translate(-70%, +80%);
   -ms-transform: translate(-45%, -50%);
   background-color: #555;
@@ -86,7 +86,7 @@
 #btnMusic {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 48%;
   transform: translate(+30%, -70%);
   -ms-transform: translate(-50%, -50%);
   background-color: #555;
