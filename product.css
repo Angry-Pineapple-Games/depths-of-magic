@@ -55,7 +55,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-150%, -70%);
+  transform: translate(-120%, -70%);
   -ms-transform: translate(-50%, -50%);
   background-color: #555;
   color: white;
@@ -71,7 +71,7 @@
   position: absolute;
   top: 50%;
   left: 48%;
-  transform: translate(-100%, +80%);
+  transform: translate(-70%, +80%);
   -ms-transform: translate(-45%, -50%);
   background-color: #555;
   color: white;
@@ -87,7 +87,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(+0%, -70%);
+  transform: translate(+30%, -70%);
   -ms-transform: translate(-50%, -50%);
   background-color: #555;
   color: white;
