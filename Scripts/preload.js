@@ -544,6 +544,11 @@ var myPreload = {
       src:"Assets/end_hand.png",
       width:1587,
       height:892
+    },
+    fondoStats:{
+      src:"Assets/fondoStats.png",
+      width:1920,
+      height:1440
     }
 
   },

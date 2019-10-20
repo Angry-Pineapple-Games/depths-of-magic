@@ -202,21 +202,21 @@ var myIntro = {
 
 var myTransitionScene = {
     hero: {},
-    posHero: [300, 440],
+    posHero: [200, 200],
     room: {},
+    idRoom: 3,
     timeTransition: 8000,
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
-        let idHero = 3;
         if((myGame.scene === 2)&& (myStatsController.loops < 1)){
-            idHero = 1;
+            this.idRoom = 1;
         } else if((myGame.scene === 4) && (myStatsController.loops < 1)){
-            idHero = 2;
+            this.idRoom = 2;
         }
-        this.hero = myHeroCharacter.generateHero(idHero);
+        this.hero = myHeroCharacter.generateHero(this.idRoom);
         myStatsController.increaseStats(this.hero);
-        this.room = myPreload.images["room1"];
+        this.room = myPreload.images["fondoStats"];
         mySoundManager.stopSound("boss");
         mySoundManager.startSound("menu");
         mySoundManager.stopSound("ending1");
@@ -229,11 +229,11 @@ var myTransitionScene = {
         myGameArea.resizeBackground(this.room, 1);
         myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
 
-        myTextManager.drawTextInBackground(1, "currentLevel", [0.7, 0.2], String(myRoomMechanics.countSwaps), "black", 50, "center");
-        myTextManager.drawTextInBackground(1, "healthPoints", [0.7, 0.35], String(myHeroCharacter.hpMax), "black", 50, "center");
-        myTextManager.drawTextInBackground(1, "attackPoints", [0.7, 0.5], String(myHeroCharacter.ap), "black", 50, "center");
-        myTextManager.drawTextInBackground(1, "defensePoints", [0.7, 0.65], String(myHeroCharacter.dp), "black", 50, "center");
-        myTextManager.drawTextInBackground(1, "numberLaps", [0.7, 0.8], String(myStatsController.loops), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "currentLevel", [0.7, 0.2], String(this.idRoom), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "healthPoints", [0.7, 0.3], String(myHeroCharacter.hpMax), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "attackPoints", [0.7, 0.4], String(myHeroCharacter.ap), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "defensePoints", [0.7, 0.5], String(myHeroCharacter.dp), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "numberLaps", [0.7, 0.6], String(myStatsController.loops), "black", 50, "center");
         myTextManager.drawTextInBackground(1, "clickToConinue", [0.98, 0.95], "", "white", 80, "right");
         myFade.fade(1);
     }
