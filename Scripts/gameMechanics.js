@@ -386,7 +386,7 @@ var myCombatMechanics = {
                                 that.scene.showDebuffEnemy = false;
                                 that.swapEnemy();
                             }else{
-                                mySoundManager.startSound("enemy9_death", false, 0.5);
+                                mySoundManager.startSound("enemy9_death", false, 0.3);
                                 myAnimManager.changeAnimation(that.scene.enemy, "death2", function () {
                                     myAnimManager.changeAnimation(that.scene.enemy, "death3", function () {
                                         myAnimManager.changeAnimation(that.scene.enemy, "death4", function () {

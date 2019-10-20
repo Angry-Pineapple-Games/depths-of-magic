@@ -20,7 +20,11 @@ var myLevel1 = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
-        this.hero = myHeroCharacter.generateHero(1);
+        let idHero = 3;
+        if(myStatsController.loops < 1){
+            idHero = 1;
+        }
+        this.hero = myHeroCharacter.generateHero(idHero);
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
@@ -161,13 +165,13 @@ var myIntro = {
         myFade.in(1);
         let that = myIntro;
         that.showText = false;
-        posAnim= [-100, -400];
+        that.posAnim= [-100, -400];
         that.currentAnimation = new Animation(myPreload.spritesInfo.intro_fire, 0, 59);
         that.currentAnimation.reset();
         that.animImg = myPreload.images.intro_fire;
         that.animResize = 3;
         that.showAnim = true;
-        myGameManager.addTimer(that.startSequence3, 3000, "timersSwap");
+        myGameManager.addTimer(that.startSequence3, 2000, "timersSwap");
     },
     startSequence3:function(){
         let that = myIntro;
@@ -176,7 +180,7 @@ var myIntro = {
         that.posText = [0.45, 0.62]
         that.text3 = "author";
         that.showText = true;
-        myGameManager.addTimer(that.startSequence4, 3000, "timersSwap");
+        myGameManager.addTimer(that.startSequence4, 4000, "timersSwap");
     },
     startSequence4:function(){
         mySoundManager.startSound("intro2", true);
@@ -204,7 +208,13 @@ var myTransitionScene = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
-        this.hero = myHeroCharacter.generateHero();
+        let idHero = 3;
+        if((myGame.scene === 2)&& (myStatsController.loops < 1)){
+            idHero = 1;
+        } else if((myGame.scene === 4) && (myStatsController.loops < 1)){
+            idHero = 2;
+        }
+        this.hero = myHeroCharacter.generateHero(idHero);
         myStatsController.increaseStats(this.hero);
         this.room = myPreload.images["room1"];
         mySoundManager.stopSound("boss");
@@ -251,7 +261,8 @@ var myEnding = {
             myGameArea.editTams(1);
             this.displayed = true;
             mySoundManager.startSound("ending1", false);
-            mySoundManager.pauseSound("menu");
+            mySoundManager.stopSound("menu");
+            mySoundManager.stopSound("boss");
             this.startSequence1();
         }
     },
@@ -286,10 +297,10 @@ var myEnding = {
         that.animResize = 1.8;
         that.showAnim = true;
         that.extraImg = myPreload.images.end_hand;
-        that.posExtraImg = [0, 550];
+        that.posExtraImg = [0, 0.35];
         that.showExtraImg = true;
         that.showText = false;
-        myGameManager.addTimer(that.startSequence2, 2000, "timersSwap");
+        myGameManager.addTimer(that.startSequence2, 500, "timersSwap");
     },
     startSequence2:function(){
         let that = myEnding;
@@ -297,7 +308,7 @@ var myEnding = {
         that.text1 = "text11";
         that.text2 = "text12";
         that.showText = true;
-        myGameManager.addTimer(that.startSequence3, 2000, "timersSwap");
+        myGameManager.addTimer(that.startSequence3, 3500, "timersSwap");
     },
     startSequence3:function(){
         let that = myEnding;
@@ -362,7 +373,11 @@ var myLevel2 = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
-        this.hero = myHeroCharacter.generateHero(2);
+        let idHero = 3;
+        if(myStatsController.loops < 1){
+            idHero = 2;
+        }
+        this.hero = myHeroCharacter.generateHero(idHero);
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
