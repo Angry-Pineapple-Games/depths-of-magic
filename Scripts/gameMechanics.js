@@ -89,7 +89,7 @@ var myGameMechanics = {
                     this.gridRopes[g][0] = -1;
                 } else { this.gridRopes[g][0] = 0; }
             }
-            myGameManager.addTimer(this.timeOrderAddOne, 2000, "timersOrderPattern");
+            myGameManager.addTimer(this.timeOrderAddOne, 1300, "timersOrderPattern");
         } else if (this.timeOrder === this.gridRopes.length) {
             for (let g = 0; g < this.gridRopes.length; g++) {
                 this.gridRopes[g][0] = 0;
@@ -577,8 +577,8 @@ var myCutMechanics = {
 var myStatsController = {
     debug: false,
     loops: 0,//vueltas dadas al juego
-    loopfactor: 0.4,//factor de mejora enemigos en cada vuelta al juego
-    increaseFactor: 5,//factor de mejora para las estadisticas del heroe
+    loopfactor: 0.2,//factor de mejora enemigos en cada vuelta al juego
+    increaseFactor: 3,//factor de mejora para las estadisticas del heroe
     counter: 0,
     counterCounter: 0,
     totalCounter: 0,
@@ -594,8 +594,8 @@ var myStatsController = {
     healNoCutsCounter: 0,
     healFactor: 6.0,
     totalHeal: 0,
-    heroFactor: 4.0,//Variable de balanceo. Cuando sea definitivo se cambian los stats y se elimina esta variable
-    enemyFactor: 8.0,//Variable de balanceo. Cuando sea definitivo se cambian los stats y se elimina esta variable
+    heroFactor: 4.0,
+    enemyFactor: 8.0,
     concatenationFactor: 0.35,
     resetLoops: function () {
         this.loops = 0;
@@ -625,11 +625,11 @@ var myStatsController = {
         else if (rope[5] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
     },
     increaseStats: function (hero) {//incrementa las estadisticas
-        hero.hpMax += this.increaseFactor * this.healNoCutsCounter;
+        hero.hpMax += Math.trunc(this.increaseFactor * this.healNoCutsCounter * 0.5);
         this.healNoCutsCounter = 0;
-        hero.ap += this.increaseFactor * this.counterCounter;
+        hero.ap += Math.trunc(this.increaseFactor * this.counterCounter * 0.25);
         this.counterCounter = 0;
-        hero.dp += this.increaseFactor * (this.counterBuff + this.counterDebuff);
+        hero.dp += Math.trunc(this.increaseFactor * (this.counterBuff + this.counterDebuff) * 0.65);
         this.counterBuff = 0;
         this.counterDebuff = 0;
     },
@@ -658,7 +658,7 @@ var myStatsController = {
         hero.hp += hero.healing;
         if (hero.hp > hero.hpMax) { hero.hp = hero.hpMax; }
         if (hero.hp < 0) { hero.hp = 0; }
-        enemy.healing = Math.trunc(this.heal * this.healFactor);
+        enemy.healing = Math.trunc(this.heal * this.healFactor * 2.5);
         enemy.hp += enemy.healing;
         if (enemy.hp > enemy.hpMax) { enemy.hp = enemy.hpMax; }
 

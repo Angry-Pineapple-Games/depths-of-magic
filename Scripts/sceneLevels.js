@@ -213,6 +213,8 @@ var myTransitionScene = {
             this.idRoom = 1;
         } else if((myGame.scene === 4) && (myStatsController.loops < 1)){
             this.idRoom = 2;
+        } else {
+            this.idRoom = 3;
         }
         this.hero = myHeroCharacter.generateHero(this.idRoom);
         myStatsController.increaseStats(this.hero);
@@ -476,7 +478,7 @@ var myLevel3 = {
     showDebuffEnemy: false,
     roomsMin: 6,
     roomsMax: 9,
-    limitTimePerPatron: 3900,
+    limitTimePerPatron: 3500,
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
