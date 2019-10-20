@@ -18,28 +18,28 @@ var myCharacterEnemies = { //contiene todos las funciones necesarias para gestio
         }
         return this.enemies;
     },
-
-    generateAnimationsInfo: function(character, frames){
+    
+    generateAnimationsInfo: function(character, frames){//genera la informacion de las animaciones base de los enemigos a partir de los id the frames que tienen guardados
         character.animations.idle = new Animation(myPreload.spritesInfo[character.img + "_idle"], frames.idle.start, frames.idle.end);
         character.animations.attack = new Animation(myPreload.spritesInfo[character.img + "_attack"], frames.attack.start, frames.attack.end);
         character.animations.damage = new Animation(myPreload.spritesInfo[character.img + "_damage"], frames.damage.start, frames.damage.end);
         character.animations.death = new Animation(myPreload.spritesInfo[character.img + "_death"], frames.death.start, frames.death.end);
     },
 
-    generateBossDeathAnimationsInfo: function(character, frames){
+    generateBossDeathAnimationsInfo: function(character, frames){//genera la informacion de las animaciones de muerte del jefe final
         character.animations.death2 = new Animation(myPreload.spritesInfo[character.img + "_death2"], frames.death2.start, frames.death2.end);
         character.animations.death3 = new Animation(myPreload.spritesInfo[character.img + "_death3"], frames.death3.start, frames.death3.end);
         character.animations.death4 = new Animation(myPreload.spritesInfo[character.img + "_death4"], frames.death4.start, frames.death4.end);
         character.animations.death5 = new Animation(myPreload.spritesInfo[character.img + "_death5"], frames.death5.start, frames.death5.end);
     },
 
-    saveImages: function(character){
+    saveImages: function(character){//Guarda las imagenes de los spritesheets de cada animacion de un enemigo
         character.imgs.idle = myPreload.images[character.img + "_idle"];
         character.imgs.attack = myPreload.images[character.img + "_attack"];
         character.imgs.damage = myPreload.images[character.img + "_damage"];
         character.imgs.death = myPreload.images[character.img + "_death"];
     },
-    saveBossDeathImages: function (character){
+    saveBossDeathImages: function (character){//Guarda las imagenes de los spritesheets de muerte del jefe final
         character.imgs.death2 = myPreload.images[character.img + "_death2"];
         character.imgs.death3 = myPreload.images[character.img + "_death3"];
         character.imgs.death4 = myPreload.images[character.img + "_death4"];
@@ -620,7 +620,7 @@ var myEnemiesProperties = { //almacena las propiedades de cada enemigo
     }
 }
 
-//Frames son placeholders
+//Frames de inicio y final de las animaciones de cada enemigo
 var myEnemiesAnimFrames = {
     0: {
         idle: {start: 0, end: 15},

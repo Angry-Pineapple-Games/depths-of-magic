@@ -2,18 +2,20 @@
 
 var myAnimManager = {
     
+    //Guarda un array con la informacion de todos los frames de un json array de flash
     getFrameInfoFromJSON:function(JSONArray){
         var arrayFrames = [];
         if(JSONArray.length > 0){
             $.each(JSONArray, function(index, value){
                 arrayFrames.push(value);
             });
-            //console.log("Extraction succesful");
         }else{
             console.log("JSON file in wrong format. Please use JSON Array");
         }
         return arrayFrames;
     },
+
+    //Guarda la info de los frames de una seccion de un spritesheet especifica
     getAnimFrames: function(spritesheet, start, end){
         var newAnim = [];
         for(var i = start; i <= end; i++){
@@ -22,6 +24,7 @@ var myAnimManager = {
         return newAnim;
     },
 
+    //Dibuja un frame especifico de un spritesheet
     drawFrame: function(ctx, img, info, frame, x, y, resize){
         ctx.drawImage(img, info[frame].frame.x, info[frame].frame.y, 
                         info[frame].frame.w, info[frame].frame.h, 
@@ -76,6 +79,8 @@ var myAnimManager = {
         character.currentAnimation.reset();
         character.currentAnimation.callback = callback;
     },
+
+    //Reproduce una secuencia de animaciones de sfx en sucesion que termina en un callback
     playSequenceSFX: function(sequence, sfx, callback){
         let nextCallback = callback;
         for(var i = sequence.length - 1; i >= 0; i--){
@@ -96,10 +101,10 @@ class Animation{
         this.callback = this.reset;
         this.paused = false;
     }
+    //Avanza la animacion un frame y controla el callback al terminar
     animate(ctx, img, x, y, resize){
         if(!this.hidden){
             myAnimManager.drawFrame(ctx, img, this.framesInfo, this.currentFrame, x, y, resize);
-            //La animacion solo avanza en frames impares para que vaya a 30fps mientras el game loop va a 60fps
             if(!myGameManager.pause && !this.paused){
                 this.currentFrame++;
             }
@@ -123,6 +128,7 @@ class Animation{
     }
 }
 
+//Objeto que guarda el efecto de magia actual
 var mySFX = {
     animations:{
         damage:{},
@@ -141,6 +147,7 @@ var mySFX = {
     currentAnimation:{},
     currentImg:{},
     pos:[0,0],
+    //Genera un SFX
     generateSFX: function(){
         this.generateAnimationsInfo();
         this.saveImages();
@@ -149,6 +156,7 @@ var mySFX = {
         this.currentAnimation.hide();
         return this;
     },
+    //Guarda la info de las animaciones
     generateAnimationsInfo: function(){
         this.animations.damage = new Animation(myPreload.spritesInfo.damage, 0, 5);
         this.animations.buff = new Animation(myPreload.spritesInfo.buff, 0, 8);
@@ -156,6 +164,7 @@ var mySFX = {
         this.animations.heal = new Animation(myPreload.spritesInfo.heal, 0, 13);
         this.animations.superbuff = new Animation(myPreload.spritesInfo.superbuff, 0, 7);
     },
+    //Guarda las imagenes de cada spritesheet
     saveImages: function(){
         this.imgs.damage = myPreload.images.damage;
         this.imgs.buff = myPreload.images.buff;
@@ -163,6 +172,7 @@ var mySFX = {
         this.imgs.heal = myPreload.images.heal;
         this.imgs.superbuff = myPreload.images.superbuff;
     },
+    //Reproduce una animacion especifica y su sonido y le da un callback al que se añade ocultarla
     playSFX: function(type, pos, callback = function(){}){
         this.pos = pos;
         switch(type){

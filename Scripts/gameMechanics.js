@@ -316,6 +316,7 @@ var myCombatMechanics = {//controla el cambio de enemigos y los patrones de esto
         let sfxSequenceHero = [];
         let sfxSequenceEnemy = [];
 
+        //Se guarda la secuencia de efectos que se van a reproducir
         if(myStatsController.buff > 0){
             that.scene.showBuffHero = true;
             sfxSequenceHero.push(["buff", that.scene.posHero]);

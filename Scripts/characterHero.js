@@ -36,7 +36,7 @@ var myHeroCharacter = {//define las propiedades del heroe y las funciones que lo
         this.currentImg = this.imgs.idle;
         return this;
     },
-    generateAnimationsInfo: function(Id = 1){
+    generateAnimationsInfo: function(Id = 1){//Genera la informacion de las animaciones del heroe segun que spritesheet use (Nivel 1, 2 o 3)
         if(Id == 1){
             this.animations.idle = new Animation(myPreload.spritesInfo.hero_idle, 0, 59);
             this.animations.attack = new Animation(myPreload.spritesInfo.hero_attack, 0, 49);
@@ -52,7 +52,7 @@ var myHeroCharacter = {//define las propiedades del heroe y las funciones que lo
         }
         
     },
-    saveImages: function(Id = 1){
+    saveImages: function(Id = 1){//Guarda las imagenes de los spritesheets correspondientes al nivel actual del heroe
         if(Id == 1){
             this.imgs.idle = myPreload.images.hero_idle;
             this.imgs.attack = myPreload.images.hero_attack;
@@ -68,4 +68,3 @@ var myHeroCharacter = {//define las propiedades del heroe y las funciones que lo
         }
     }
 }
-//https://konvajs.org/docs/sandbox/GIF_On_Canvas.html
