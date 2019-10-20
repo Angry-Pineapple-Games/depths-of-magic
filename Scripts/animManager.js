@@ -179,7 +179,7 @@ var mySFX = {
             case "debuff":
                 this.currentImg = this.imgs.debuff;
                 this.currentAnimation = this.animations.debuff;
-                mySoundManager.startSound("debuff", false, 0.6);
+                mySoundManager.startSound("debuff", false, 0.4);
                 break;
             case "heal":
                 this.currentImg = this.imgs.heal;

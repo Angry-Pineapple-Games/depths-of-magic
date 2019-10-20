@@ -6,6 +6,8 @@ var myWebContent = {
     isTutorialVisible : false,
     btnTutorialsContentENG: "Tutorials",
     btnTutorialsContentESP: "Tutoriales",
+    //Music
+    musicPlaying : false,
     
     title1ENG : "How to play",
     title1ESP : "Cómo jugar",
@@ -144,6 +146,14 @@ $(document).ready(function () {
 
     $('#btnMusic').click(function() {
         console.log("Click works! Sub this console.log with audio play");
+        /*var webMusic = sessionStorage.getItem("soundDOM");
+        if (!myWebContent.musicPlaying){
+            webMusic.play();
+            myWebContent.musicPlaying = true;
+        } else{
+            webMusic.pause();
+            myWebContent.musicPlaying = false;
+        }*/
     });
 
     $("#btnTutorial").click(function () {

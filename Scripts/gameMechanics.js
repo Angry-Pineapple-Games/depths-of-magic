@@ -626,7 +626,7 @@ var myStatsController = {//gestiona todos los stats y los efectos de estos en el
         else if (rope[5] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
     },
     increaseStats: function (hero) {//incrementa las estadisticas
-        hero.hpMax += Math.trunc(this.increaseFactor * this.healNoCutsCounter * 0.5);
+        hero.hpMax += Math.trunc(this.increaseFactor * this.healNoCutsCounter * 0.85);
         this.healNoCutsCounter = 0;
         hero.ap += Math.trunc(this.increaseFactor * this.counterCounter * 0.25);
         this.counterCounter = 0;
