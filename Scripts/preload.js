@@ -1,5 +1,5 @@
 /*En este script se gestiona la carga de los archivos multimedia para dejarlo disponible siempre que sea necesario*/
-var myLoading = {
+var myLoading = {//precarga de los assets para el loading
   images: [],
   numImages: 16,
   source: {
@@ -24,7 +24,7 @@ var myLoading = {
     }
   }
 }
-
+//carga los assets visuales y audio del juego
 var myPreload = {
   images: {},
   audios: {},
@@ -952,6 +952,7 @@ var myPreload = {
         if(loadedAudios < numAudios) {myGameArea.resizeBackground(myLoading.images[Math.trunc(((loadedImages+loadedAudios) / (numImages+numAudios)) * myLoading.numImages)], 1);}
         if (++loadedAudios == numAudios) {
           myTextManager.drawTextInBackground(1, "clickToStart", [0.98, 0.95], "", "white", 25, "right");
+          if(!sessionStorage.getItem("soundDOM")){ myTextManager.drawTextInBackground(1, "sound", [0.02, 0.95], "", "white", 25, "left"); }
           $(document).click(startGame);
         }
       };

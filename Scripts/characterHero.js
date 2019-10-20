@@ -1,4 +1,4 @@
-var myHeroCharacter = {
+var myHeroCharacter = {//define las propiedades del heroe y las funciones que lo modifican
     hp: 100,
     hpIni: 100,
     hpMax: 100,
@@ -25,7 +25,7 @@ var myHeroCharacter = {
         death:{},
         victory:{}
     },
-    generateHero: function(levelId = 1) {
+    generateHero: function(levelId = 1) {//genera el heroe con las propiedades restauradas para un nivel en concreto
         this.saveImages(levelId);
         this.hp = this.hpMax;
         this.buff = 0;

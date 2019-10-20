@@ -1,3 +1,4 @@
+/*Gestiona los textos empleados en el juego*/
 myTextManager = {
     langVersion: 'english',
     eventualText: [0, -0.01],
@@ -28,6 +29,7 @@ myTextManager = {
     }
 }
 
+//distintos idiomas
 myEnglishVersion = {
     clickToStart: "Press to start",
     clickToSkip: "Press to skip",
@@ -53,7 +55,8 @@ myEnglishVersion = {
     remember: "REMEMBER",
     cut: "CUT",
     score: "Score: ",
-    roomCombat: "Room - Combat: "
+    roomCombat: "Room - Combat: ",
+    sound: "Sound: deactivated"
 }
 
 mySpanishVersion = {
@@ -81,5 +84,6 @@ mySpanishVersion = {
     remember: "RECUERDA",
     cut: "CORTA",
     score: "Puntos: ",
-    roomCombat: "Sala - Combate: "
+    roomCombat: "Sala - Combate: ",
+    sound: "Sonido: desactivado"
 }

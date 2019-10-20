@@ -26,7 +26,7 @@ var myGameMechanics = {
     lineDecay: 0.1,
     sizeGridX: 4,
     sizeGridY: 4,
-    drawTraces: function (ctx2) {
+    drawTraces: function (ctx2) {//dibuja los trazos obtenidos
         let that = myGameMechanics;
         that.traces.forEach(trace => {
             ctx2.beginPath();
@@ -43,8 +43,8 @@ var myGameMechanics = {
             that.traces.shift();
         }
     },
-    generateArrayRandomOrder: function (max, enemies=false, min=0) {
-        if(enemies) {max--;}
+    generateArrayRandomOrder: function (max, enemies=false, min=0) { //genera un array aleatorio permutando el array
+        if(enemies) {max--;}//si permuta un array de enemigos el último lo mantiene fijo, si no permuta toda la secuencia.
         let _array = [];
         for(var i=min; i<max; i++) {
             _array.push(i);
@@ -60,7 +60,7 @@ var myGameMechanics = {
         if(enemies) {_array.push(max);}
         return _array;
     },
-    generateGridRopes: function (enemy) {//coge un nuevo grid aleatorio y lo pinta, contando el número de cuerdas totales y modificando los stats
+    generateGridRopes: function (enemy) {//coge un nuevo grid aleatorio y lo pinta sin repetirlos, contando el número de cuerdas totales y modificando los stats
         enemy.gridRopeNow = myCombatMechanics.patternsRandomArray.shift();
         myCombatMechanics.patternsRandomArray.push(enemy.gridRopeNow);
         myStatsController.reset(enemy.gridRopes[enemy.gridRopeNow]);
@@ -82,7 +82,7 @@ var myGameMechanics = {
             myFade.addImage(myPreload.images.gridBlocked, "gridBlocked", Date.now(), 2)
         }
     },
-    generateGridWithOrder: function () {
+    generateGridWithOrder: function () { //cuando el grid tiene que seguir un orden prefijado
         if (this.timeOrder < this.gridRopes.length) {
             for (let g = 0; g < this.gridRopes.length; g++) {
                 if (g !== this.timeOrder) {
@@ -98,7 +98,7 @@ var myGameMechanics = {
             myGameManager.addTimer(this.un_blockInputs, 2000, "timersOrderPattern");
         }
     },
-    generateEnemy: function (enemies, enemiesMax, nEnemies) {
+    generateEnemy: function (enemies, enemiesMax, nEnemies) { //coge el primer enemigo del array generado aleatoriamente
         let nextEnemy = enemies[myRoomMechanics.enemiesRandomArray.shift()];
         if (myRoomMechanics.countSwaps === myRoomMechanics.nRooms && myCombatMechanics.countCombats === nEnemies) {
             mySoundManager.stopSound("menu");
@@ -109,7 +109,7 @@ var myGameMechanics = {
         nextEnemy.buff = 0;
         return nextEnemy;
     },
-    generateRooms: function (roomsMax) {
+    generateRooms: function (roomsMax) {//devuelve todas las salas disponibles
         let rooms = [];
         for (var r = 0; r < roomsMax; r++) {
             rooms.push(myPreload.images['room' + String(r)]);
@@ -119,13 +119,13 @@ var myGameMechanics = {
     drawRopes: function (gridRopes) { //pinta las cuerdas en función del tamaño de la imagen de fondo
         myGameArea.drawInBackgroundAGrid(2, this.getPositionRope, gridRopes);
     },
-    timeOrderAddOne: function () {
+    timeOrderAddOne: function () {//manda dibujar la siguiente cuerda
         let that = myGameMechanics;
         if (that.debug) { console.log("TimeOrderAddone"); }
         that.timeOrder++;
         that.generateGridWithOrder();
     },
-    un_blockInputs: function () {
+    un_blockInputs: function () {//bloquea o desbloquea los eventos producidos por el usuario, excepto pausa
         let that = myGameMechanics;
         if (!myInputsManager.blocked) {
             if (that.debug) { console.log("blockInputs"); }
@@ -269,7 +269,8 @@ var myGameMechanics = {
     }
 }
 
-var myCombatMechanics = {
+//gestión de los estados del juego
+var myCombatMechanics = {//controla el cambio de enemigos y los patrones de estos, además de la resolución del combate
     debug: false,
     countSwaps: 0,
     countCombats: 0,
@@ -309,7 +310,7 @@ var myCombatMechanics = {
             myRoomMechanics.swapRoom();
         }
     },
-    updateState: function () {
+    updateState: function () {//resultado del combate
         that = myCombatMechanics;
         myStatsController.applyStats(that.scene.hero, that.scene.enemy);
         let sfxSequenceHero = [];
@@ -480,7 +481,7 @@ var myCombatMechanics = {
     }
 }
 
-var myRoomMechanics = {
+var myRoomMechanics = { //gestiona el cambio de salas y niveles
     debug: false,
     scene: {},
     countSwaps: 0,
@@ -504,7 +505,7 @@ var myRoomMechanics = {
     }
 }
 
-var myCutMechanics = {
+var myCutMechanics = {//control de los cortes de las cuerdas
     debug: false,
     cutRopes: 0,
     totalRopes: 0,
@@ -569,7 +570,7 @@ var myCutMechanics = {
     }
 }
 
-var myStatsController = {
+var myStatsController = {//gestiona todos los stats y los efectos de estos en el heroe, enemigos y sus daños
     debug: false,
     loops: 0,//vueltas dadas al juego
     loopfactor: 0.4,//factor de mejora enemigos en cada vuelta al juego
@@ -592,10 +593,10 @@ var myStatsController = {
     heroFactor: 4.0,//Variable de balanceo. Cuando sea definitivo se cambian los stats y se elimina esta variable
     enemyFactor: 8.0,//Variable de balanceo. Cuando sea definitivo se cambian los stats y se elimina esta variable
     concatenationFactor: 0.35,
-    resetLoops: function () {
+    resetLoops: function () {//si se produce un game over (afecta a los stats de los enemigos)
         this.loops = 0;
     },
-    reset: function (pattern) {//resetea las variables
+    reset: function (pattern) {//resetea las todos los stats, exceptos los que se aplican en la escena intermedia
         this.counter = 0;
         this.buff = 0;
         this.debuff = 0;
@@ -612,14 +613,14 @@ var myStatsController = {
             else if (pattern[idx][5] === 4) { this.totalPower++; }
         }
     },
-    updateStats: function (rope) {//actualiza los contenedores
+    updateStats: function (rope) {//contabiliza las cuerdas cortadas por el jugador
         if (rope[5] === 0) { this.counter++; this.counterCounter++; }
         else if (rope[5] === 1) { this.buff++; this.counterBuff++; }
         else if (rope[5] === 2) { this.debuff++; this.counterDebuff++; }
         else if (rope[5] === 3) { this.heal++; }
         else if (rope[5] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
     },
-    increaseStats: function (hero) {//incrementa las estadisticas
+    increaseStats: function (hero) {//incrementa las estadisticas del heroe
         hero.hpMax += this.increaseFactor * this.healNoCutsCounter;
         this.healNoCutsCounter = 0;
         hero.ap += this.increaseFactor * this.counterCounter;
@@ -628,7 +629,7 @@ var myStatsController = {
         this.counterBuff = 0;
         this.counterDebuff = 0;
     },
-    resetStats: function (hero) {
+    resetStats: function (hero) {//cuando se produce un game over reinicia los stats del heroe
         this.healNoCutsCounter = 0;
         this.counterCounter = 0;
         this.counterBuff = 0;
@@ -638,7 +639,7 @@ var myStatsController = {
         hero.ap = hero.apMax;
         hero.dp = hero.dpMax;
     },
-    applyStats: function (hero, enemy) {//aplica los daños y curaciones
+    applyStats: function (hero, enemy) {//aplica los daños y curaciones, además de avisar para su representación gráfica
         hero.buff = (1 + this.buff * this.buffFactor) / (1 + (this.totalDebuff - this.debuff) * this.debuffFactor);
         enemy.buff = (1 + (this.totalBuff - this.buff) * this.buffFactor) / (1 + this.debuff * this.debuffFactor);
 

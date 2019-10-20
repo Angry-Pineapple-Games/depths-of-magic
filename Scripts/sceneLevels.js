@@ -1,3 +1,4 @@
+/*Este script recoge todos los detalles de las escenas definidas*/
 var myLevel1 = {
     hero: {},
     enemies: [],
@@ -21,7 +22,7 @@ var myLevel1 = {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
         this.hero = myHeroCharacter.generateHero(1);
-        this.enemies = myCharacterEnemies.generateEnemies(this);
+        this.enemies = myCharacterEnemies.generateEnemies(this.enemiesMax);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
         myFade.clearImage();

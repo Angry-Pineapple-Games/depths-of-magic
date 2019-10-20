@@ -1,16 +1,16 @@
-/*En este script se gestiona el motor del juego, controlando el gameloop y siendo por tanto el core de esta estructura*/
-function preloadGame() {
+/*En este script se gestiona el motor del juego, controlando el gameloop y siendo por tanto el core*/
+function preloadGame() {//preinicializa el juego
     myGameArea.start();
     myTextManager.changeLang();
     myLoading.loadImages(startGame);
 }
 
-function startGame() {
+function startGame() {//arranca el juego
     myInputsManager.start();
     myGameManager.start();
 }
 
-var myGameManager = {
+var myGameManager = {//gestiona los timers dentro del juego y las propiedades principales del juego
     debug: false,
     lastFrameTimeMs: 0,
     maxFPS: 30,
@@ -71,7 +71,7 @@ var myGameManager = {
     }
 }
 
-var mainLoop = function (timestamp) {
+var mainLoop = function (timestamp) {//game loop del juego
     // Limita los fps 
     if (timestamp < myGameManager.lastFrameTimeMs + (1000 / myGameManager.maxFPS)) {
         requestAnimationFrame(mainLoop);
@@ -103,7 +103,7 @@ var mainLoop = function (timestamp) {
     window.requestAnimationFrame(mainLoop);
 }
 
-function myTimer(callback, timeMilis) {
+function myTimer(callback, timeMilis) {//gestion de las funciones internas de los timers
     this.debug = false;
     this.callback = callback;
     this.timerID = 0;

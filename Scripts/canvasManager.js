@@ -12,13 +12,13 @@ var myGameArea = {
         myFade.addCanvas(this.canvas1, this.context1);
         myFade.addCanvas(this.canvas2, this.context2);
     },
-    editTams: function (tam1) {
+    editTams: function (tam1) { //Permite cambiar el tamaño de los canvas
         if (tam1 > 1 || tam1 < 0) { console.log("Fail mygamearea/edittams/tam1"); }
         this.tam1 = tam1;
         this.tam2 = 1 - tam1;
         this.resizeCanvas();
     },
-    resizeCanvas: function () {//en tanto por uno
+    resizeCanvas: function () {//Redimensiona el canvas en función del tamaño de la ventana del documento
         let that = myGameArea;
         if (window.innerWidth > window.innerHeight * 1.5) {
             myGameArea.canvas1.width = window.innerWidth * that.tam1;
@@ -36,7 +36,7 @@ var myGameArea = {
             myGameArea.canvas2.style.top = window.innerHeight * that.tam1 + 'px';
         }
     },
-    resizeBackground: function (img, num) {
+    resizeBackground: function (img, num) {//redimensiona una imagen de fondo en función del tamaño del canvas
         let cnv, ctx;
         let background = {
             iniWidth: img.initWidth,
@@ -77,11 +77,11 @@ var myGameArea = {
         background.drawPosX = drawPosInCnvWidth;
         background.drawPosY = drawPosInCnvHeight;
     },
-    drawInBackgroundAGrid: function (num, callback, grid) {
+    drawInBackgroundAGrid: function (num, callback, grid) {//dibuja encima del fondo un grid de elementos respetando sus dimensiones al redimensionar
         let bg;
         if (num === 1) { bg = this.background1; }
         else if (num === 2) { bg = this.background2; }
-        else { console.log("Error en canvasManager/drawInBackground/num"); }
+        else { console.log("Error en canvasManager/drawInBackgroundAGrid/num"); }
         if (bg !== undefined) {
             for (var idx = 0; idx < grid.length; idx++) {
                 if (grid[idx][0] !== -1) {
@@ -92,7 +92,7 @@ var myGameArea = {
             }
         }
     },
-    drawInBackground: function (num, pos, img) {
+    drawInBackground: function (num, pos, img) {//dibuja una imagen encima del fondo
         let bg;
         if (num === 1) { bg = this.background1; }
         else if (num === 2) { bg = this.background2; }
@@ -102,7 +102,7 @@ var myGameArea = {
             bg.ctx.drawImage(img, bg.drawPosX + pos[0] * bg.width, bg.drawPosY + pos[1] * bg.height, img.initWidth * resizePerOne, img.initHeight * resizePerOne);
         }
     },
-    drawTextInBackground: function (num, text, pos, color = "white", textHeight = 20, textAlign = "center", textAlpha = 1) {
+    drawTextInBackground: function (num, text, pos, color = "white", textHeight = 20, textAlign = "center", textAlpha = 1) { //dibuja texto en el fondo
         let bg;
         if (num === 1) { bg = myGameArea.background1; }
         else if (num === 2) { bg = myGameArea.background2; }
@@ -119,7 +119,7 @@ var myGameArea = {
             bg.ctx.globalAlpha = 1;
         }
     },
-    animateInBackground: function (num, pos, img, animation, resize) {
+    animateInBackground: function (num, pos, img, animation, resize) {//dibuja frames de animaciones en el fondo
         let bg;
         if (num === 1) { bg = this.background1; }
         else if (num === 2) { bg = this.background2; }
@@ -129,12 +129,12 @@ var myGameArea = {
             animation.animate(bg.ctx, img, bg.drawPosX + pos[0] * resizePerOne, bg.drawPosY + pos[1] * resizePerOne, resizePerOne * resize);
         }
     },
-    resizeBackgroundPerOne: function (bg) {
+    resizeBackgroundPerOne: function (bg) {//devuelve en tanto por uno cuando ha cambiado de dimensiones el fondo
         return bg.width / bg.iniWidth;
     }
 }
 
-var myFade = {
+var myFade = {//controla eventos de degradados tanto de canvas como imágenes
     canvas: [], //cnv, ctx, fade
     images: {},
     in: function (num, duration = -0.08) {

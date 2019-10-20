@@ -1,11 +1,10 @@
-var myCharacterEnemies = {
+var myCharacterEnemies = { //contiene todos las funciones necesarias para gestionar los enemigos
     enemies: [],
-    
-    generateEnemies: function(scene) {
+    generateEnemies: function(enemiesMax) {//genera enemigos hasta un limite indicado de los disponibles
         for(var e=0; e<this.enemies.length; e++) {
             this.enemies[e].hp = this.enemies[e].hpMax;
         }
-        for (var e=this.enemies.length; e<scene.enemiesMax; e++) {
+        for (var e=this.enemies.length; e<enemiesMax; e++) {
             this.enemies.push(myEnemiesProperties[String(e)]);
             this.saveImages(this.enemies[e]);
             this.generateAnimationsInfo(this.enemies[e], myEnemiesAnimFrames[e]);
@@ -51,8 +50,8 @@ var myCharacterEnemies = {
 //typeOrder = 0 : disordered, 1: ordered
 //typeCut = 0:simple, 1:double, 2:directionable negative, 3:directionable positive
 //typeRope = 0:counterattack, 1:buff , 2:debuff, 3:heal, 4:power
-var myEnemiesProperties = {
-    length: 10,
+var myEnemiesProperties = { //almacena las propiedades de cada enemigo
+    length: 10,//numero total de enemigos
     0: {
         name: "Glanxyor",
         hp: 90,

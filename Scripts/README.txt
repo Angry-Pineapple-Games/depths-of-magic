@@ -1,0 +1,3 @@
+- game loop / https://isaacsukin.com/news/2015/01/detailed-explanation-javascript-game-loops-and-timing#panic-spiral-death
+- https://www.w3schools.com
+- https://developer.mozilla.org

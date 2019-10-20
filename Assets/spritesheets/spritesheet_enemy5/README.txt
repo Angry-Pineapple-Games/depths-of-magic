@@ -1,1 +1,0 @@
-Ahora las animaciones funcionan a 30 fps.

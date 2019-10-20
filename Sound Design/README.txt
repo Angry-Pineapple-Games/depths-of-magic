@@ -1,0 +1,21 @@
+- Originales / enlace
+	- Editados
+
+- campana.aiff / https://freesound.org/people/wuola/sounds/144492/
+ 	- bassamasCampana.wav
+	- bassamenosCampana.wav
+	- bassCampana.wav
+- drum.wav / https://freesound.org/people/Zajo/sounds/4832/
+	- bassCine.wav
+- drum2.wav / https://freesound.org/people/zgump/sounds/72997/
+	- bassCine2.wav
+- medievalMusic.wav / https://freesound.org/people/Kevzog/sounds/362288/
+	- Melodia_medieval_1.wav / adaptación con bajo Iago Cruz García
+	- Melodia_medieval_2.wav / adaptación con bajo Iago Cruz García
+- monks.wav / https://freesound.org/people/valerio_maina/sounds/439944/
+	- monjes.wav
+- ending.wav / propia elaboración, músico Iago Cruz García
+- the-descent-by-kevin-macleod.mp3 / https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200094
+	- bosu.wav / adaptación con bajo Iago Cruz García
+	- boss.ogg
+- canticos.wav / propia elaboración, músico Iago Cruz García

@@ -10,7 +10,7 @@ var myInputsManager = {
     start: function () {
         let that = myInputsManager;
         let pause = myGameManager.pause;
-
+        //canvas1, toque
         document.getElementById("canvas1").onmouseup = function (event) {
             event.stopPropagation();
             that.passCertainScenes();
@@ -21,7 +21,7 @@ var myInputsManager = {
             event.preventDefault();
             that.passCertainScenes();
         }
-
+        //empieza a detectar el inicio de los trazos en el canvas2
         document.getElementById("canvas2").onmousedown = function (event) {
             event.stopPropagation();
             if (!pause && !that.blocked) {
@@ -42,7 +42,6 @@ var myInputsManager = {
                 }
             }
         };
-
         document.getElementById("canvas2").ontouchstart = function (event) {
             event.stopPropagation();
             event.preventDefault();
@@ -52,6 +51,7 @@ var myInputsManager = {
                 that.leftMouseDown = true;
             }
         }
+        //detecta el movimiento del jugador
         document.getElementById("canvas2").onmousemove = function (event) {
             event.stopPropagation();
             if (!pause && !that.blocked) {
@@ -60,7 +60,6 @@ var myInputsManager = {
                 }
             }
         };
-
         document.getElementById("canvas2").ontouchmove = function (event) {
             event.stopPropagation();
             event.preventDefault();
@@ -70,7 +69,7 @@ var myInputsManager = {
                 }
             }
         }
-
+        //detecta la finalización del trazo
         document.getElementById("canvas2").onmouseup = function (event) {
             event.stopPropagation();
             if (!pause && !that.blocked) {
@@ -92,7 +91,6 @@ var myInputsManager = {
                 }
             }
         };
-
         document.getElementById("canvas2").ontouchend = function (event) {
             event.stopPropagation();
             event.preventDefault();
@@ -103,7 +101,7 @@ var myInputsManager = {
                 }
             }
         }
-
+        //eventos de teclado
         $(document).keyup(function (e) {
             event.stopPropagation();
             if (e.key === "Backspace") { //si la tecla era "retroceso" vuelve a la pagina anterior
@@ -119,12 +117,12 @@ var myInputsManager = {
             }
         });
     },
-    passCertainScenes: function () {
+    passCertainScenes: function () {//control de escenas
         if (myIntro === myGame.scenes[myGame.scene] || myEnding === myGame.scenes[myGame.scene] || myTransitionScene === myGame.scenes[myGame.scene] /*|| myLevel1 === myGame.scenes[myGame.scene] || myLevel2 === myGame.scenes[myGame.scene] || myLevel3 === myGame.scenes[myGame.scene]*/) { myGame.swapScene(); }
         else if (myGameOver === myGame.scenes[myGame.scene]) { myGame.restart(); }
         else {this.Pause(event);}
     },
-    Pause: function () {
+    Pause: function () {//pausa todos los timers del juego
         if (!myGameManager.pause) {
             myGameManager.pause = true;
             myGameManager.pauseTimers("all");
