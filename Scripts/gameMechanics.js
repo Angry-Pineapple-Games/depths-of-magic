@@ -373,6 +373,11 @@ var myCombatMechanics = {
                         myAnimManager.changeAnimation(that.scene.hero, "idle");
                     });
                     myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
+                        if(that.scene.enemy.name !== "The Abyss"){
+                            mySoundManager.startSound(that.scene.enemy.img, false, 0.5);
+                        } else{
+                            mySoundManager.startSound("enemy9_death", false, 0.3);
+                        }
                         myAnimManager.changeAnimation(that.scene.enemy, "death", function () {
                             //Si es el jefe final, reproduce su animacion de muerte entera
                             if(that.scene.enemy.name !== "The Abyss"){
@@ -386,7 +391,6 @@ var myCombatMechanics = {
                                 that.scene.showDebuffEnemy = false;
                                 that.swapEnemy();
                             }else{
-                                mySoundManager.startSound("enemy9_death", false, 0.3);
                                 myAnimManager.changeAnimation(that.scene.enemy, "death2", function () {
                                     myAnimManager.changeAnimation(that.scene.enemy, "death3", function () {
                                         myAnimManager.changeAnimation(that.scene.enemy, "death4", function () {
