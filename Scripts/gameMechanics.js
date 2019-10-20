@@ -89,7 +89,7 @@ var myGameMechanics = {
                     this.gridRopes[g][0] = -1;
                 } else { this.gridRopes[g][0] = 0; }
             }
-            myGameManager.addTimer(this.timeOrderAddOne, 2000, "timersOrderPattern");
+            myGameManager.addTimer(this.timeOrderAddOne, 1300, "timersOrderPattern");
         } else if (this.timeOrder === this.gridRopes.length) {
             for (let g = 0; g < this.gridRopes.length; g++) {
                 this.gridRopes[g][0] = 0;
@@ -366,41 +366,46 @@ var myCombatMechanics = {//controla el cambio de enemigos y los patrones de esto
         }
         else if (that.scene.enemy.hp <= 0) {
             //Secuencia: 1. heroe ataca, 2. enemigo muere y heroe celebra victoria, 3. cambio de enemigo
-            mySoundManager.startSound("hero_attack", false, 0.3);
+        mySoundManager.startSound("hero_attack", false, 0.3);
             myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
                 myAnimManager.changeAnimation(that.scene.hero, "idle");
                 myAnimManager.playSequenceSFX(sfxSequenceHero, that.scene.sfx, function(){
-                    myAnimManager.changeAnimation(that.scene.hero, "victory", function () {
-                        myAnimManager.changeAnimation(that.scene.hero, "idle");
-                    });
                     myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
+                        if(that.scene.enemy.name !== "The Abyss"){
+                            mySoundManager.startSound(that.scene.enemy.img, false, 0.5);
+                        } else{
+                            mySoundManager.startSound("enemy9_death", false, 0.3);
+                        }
                         myAnimManager.changeAnimation(that.scene.enemy, "death", function () {
                             //Si es el jefe final, reproduce su animacion de muerte entera
                             if(that.scene.enemy.name !== "The Abyss"){
-                                myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                                myAnimManager.changeAnimation(that.scene.hero, "idle");
-                                myGameMechanics.un_blockInputs();
-                                myScoreManager.currentScore += that.scene.enemy.defeatScore;
-                                that.scene.showBuffHero = false;
-                                that.scene.showDebuffHero = false;
-                                that.scene.showBuffEnemy = false;
-                                that.scene.showDebuffEnemy = false;
-                                that.swapEnemy();
+                                myAnimManager.changeAnimation(that.scene.hero, "victory", function(){
+                                    myAnimManager.changeAnimation(that.scene.enemy, "idle");
+                                    myAnimManager.changeAnimation(that.scene.hero, "idle");
+                                    myGameMechanics.un_blockInputs();
+                                    myScoreManager.currentScore += that.scene.enemy.defeatScore;
+                                    that.scene.showBuffHero = false;
+                                    that.scene.showDebuffHero = false;
+                                    that.scene.showBuffEnemy = false;
+                                    that.scene.showDebuffEnemy = false;
+                                    that.swapEnemy();
+                                });
                             }else{
-                                mySoundManager.startSound("enemy9_death", false, 0.5);
                                 myAnimManager.changeAnimation(that.scene.enemy, "death2", function () {
                                     myAnimManager.changeAnimation(that.scene.enemy, "death3", function () {
                                         myAnimManager.changeAnimation(that.scene.enemy, "death4", function () {
                                             myAnimManager.changeAnimation(that.scene.enemy, "death5", function () {
-                                                myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                                                myAnimManager.changeAnimation(that.scene.hero, "idle");
-                                                myGameMechanics.un_blockInputs();
-                                                myScoreManager.currentScore += that.scene.enemy.defeatScore;
-                                                that.scene.showBuffHero = false;
-                                                that.scene.showDebuffHero = false;
-                                                that.scene.showBuffEnemy = false;
-                                                that.scene.showDebuffEnemy = false;
-                                                that.swapEnemy();
+                                                myAnimManager.changeAnimation(that.scene.hero, "victory", function(){
+                                                    myAnimManager.changeAnimation(that.scene.enemy, "idle");
+                                                    myAnimManager.changeAnimation(that.scene.hero, "idle");
+                                                    myGameMechanics.un_blockInputs();
+                                                    myScoreManager.currentScore += that.scene.enemy.defeatScore;
+                                                    that.scene.showBuffHero = false;
+                                                    that.scene.showDebuffHero = false;
+                                                    that.scene.showBuffEnemy = false;
+                                                    that.scene.showDebuffEnemy = false;
+                                                    that.swapEnemy();
+                                                });
                                             });
                                         });
                                     });
@@ -573,8 +578,8 @@ var myCutMechanics = {//control de los cortes de las cuerdas
 var myStatsController = {//gestiona todos los stats y los efectos de estos en el heroe, enemigos y sus daños
     debug: false,
     loops: 0,//vueltas dadas al juego
-    loopfactor: 0.4,//factor de mejora enemigos en cada vuelta al juego
-    increaseFactor: 5,//factor de mejora para las estadisticas del heroe
+    loopfactor: 0.2,//factor de mejora enemigos en cada vuelta al juego
+    increaseFactor: 3,//factor de mejora para las estadisticas del heroe
     counter: 0,
     counterCounter: 0,
     totalCounter: 0,
@@ -590,8 +595,8 @@ var myStatsController = {//gestiona todos los stats y los efectos de estos en el
     healNoCutsCounter: 0,
     healFactor: 6.0,
     totalHeal: 0,
-    heroFactor: 4.0,//Variable de balanceo. Cuando sea definitivo se cambian los stats y se elimina esta variable
-    enemyFactor: 8.0,//Variable de balanceo. Cuando sea definitivo se cambian los stats y se elimina esta variable
+    heroFactor: 4.0,
+    enemyFactor: 8.0,
     concatenationFactor: 0.35,
     resetLoops: function () {//si se produce un game over (afecta a los stats de los enemigos)
         this.loops = 0;
@@ -620,12 +625,12 @@ var myStatsController = {//gestiona todos los stats y los efectos de estos en el
         else if (rope[5] === 3) { this.heal++; }
         else if (rope[5] === 4) { this.counterCounter++; this.counterBuff++; this.counterDebuff++; this.counterHeal++;}
     },
-    increaseStats: function (hero) {//incrementa las estadisticas del heroe
-        hero.hpMax += this.increaseFactor * this.healNoCutsCounter;
+    increaseStats: function (hero) {//incrementa las estadisticas
+        hero.hpMax += Math.trunc(this.increaseFactor * this.healNoCutsCounter * 0.5);
         this.healNoCutsCounter = 0;
-        hero.ap += this.increaseFactor * this.counterCounter;
+        hero.ap += Math.trunc(this.increaseFactor * this.counterCounter * 0.25);
         this.counterCounter = 0;
-        hero.dp += this.increaseFactor * (this.counterBuff + this.counterDebuff);
+        hero.dp += Math.trunc(this.increaseFactor * (this.counterBuff + this.counterDebuff) * 0.65);
         this.counterBuff = 0;
         this.counterDebuff = 0;
     },
@@ -654,7 +659,7 @@ var myStatsController = {//gestiona todos los stats y los efectos de estos en el
         hero.hp += hero.healing;
         if (hero.hp > hero.hpMax) { hero.hp = hero.hpMax; }
         if (hero.hp < 0) { hero.hp = 0; }
-        enemy.healing = Math.trunc(this.heal * this.healFactor);
+        enemy.healing = Math.trunc(this.heal * this.healFactor * 2.5);
         enemy.hp += enemy.healing;
         if (enemy.hp > enemy.hpMax) { enemy.hp = enemy.hpMax; }
 

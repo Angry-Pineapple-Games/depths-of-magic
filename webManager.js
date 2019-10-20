@@ -181,7 +181,8 @@ var ids = [["#btnSpanish", "radio", "Spanish", "Español"], ["#btnEnglish","radi
  ["animation", "normal", "Animation", "Animación"], ["music", "normal", "Music", "Música"],["backTop", "normal", "Back to top", "Vuelta arriba"],["bestScores", "normal", "Your 10 best scores", "Tus 10 mejores puntuaciones"],
  ["tutorial4", "normal", myWebContent.title4ENG, myWebContent.title4ESP],["description4", "normal", myWebContent.tutorial4ENG, myWebContent.tutorial4ESP], ["btnTutorial","normal",myWebContent.btnTutorialsContentENG,myWebContent.btnTutorialsContentESP],
  ["gameDesc", "normal", "Face your fears and unleash the power of magic in this dark roguelike", "Enfrenta a tus miedos y desata el poder de la magia en este oscuro roguelike"], ["btnMusic", "normal", "Play Soundtrack", "Reproducir Soundtrack"],
- ["gameTitle2", "normal", "Coming soon", "Próximamente"], ["gameDesc2", "normal", "In the next weeks we'll show you our next project. Stay tuned!", "En las próximas semanas os mostraremos nuestro nuevo proyecto. ¡Permaneced atentxs!"]];
+ ["gameTitle2", "normal", "Coming soon", "Próximamente"], ["gameDesc2", "normal", "In the next weeks we'll show you our next project. Stay tuned!", "En las próximas semanas os mostraremos nuestro nuevo proyecto. ¡Permaneced atentxs!"],
+ ["presenTitle", "normal", "Who we are?", "¿Quiénes somos?"], ["presenDesc", "normal", "A group of people focused on your enjoyment. We do what we love and we love videogames", "Un grupo de personas centradas en tu disfrute. Hacemos lo que nos encanta, y nos encantan los videojuegos"]];
 
 function changeLangHtml(lang) {
     let newLang = 2;

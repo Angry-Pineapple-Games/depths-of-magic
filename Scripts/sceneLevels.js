@@ -21,8 +21,12 @@ var myLevel1 = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
-        this.hero = myHeroCharacter.generateHero(1);
-        this.enemies = myCharacterEnemies.generateEnemies(this.enemiesMax);
+        let idHero = 3;
+        if(myStatsController.loops < 1){
+            idHero = 1;
+        }
+        this.hero = myHeroCharacter.generateHero(idHero);
+        this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
         myFade.clearImage();
@@ -162,13 +166,13 @@ var myIntro = {
         myFade.in(1);
         let that = myIntro;
         that.showText = false;
-        posAnim= [-100, -400];
+        that.posAnim= [-100, -400];
         that.currentAnimation = new Animation(myPreload.spritesInfo.intro_fire, 0, 59);
         that.currentAnimation.reset();
         that.animImg = myPreload.images.intro_fire;
         that.animResize = 3;
         that.showAnim = true;
-        myGameManager.addTimer(that.startSequence3, 3000, "timersSwap");
+        myGameManager.addTimer(that.startSequence3, 2000, "timersSwap");
     },
     startSequence3:function(){
         let that = myIntro;
@@ -177,7 +181,7 @@ var myIntro = {
         that.posText = [0.45, 0.62]
         that.text3 = "author";
         that.showText = true;
-        myGameManager.addTimer(that.startSequence4, 3000, "timersSwap");
+        myGameManager.addTimer(that.startSequence4, 4000, "timersSwap");
     },
     startSequence4:function(){
         mySoundManager.startSound("intro2", true);
@@ -199,15 +203,23 @@ var myIntro = {
 
 var myTransitionScene = {
     hero: {},
-    posHero: [300, 440],
+    posHero: [200, 200],
     room: {},
+    idRoom: 3,
     timeTransition: 8000,
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(1);
-        this.hero = myHeroCharacter.generateHero();
+        if((myGame.scene === 2)&& (myStatsController.loops < 1)){
+            this.idRoom = 1;
+        } else if((myGame.scene === 4) && (myStatsController.loops < 1)){
+            this.idRoom = 2;
+        } else {
+            this.idRoom = 3;
+        }
+        this.hero = myHeroCharacter.generateHero(this.idRoom);
         myStatsController.increaseStats(this.hero);
-        this.room = myPreload.images["room1"];
+        this.room = myPreload.images["fondoStats"];
         mySoundManager.stopSound("boss");
         mySoundManager.startSound("menu");
         mySoundManager.stopSound("ending1");
@@ -220,11 +232,11 @@ var myTransitionScene = {
         myGameArea.resizeBackground(this.room, 1);
         myGameArea.animateInBackground(1, this.posHero, this.hero.currentImg, this.hero.currentAnimation, 2.5);
 
-        myTextManager.drawTextInBackground(1, "currentLevel", [0.7, 0.2], String(myRoomMechanics.countSwaps), "black", 50, "center");
-        myTextManager.drawTextInBackground(1, "healthPoints", [0.7, 0.35], String(myHeroCharacter.hpMax), "black", 50, "center");
-        myTextManager.drawTextInBackground(1, "attackPoints", [0.7, 0.5], String(myHeroCharacter.ap), "black", 50, "center");
-        myTextManager.drawTextInBackground(1, "defensePoints", [0.7, 0.65], String(myHeroCharacter.dp), "black", 50, "center");
-        myTextManager.drawTextInBackground(1, "numberLaps", [0.7, 0.8], String(myStatsController.loops), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "currentLevel", [0.7, 0.2], String(this.idRoom), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "healthPoints", [0.7, 0.3], String(myHeroCharacter.hpMax), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "attackPoints", [0.7, 0.4], String(myHeroCharacter.ap), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "defensePoints", [0.7, 0.5], String(myHeroCharacter.dp), "black", 50, "center");
+        myTextManager.drawTextInBackground(1, "numberLaps", [0.7, 0.6], String(myStatsController.loops), "black", 50, "center");
         myTextManager.drawTextInBackground(1, "clickToConinue", [0.98, 0.95], "", "white", 80, "right");
         myFade.fade(1);
     }
@@ -252,7 +264,8 @@ var myEnding = {
             myGameArea.editTams(1);
             this.displayed = true;
             mySoundManager.startSound("ending1", false);
-            mySoundManager.pauseSound("menu");
+            mySoundManager.stopSound("menu");
+            mySoundManager.stopSound("boss");
             this.startSequence1();
         }
     },
@@ -287,10 +300,10 @@ var myEnding = {
         that.animResize = 1.8;
         that.showAnim = true;
         that.extraImg = myPreload.images.end_hand;
-        that.posExtraImg = [0, 550];
+        that.posExtraImg = [0, 0.35];
         that.showExtraImg = true;
         that.showText = false;
-        myGameManager.addTimer(that.startSequence2, 2000, "timersSwap");
+        myGameManager.addTimer(that.startSequence2, 500, "timersSwap");
     },
     startSequence2:function(){
         let that = myEnding;
@@ -298,7 +311,7 @@ var myEnding = {
         that.text1 = "text11";
         that.text2 = "text12";
         that.showText = true;
-        myGameManager.addTimer(that.startSequence3, 2000, "timersSwap");
+        myGameManager.addTimer(that.startSequence3, 3500, "timersSwap");
     },
     startSequence3:function(){
         let that = myEnding;
@@ -363,7 +376,11 @@ var myLevel2 = {
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
-        this.hero = myHeroCharacter.generateHero(2);
+        let idHero = 3;
+        if(myStatsController.loops < 1){
+            idHero = 2;
+        }
+        this.hero = myHeroCharacter.generateHero(idHero);
         this.enemies = myCharacterEnemies.generateEnemies(this);
         this.rooms = myGameMechanics.generateRooms(this.roomsMax);
         this.sfx = mySFX.generateSFX();
@@ -462,7 +479,7 @@ var myLevel3 = {
     showDebuffEnemy: false,
     roomsMin: 6,
     roomsMax: 9,
-    limitTimePerPatron: 3900,
+    limitTimePerPatron: 3500,
     start: function () {
         myGameManager.clearTimers("all");
         myGameArea.editTams(0.6);
