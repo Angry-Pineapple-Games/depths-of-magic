@@ -365,13 +365,10 @@ var myCombatMechanics = {
         }
         else if (that.scene.enemy.hp <= 0) {
             //Secuencia: 1. heroe ataca, 2. enemigo muere y heroe celebra victoria, 3. cambio de enemigo
-            mySoundManager.startSound("hero_attack", false, 0.3);
+        mySoundManager.startSound("hero_attack", false, 0.3);
             myAnimManager.changeAnimation(that.scene.hero, "attack", function () {
                 myAnimManager.changeAnimation(that.scene.hero, "idle");
                 myAnimManager.playSequenceSFX(sfxSequenceHero, that.scene.sfx, function(){
-                    myAnimManager.changeAnimation(that.scene.hero, "victory", function () {
-                        myAnimManager.changeAnimation(that.scene.hero, "idle");
-                    });
                     myAnimManager.changeAnimation(that.scene.enemy, "damage", function () {
                         if(that.scene.enemy.name !== "The Abyss"){
                             mySoundManager.startSound(that.scene.enemy.img, false, 0.5);
@@ -381,29 +378,33 @@ var myCombatMechanics = {
                         myAnimManager.changeAnimation(that.scene.enemy, "death", function () {
                             //Si es el jefe final, reproduce su animacion de muerte entera
                             if(that.scene.enemy.name !== "The Abyss"){
-                                myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                                myAnimManager.changeAnimation(that.scene.hero, "idle");
-                                myGameMechanics.un_blockInputs();
-                                myScoreManager.currentScore += that.scene.enemy.defeatScore;
-                                that.scene.showBuffHero = false;
-                                that.scene.showDebuffHero = false;
-                                that.scene.showBuffEnemy = false;
-                                that.scene.showDebuffEnemy = false;
-                                that.swapEnemy();
+                                myAnimManager.changeAnimation(that.scene.hero, "victory", function(){
+                                    myAnimManager.changeAnimation(that.scene.enemy, "idle");
+                                    myAnimManager.changeAnimation(that.scene.hero, "idle");
+                                    myGameMechanics.un_blockInputs();
+                                    myScoreManager.currentScore += that.scene.enemy.defeatScore;
+                                    that.scene.showBuffHero = false;
+                                    that.scene.showDebuffHero = false;
+                                    that.scene.showBuffEnemy = false;
+                                    that.scene.showDebuffEnemy = false;
+                                    that.swapEnemy();
+                                });
                             }else{
                                 myAnimManager.changeAnimation(that.scene.enemy, "death2", function () {
                                     myAnimManager.changeAnimation(that.scene.enemy, "death3", function () {
                                         myAnimManager.changeAnimation(that.scene.enemy, "death4", function () {
                                             myAnimManager.changeAnimation(that.scene.enemy, "death5", function () {
-                                                myAnimManager.changeAnimation(that.scene.enemy, "idle");
-                                                myAnimManager.changeAnimation(that.scene.hero, "idle");
-                                                myGameMechanics.un_blockInputs();
-                                                myScoreManager.currentScore += that.scene.enemy.defeatScore;
-                                                that.scene.showBuffHero = false;
-                                                that.scene.showDebuffHero = false;
-                                                that.scene.showBuffEnemy = false;
-                                                that.scene.showDebuffEnemy = false;
-                                                that.swapEnemy();
+                                                myAnimManager.changeAnimation(that.scene.hero, "victory", function(){
+                                                    myAnimManager.changeAnimation(that.scene.enemy, "idle");
+                                                    myAnimManager.changeAnimation(that.scene.hero, "idle");
+                                                    myGameMechanics.un_blockInputs();
+                                                    myScoreManager.currentScore += that.scene.enemy.defeatScore;
+                                                    that.scene.showBuffHero = false;
+                                                    that.scene.showDebuffHero = false;
+                                                    that.scene.showBuffEnemy = false;
+                                                    that.scene.showDebuffEnemy = false;
+                                                    that.swapEnemy();
+                                                });
                                             });
                                         });
                                     });
