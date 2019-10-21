@@ -56,7 +56,8 @@ myEnglishVersion = {
     cut: "CUT",
     score: "Score: ",
     roomCombat: "Room - Combat: ",
-    sound: "Sound: disabled"
+    sound: "Sound: disabled",
+    loading: "Loading..."
 }
 
 mySpanishVersion = {
@@ -85,5 +86,6 @@ mySpanishVersion = {
     cut: "CORTA",
     score: "Puntos: ",
     roomCombat: "Sala - Combate: ",
-    sound: "Sonido: desactivado"
+    sound: "Sonido: desactivado",
+    loading: "Cargando..."
 }

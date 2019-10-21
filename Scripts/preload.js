@@ -933,6 +933,7 @@ var myPreload = {
       this.images[src].decoding = 'async';
       this.images[src].onload = function () {
         myGameArea.resizeBackground(myLoading.images[Math.trunc((loadedImages / numImages) * myLoading.numImages * 0.5)], 1);
+        myTextManager.drawTextInBackground(1, "loading", [0.5, 0.2], "", "white", 25, "center");
         if (++loadedImages >= numImages) {
           that.loadAudio(callback, loadedImages, numImages);
         }
@@ -954,8 +955,12 @@ var myPreload = {
     for (var src in this.sourcesA) {
       this.audios[src] = new Audio(this.sourcesA[src].src);
       this.audios[src].oncanplaythrough = function () {
-        if(loadedAudios < numAudios) {myGameArea.resizeBackground(myLoading.images[Math.trunc(((loadedImages+loadedAudios) / (numImages+numAudios)) * myLoading.numImages)], 1);}
+        if(loadedAudios < numAudios) {
+          myGameArea.resizeBackground(myLoading.images[Math.trunc(((loadedImages+loadedAudios) / (numImages+numAudios)) * myLoading.numImages)], 1);
+          myTextManager.drawTextInBackground(1, "loading", [0.5, 0.2], "", "white", 25, "center");
+        }
         if (++loadedAudios == numAudios) {
+          myGameArea.resizeBackground(myLoading.images[myLoading.numImages-1], 1);
           myTextManager.drawTextInBackground(1, "clickToStart", [0.98, 0.95], "", "white", 25, "right");
           if(!sessionStorage.getItem("soundDOM")){ myTextManager.drawTextInBackground(1, "sound", [0.02, 0.95], "", "white", 25, "left"); }
           $(document).click(startGame);
